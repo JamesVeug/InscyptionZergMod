@@ -2,7 +2,7 @@
 using DiskCardGame;
 using UnityEngine;
 
-namespace CardLoaderMod
+namespace ZergMod
 {
     public class GiveZerglingsAbility : AbilityBehaviour
     {

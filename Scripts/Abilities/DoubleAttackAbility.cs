@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using System.IO;
 using APIPlugin;
 using DiskCardGame;
+using HarmonyLib;
 using UnityEngine;
 
-namespace CardLoaderMod
+namespace ZergMod
 {
     public class DoubleAttackAbility : AbilityBehaviour
     {

@@ -4,7 +4,7 @@ using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
 
-namespace CardLoaderMod.Scripts.Cards
+namespace ZergMod.Scripts.Cards
 {
     public static class Queen
     {

@@ -5,7 +5,7 @@ using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
 
-namespace CardLoaderMod
+namespace ZergMod
 {
     public class SpawnLarvaAbility : CreateCardsAdjacent
 	{
