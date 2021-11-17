@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
 
@@ -18,6 +21,28 @@ namespace CardLoaderMod
         protected string CannotSpawnDialogue => "No spaces left to spawn!";
 
         private int numTurnsInPlay;
+        
+        public static void Initialize()
+        {
+            AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
+            info.powerLevel = 0;
+            info.rulebookName = "Hatch Zergling's";
+            info.rulebookDescription = "Hatches 3 Zergling's on the board at the end of your opponents turn";
+            info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
+
+            List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
+            DialogueEvent.Line line = new DialogueEvent.Line();
+            line.text = "Whoa what happened there?";
+            lines.Add(line);
+            info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+
+            byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory,"Artwork/spawn_3_zerglings.png"));
+            Texture2D tex = new Texture2D(2,2);
+            tex.LoadImage(imgBytes);
+
+            NewAbility newAbility = new NewAbility(info,typeof(ZerglingEvolveAbility),tex,AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
+            ZerglingEvolveAbility.ability = newAbility.ability;
+        }
 
         private bool CanCreateExtraCards()
         {

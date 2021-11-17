@@ -15,6 +15,10 @@ namespace CardLoaderMod
         }
 
         public static Ability ability;
+        
+        public static void Initialize()
+        {
+        }
 
         public override bool RespondsToResolveOnBoard()
         {

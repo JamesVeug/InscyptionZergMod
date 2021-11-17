@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
 
@@ -12,6 +14,28 @@ namespace CardLoaderMod
         public static Ability ability;
 
         private List<int> attackedSlots = new List<int>();
+        
+        public static void Initialize()
+        {
+            AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
+            info.powerLevel = 0;
+            info.rulebookName = "Final Attack";
+            info.rulebookDescription = "When this card deals damage it will follow up with one more attack.";
+            info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
+
+            List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
+            DialogueEvent.Line line = new DialogueEvent.Line();
+            line.text = "Oof that one will be painful";
+            lines.Add(line);
+            info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+
+            byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory,"Artwork/double_attack.png"));
+            Texture2D tex = new Texture2D(2,2);
+            tex.LoadImage(imgBytes);
+
+            NewAbility newAbility = new NewAbility(info,typeof(DoubleAttackAbility),tex,AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
+            DoubleAttackAbility.ability = newAbility.ability;
+        }
 
         public override IEnumerator OnAttackEnded()
         {

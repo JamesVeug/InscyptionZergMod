@@ -1,0 +1,52 @@
+﻿using System.Collections.Generic;
+using System.IO;
+using APIPlugin;
+using DiskCardGame;
+using UnityEngine;
+
+namespace CardLoaderMod.Scripts.Cards
+{
+    public static class Kerrigan
+    {
+        private const string DisplayName = "Queen of Blades";
+        private const string Description = "Hero that never dies";
+        private const string TextureFile = "Artwork/kerrigan.png";
+
+        private const int BaseAttack = 3;
+        private const int BaseHealth = 3;
+        private const int BloodCost = 3;
+        private const int BoneCost = 0;
+
+        public static void Initialize()
+        {
+            List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+            metaCategories.Add(CardMetaCategory.Rare);
+            metaCategories.Add(CardMetaCategory.ChoiceNode);
+            metaCategories.Add(CardMetaCategory.TraderOffer);
+
+            List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
+            appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
+
+            byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory,TextureFile));
+            Texture2D tex = new Texture2D(2,2);
+            tex.LoadImage(imgBytes);
+
+            List<Ability> abilities = new List<Ability> { RegestateAbility.ability };
+
+            NewCard.Add(DisplayName, metaCategories, 
+                CardComplexity.Simple, 
+                CardTemple.Nature,
+                DisplayName,
+                BaseAttack,
+                BaseHealth,
+                description:Description,
+                cost:BloodCost,
+                bonesCost:BoneCost,
+                abilities:abilities,
+                tribes:new List<Tribe> { Tribe.Insect },
+                appearanceBehaviour:appearanceBehaviour, 
+                tex:tex,
+                onePerDeck:true);
+        }
+    }
+}
