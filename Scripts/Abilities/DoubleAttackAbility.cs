@@ -21,14 +21,14 @@ namespace ZergMod
         {
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
             info.powerLevel = 0;
-            info.rulebookName = "Final Attack";
-            info.rulebookDescription = "When this card deals damage it will follow up with one more attack.";
+            info.rulebookName = "Double Attack";
+            info.rulebookDescription = "When a card bearing this sigil deals damage it will perform one additional attack.";
             info.metaCategories = new List<AbilityMetaCategory>
                 { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
 
             List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
             DialogueEvent.Line line = new DialogueEvent.Line();
-            line.text = "Oof that one will be painful";
+            line.text = "One attack just isn't enough is it?";
             lines.Add(line);
             info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
@@ -77,16 +77,7 @@ namespace ZergMod
             attackedSlots.Add(attackingInstanceID);
             
             yield return new WaitForSeconds(0.4f);
-            if (target.Dead)
-            {
-                // Deal damage directly
-                yield return Singleton<CombatPhaseManager>.Instance.VisualizeCardAttackingDirectly(Card.Slot, targetSlot, amount);
-            }
-            else
-            {
-                // Hit the same card again
-                yield return Singleton<CombatPhaseManager>.Instance.SlotAttackSlot(Card.Slot, targetSlot);
-            }
+            yield return Singleton<CombatPhaseManager>.Instance.SlotAttackSlot(Card.Slot, targetSlot);
             yield return new WaitForSeconds(0.4f);
 
             yield return base.LearnAbility(0.0f);
@@ -108,9 +99,13 @@ namespace ZergMod
         {
             yield return base.PreSuccessfulTriggerSequence();
 
-            yield return new WaitForSeconds(0.5f);
-            yield return Singleton<CombatPhaseManager>.Instance.VisualizeCardAttackingDirectly(Card.Slot, directAttackSlot, amount);
-            yield return new WaitForSeconds(0.5f);
+            CardSlot targetSlot = directAttackSlot;
+            int attackingInstanceID = targetSlot.GetInstanceID();
+            attackedSlots.Add(attackingInstanceID);
+            
+            yield return new WaitForSeconds(0.4f);
+            yield return Singleton<CombatPhaseManager>.Instance.SlotAttackSlot(Card.Slot, directAttackSlot);
+            yield return new WaitForSeconds(0.4f);
             
             yield return base.LearnAbility(0.0f);
         }

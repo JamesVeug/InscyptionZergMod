@@ -6,22 +6,20 @@ using UnityEngine;
 
 namespace ZergMod.Scripts.Cards
 {
-    public static class Zerglings
+    public static class Banelings
     {
-        private const string DisplayName = "Zerglings";
-        private const string Description = "Looks friendly but watch your face because your could lose it";
-        private const string TextureFile = "Artwork/two_zerglings.png";
+        private const string DisplayName = "Banelings";
+        private const string Description = "Explosive in their nature";
+        private const string TextureFile = "Artwork/two_banelings.png";
 
-        private const int BaseAttack = 1;
-        private const int BaseHealth = 2;
+        private const int BaseAttack = 4;
+        private const int BaseHealth = 4;
         private const int BloodCost = 1;
         private const int BoneCost = 0;
 
         public static void Initialize()
         {
             List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
-            metaCategories.Add(CardMetaCategory.ChoiceNode);
-            metaCategories.Add(CardMetaCategory.TraderOffer);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
             appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
@@ -30,12 +28,8 @@ namespace ZergMod.Scripts.Cards
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 	        
-            List<Ability> abilities = new List<Ability> {DoubleAttackAbility.ability};
+            List<Ability> abilities = new List<Ability> {Ability.TriStrike, Ability.Brittle};
 	        
-            // Evolve into banelings
-            //CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Banelings");
-            //EvolveIdentifier identifier = new EvolveIdentifier("Banelings", 1, new CardModificationInfo(cardInfo));
-            
             NewCard.Add(DisplayName, metaCategories, CardComplexity.Simple, CardTemple.Nature,DisplayName,
                 BaseAttack,
                 BaseHealth,

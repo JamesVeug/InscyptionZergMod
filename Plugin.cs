@@ -18,14 +18,14 @@ namespace ZergMod
     {
 	    public const string PluginGuid = "jamesgames.inscryption.zergmod";
 	    public const string PluginName = "Zerg Mod";
-	    public const string PluginVersion = "0.1.0.0";
+	    public const string PluginVersion = "0.1.1.0";
 
         public static string Directory;
 
         private void Awake()
         {
             Logger.LogInfo($"Loaded {PluginName}!");
-            Directory = this.Info.Location.Replace("CardLoaderMod.dll", "");
+            Directory = this.Info.Location.Replace("ZergMod.dll", "");
             
             Egg.Initialize();
             
@@ -36,6 +36,7 @@ namespace ZergMod
             SpawnLarvaAbility.Initialize();
             
             // Units
+            //Banelings.Initialize();
             Zerglings.Initialize();
             Roach.Initialize();
             Mutalisk.Initialize();
@@ -54,9 +55,7 @@ namespace ZergMod
 	        Texture2D tex = new Texture2D(2,2);
 	        tex.LoadImage(imgBytes);
 
-	        List<Ability> abilities = new List<Ability>() { DoubleAttackAbility.ability, Ability.TriStrike };
-	        
-	        new CustomCard("Squirrel") {displayedName="Larva", tex=tex, abilities = abilities, baseHealth = 10};
+	        new CustomCard("Squirrel") {displayedName="Larva", tex=tex};
         }
 
         /// <summary>

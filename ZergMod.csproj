@@ -2,8 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>CardLoaderMod</AssemblyName>
-    <Description>Loads a custom card, and modifies the wolf</Description>
+    <Description>A Starcraft inspired mod that brings Zerg into the world of Inscryption</Description>
     <Version>1.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>7.3</LangVersion>

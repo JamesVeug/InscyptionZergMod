@@ -18,7 +18,7 @@ namespace ZergMod
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
             info.powerLevel = 0;
             info.rulebookName = "Regenerate";
-            info.rulebookDescription = "Heals 1 health at the end of a turn";
+            info.rulebookDescription = "The card bearing this sigil Heals 1 health at the end of a turn";
             info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
             List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
@@ -27,7 +27,7 @@ namespace ZergMod
             lines.Add(line);
             info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
-            byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, "Artwork/heal.png"));
+            byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, "Artwork/regenerate.png"));
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 

@@ -9,7 +9,7 @@ namespace ZergMod.Scripts.Cards
     public static class Kerrigan
     {
         private const string DisplayName = "Queen of Blades";
-        private const string Description = "Hero that never dies";
+        private const string Description = "The Hero that never dies";
         private const string TextureFile = "Artwork/kerrigan.png";
 
         private const int BaseAttack = 3;
