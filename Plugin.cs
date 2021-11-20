@@ -45,7 +45,7 @@ namespace ZergMod
             Overseer.Initialize();
             
             // Units
-            //Banelings.Initialize();
+            Banelings.Initialize();
             Zerglings.Initialize();
             Roach.Initialize();
             Mutalisk.Initialize();
