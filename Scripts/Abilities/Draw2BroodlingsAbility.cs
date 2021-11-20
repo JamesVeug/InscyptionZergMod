@@ -17,7 +17,7 @@ namespace ZergMod
 			AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
 			info.powerLevel = 0;
 			info.rulebookName = "Swarm Seeds";
-			info.rulebookDescription = "Draw 2 Broodlings at the end of the round";
+			info.rulebookDescription = "Draw 2 Broodling's at the end of the round\nA Broodling is defined as: 1 Power 1 Health";
 			info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
 			List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
@@ -34,12 +34,12 @@ namespace ZergMod
 			Draw2BroodlingsAbility.ability = newAbility.ability;
 		}
 
-		public override bool RespondsToResolveOnBoard()
+		public override bool RespondsToTurnEnd(bool playerTurnEnd)
 		{
-			return true;
+			return !Card.Dead && playerTurnEnd && Card.slot.IsPlayerSlot;
 		}
 
-		public override IEnumerator OnResolveOnBoard()
+		public override IEnumerator OnTurnEnd(bool playerTurnEnd)
 		{
 			yield return PreSuccessfulTriggerSequence();
 			yield return CreateCards();
