@@ -10,7 +10,7 @@ namespace ZergMod.Scripts.Cards
     {
         private const string DisplayName = "Zerglings";
         private const string Description = "Looks friendly but watch your face because your could lose it";
-        private const string TextureFile = "Artwork/two_zerglings.png";
+        private const string TextureFile = "Artwork/two_zergling.png";
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 2;
@@ -31,21 +31,24 @@ namespace ZergMod.Scripts.Cards
             tex.LoadImage(imgBytes);
 	        
             List<Ability> abilities = new List<Ability> {DoubleAttackAbility.ability};
-	        
+            List<SpecialTriggeredAbility> specialAbilities = new List<SpecialTriggeredAbility> { ZerglingSpecialAbility.specialAbility };
+
             // Evolve into banelings
-            //CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Banelings");
-            //EvolveIdentifier identifier = new EvolveIdentifier("Banelings", 1, new CardModificationInfo(cardInfo));
-            
-            NewCard.Add(DisplayName, metaCategories, CardComplexity.Simple, CardTemple.Nature,DisplayName,
+            CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Banelings");
+            EvolveIdentifier identifier = new EvolveIdentifier("Banelings", 1, new CardModificationInfo(cardInfo));
+
+            NewCard.Add(DisplayName, metaCategories, CardComplexity.Simple, CardTemple.Nature, DisplayName,
                 BaseAttack,
                 BaseHealth,
                 description: Description,
-                cost:BloodCost,
-                bonesCost:BoneCost,
-                tribes:new List<Tribe> { Tribe.Insect },
-                appearanceBehaviour:appearanceBehaviour, 
-                tex:tex,
-                abilities:abilities);
+                cost: BloodCost,
+                bonesCost: BoneCost,
+                tribes: new List<Tribe> { Tribe.Insect },
+                appearanceBehaviour: appearanceBehaviour,
+                tex: tex,
+                abilities: abilities,
+                specialAbilities: specialAbilities,
+                evolveId:identifier);
         }
     }
 }
