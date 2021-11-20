@@ -1,3 +1,4 @@
+using System;
 using BepInEx;
 using BepInEx.Logging;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using DiskCardGame;
 using HarmonyLib;
 using UnityEngine;
 using APIPlugin;
+using CardLoaderPlugin.lib;
 using ZergMod.Scripts.Cards;
 
 namespace ZergMod
@@ -21,10 +23,12 @@ namespace ZergMod
 	    public const string PluginVersion = "0.1.1.0";
 
         public static string Directory;
+        public static ManualLogSource Log;
 
         private void Awake()
         {
-            Logger.LogInfo($"Loaded {PluginName}!");
+	        Log = Logger;
+            Logger.LogInfo($"Loading {PluginName}...");
             Directory = this.Info.Location.Replace("ZergMod.dll", "");
             
             Egg.Initialize();
@@ -34,6 +38,11 @@ namespace ZergMod
             RegestateAbility.Initialize();
             DoubleAttackAbility.Initialize();
             SpawnLarvaAbility.Initialize();
+            DetectorAbility.Initialize();
+            
+            // Evolutions
+            Banelings.Initialize();
+            Overseer.Initialize();
             
             // Units
             //Banelings.Initialize();
@@ -47,6 +56,7 @@ namespace ZergMod
 
             // Squirrel / Lava
             ChangeSquirrelToLarva();
+            Logger.LogInfo($"Loaded {PluginName}!");
         }
         
         public void ChangeSquirrelToLarva()

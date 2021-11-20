@@ -6,11 +6,11 @@ using UnityEngine;
 
 namespace ZergMod.Scripts.Cards
 {
-    public static class Overlord
+    public static class Overseer
     {
-        private const string DisplayName = "Overlord";
-        private const string Description = "Lazy alien balloon";
-        private const string TextureFile = "Artwork/overlord.png";
+        private const string DisplayName = "Overseer";
+        private const string Description = "Reveals hidden creatures on the board";
+        private const string TextureFile = "Artwork/overseer.png";
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 4;
@@ -22,6 +22,7 @@ namespace ZergMod.Scripts.Cards
             List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
             metaCategories.Add(CardMetaCategory.ChoiceNode);
             metaCategories.Add(CardMetaCategory.TraderOffer);
+            metaCategories.Add(CardMetaCategory.Rare);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
             appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
@@ -30,11 +31,7 @@ namespace ZergMod.Scripts.Cards
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            List<Ability> abilities = new List<Ability> { Ability.Reach, Ability.Flying };
-	        
-            // Evolve into Overseer
-            CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Overseer");
-            EvolveIdentifier identifier = new EvolveIdentifier("Overseer", 1, new CardModificationInfo(cardInfo));
+            List<Ability> abilities = new List<Ability> { Ability.Flying, DetectorAbility.ability };
 
             NewCard.Add(DisplayName, metaCategories, 
                 CardComplexity.Simple, 
@@ -47,8 +44,7 @@ namespace ZergMod.Scripts.Cards
                 bonesCost:BoneCost,
                 tribes:new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour:appearanceBehaviour, 
-                tex:tex, abilities:abilities,
-                evolveId:identifier);
+                tex:tex, abilities:abilities);
         }
     }
 }
