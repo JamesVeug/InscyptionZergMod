@@ -12,7 +12,6 @@ namespace ZergMod.Patches
     {
         public static bool Prefix(CardInfo info, Card __instance)
         {
-            Plugin.Log.LogInfo("Prefix Card.AttachAbilities: " + NewSpecialAbility.SPECIAL_ABILITIES.Count);
             foreach (SpecialTriggeredAbility specialTriggeredAbility in info.SpecialAbilities)
             {
                 bool customSpecialAbility = false;
@@ -20,7 +19,6 @@ namespace ZergMod.Patches
                 {
                     if (specialTriggeredAbility == ability.SpecialAbility)
                     {
-                        Plugin.Log.LogInfo("\tPrefix Attach Custom Special Ability: " + ability.BehaviourTypeString);
                         Utils.AttachMonoBehaviour<SpecialCardBehaviour>(ability.BehaviourType, __instance.gameObject);
 
                         customSpecialAbility = true;
@@ -30,7 +28,6 @@ namespace ZergMod.Patches
 
                 if (!customSpecialAbility)
                 {
-                    Plugin.Log.LogInfo("\tPrefix Attach Vanilla Special Ability: " + specialTriggeredAbility.ToString());
                     CardTriggerHandler.AddReceiverToGameObject<SpecialCardBehaviour>(specialTriggeredAbility.ToString(), __instance.gameObject);
                 }
             }
@@ -44,7 +41,6 @@ namespace ZergMod.Patches
     {
         public static bool Prefix(ref SpecialTriggeredAbility ability, CardTriggerHandler __instance)
         {
-            Plugin.Log.LogInfo("Prefix CardTriggerHandler.AddAbility: " + ability.ToString());
             if (ability < SpecialTriggeredAbility.NUM_ABILITIES)
                 return true;
             
@@ -66,16 +62,13 @@ namespace ZergMod.Patches
     {
         public static T AttachMonoBehaviour<T>(Type type, GameObject gameObject)
         {
-            Plugin.Log.LogInfo("[AttachMonoBehaviour] Attaching " + type + " to " + gameObject.name);
             SpecialCardBehaviour t = gameObject.GetComponent(type) as SpecialCardBehaviour;
             if (t == null)
             {
-                Plugin.Log.LogInfo("[AttachMonoBehaviour] Added " + type + " to " + gameObject.name);
                 return (T)(object)gameObject.AddComponent(type);
             }
             else
             {
-                Plugin.Log.LogInfo("[AttachMonoBehaviour] " + gameObject.name + " already has " + type + " attached: " + t);
                 return (T)(object)t;
             }
         }
