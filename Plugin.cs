@@ -61,6 +61,7 @@ namespace ZergMod
             Hydralisk.Initialize();
             Broodling.Initialize();
             Broodlord.Initialize();
+            Drone.Initialize();
 
             // Squirrel / Lava
             ChangeSquirrelToLarva();
