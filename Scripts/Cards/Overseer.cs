@@ -31,7 +31,7 @@ namespace ZergMod.Scripts.Cards
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            List<Ability> abilities = new List<Ability> { Ability.Flying, DetectorAbility.ability };
+            List<Ability> abilities = new List<Ability> { Ability.Flying };
 
             NewCard.Add(DisplayName, metaCategories, 
                 CardComplexity.Simple, 
