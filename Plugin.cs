@@ -45,6 +45,7 @@ namespace ZergMod
             SpawnLarvaAbility.Initialize();
             //DetectorAbility.Initialize();
             Draw2BroodlingsAbility.Initialize();
+            Draw2LocustsAbility.Initialize();
             
             // Evolutions
             Banelings.Initialize();
@@ -52,6 +53,7 @@ namespace ZergMod
             
             // Units
             Banelings.Initialize();
+            Locust.Initialize();
             Zerglings.Initialize();
             Roach.Initialize();
             Mutalisk.Initialize();
