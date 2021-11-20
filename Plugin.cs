@@ -65,6 +65,7 @@ namespace ZergMod
             Ultralisk.Initialize();
             Dehaka.Initialize();
             InfestedTerran.Initialize();
+            Infestor.Initialize();
 
             // Squirrel / Lava
             ChangeSquirrelToLarva();
