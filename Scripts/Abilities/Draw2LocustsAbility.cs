@@ -17,7 +17,7 @@ namespace ZergMod
 			AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
 			info.powerLevel = 0;
 			info.rulebookName = "Draw Locusts";
-			info.rulebookDescription = "Draw 2 Locusts at the end of the round";
+			info.rulebookDescription = "Draw 2 Locusts at the end of the round\nA Locust is defined as: 1 Power 1 Health";
 			info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
 			List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
@@ -30,16 +30,16 @@ namespace ZergMod
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
 
-			NewAbility newAbility = new NewAbility(info,typeof(Draw2BroodlingsAbility),tex,AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
-			Draw2BroodlingsAbility.ability = newAbility.ability;
+			NewAbility newAbility = new NewAbility(info,typeof(Draw2LocustsAbility),tex,AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
+			Draw2LocustsAbility.ability = newAbility.ability;
 		}
 
-		public override bool RespondsToResolveOnBoard()
+		public override bool RespondsToTurnEnd(bool playerTurnEnd)
 		{
-			return true;
+			return !Card.Dead && playerTurnEnd && Card.slot.IsPlayerSlot;
 		}
 
-		public override IEnumerator OnResolveOnBoard()
+		public override IEnumerator OnTurnEnd(bool playerTurnEnd)
 		{
 			yield return PreSuccessfulTriggerSequence();
 			yield return CreateCards();
