@@ -44,6 +44,7 @@ namespace ZergMod
             DoubleAttackAbility.Initialize();
             SpawnLarvaAbility.Initialize();
             DetectorAbility.Initialize();
+            Draw2BroodlingsAbility.Initialize();
             
             // Evolutions
             Banelings.Initialize();
@@ -58,6 +59,8 @@ namespace ZergMod
             Kerrigan.Initialize();
             Queen.Initialize();
             Hydralisk.Initialize();
+            Broodling.Initialize();
+            Broodlord.Initialize();
 
             // Squirrel / Lava
             ChangeSquirrelToLarva();
