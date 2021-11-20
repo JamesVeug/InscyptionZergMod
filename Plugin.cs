@@ -62,6 +62,7 @@ namespace ZergMod
             Broodling.Initialize();
             Broodlord.Initialize();
             Drone.Initialize();
+            Dehaka.Initialize();
 
             // Squirrel / Lava
             ChangeSquirrelToLarva();
