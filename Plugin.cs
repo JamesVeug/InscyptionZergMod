@@ -50,9 +50,10 @@ namespace ZergMod
             // Evolutions
             Banelings.Initialize();
             Overseer.Initialize();
+            Lurker.Initialize();
+            Ravenger.Initialize();
             
             // Units
-            Banelings.Initialize();
             Locust.Initialize();
             Zerglings.Initialize();
             Roach.Initialize();
@@ -70,8 +71,6 @@ namespace ZergMod
             Infestor.Initialize();
             SwarmHost.Initialize();
             Leviathan.Initialize();
-            Roach.Initialize();
-            Lurker.Initialize();
 
             // Squirrel / Lava
             ChangeSquirrelToLarva();
