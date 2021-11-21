@@ -12,7 +12,7 @@ namespace ZergMod.Scripts.Cards
         private const string Description = "Explosive in their nature";
         private const string TextureFile = "Artwork/two_banelings.png";
 
-        private const int BaseAttack = 4;
+        private const int BaseAttack = 3;
         private const int BaseHealth = 1;
         private const int BloodCost = 0;
         private const int BoneCost = 2;
@@ -21,8 +21,10 @@ namespace ZergMod.Scripts.Cards
         {
             List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
             metaCategories.Add(CardMetaCategory.TraderOffer);
+            metaCategories.Add(CardMetaCategory.Rare);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
+            appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
 
             byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory,TextureFile));
             Texture2D tex = new Texture2D(2,2);
