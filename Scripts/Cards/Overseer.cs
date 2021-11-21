@@ -13,8 +13,8 @@ namespace ZergMod.Scripts.Cards
         private const string TextureFile = "Artwork/overseer.png";
 
         private const int BaseAttack = 0;
-        private const int BaseHealth = 4;
-        private const int BloodCost = 1;
+        private const int BaseHealth = 6;
+        private const int BloodCost = 2;
         private const int BoneCost = 0;
 
         public static void Initialize()
@@ -30,7 +30,7 @@ namespace ZergMod.Scripts.Cards
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            List<Ability> abilities = new List<Ability> { Ability.Flying };
+            List<Ability> abilities = new List<Ability> { Ability.Reach, Ability.Flying };
 
             NewCard.Add(DisplayName, metaCategories, 
                 CardComplexity.Simple, 
