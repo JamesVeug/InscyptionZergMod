@@ -12,8 +12,8 @@ namespace ZergMod.Scripts.Cards
         private const string Description = "Flying devil";
         private const string TextureFile = "Artwork/mutalisk.png";
 
-        private const int BaseAttack = 2;
-        private const int BaseHealth = 1;
+        private const int BaseAttack = 1;
+        private const int BaseHealth = 3;
         private const int BloodCost = 2;
         private const int BoneCost = 0;
 
@@ -29,7 +29,7 @@ namespace ZergMod.Scripts.Cards
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            List<Ability> abilities = new List<Ability> { Ability.Flying, Ability.SplitStrike };
+            List<Ability> abilities = new List<Ability> { Ability.Flying, RegestateAbility.ability };
 
             NewCard.Add(DisplayName, metaCategories, 
                 CardComplexity.Simple, 
