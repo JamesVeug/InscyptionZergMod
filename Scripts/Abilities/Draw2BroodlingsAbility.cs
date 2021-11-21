@@ -36,7 +36,7 @@ namespace ZergMod
 
 		public override bool RespondsToTurnEnd(bool playerTurnEnd)
 		{
-			return !Card.Dead && playerTurnEnd && Card.slot.IsPlayerSlot;
+			return !Card.Dead && !playerTurnEnd && Card.slot.IsPlayerSlot;
 		}
 
 		public override IEnumerator OnTurnEnd(bool playerTurnEnd)
