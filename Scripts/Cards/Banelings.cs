@@ -13,13 +13,14 @@ namespace ZergMod.Scripts.Cards
         private const string TextureFile = "Artwork/two_banelings.png";
 
         private const int BaseAttack = 4;
-        private const int BaseHealth = 4;
-        private const int BloodCost = 1;
-        private const int BoneCost = 0;
+        private const int BaseHealth = 1;
+        private const int BloodCost = 0;
+        private const int BoneCost = 2;
 
         public static void Initialize()
         {
             List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+            metaCategories.Add(CardMetaCategory.TraderOffer);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
 
