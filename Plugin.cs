@@ -20,7 +20,7 @@ namespace ZergMod
     {
 	    public const string PluginGuid = "jamesgames.inscryption.zergmod";
 	    public const string PluginName = "Zerg Mod";
-	    public const string PluginVersion = "0.1.1.0";
+	    public const string PluginVersion = "0.2.0.0";
 
         public static string Directory;
         public static ManualLogSource Log;
