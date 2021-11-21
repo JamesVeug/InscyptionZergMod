@@ -16,8 +16,8 @@ namespace ZergMod
 		{
 			AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
 			info.powerLevel = 0;
-			info.rulebookName = "Draw Locusts";
-			info.rulebookDescription = "Draw 2 Locusts at the end of the round\nA Locust is defined as: 1 Power 1 Health";
+			info.rulebookName = "Draw Locust's";
+			info.rulebookDescription = "Draw 2 Locust's at the end of the round\nA Locust is defined as: 1 Power 1 Health";
 			info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
 			List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
