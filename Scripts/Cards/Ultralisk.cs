@@ -12,9 +12,9 @@ namespace ZergMod.Scripts.Cards
         private const string Description = "Double armoured brute. You don't want to be in his way!";
         private const string TextureFile = "Artwork/ultralisk.png";
 
-        private const int BaseAttack = 7;
-        private const int BaseHealth = 7;
-        private const int BloodCost = 4;
+        private const int BaseAttack = 2;
+        private const int BaseHealth = 5;
+        private const int BloodCost = 3;
         private const int BoneCost = 0;
 
         public static void Initialize()
@@ -31,7 +31,7 @@ namespace ZergMod.Scripts.Cards
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            List<Ability> abilities = new List<Ability> { };
+            List<Ability> abilities = new List<Ability> { Ability.DeathShield };
 
             NewCard.Add(DisplayName, metaCategories, 
                 CardComplexity.Simple, 
