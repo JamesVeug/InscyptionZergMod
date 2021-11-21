@@ -69,6 +69,7 @@ namespace ZergMod
             InfestedTerran.Initialize();
             Infestor.Initialize();
             SwarmHost.Initialize();
+            Leviathan.Initialize();
 
             // Squirrel / Lava
             ChangeSquirrelToLarva();
