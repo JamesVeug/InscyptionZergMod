@@ -17,7 +17,7 @@ namespace ZergMod
 			AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
 			info.powerLevel = 0;
 			info.rulebookName = "Draw Broodling's";
-			info.rulebookDescription = "Draw 2 Broodling's at the end of the round\nA Broodling is defined as: 1 Power 1 Health";
+			info.rulebookDescription = "Draw 2 Broodling's at the start of your turn\nA Broodling is defined as: 1 Power 1 Health";
 			info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
 			List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
