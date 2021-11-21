@@ -6,11 +6,11 @@ using UnityEngine;
 
 namespace ZergMod.Scripts.Cards
 {
-    public static class Roach
+    public static class Ravenger
     {
-        private const string DisplayName = "Roach";
-        private const string Description = "Armored unit that can heal";
-        private const string TextureFile = "Artwork/roach.png";
+        private const string DisplayName = "Ravenger";
+        private const string Description = "Beware of its snipe. Can be unfortunate to be in its way";
+        private const string TextureFile = "Artwork/ravenger.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 2;
@@ -29,11 +29,7 @@ namespace ZergMod.Scripts.Cards
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            List<Ability> abilities = new List<Ability> { HealAbility.ability };
-
-            // Evolve into banelings
-            CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Ravenger");
-            EvolveIdentifier identifier = new EvolveIdentifier("Ravenger", 1, new CardModificationInfo(cardInfo));
+            List<Ability> abilities = new List<Ability> { Ability.Sniper };
 
             NewCard.Add(DisplayName, metaCategories, 
                 CardComplexity.Simple, 
@@ -47,8 +43,7 @@ namespace ZergMod.Scripts.Cards
                 tribes:new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour:appearanceBehaviour, 
                 tex:tex,
-                abilities:abilities,
-                evolveId:identifier);
+                abilities:abilities);
         }
     }
 }
