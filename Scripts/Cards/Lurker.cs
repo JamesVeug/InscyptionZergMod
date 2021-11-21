@@ -6,13 +6,13 @@ using UnityEngine;
 
 namespace ZergMod.Scripts.Cards
 {
-    public static class Hydralisk
+    public static class Lurker
     {
-        private const string DisplayName = "Hydralisk";
-        private const string Description = "Great for taking out flyers";
-        private const string TextureFile = "Artwork/hydralisk.png";
+        private const string DisplayName = "Lurker";
+        private const string Description = "Stay away from its spines. They are beyond deadly";
+        private const string TextureFile = "Artwork/lurker.png";
 
-        private const int BaseAttack = 3;
+        private const int BaseAttack = 2;
         private const int BaseHealth = 2;
         private const int BloodCost = 2;
         private const int BoneCost = 0;
@@ -20,8 +20,6 @@ namespace ZergMod.Scripts.Cards
         public static void Initialize()
         {
             List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
-            metaCategories.Add(CardMetaCategory.ChoiceNode);
-            metaCategories.Add(CardMetaCategory.TraderOffer);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
 
@@ -29,8 +27,7 @@ namespace ZergMod.Scripts.Cards
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Lurker");
-            EvolveIdentifier identifier = new EvolveIdentifier("Lurker", 1, new CardModificationInfo(cardInfo));
+            List<Ability> abilities = new List<Ability> { Ability.Submerge, Ability.WhackAMole };
 
             NewCard.Add(DisplayName, metaCategories, 
                 CardComplexity.Simple, 
@@ -44,7 +41,7 @@ namespace ZergMod.Scripts.Cards
                 tribes:new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour:appearanceBehaviour, 
                 tex:tex,
-                evolveId:identifier);
+                abilities:abilities);
         }
     }
 }
