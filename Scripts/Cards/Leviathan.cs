@@ -24,9 +24,9 @@ namespace ZergMod.Scripts.Cards
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
 
-            byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory,TextureFile));
-            Texture2D tex = new Texture2D(2,2);
-            tex.LoadImage(imgBytes);
+            Texture2D tex = Utils.GetTextureFromPath(TextureFile);
+            Texture2D decal = Utils.GetTextureFromPath(Plugin.DecalPath);
+
 
             List<Ability> abilities = new List<Ability> { Ability.WhackAMole, Ability.Sharp };
 	        
@@ -39,7 +39,8 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 tex: tex,
-                abilities:abilities);
+                abilities:abilities,
+                decals:new List<Texture>{decal});
         }
     }
 }

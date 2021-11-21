@@ -25,9 +25,9 @@ namespace ZergMod.Scripts.Cards
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
 
-            byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory,TextureFile));
-            Texture2D tex = new Texture2D(2,2);
-            tex.LoadImage(imgBytes);
+            Texture2D tex = Utils.GetTextureFromPath(TextureFile);
+            Texture decal = Utils.GetTextureFromPath(Plugin.DecalPath);
+
 	        
             List<Ability> abilities = new List<Ability> {DoubleAttackAbility.ability};
             List<SpecialTriggeredAbility> specialAbilities = new List<SpecialTriggeredAbility> { ZerglingSpecialAbility.specialAbility };
@@ -47,7 +47,8 @@ namespace ZergMod.Scripts.Cards
                 tex: tex,
                 abilities: abilities,
                 specialAbilities: specialAbilities,
-                evolveId:identifier);
+                evolveId:identifier,
+                decals:new List<Texture>{decal});
         }
     }
 }
