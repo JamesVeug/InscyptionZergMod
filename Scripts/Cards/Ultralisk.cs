@@ -29,7 +29,7 @@ namespace ZergMod.Scripts.Cards
 
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
 
-            List<Ability> abilities = new List<Ability> { Ability.DeathShield };
+            List<Ability> abilities = new List<Ability> { ArmouredAbility.ability };
 
             NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,

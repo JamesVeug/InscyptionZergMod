@@ -43,6 +43,7 @@ namespace ZergMod
             //DetectorAbility.Initialize();
             Draw2BroodlingsAbility.Initialize();
             Draw2LocustsAbility.Initialize();
+            ArmouredAbility.Initialize();
             
             // Evolutions
             Banelings.Initialize();
