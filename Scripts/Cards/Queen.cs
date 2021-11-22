@@ -26,25 +26,24 @@ namespace ZergMod.Scripts.Cards
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
 
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
-            Texture2D decal = Utils.GetTextureFromPath(Plugin.DecalPath);
-
 
             List<Ability> abilities = new List<Ability> { SpawnLarvaAbility.ability };
 
-            NewCard.Add(DisplayName, metaCategories, 
-                CardComplexity.Simple, 
-                CardTemple.Nature,
-                DisplayName,
-                BaseAttack,
-                BaseHealth,
-                description:Description,
-                cost:BloodCost,
-                bonesCost:BoneCost,
-                tribes:new List<Tribe> { Tribe.Insect },
-                appearanceBehaviour:appearanceBehaviour, 
-                tex:tex,
-                abilities:abilities,
-                decals:new List<Texture>{decal});
+            NewCard.Add(name: DisplayName,
+                displayedName: DisplayName,
+                baseAttack: BaseAttack,
+                baseHealth: BaseHealth,
+                metaCategories: metaCategories,
+                cardComplexity: CardComplexity.Simple,
+                temple: CardTemple.Nature,
+                description: Description,
+                bloodCost: BloodCost,
+                bonesCost: BoneCost,
+                tribes: new List<Tribe> { Tribe.Insect },
+                appearanceBehaviour: appearanceBehaviour,
+                defaultTex: tex,
+                abilities: abilities,
+                decals: Utils.GetDecals());
         }
     }
 }

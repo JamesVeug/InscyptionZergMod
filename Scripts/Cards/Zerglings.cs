@@ -26,8 +26,6 @@ namespace ZergMod.Scripts.Cards
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
 
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
-            Texture decal = Utils.GetTextureFromPath(Plugin.DecalPath);
-
 	        
             List<Ability> abilities = new List<Ability> {DoubleAttackAbility.ability};
             List<SpecialTriggeredAbility> specialAbilities = new List<SpecialTriggeredAbility> { ZerglingSpecialAbility.specialAbility };
@@ -36,19 +34,23 @@ namespace ZergMod.Scripts.Cards
             CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Banelings");
             EvolveIdentifier identifier = new EvolveIdentifier("Banelings", 1, new CardModificationInfo(cardInfo));
 
-            NewCard.Add(DisplayName, metaCategories, CardComplexity.Simple, CardTemple.Nature, DisplayName,
-                BaseAttack,
-                BaseHealth,
+            NewCard.Add(name: DisplayName,
+                displayedName: DisplayName,
+                baseAttack: BaseAttack,
+                baseHealth: BaseHealth,
+                metaCategories: metaCategories,
+                cardComplexity: CardComplexity.Simple,
+                temple: CardTemple.Nature,
                 description: Description,
-                cost: BloodCost,
+                bloodCost: BloodCost,
                 bonesCost: BoneCost,
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
-                tex: tex,
+                defaultTex: tex,
                 abilities: abilities,
                 specialAbilities: specialAbilities,
-                evolveId:identifier,
-                decals:new List<Texture>{decal});
+                evolveId: identifier,
+                decals: Utils.GetDecals());
         }
     }
 }

@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using CardLoaderPlugin.lib;
+using APIPlugin;
 using UnityEngine;
 using ZergMod;
+using Plugin = ZergMod.Plugin;
 
 namespace DiskCardGame
 {
@@ -13,6 +13,9 @@ namespace DiskCardGame
         public SpecialTriggeredAbility SpecialAbility => specialAbility;
         public static SpecialTriggeredAbility specialAbility;
 
+        public static int MaxZerglingsToSwarm = 6;
+        public static int SwarmDamageBonus = 1;
+        
         private static Dictionary<int, Texture2D> m_zerglingImages = new Dictionary<int, Texture2D>();
         private static int m_maxZerglingHealth = 0;
 
@@ -25,8 +28,17 @@ namespace DiskCardGame
             InitializeTexture(5, "Artwork/five_zergling.png");
             InitializeTexture(6, "Artwork/six_zergling.png");
 
-            NewSpecialAbility newAbility = new NewSpecialAbility(typeof(ZerglingSpecialAbility));
-            ZerglingSpecialAbility.specialAbility = newAbility.SpecialAbility;
+            SpecialAbilityIdentifier identifier = SpecialAbilityIdentifier.GetID("ZerglingSpecialAbility", "ZerglingSpecialAbility");
+            
+            StatIconInfo iconInfo = new StatIconInfo();
+            iconInfo.rulebookName = "Zergling Swarm";
+            iconInfo.rulebookDescription = "Portrait changes as the health increases. Max 6";
+            iconInfo.iconType = SpecialStatIcon.CardsInHand;
+            iconInfo.iconGraphic = Utils.GetTextureFromPath("Artwork/two_zergling.png");
+            iconInfo.metaCategories = new List<AbilityMetaCategory> { AbilityMetaCategory.Part1Modular, AbilityMetaCategory.Part1Rulebook };
+            
+            NewSpecialAbility newSpecialAbility = new NewSpecialAbility(typeof(ZerglingSpecialAbility), identifier, iconInfo);
+            specialAbility = newSpecialAbility.specialTriggeredAbility;
         }
 
         private static void InitializeTexture(int health, string fileName)

@@ -1,15 +1,11 @@
-using System;
+using System.Collections.Generic;
 using BepInEx;
 using BepInEx.Logging;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Linq;
 using System.IO;
 using DiskCardGame;
 using HarmonyLib;
 using UnityEngine;
 using APIPlugin;
-using CardLoaderPlugin.lib;
 using ZergMod.Scripts.Cards;
 
 namespace ZergMod
@@ -20,7 +16,7 @@ namespace ZergMod
     {
 	    public const string PluginGuid = "jamesgames.inscryption.zergmod";
 	    public const string PluginName = "Zerg Mod";
-	    public const string PluginVersion = "0.2.0.0";
+	    public const string PluginVersion = "0.3.0.0";
 	    public const string DecalPath = "Artwork/watermark.png";
 
         public static string Directory;
@@ -84,39 +80,7 @@ namespace ZergMod
 	        Texture2D tex = new Texture2D(2,2);
 	        tex.LoadImage(imgBytes);
 
-	        new CustomCard("Squirrel") {displayedName="Larva", tex=tex};
-        }
-
-        /// <summary>
-        /// Deprecated. No longer used
-        /// </summary>
-        public void CreateEggForCard(string cardName, int turnsToEvolve, Ability evolveAbility=Ability.Evolve, bool rare=false, bool choiceNode=true)
-        {
-	        List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
-	        if (rare)
-	        {
-		        metaCategories.Add(CardMetaCategory.Rare);
-	        }
-
-	        List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
-	        appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
-
-	        byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory,"Artwork/egg.png"));
-	        Texture2D tex = new Texture2D(2,2);
-	        tex.LoadImage(imgBytes);
-
-	        List<Ability> abilities = new List<Ability> {evolveAbility, Ability.DeathShield};
-	        CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == cardName);
-	        EvolveIdentifier identifier = new EvolveIdentifier(cardName, turnsToEvolve, new CardModificationInfo(cardInfo));
-	        
-	        NewCard.Add(cardName + " Egg", metaCategories, CardComplexity.Simple, CardTemple.Nature,cardName + " Egg",0,2,
-		        description:"Egg that is gestates into a " + cardName,
-		        cost:1,
-		        abilities:abilities,
-		        tribes:new List<Tribe> { Tribe.Insect },
-		        appearanceBehaviour:appearanceBehaviour, 
-		        tex:tex,
-		        evolveId:identifier);
+	        new CustomCard("Squirrel") {displayedName="Larva", tex=tex, altTex=tex};
         }
     }
 
