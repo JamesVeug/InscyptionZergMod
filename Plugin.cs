@@ -82,7 +82,18 @@ namespace ZergMod
 	        Texture2D tex = new Texture2D(2,2);
 	        tex.LoadImage(imgBytes);
 
-	        new CustomCard("Squirrel") {displayedName="Larva", tex=tex, altTex=tex};
+	        List<Ability> abilities = new List<Ability>{ SplashDamageAbility.ability, ArmouredAbility.ability };
+
+	        new CustomCard("Squirrel")
+	        {
+		        displayedName="Larva", 
+		        tex=tex, 
+		        altTex=tex, 
+		        /*baseAttack = 1, 
+		        baseHealth = 10, 
+		        abilities = abilities,*/
+		        decals = Utils.GetDecals()
+	        };
         }
     }
 
