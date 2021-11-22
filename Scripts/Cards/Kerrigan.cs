@@ -12,8 +12,8 @@ namespace ZergMod.Scripts.Cards
         private const string Description = "The Hero that never dies";
         private const string TextureFile = "Artwork/kerrigan.png";
 
-        private const int BaseAttack = 3;
-        private const int BaseHealth = 3;
+        private const int BaseAttack = 4;
+        private const int BaseHealth = 4;
         private const int BloodCost = 3;
         private const int BoneCost = 0;
 
