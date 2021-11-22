@@ -14,7 +14,7 @@ namespace ZergMod.Scripts.Cards
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 2;
-        private const int BloodCost = 1;
+        private const int BloodCost = 0;
         private const int BoneCost = 1;
 
         public static void Initialize()
