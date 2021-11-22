@@ -13,8 +13,8 @@ namespace ZergMod.Scripts.Cards
         private const string TextureFile = "Artwork/broodlord.png";
 
         private const int BaseAttack = 0;
-        private const int BaseHealth = 4;
-        private const int BloodCost = 2;
+        private const int BaseHealth = 6;
+        private const int BloodCost = 3;
         private const int BoneCost = 0;
 
         public static void Initialize()
