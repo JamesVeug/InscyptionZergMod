@@ -12,7 +12,7 @@ Zerg is an alien race that are powerful in large numbers.
 - Bloodling - 1,1 with Brittle
 - Locus - 2,2 with Brittle
 - Infested Terran - 1,2 with Brittle and DrawCopy
-- Overlord - 0,4 with Flying and Magic Leap. Evolves into Overseer
+- Overlord - 0,4 with Flying and Mighty Leap. Evolves into Overseer
 - Ultralisk - 2,6 with Armoured and Splash Damage
 - Roach - 2,2 with Regenerate. Evolves into Ravenger
 - Ravenger - 2,2 with Snipe
@@ -133,7 +133,7 @@ I recommend this tutotial if you are curious how to manually install mods in the
 - Squirrel art changed to a Larva
 - Added Zergling - 1,2 with Final attack
 - Added Roach - 2,2 with Regenerate
-- Added Overlord - 0,4 with Flying and Magic Leap
+- Added Overlord - 0,4 with Flying and Mighty Leap
 - Added Kerrigan - 3,3 With Regestate
 - Added Mutalisk - 3,1 with Flying and Split Strike
 - Added Queen - 1,3 With Spawn Larva
