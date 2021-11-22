@@ -46,6 +46,7 @@ Zerg is an alien race that are powerful in large numbers.
 - Carbot - Original Cartoon art for Star Craft
 - GeneralSpritz - Custom Art
 - Shattered Omega - Balancing suggestions
+- Cyantist - Armoured Ability
 
 ## Bug reports or Suggestions:
 Contact JamesGames on the Inscryption Modding Discord
