@@ -44,7 +44,8 @@ namespace ZergMod.Scripts.Cards
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: tex,
                 abilities: abilities,
-                decals: Utils.GetDecals());
+                decals: Utils.GetDecals(),
+                onePerDeck:true);
         }
     }
 }
