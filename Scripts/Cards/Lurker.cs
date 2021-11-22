@@ -25,7 +25,7 @@ namespace ZergMod.Scripts.Cards
 
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
 
-            List<Ability> abilities = new List<Ability> { Ability.Submerge, Ability.WhackAMole };
+            List<Ability> abilities = new List<Ability> { Ability.Submerge, Ability.GuardDog };
 
             NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,
