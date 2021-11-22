@@ -8,9 +8,9 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Ravenger
     {
-        private const string DisplayName = "Ravenger";
+        private const string DisplayName = "Ravager";
         private const string Description = "Beware of its snipe. Can be unfortunate to be in its way";
-        private const string TextureFile = "Artwork/ravenger.png";
+        private const string TextureFile = "Artwork/ravager.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 2;
@@ -29,7 +29,7 @@ namespace ZergMod.Scripts.Cards
 
             List<Ability> abilities = new List<Ability> { Ability.Sniper };
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: "Ravenger", // Avoids breaking saves
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,
