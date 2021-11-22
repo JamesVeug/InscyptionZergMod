@@ -44,6 +44,7 @@ namespace ZergMod
             Draw2BroodlingsAbility.Initialize();
             Draw2LocustsAbility.Initialize();
             ArmouredAbility.Initialize();
+            SplashDamageAbility.Initialize();
             
             // Evolutions
             Banelings.Initialize();

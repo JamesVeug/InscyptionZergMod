@@ -28,7 +28,7 @@ namespace ZergMod.Scripts.Cards
 
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
 
-            List<Ability> abilities = new List<Ability> { ArmouredAbility.ability };
+            List<Ability> abilities = new List<Ability> { ArmouredAbility.ability, SplashDamageAbility.ability };
 
             NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,
