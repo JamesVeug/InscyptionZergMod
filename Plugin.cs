@@ -45,6 +45,7 @@ namespace ZergMod
             Draw2LocustsAbility.Initialize();
             ArmouredAbility.Initialize();
             SplashDamageAbility.Initialize();
+            AbductAbility.Initialize();
             
             // Evolutions
             Banelings.Initialize();
@@ -70,6 +71,7 @@ namespace ZergMod
             Infestor.Initialize();
             SwarmHost.Initialize();
             Leviathan.Initialize();
+            Viper.Initialize();
 
             // Squirrel / Lava
             ChangeSquirrelToLarva();
