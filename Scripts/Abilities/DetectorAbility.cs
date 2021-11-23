@@ -24,12 +24,12 @@ namespace ZergMod
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
             info.powerLevel = 0;
             info.rulebookName = "Detector";
-            info.rulebookDescription = "The card bearing this sigil will reveal submerged cards on the board at the beginning of your turn";
+            info.rulebookDescription = "When a card bearing this sigil is on the board all opponent's submerged cards will be revealed.";
             info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
             List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
             DialogueEvent.Line line = new DialogueEvent.Line();
-            line.text = "Grr you manged to foil my plan!";
+            line.text = "Revealing hidden cards will not help you defeat me";
             lines.Add(line);
             info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
@@ -48,22 +48,17 @@ namespace ZergMod
 
         public override IEnumerator OnResolveOnBoard()
         {
-            // WHY DOES THIS BRRRRRRREEEEEEEEEAAAAAAAAAAAAAK
-            Plugin.Log.LogInfo("[DetectorAbility] ========== OnResolveOnBoard: player: " + Singleton<TurnManager>.Instance.IsPlayerTurn + " ==========");
             yield return OnUpkeep(Singleton<TurnManager>.Instance.IsPlayerTurn);
-            Plugin.Log.LogInfo("[DetectorAbility] ========== OnResolveOnBoard done");
             yield break;
         }
 
         public override bool RespondsToUpkeep(bool playerUpkeep)
         {
-            Plugin.Log.LogInfo("[DetectorAbility] ========== RespondsToUpkeep: player: " + playerUpkeep + " ==========");
             return playerUpkeep && GetValidCardSlotsToFlip(false).Count > 0;
         }
 
         public override IEnumerator OnUpkeep(bool playerUpkeep)
         {
-            Plugin.Log.LogInfo("[DetectorAbility] ========== OnUpkeep: player: " + playerUpkeep + " ==========");
             activated = true;
             
             Singleton<ViewManager>.Instance.SwitchToView(View.Board, false);
@@ -74,7 +69,6 @@ namespace ZergMod
             for (int i = 0; i < opposingSlots.Count; i++)
             {
                 PlayableCard card = opposingSlots[i].Card;
-                Plugin.Log.LogInfo("[DetectorAbility] Flipping up " + card.Info.displayedName);
                 yield return base.LearnAbility(0f);
                         
                 // Our targeted
@@ -85,7 +79,6 @@ namespace ZergMod
             
             this.triggerPriority = int.MinValue + 1;
             yield return new WaitForSeconds(0.3f); // Because its happening too fast maybe?
-            Plugin.Log.LogInfo("[DetectorAbility] ========== OnUpkeep done ==========");
         }
 
         public override bool RespondsToTurnEnd(bool playerTurnEnd)
@@ -96,7 +89,6 @@ namespace ZergMod
 
         public override IEnumerator OnTurnEnd(bool playerTurnEnd)
         {
-            Plugin.Log.LogInfo("[DetectorAbility] ========== OnTurnEnd: player: " + playerTurnEnd + " ==========");
             activated = false;
             Singleton<ViewManager>.Instance.SwitchToView(View.Board, false, true);
             yield return new WaitForSeconds(0.15f);
@@ -105,7 +97,6 @@ namespace ZergMod
             for (int i = 0; i < opposingSlots.Count; i++)
             {
                 PlayableCard card = opposingSlots[i].Card;
-                Plugin.Log.LogInfo("[DetectorAbility] Flipping down " + card.Info.displayedName);
                 yield return base.LearnAbility(0f);
                         
                 // Our targeted
@@ -116,7 +107,6 @@ namespace ZergMod
             
             this.triggerPriority = int.MaxValue;
             yield return new WaitForSeconds(0.3f); // Because its happening too fast maybe?
-            Plugin.Log.LogInfo("[DetectorAbility] ========== OnTurnEnd done ==========");
         }
 
         public override bool RespondsToDie(bool wasSacrifice, PlayableCard killer)
