@@ -13,7 +13,6 @@ namespace ZergMod
         public override Ability Ability => ability;
         public static Ability ability;
         
-        
         public override int Priority => this.triggerPriority;
         private int triggerPriority = int.MinValue + 1;
 
@@ -48,17 +47,6 @@ namespace ZergMod
 
         public override IEnumerator OnResolveOnBoard()
         {
-            yield return OnUpkeep(Singleton<TurnManager>.Instance.IsPlayerTurn);
-            yield break;
-        }
-
-        public override bool RespondsToUpkeep(bool playerUpkeep)
-        {
-            return playerUpkeep && GetValidCardSlotsToFlip(false).Count > 0;
-        }
-
-        public override IEnumerator OnUpkeep(bool playerUpkeep)
-        {
             activated = true;
             
             Singleton<ViewManager>.Instance.SwitchToView(View.Board, false);
@@ -81,13 +69,12 @@ namespace ZergMod
             yield return new WaitForSeconds(0.3f); // Because its happening too fast maybe?
         }
 
-        public override bool RespondsToTurnEnd(bool playerTurnEnd)
+        public override bool RespondsToDie(bool wasSacrifice, PlayableCard killer)
         {
-            // Only do something if the card that played was owned by us 
-            return playerTurnEnd && GetValidCardSlotsToFlip(true).Count > 0;
+            return activated;
         }
 
-        public override IEnumerator OnTurnEnd(bool playerTurnEnd)
+        public override IEnumerator OnDie(bool wasSacrifice, PlayableCard killer)
         {
             activated = false;
             Singleton<ViewManager>.Instance.SwitchToView(View.Board, false, true);
@@ -107,18 +94,6 @@ namespace ZergMod
             
             this.triggerPriority = int.MaxValue;
             yield return new WaitForSeconds(0.3f); // Because its happening too fast maybe?
-        }
-
-        public override bool RespondsToDie(bool wasSacrifice, PlayableCard killer)
-        {
-            return !wasSacrifice && activated;
-        }
-
-        public override IEnumerator OnDie(bool wasSacrifice, PlayableCard killer)
-        {
-            // TODO: Card killed while enemy is playing
-            // TODO: card is killed while player is playing
-            yield return OnTurnEnd(false);
         }
 
         private List<CardSlot> GetOpponentSlots(bool isPlayer)

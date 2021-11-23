@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using APIPlugin;
 using BepInEx.Logging;
 using DiskCardGame;
@@ -20,6 +21,20 @@ namespace ZergMod.Patches
             {
                 return (T)(object)t;
             }
+        }
+        
+        public static bool OpponentHasADetector(PlayableCard card)
+        {
+            List<CardSlot> opponentSlots = Singleton<BoardManager>.Instance.GetSlots(card.OpponentCard);
+            foreach (CardSlot slot in opponentSlots)
+            {
+                if (slot != null && slot.Card != null && slot.Card.HasAbility(DetectorAbility.ability))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }
