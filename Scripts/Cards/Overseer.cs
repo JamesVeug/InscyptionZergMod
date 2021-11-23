@@ -9,7 +9,7 @@ namespace ZergMod.Scripts.Cards
     public static class Overseer
     {
         private const string DisplayName = "Overseer";
-        private const string Description = "Reveals hidden creatures on the board";
+        private const string Description = "The all seeing creature powered to reveal hidden creatures";
         private const string TextureFile = "Artwork/overseer.png";
 
         private const int BaseAttack = 0;
@@ -28,7 +28,7 @@ namespace ZergMod.Scripts.Cards
 
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
 
-            List<Ability> abilities = new List<Ability> { Ability.Reach, Ability.Flying };
+            List<Ability> abilities = new List<Ability> { DetectorAbility.ability, Ability.DebuffEnemy };
 
             NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,
