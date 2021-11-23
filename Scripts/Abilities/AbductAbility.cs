@@ -22,7 +22,7 @@ namespace ZergMod
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
             info.powerLevel = 0;
             info.rulebookName = "Abduct";
-            info.rulebookDescription = "Whenever a card bearing this sigil is played, a targeted enemy card is moved to the space in front of it, if that space is empty";
+            info.rulebookDescription = "When a card bearing this sigil is played, a targeted enemy card is moved to the space in front of it, if that space is empty";
             info.metaCategories = new List<AbilityMetaCategory>
                 { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
 
@@ -35,7 +35,6 @@ namespace ZergMod
             AbductAbility.ability = newAbility.ability;
         }
 
-        // Token: 0x06001355 RID: 4949 RVA: 0x0000F57E File Offset: 0x0000D77E
         public override bool RespondsToResolveOnBoard()
         {
 	        if (!Card.Slot.IsPlayerSlot)
