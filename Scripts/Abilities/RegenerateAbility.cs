@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace ZergMod
 {
-    public class HealAbility : AbilityBehaviour
+    public class RegenerateAbility : AbilityBehaviour
     {
         public override Ability Ability => ability;
         public static Ability ability;
@@ -31,8 +31,8 @@ namespace ZergMod
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            NewAbility newAbility = new NewAbility(info,typeof(HealAbility),tex,AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
-            HealAbility.ability = newAbility.ability;
+            NewAbility newAbility = new NewAbility(info,typeof(RegenerateAbility),tex,AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
+            RegenerateAbility.ability = newAbility.ability;
         }
 
         public override bool RespondsToUpkeep(bool playerUpkeep)

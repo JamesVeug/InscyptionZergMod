@@ -36,7 +36,7 @@ namespace ZergMod
             ZerglingSpecialAbility.Initialize();
             
             // Abilities
-            HealAbility.Initialize();
+            RegenerateAbility.Initialize();
             RegestateAbility.Initialize();
             DoubleAttackAbility.Initialize();
             SpawnLarvaAbility.Initialize();

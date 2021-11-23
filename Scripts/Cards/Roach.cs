@@ -27,7 +27,7 @@ namespace ZergMod.Scripts.Cards
 
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
 
-            List<Ability> abilities = new List<Ability> { HealAbility.ability };
+            List<Ability> abilities = new List<Ability> { RegenerateAbility.ability };
 
             // Evolve into banelings
             CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Ravager");
