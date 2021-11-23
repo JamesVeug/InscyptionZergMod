@@ -40,7 +40,7 @@ namespace ZergMod
             RegestateAbility.Initialize();
             DoubleAttackAbility.Initialize();
             SpawnLarvaAbility.Initialize();
-            //DetectorAbility.Initialize();
+            DetectorAbility.Initialize();
             Draw2BroodlingsAbility.Initialize();
             Draw2LocustsAbility.Initialize();
             ArmouredAbility.Initialize();
