@@ -17,7 +17,7 @@ namespace ZergMod
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
             info.powerLevel = 0;
             info.rulebookName = "Regestate";
-            info.rulebookDescription = "When this card is killed it will transform into an Egg for it to regenerate into its original form";
+            info.rulebookDescription = "When this card is killed it will transform into an Egg for it to regenerate into its original form.\nAn egg is defined as: 0 Power 3 Health";
             info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
             List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
