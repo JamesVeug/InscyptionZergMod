@@ -66,7 +66,7 @@ namespace ZergMod
             Plugin.Log.LogInfo("[DetectorAbility] ========== OnUpkeep: player: " + playerUpkeep + " ==========");
             activated = true;
             
-            Singleton<ViewManager>.Instance.SwitchToView(View.Board, false, true);
+            Singleton<ViewManager>.Instance.SwitchToView(View.Board, false);
             yield return new WaitForSeconds(0.15f);
             yield return base.PreSuccessfulTriggerSequence();
 
