@@ -27,7 +27,7 @@ namespace ZergMod.Scripts.Cards
 
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
 
-            List<Ability> abilities = new List<Ability> { Ability.Reach, Ability.Flying };
+            List<Ability> abilities = new List<Ability> { Ability.Reach, Ability.Evolve };
 	        
             // Evolve into Overseer
             CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Overseer");
