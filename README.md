@@ -28,7 +28,7 @@ Zerg is an alien race that are powerful in large numbers.
 - Overseer - 0,6 with Reach and Flying
 - Infestor - 1,1 with Submerge and Trifurcated Strike
 - Dehaka - 1,2 with Regenerate
-- Leviathan - 2,10 with Wack'a'mole and Sharp
+- Leviathan - 2,10 with Burrower and Sharp
 - Queen of Blades - 4,4 With Regestate
 
 ## Abilities:
@@ -36,10 +36,10 @@ Zerg is an alien race that are powerful in large numbers.
 - Draw Locust's - Draw 2 Locusts at the start of your turn
 - Regenerate - Restores 1 lost health at the end of the round
 - Spawn Larva - The card bearing this sigil will place 2 lava on the board
-- Double attack - When a card bearing this sigil deals damage it will perform one additional attack.
-- Regestate - When this card is killed it will transform into an Egg for it to regenerate into its original form
-- Armoured Ability - The card bearing this sigil will take 1 less damage
-- Splash Ability - When a card bearing this sigil deals damage it will also hit the adjacent cards
+- Double Attack - When a card bearing this sigil deals damage it will perform one additional attack.
+- Regestate - When this card is killed it will transform into an Egg for it to regenerate into its original form.An egg is defined as: 0 Power 3 Health
+- Armoured - The card bearing this sigil will take 1 less damage
+- Splash Damage - When a card bearing this sigil deals damage it will also hit the adjacent cards
 
 ## Credits:
 - JamesGames - Creator
@@ -63,7 +63,7 @@ I recommend this tutotial if you are curious how to manually install mods in the
 
 ## `0.3.0`
 - Added Ravenger - 2,2 with Snipe
-- Added Lurker - 2,2 with Submurge and Wack'a'mole
+- Added Lurker - 2,2 with Submurge and Burrower
 
 - Added Armoured Ability
 - Added Splash Ability
@@ -159,7 +159,7 @@ I recommend this tutotial if you are curious how to manually install mods in the
 - Added Roach - 2,2 with Regenerate
 - Added Overlord - 0,4 with Flying and Mighty Leap
 - Added Kerrigan - 3,3 With Regestate
-- Added Mutalisk - 3,1 with Flying and Split Strike
+- Added Mutalisk - 3,1 with Flying and Bifurcated Strike
 - Added Queen - 1,3 With Spawn Larva
 - Added Hydralisk - 3,2
 
