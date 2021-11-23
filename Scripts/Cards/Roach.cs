@@ -30,8 +30,8 @@ namespace ZergMod.Scripts.Cards
             List<Ability> abilities = new List<Ability> { HealAbility.ability };
 
             // Evolve into banelings
-            CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Ravenger");
-            EvolveIdentifier identifier = new EvolveIdentifier("Ravenger", 1, new CardModificationInfo(cardInfo));
+            CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Ravager");
+            EvolveIdentifier identifier = new EvolveIdentifier("Ravager", 1, new CardModificationInfo(cardInfo));
 
             NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,

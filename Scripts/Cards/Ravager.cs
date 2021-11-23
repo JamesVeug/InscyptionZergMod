@@ -29,7 +29,7 @@ namespace ZergMod.Scripts.Cards
 
             List<Ability> abilities = new List<Ability> { Ability.Sniper };
 
-            NewCard.Add(name: "Ravenger", // Avoids breaking saves
+            NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,
