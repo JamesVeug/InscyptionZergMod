@@ -16,7 +16,7 @@ Zerg is an alien race that are powerful in large numbers.
 - Ultralisk - 2,6 with Armoured and Splash Damage
 - Roach - 2,2 with Regenerate. Evolves into Ravenger
 - Ravenger - 2,2 with Snipe
-- Mutalisk - 1,3 with Flying and Regeneration
+- Mutalisk - 1,3 with Airborne and Regeneration
 - Queen - 1,3 With Spawn Larva
 - Hydralisk - 3,2. Evolves into Lurker
 - Lurker - 2,2 with Submurge and Wack'a'mole
@@ -56,7 +56,7 @@ Contact JamesGames on the Inscryption Modding Discord
 For this mod you will need
 https://inscryption.thunderstore.io/package/BepInEx/BepInExPack_Inscryption/ - BepInEx
 https://inscryption.thunderstore.io/package/API_dev/API/ - API
-I recommend this tutotial if you are curious how to manually install mods in the first place https://youtu.be/HgCtjtXraog
+I recommend this tutorial if you are curious how to manually install mods in the first place https://youtu.be/HgCtjtXraog
 
 
 # Update notes
@@ -103,7 +103,7 @@ I recommend this tutotial if you are curious how to manually install mods in the
 - Added Broodlord - 0,4 with Draw 2 Broodlings
 - Added Bloodling - 1,1 with Brittle
 - Added Infested Terran - 1,2 with Brittle and Fecundity
-- Added Overseer - 0,6 - Rare with Reach and Flying
+- Added Overseer - 0,6 - Rare with Reach and Airborne
 - Added Infestor - 1,1 - Rare with Submerge and Trifurcated Strike
 - Added Dehaka - 1,2 - Rare with Regenerate
 - Added Leviathan - 2,10 - with Wack'a'mole and Sharp
@@ -157,9 +157,9 @@ I recommend this tutotial if you are curious how to manually install mods in the
 - Squirrel art changed to a Larva
 - Added Zergling - 1,2 with Final attack
 - Added Roach - 2,2 with Regenerate
-- Added Overlord - 0,4 with Flying and Mighty Leap
+- Added Overlord - 0,4 with Airborne and Mighty Leap
 - Added Kerrigan - 3,3 With Regestate
-- Added Mutalisk - 3,1 with Flying and Bifurcated Strike
+- Added Mutalisk - 3,1 with Airborne and Bifurcated Strike
 - Added Queen - 1,3 With Spawn Larva
 - Added Hydralisk - 3,2
 
