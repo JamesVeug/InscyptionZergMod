@@ -53,6 +53,7 @@ namespace ZergMod
             Overseer.Initialize();
             Lurker.Initialize();
             Ravenger.Initialize();
+            Guardian.Initialize();
             
             // Units
             Locust.Initialize();
