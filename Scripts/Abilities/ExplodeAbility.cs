@@ -26,14 +26,25 @@ namespace ZergMod
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
 
-			NewAbility newAbility = new NewAbility(info,typeof(SpawnLarvaAbility),tex,AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
-			SpawnLarvaAbility.ability = newAbility.ability;
+			NewAbility newAbility = new NewAbility(info,typeof(ExplodeAbility),tex,AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
+			ExplodeAbility.ability = newAbility.ability;
 		}
 
 		public override IEnumerator OnDealDamage(int amount, PlayableCard target)
 		{
 			m_startedAttack = true;
 			yield return base.OnDealDamage(amount, target);
+		}
+
+		public override bool RespondsToDealDamageDirectly(int amount)
+		{
+			return true;
+		}
+
+		public override IEnumerator OnDealDamageDirectly(int amount)
+		{
+			m_startedAttack = true;
+			yield return base.OnDealDamageDirectly(amount);
 		}
 
 		public override bool RespondsToAttackEnded()
