@@ -52,20 +52,20 @@ namespace ZergMod
             yield return null;
         }
 
+        public override bool RespondsToAttackEnded()
+        {
+            return attackedSlots.Count > 0;
+        }
+
         public override IEnumerator OnAttackEnded()
         {
             attackedSlots.Clear();
             yield return null;
         }
 
-        public override bool RespondsToAttackEnded()
-        {
-            return attackedSlots.Count > 0;
-        }
-
         public override bool RespondsToDealDamage(int amount, PlayableCard target)
         {
-            return !AlreadyDoubleHitSlot();
+            return !AlreadyDoubleHitSlot() && !target.Dead && !Card.Dead;
         }
 
         public override IEnumerator OnDealDamage(int amount, PlayableCard target)
@@ -88,26 +88,6 @@ namespace ZergMod
             CardSlot targetSlot = directAttackSlot;
             int attackingInstanceID = targetSlot.GetInstanceID();
             return attackedSlots.Contains(attackingInstanceID);
-        }
-
-        public override bool RespondsToDealDamageDirectly(int amount)
-        {
-            return !AlreadyDoubleHitSlot();
-        }
-
-        public override IEnumerator OnDealDamageDirectly(int amount)
-        {
-            yield return base.PreSuccessfulTriggerSequence();
-
-            CardSlot targetSlot = directAttackSlot;
-            int attackingInstanceID = targetSlot.GetInstanceID();
-            attackedSlots.Add(attackingInstanceID);
-            
-            yield return new WaitForSeconds(0.4f);
-            yield return Singleton<CombatPhaseManager>.Instance.SlotAttackSlot(Card.Slot, directAttackSlot);
-            yield return new WaitForSeconds(0.4f);
-            
-            yield return base.LearnAbility(0.0f);
         }
     }
 }
