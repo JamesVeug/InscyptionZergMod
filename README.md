@@ -3,8 +3,8 @@ This mod brings in multiple Zerg units and unique sigils from the RTS Starcraft.
 Zerg is an alien race that are powerful in large numbers.
 
 ## Includes:
-- 21 new Cards
-- 8 new Sigils
+- 24 new Cards
+- 11 new Sigils
 
 ## Cards:
 - Drone - 1,1 with Bone digger
@@ -12,24 +12,28 @@ Zerg is an alien race that are powerful in large numbers.
 - Broodling - 1,1 with Brittle
 - Locus - 2,2 with Brittle
 - Infested Terran - 1,2 with Brittle and Fecundity
-- Overlord - 0,4 with Flying and Mighty Leap. Evolves into Overseer
+- Overlord - 0,4 with Fledgling and Mighty Leap. Evolves into Overseer
 - Ultralisk - 2,6 with Armoured and Splash Damage
 - Roach - 2,2 with Regenerate. Evolves into Ravenger
 - Ravenger - 2,2 with Snipe
 - Mutalisk - 1,3 with Airborne and Regeneration
 - Queen - 1,3 With Spawn Larva
 - Hydralisk - 3,2. Evolves into Lurker
-- Lurker - 2,2 with Submurge and Wack'a'mole
+- Lurker - 2,2 with Submurge and Guardian
+- Scourge - 1,1 with Explode and Airborne
+- Corrupter - 2,2 with Airborne. Evolves into Devourer
+- Devourer - 3,3 with Airborne and Armoured
 
 ## Rare Cards:
 - Baneling - 3,1 with Brittle and Splash Damage
 - Swam Host - 0,2 with Draw 2 Locusts and Submerge
 - Broodlord - 0,6 with Draw 2 Broodlings
-- Overseer - 0,6 with Reach and Flying
+- Overseer - 0,6 with Detector and Stinky
 - Infestor - 1,1 with Submerge and Trifurcated Strike
 - Dehaka - 1,2 with Regenerate
 - Leviathan - 2,10 with Burrower and Sharp
 - Queen of Blades - 4,4 With Regestate
+- Viper - 2,1 With Abduct
 
 ## Abilities:
 - Draw Broodling's - Draw 2 Broodlings at the start of your turn
@@ -40,10 +44,13 @@ Zerg is an alien race that are powerful in large numbers.
 - Regestate - When this card is killed it will transform into an Egg for it to regenerate into its original form.An egg is defined as: 0 Power 3 Health
 - Armoured - The card bearing this sigil will take 1 less damage
 - Splash Damage - When a card bearing this sigil deals damage it will also hit the adjacent cards
+- Abduct - When a card bearing this sigil is played, a targeted enemy card is moved to the space in front of it, if that space is empty
+- Detector - When a card bearing this sigil is on the board all opponent's submerged cards will be revealed.
+- Explode - When a card bearing this sigil deals damage it will also hit the adjacent cards and perish.
 
 ## Credits:
 - JamesGames - Creator
-- Carbot - Original Cartoon art for Star Craft
+- CarbotAnimations - Original Cartoon art for Star Craft
 - GeneralSpritz - Custom Art
 - Shattered Omega - Balancing suggestions
 - Cyantist - Armoured Ability
@@ -60,6 +67,35 @@ I recommend this tutorial if you are curious how to manually install mods in the
 
 
 # Update notes
+
+## `0.4.0`
+- Added Viper - 2,1 with Abduct
+- Added Scourge - 1,1 with Explode and Airborne
+- Added Corrupter - 2,2 with Airborne. Evolves into Devourer
+- Added Devourer - 3,3 with Airborne and Armoured
+
+- Added Abduct Ability
+- Added Detector Ability
+- Added Explode Ability
+
+- Infested Terran
+- - Removed Blood cost so now its just 1 Bone
+- Ravager
+- - Renamed from Ravanger to Ravager
+- Lurker
+- - Removed Burrower ability
+- - Added GuardDog ability
+- Overlord
+- - Removed Airborne ability
+- - Added Fledgling ability
+- Overseer
+- - Removed Reach and Airborne abilities
+- - Added Detector and Stinky abilities
+
+- Splash Damage
+- - Added new art by General Spritz
+- Double Attack
+- - No longer hits face
 
 ## `0.3.0`
 - Added Ravenger - 2,2 with Snipe
@@ -106,8 +142,8 @@ I recommend this tutorial if you are curious how to manually install mods in the
 - Added Overseer - 0,6 - Rare with Reach and Airborne
 - Added Infestor - 1,1 - Rare with Submerge and Trifurcated Strike
 - Added Dehaka - 1,2 - Rare with Regenerate
-- Added Leviathan - 2,10 - with Wack'a'mole and Sharp
-- Added Ultralisk - 2,6 - with DeathShield
+- Added Leviathan - 2,10 - with Burrower and Sharp
+- Added Ultralisk - 2,6 - with Death Shield
 
 - Added Draw Broodlings ability
 - Added Draw Locusts ability
