@@ -28,6 +28,9 @@ namespace ZergMod.Scripts.Cards
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
 
             List<Ability> abilities = new List<Ability> { Ability.Flying, RegenerateAbility.ability };
+            
+            CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Guardian");
+            EvolveIdentifier identifier = new EvolveIdentifier("Guardian", 1, new CardModificationInfo(cardInfo));
 
             NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,
@@ -43,7 +46,8 @@ namespace ZergMod.Scripts.Cards
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: tex,
                 abilities: abilities,
-                decals: Utils.GetDecals());
+                decals: Utils.GetDecals(),
+                evolveId:identifier);
         }
     }
 }
