@@ -47,6 +47,7 @@ namespace ZergMod
             SplashDamageAbility.Initialize();
             AbductAbility.Initialize();
             ExplodeAbility.Initialize();
+            BombardAbility.Initialize();
             
             // Evolutions
             Banelings.Initialize();
