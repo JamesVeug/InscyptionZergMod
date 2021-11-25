@@ -49,7 +49,7 @@ namespace ZergMod
             List<CardSlot> adjacentSlots = Singleton<BoardManager>.Instance.GetAdjacentSlots(cardSlot);
             foreach (CardSlot slot in adjacentSlots)
             {
-                if (slot.Card != null && !slot.Card.Dead)
+                if (slot.Card != null && !slot.Card.Dead && !slot.Card.FaceDown)
                 {
                     yield return slot.Card.TakeDamage(amount, Card);
                 }
