@@ -21,7 +21,6 @@ namespace ZergMod.Scripts.Cards
         {
             List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
             metaCategories.Add(CardMetaCategory.Rare);
-            metaCategories.Add(CardMetaCategory.ChoiceNode);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
             appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
@@ -35,7 +34,7 @@ namespace ZergMod.Scripts.Cards
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,
                 metaCategories: metaCategories,
-                cardComplexity: CardComplexity.Simple,
+                cardComplexity: CardComplexity.Advanced,
                 temple: CardTemple.Nature,
                 description: Description,
                 bloodCost: BloodCost,

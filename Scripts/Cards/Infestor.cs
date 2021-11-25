@@ -20,7 +20,6 @@ namespace ZergMod.Scripts.Cards
         public static void Initialize()
         {
             List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
-            metaCategories.Add(CardMetaCategory.ChoiceNode);
             metaCategories.Add(CardMetaCategory.Rare);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();

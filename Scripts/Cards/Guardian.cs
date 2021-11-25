@@ -20,6 +20,7 @@ namespace ZergMod.Scripts.Cards
         public static void Initialize()
         {
             List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+            metaCategories.Add(CardMetaCategory.Rare);
             metaCategories.Add(CardMetaCategory.TraderOffer);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
@@ -33,7 +34,7 @@ namespace ZergMod.Scripts.Cards
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,
                 metaCategories: metaCategories,
-                cardComplexity: CardComplexity.Simple,
+                cardComplexity: CardComplexity.Intermediate,
                 temple: CardTemple.Nature,
                 description: Description,
                 bloodCost: BloodCost,
