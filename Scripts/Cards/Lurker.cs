@@ -20,8 +20,10 @@ namespace ZergMod.Scripts.Cards
         public static void Initialize()
         {
             List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+            metaCategories.Add(CardMetaCategory.Rare);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
+            appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
 
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
 
@@ -32,7 +34,7 @@ namespace ZergMod.Scripts.Cards
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,
                 metaCategories: metaCategories,
-                cardComplexity: CardComplexity.Simple,
+                cardComplexity: CardComplexity.Advanced,
                 temple: CardTemple.Nature,
                 description: Description,
                 bloodCost: BloodCost,
