@@ -4,57 +4,59 @@ This mod brings the alien race 'Zerg' from the RTS series StarCraft, into the wo
 The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advanced, arthropodal aliens. Dedicated to the pursuit of genetic perfection.
 
 ## Includes:
-- 24 new Cards
-- 11 new Sigils
+- 26 new Cards
+- 12 new Sigils
 
 ### Cards:
-- Drone - 1,1 with Bone digger
-- Zergling - 1,2 with Double attack. Evolves into Baneling
-- Broodling - 1,1 with Brittle
-- Locus - 2,2 with Brittle
-- Infested Terran - 1,2 with Brittle and Fecundity
-- Overlord - 0,4 with Fledgling and Mighty Leap. Evolves into Overseer
-- Ultralisk - 2,6 with Armoured and Splash Damage
-- Roach - 2,2 with Regenerate. Evolves into Ravenger
-- Ravenger - 2,2 with Snipe
-- Mutalisk - 1,3 with Airborne and Regeneration
-- Queen - 1,3 With Spawn Larva
-- Hydralisk - 3,2. Evolves into Lurker
-- Lurker - 2,2 with Submurge and Guardian
-- Scourge - 1,1 with Explode and Airborne
-- Corrupter - 2,2 with Airborne. Evolves into Devourer
-- Devourer - 3,3 with Airborne and Armoured
+- **Drone** - 1,1 with Bone digger.
+- **Zergling** - 1,2 with Double Attack. Evolves into Baneling.
+- **Broodling** - 1,1 with Brittle.
+- **Locus** - 2,2 with Brittle.
+- **Infested Terran** - 1,2 with Brittle and Fecundity.
+- **Overlord** - 0,4 with Fledgling and Mighty Leap. Evolves into Overseer.
+- **Roach** - 2,2 with Regenerate. Evolves into Ravager.
+- **Mutalisk** - 1,1 with Airborne and Bombard.
+- **Queen** - 1,3 With Spawn Larva.
+- **Hydralisk** - 3,2. Evolves into Lurker.
+- **Scourge** - 1,1 with Explode and Airborne.
+- **Corrupter** - 2,2 with Airborne. Evolves into Devourer.
 
 ### Rare Cards:
-- Baneling - 3,1 with Brittle and Splash Damage
-- Swam Host - 0,2 with Draw 2 Locusts and Submerge
-- Broodlord - 0,6 with Draw 2 Broodlings
-- Overseer - 0,6 with Detector and Stinky
-- Infestor - 1,1 with Submerge and Trifurcated Strike
-- Dehaka - 1,2 with Regenerate
-- Leviathan - 2,10 with Burrower and Sharp
-- Queen of Blades - 4,4 With Regestate
-- Viper - 2,1 With Abduct
+- **Baneling** - 3,1 with Brittle and Splash Damage
+- **Swam Host** - 0,2 with Draw 2 Locusts and Waterborne
+- **Broodlord** - 0,6 with Draw 2 Broodlings
+- **Overseer** - 0,6 with Detector and Stinky
+- **Infestor** - 1,1 with Waterborne and Trifurcated Strike
+- **Dehaka** - 1,2 with Regenerate
+- **Leviathan** - 2,10 with Burrower and Sharp
+- **Queen of Blades** - 4,4 With Regestate
+- **Viper** - 2,1 With Abduct
+- **Devourer** - 3,3 with Airborne and Armoured.
+- **Guardian** - 4,6
+- **Ultralisk** - 2,6 with Armoured and Splash Damage.
+- **Ravager** - 2,2 with Snipe.
+- **Lurker** - 2,2 with Waterborne and Guardian.
 
 ### Abilities:
-- Draw Broodling's - Draw 2 Broodling's at the start of your turn
-- Draw Locust's - Draw 2 Locusts at the start of your turn
-- Regenerate - Restores 1 lost health at the end of the round
-- Spawn Larva - The card bearing this sigil will place 2 lava on the board
-- Double Attack - When a card bearing this sigil deals damage it will perform one additional attack.
-- Regestate - When this card is killed it will transform into an Egg for it to regenerate into its original form.\nAn egg has 0 Power and as much Health as the base card.
-- Armoured - The card bearing this sigil will take 1 less damage
-- Splash Damage - When a card bearing this sigil deals damage it will also hit the adjacent cards
-- Abduct - When a card bearing this sigil is played, a targeted enemy card is moved to the space in front of it, if that space is empty
-- Detector - When a card bearing this sigil is on the board all opponent's submerged cards will be revealed.
-- Explode - When a card bearing this sigil deals damage it will also hit the adjacent cards and perish.
+- **Draw Broodling's** - Draw 1 Broodling's at the start of your turn
+- **Draw Locust's** - Draw 1 Locusts at the start of your turn
+- **Regenerate** - Restores 1 lost health at the end of the round
+- **Spawn Larva** - The card bearing this sigil will place 2 lava on the board
+- **Double Attack** - When a card bearing this sigil deals damage a card it will perform one additional attack.
+- **Regestate** - When this card is killed it will transform into an Egg for it to regenerate into its original form.\nAn egg has 0 Power and as much Health as the base card.
+- **Armoured** - The card bearing this sigil will take 1 less damage
+- **Splash Damage** - When a card bearing this sigil deals damage it will also hit the adjacent cards
+- **Abduct** - When a card bearing this sigil is played, a targeted enemy card is moved to the space in front of it, if that space is empty
+- **Detector** - When a card bearing this sigil is on the board all opponent's submerged cards will be revealed.
+- **Explode** - When a card bearing this sigil deals damage it will also hit the adjacent cards and perish.
+- **Bombard** - When a card bearing this sigil deals damage directly it will damage the opposing card for 1 damage.
 
 ## Credits:
-- JamesGames - Creator
-- CarbotAnimations - Original Cartoon art for Star Craft
-- GeneralSpritz - Custom Art
-- Shattered Omega - Balancing suggestions
-- Cyantist - Armoured Ability
+- **JamesGames** - Creator
+- **CarbotAnimations** - Original Cartoon art for Star Craft
+- **GeneralSpritz** - Custom Art
+- **Shattered Omega** - Balancing suggestions
+- **Cyantist** - Armoured Ability
 
 
 # Installation
@@ -76,12 +78,55 @@ Contact JamesGames on the Inscryption Modding Discord
 
 # Update notes:
 
+
+## `Version: 0.5.0 - 26/11/2021`
+### New:
+- Added Bombard ability
+
+### Changes:
+- General
+  - Rebalanced drop rates of rare cards
+  - Updated some descriptions
+- Mutalisk
+  - Health Reduced from 3 to 1
+  - Regenerate ability removed
+  - Bombard ability added
+- Infested Terran
+  - Bone cost increase from 1 to 2
+- Draw Broodling's
+  - Reduced cards drawn from 2 to 1
+- Draw Locust's
+  - Reduced cards drawn from 2 to 1
+- Regestate
+  - Health of egg now the same as the card it evolves into
+  - Total turns to evolve now depends on health of card evolving into
+- Double Attack
+  - No longer hits face
+    - Halved animation
+- Devourer
+  - Is now Rare
+- Guardian
+  - Is now Rare
+- Ravager
+  - Is now Rare
+- Lurker
+  - Is now Rare
+  - Accessible from boss fights
+
+### Fixes:
+- Rare cards obtainable from common card map node 
+- Splash damage no longer hits face down cards
+- Fixed Regestate not having the Fledgling sigil to evolve the egg
+
+
+
 ## `Version: 0.4.0 - 24/11/2021` 
 ### New:
 - Added Viper - 2,1 with Abduct
 - Added Scourge - 1,1 with Explode and Airborne
 - Added Corrupter - 2,2 with Airborne. Evolves into Devourer
 - Added Devourer - 3,3 with Airborne and Armoured
+- Added Guardian - 4,6
 
 - Added Abduct Ability
 - Added Detector Ability
@@ -101,13 +146,13 @@ Contact JamesGames on the Inscryption Modding Discord
 - Overseer
 	- Removed Reach and Airborne abilities
 	- Added Detector and Stinky abilities
-
-### Fixes:
-- Fixed Infested Terran costing 1 Blood and 1 Bone
 - Splash Damage
 	- Added new art by General Spritz
 - Double Attack
-	- No longer hits face
+    - No longer hits face
+
+### Fixes:
+- Fixed Infested Terran costing 1 Blood and 1 Bone
 
 ## `Version: 0.3.0 - 23/11/2021`
 ### New:

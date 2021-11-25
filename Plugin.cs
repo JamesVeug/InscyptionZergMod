@@ -16,7 +16,7 @@ namespace ZergMod
     {
 	    public const string PluginGuid = "jamesgames.inscryption.zergmod";
 	    public const string PluginName = "Zerg Mod";
-	    public const string PluginVersion = "0.4.0.0";
+	    public const string PluginVersion = "0.5.0.0";
 	    public const string DecalPath = "Artwork/watermark.png";
 
         public static string Directory;
