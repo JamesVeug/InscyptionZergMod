@@ -116,7 +116,6 @@ namespace DiskCardGame
         private void RefreshPortrait()
         {
             int health = Mathf.Clamp(PlayableCard.Health, 0, m_maxZerglingHealth);
-            Plugin.Log.LogInfo("[ZerglingSpecialAbility] RefreshPortrait health: " + health);
             if (health == 0)
             {
                 return;
