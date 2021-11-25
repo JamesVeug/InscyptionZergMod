@@ -17,7 +17,7 @@ namespace ZergMod
 			AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
 			info.powerLevel = 0;
 			info.rulebookName = "Draw Broodling's";
-			info.rulebookDescription = "Draw 2 Broodling's at the start of your turn\nA Broodling is defined as: 2 Power 2 Health";
+			info.rulebookDescription = "Draw 1 Broodling at the start of your turn\nA Broodling is defined as: 2 Power 2 Health";
 			info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
 			List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
@@ -57,7 +57,6 @@ namespace ZergMod
 
 			CardInfo cardByName = CardLoader.GetCardByName("Broodling");
 			yield return Singleton<CardSpawner>.Instance.SpawnCardToHand(cardByName, null, 0.25f, null);
-			yield return Singleton<CardSpawner>.Instance.SpawnCardToHand(cardByName, null, 0.125f, null);
 			yield return new WaitForSeconds(0.45f);
 			yield return base.LearnAbility(0.1f);
 			yield break;
