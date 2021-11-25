@@ -9,13 +9,13 @@ namespace ZergMod.Scripts.Cards
     public static class InfestedTerran
     {
         private const string DisplayName = "Infested Terran";
-        private const string Description = "Something horrible happened to that soldier";
+        private const string Description = "Must be a result of a space virus infesting a human turning them Zerg.";
         private const string TextureFile = "Artwork/infested_terran.png";
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 2;
         private const int BloodCost = 0;
-        private const int BoneCost = 1;
+        private const int BoneCost = 2;
 
         public static void Initialize()
         {
