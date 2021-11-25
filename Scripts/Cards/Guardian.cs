@@ -24,6 +24,7 @@ namespace ZergMod.Scripts.Cards
             metaCategories.Add(CardMetaCategory.TraderOffer);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
+            appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
 
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
 
