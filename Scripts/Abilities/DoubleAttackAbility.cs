@@ -22,7 +22,7 @@ namespace ZergMod
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
             info.powerLevel = 0;
             info.rulebookName = "Double Attack";
-            info.rulebookDescription = "When a card bearing this sigil deals damage it will perform one additional attack.";
+            info.rulebookDescription = "When a card bearing this sigil deals damage a card it will perform one additional attack.";
             info.metaCategories = new List<AbilityMetaCategory>
                 { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
 
@@ -76,9 +76,9 @@ namespace ZergMod
             int attackingInstanceID = targetSlot.GetInstanceID();
             attackedSlots.Add(attackingInstanceID);
             
-            yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(0.2f);
             yield return Singleton<CombatPhaseManager>.Instance.SlotAttackSlot(Card.Slot, targetSlot);
-            yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(0.2f);
 
             yield return base.LearnAbility(0.0f);
         }
