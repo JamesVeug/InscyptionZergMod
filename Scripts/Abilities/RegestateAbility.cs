@@ -36,7 +36,14 @@ namespace ZergMod
 
         public override bool RespondsToDie(bool wasSacrifice, PlayableCard killer)
         {
-            return !wasSacrifice;
+            if (wasSacrifice) 
+                return false;
+            
+            bool isADeathCard = Card.Info.mods.Find((x)=>x.deathCardInfo != null) != null;
+            if (isADeathCard)
+                return false;
+            
+            return true;
         }
 
         public override IEnumerator OnDie(bool wasSacrifice, PlayableCard killer)
@@ -44,10 +51,17 @@ namespace ZergMod
             yield return base.PreSuccessfulTriggerSequence();
             
             Singleton<ViewManager>.Instance.SwitchToView(View.Board, false, false);
-
-            CardInfo cardByName = (CardInfo)NewCard.cards.Find(info => info.displayedName == "Egg").Clone();
-            cardByName.evolveParams = new EvolveParams{turnsToEvolve = 2, evolution = (CardInfo)Card.Info.Clone()};
-            yield return Singleton<BoardManager>.Instance.CreateCardInSlot(cardByName, Card.slot, 0.15f, true);
+            
+            CardInfo whatToMutateInto = CardLoader.GetCardByName(this.Card.Info.name);
+            int totalHealth = whatToMutateInto.Health;
+            int totalEvolves = Mathf.Clamp(Mathf.FloorToInt((float)totalHealth / 4), 1, 3) + 1;
+            
+            CardInfo egg = (CardInfo)NewCard.cards.Find(info => info.displayedName == "Egg").Clone();
+            egg.baseHealth = whatToMutateInto.baseHealth;
+            egg.abilities = new List<Ability> { Ability.Evolve };
+            egg.evolveParams = new EvolveParams{turnsToEvolve = totalEvolves, evolution = whatToMutateInto};
+            
+            yield return Singleton<BoardManager>.Instance.CreateCardInSlot(egg, Card.slot, 0.15f, true);
 
             yield return base.LearnAbility(0f);
             yield break;
