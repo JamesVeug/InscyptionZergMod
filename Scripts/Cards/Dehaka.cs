@@ -9,7 +9,7 @@ namespace ZergMod.Scripts.Cards
     public static class Dehaka
     {
         private const string DisplayName = "Dehaka";
-        private const string Description = "The primal zerg will devour the essence of its prey";
+        private const string Description = "Collects, Kills, takes the essence of its prey.";
         private const string TextureFile = "Artwork/dehaka.png";
 
         private const int BaseAttack = 1;
