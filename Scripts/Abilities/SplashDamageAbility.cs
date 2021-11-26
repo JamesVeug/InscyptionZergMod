@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using APIPlugin;
 using DiskCardGame;
-using HarmonyLib;
 using UnityEngine;
 
 namespace ZergMod
@@ -15,6 +13,8 @@ namespace ZergMod
         public static Ability ability;
 
         private bool activated = false;
+        
+        public override int Priority => int.MaxValue;
 
         public static void Initialize()
         {
@@ -36,17 +36,18 @@ namespace ZergMod
 
         public override bool RespondsToDealDamage(int amount, PlayableCard target)
         {
-            return !Card.Dead && !activated;
+            CardSlot slot = Utils.GetSlot(target);
+            return !Card.Dead && !activated && slot != null;
         }
 
         public override IEnumerator OnDealDamage(int amount, PlayableCard target)
         {
-            yield return base.PreSuccessfulTriggerSequence();
+            yield return this.PreSuccessfulTriggerSequence();
 
             activated = true;
             
-            CardSlot cardSlot = target.slot;
-            List<CardSlot> adjacentSlots = Singleton<BoardManager>.Instance.GetAdjacentSlots(cardSlot);
+            CardSlot cardSlot = Utils.GetSlot(target);
+            List<CardSlot> adjacentSlots = Utils.GetAdjacentSlots(cardSlot);
             foreach (CardSlot slot in adjacentSlots)
             {
                 if (slot.Card != null && !slot.Card.Dead && !slot.Card.FaceDown)
