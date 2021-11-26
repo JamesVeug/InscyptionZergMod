@@ -35,7 +35,7 @@ namespace ZergMod
         public override bool RespondsToDealDamageDirectly(int amount)
         {
             PlayableCard opposingSlotCard = Card.slot.opposingSlot.Card;
-            return opposingSlotCard != null && !opposingSlotCard.Dead;
+            return opposingSlotCard != null && !opposingSlotCard.Dead && !opposingSlotCard.FaceDown;
         }
 
         public override IEnumerator OnDealDamageDirectly(int amount)
