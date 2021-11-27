@@ -16,8 +16,8 @@ namespace DiskCardGame
             SpecialAbilityIdentifier identifier = SpecialAbilityIdentifier.GetID("DehakaSpecialAbility", "DehakaSpecialAbility");
             
             StatIconInfo iconInfo = new StatIconInfo();
-            iconInfo.rulebookName = "Essence Steal";
-            iconInfo.rulebookDescription = "When a card with this sigil kills another stronger card it will steal its essence and grow in Power or Health.";
+            iconInfo.rulebookName = "Collect Essence";
+            iconInfo.rulebookDescription = "When a card with this sigil kills a stronger card it will steal its essence.";
             iconInfo.iconType = SpecialStatIcon.CardsInHand;
             iconInfo.iconGraphic = Utils.GetTextureFromPath("Artwork/dehaka.png");
             iconInfo.metaCategories = new List<AbilityMetaCategory> { AbilityMetaCategory.Part1Modular, AbilityMetaCategory.Part1Rulebook };
