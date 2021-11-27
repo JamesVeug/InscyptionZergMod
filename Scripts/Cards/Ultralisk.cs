@@ -34,7 +34,7 @@ namespace ZergMod.Scripts.Cards
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,
                 metaCategories: metaCategories,
-                cardComplexity: CardComplexity.Advanced,
+                cardComplexity: CardComplexity.Intermediate,
                 temple: CardTemple.Nature,
                 description: Description,
                 bloodCost: BloodCost,
