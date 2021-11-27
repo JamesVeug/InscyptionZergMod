@@ -28,6 +28,7 @@ namespace ZergMod.Scripts.Cards
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
 
             List<Ability> abilities = new List<Ability> { RegenerateAbility.ability };
+            List<SpecialTriggeredAbility> specialAbilities = new List<SpecialTriggeredAbility> { DehakaSpecialAbility.specialAbility };
 
             NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,
@@ -43,6 +44,7 @@ namespace ZergMod.Scripts.Cards
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: tex,
                 abilities: abilities,
+                specialAbilities: specialAbilities,
                 decals: Utils.GetDecals(),
                 onePerDeck:true);
         }
