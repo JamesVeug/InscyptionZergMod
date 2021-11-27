@@ -27,14 +27,14 @@ namespace ZergMod.Scripts.Cards
 
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
 	        
-            List<Ability> abilities = new List<Ability> { Ability.Submerge, Ability.TriStrike };
+            List<Ability> abilities = new List<Ability> { HookAbility.ability, Ability.Submerge };
 
             NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,
                 metaCategories: metaCategories,
-                cardComplexity: CardComplexity.Simple,
+                cardComplexity: CardComplexity.Intermediate,
                 temple: CardTemple.Nature,
                 description: Description,
                 bloodCost: BloodCost,

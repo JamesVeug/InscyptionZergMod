@@ -49,6 +49,7 @@ namespace ZergMod
             AbductAbility.Initialize();
             ExplodeAbility.Initialize();
             BombardAbility.Initialize();
+            HookAbility.Initialize();
             
             // Evolutions
             Banelings.Initialize();
