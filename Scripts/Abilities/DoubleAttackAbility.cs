@@ -22,7 +22,7 @@ namespace ZergMod
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
             info.powerLevel = 0;
             info.rulebookName = "Double Attack";
-            info.rulebookDescription = "When a card bearing this sigil deals damage a card it will perform one additional attack.";
+            info.rulebookDescription = "When a card bearing this sigil deals damage to a card and survives, it will perform one additional attack.";
             info.metaCategories = new List<AbilityMetaCategory>
                 { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
 
