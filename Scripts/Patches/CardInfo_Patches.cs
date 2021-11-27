@@ -1,26 +1,29 @@
-﻿using System;
-using APIPlugin;
-using BepInEx.Logging;
-using DiskCardGame;
+﻿using DiskCardGame;
 using HarmonyLib;
-using UnityEngine;
 
 namespace ZergMod.Patches
 {
-    // Disabled until i decide what to do with the rest of it
-    /*[HarmonyPatch(typeof(CardInfo), "Attack", MethodType.Getter)]
+    [HarmonyPatch(typeof(CardInfo), "Attack", MethodType.Getter)]
     public class CardInfo_Attack
     {
         public static void Postfix(ref CardInfo __instance, ref int __result)
         {
-            Plugin.Log.LogInfo("[CardInfo_Attack] ");
-            if (__instance.specialAbilities.Contains(ZerglingSpecialAbility.specialAbility))
+            if (__instance.specialAbilities.Contains(DehakaSpecialAbility.specialAbility))
             {
-                if (__instance.Health >= ZerglingSpecialAbility.MaxZerglingsToSwarm)
-                {
-                    __result += ZerglingSpecialAbility.SwarmDamageBonus;
-                }
+                __result += (CustomSaveManager.SaveFile.DehakaKills + 1) / 2;
             }
         }
-    }*/
+    }
+    
+    [HarmonyPatch(typeof(CardInfo), "Health", MethodType.Getter)]
+    public class CardInfo_Health
+    {
+        public static void Postfix(ref CardInfo __instance, ref int __result)
+        {
+            if (__instance.specialAbilities.Contains(DehakaSpecialAbility.specialAbility))
+            {
+                __result += (CustomSaveManager.SaveFile.DehakaKills / 2);
+            }
+        }
+    }
 }

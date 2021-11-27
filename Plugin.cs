@@ -34,6 +34,7 @@ namespace ZergMod
             
             // SpecialAbilities
             ZerglingSpecialAbility.Initialize();
+            DehakaSpecialAbility.Initialize();
             
             // Abilities
             RegenerateAbility.Initialize();

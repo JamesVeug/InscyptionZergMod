@@ -63,5 +63,6 @@ namespace ZergMod
     
     public class CustomSaveData
     {
+        public int DehakaKills = 0;
     }
 }
