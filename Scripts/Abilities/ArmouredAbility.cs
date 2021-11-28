@@ -20,7 +20,7 @@ namespace ZergMod
 			AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
 			info.powerLevel = 0;
 			info.rulebookName = "Armoured";
-			info.rulebookDescription = "The card bearing this sigil will take 1 less damage";
+			info.rulebookDescription = "When a card bearing this sigil takes damage, it will take 1 less damage";
 			info.metaCategories = new List<AbilityMetaCategory>
 				{ AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
 
