@@ -5,17 +5,17 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 
 ## Includes:
 - 26 new Cards
-- 12 new Sigils
+- 14 new Sigils
 
 ### Cards:
 - **Drone** - 1,1 with Bone digger.
-- **Zergling** - 1,2 with Double Attack. Evolves into Baneling.
+- **Zergling** - 1,2 with Double Attack. Evolves into Baneling. Special: Zergling Swarm
 - **Broodling** - 1,1 with Brittle.
 - **Locus** - 2,2 with Brittle.
 - **Infested Terran** - 1,2 with Brittle and Fecundity.
 - **Overlord** - 0,4 with Fledgling and Mighty Leap. Evolves into Overseer.
-- **Roach** - 2,2 with Regenerate. Evolves into Ravager.
-- **Mutalisk** - 1,1 with Airborne and Bombard.
+- **Roach** - 2,3 with Regenerate. Evolves into Ravager.
+- **Mutalisk** - 1,3 with Airborne and Ricochet.
 - **Queen** - 1,3 With Spawn Larva.
 - **Hydralisk** - 3,2. Evolves into Lurker.
 - **Scourge** - 1,1 with Explode and Airborne.
@@ -26,8 +26,8 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Swam Host** - 0,2 with Draw 2 Locusts and Waterborne
 - **Broodlord** - 0,6 with Draw 2 Broodlings
 - **Overseer** - 0,6 with Detector and Stinky
-- **Infestor** - 1,1 with Waterborne and Trifurcated Strike
-- **Dehaka** - 1,2 with Regenerate
+- **Infestor** - 1,1 with Waterborne and Fish Hook
+- **Dehaka** - 1,2 with Regenerate. Special: Collect Essence
 - **Leviathan** - 2,10 with Burrower and Sharp
 - **Queen of Blades** - 4,4 With Regestate
 - **Viper** - 2,1 With Abduct
@@ -40,16 +40,23 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 ### Abilities:
 - **Draw Broodling's** - Draw 1 Broodling's at the start of your turn
 - **Draw Locust's** - Draw 1 Locusts at the start of your turn
-- **Regenerate** - Restores 1 lost health at the end of the round
+- **Regenerate** - The card bearing this sigil Heals 1 health at the end of a turn
 - **Spawn Larva** - The card bearing this sigil will place 2 lava on the board
-- **Double Attack** - When a card bearing this sigil deals damage a card it will perform one additional attack.
+- **Double Attack** - When a card bearing this sigil deals damage to a card and survives, it will perform one additional attack.
 - **Regestate** - When this card is killed it will transform into an Egg for it to regenerate into its original form.\nAn egg has 0 Power and as much Health as the base card.
-- **Armoured** - The card bearing this sigil will take 1 less damage
+- **Armoured** - When a card bearing this sigil takes damage, it will take 1 less damage
 - **Splash Damage** - When a card bearing this sigil deals damage it will also hit the adjacent cards
 - **Abduct** - When a card bearing this sigil is played, a targeted enemy card is moved to the space in front of it, if that space is empty
 - **Detector** - When a card bearing this sigil is on the board all opponent's submerged cards will be revealed.
 - **Explode** - When a card bearing this sigil deals damage it will also hit the adjacent cards and perish.
 - **Bombard** - When a card bearing this sigil deals damage directly it will damage the opposing card for 1 damage.
+- **Ricochet** - When a card bearing this sigil deals damage to a card it also hits face for 1 damage.
+- **Fish Hook** - When a card bearing this sigil is played, a targeted card is moved to your side of the board
+
+### Special Abilities:
+- **Zergling Swarm** - Portrait changes as the health increases. Max 6
+- **Collect Essence** - When a card with this sigil kills a stronger card it will steal its essence.
+
 
 ## Credits:
 - **JamesGames** - Creator
@@ -67,7 +74,6 @@ I recommend this tutorial if you are curious how to manually install mods in the
 
 
 ## Known Issues:
-- Splash damage sometimes doesn't hit a card
 - Regestate does not work for death cards
 
 
@@ -77,6 +83,37 @@ Contact JamesGames on the Inscryption Modding Discord
 
 
 # Update notes:
+
+## `Version: 0.6.0 - 28/11/2021`
+### New:
+- Added Collect Essence special ability
+- Added Fish Hook ability
+- Added Ricochet ability
+
+### Changes:
+- General
+    - Updated some descriptions
+- Dehaka
+    - Added Collect Essence special ability
+    - Portrait changes as he kills strong units
+- Infestor
+    - Removed Trifurcated Strike ability
+    - Added Fish Hook ability
+- Ultralisk
+    - Now obtainable after defeating Prospector
+- Mutalisk 
+    - Health reverted back to 3 from 1
+    - Removed Bombard ability
+    - Added Ricochet ability
+- Roach
+	- Health increased from 2 to 3
+- Armoured ability
+	- Added new art by General Spritz
+
+### Fixes:
+- Splash damage sometimes doesn't hit a
+- Fixed Bombard hitting facedown cards
+
 
 
 ## `Version: 0.5.0 - 26/11/2021`

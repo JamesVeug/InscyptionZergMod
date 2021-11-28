@@ -1,6 +1,6 @@
 {
     "name": "ZergMod",
-    "version_number": "0.5.0",
+    "version_number": "0.6.0",
     "website_url": "https://github.com/JamesVeug/InscyptionZergMod",
     "description": "A StarCraft inspired mod that brings Zerg into the world of Inscryption",
     "dependencies": [
