@@ -13,7 +13,7 @@ namespace ZergMod.Scripts.Cards
         private const string TextureFile = "Artwork/roach.png";
 
         private const int BaseAttack = 2;
-        private const int BaseHealth = 2;
+        private const int BaseHealth = 3;
         private const int BloodCost = 2;
         private const int BoneCost = 0;
 
