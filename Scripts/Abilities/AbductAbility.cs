@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using APIPlugin;
 using DiskCardGame;
-using HarmonyLib;
 using Pixelplacement;
 using UnityEngine;
 
@@ -14,24 +12,40 @@ namespace ZergMod
     {
         public override Ability Ability => ability;
         public static Ability ability;
+        
+        private const int PowerLevel = 0;
+        private const string SigilID = "Abduct";
+        private const string SigilName = "Abduct";
+        private const string Description = "When a card bearing this sigil is played, a targeted enemy card is moved to the space in front of it, if that space is empty";
+        private const string TextureFile = "Artwork/abduct.png";
+        private const string LearnText = "";
 
         private CardSlot m_targetedCardSlot = null;
 
         public static void Initialize()
         {
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
-            info.powerLevel = 0;
-            info.rulebookName = "Abduct";
-            info.rulebookDescription = "When a card bearing this sigil is played, a targeted enemy card is moved to the space in front of it, if that space is empty";
+            info.powerLevel = PowerLevel;
+            info.rulebookName = SigilName;
+            info.rulebookDescription = Description;
             info.metaCategories = new List<AbilityMetaCategory>
                 { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
 
-            byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, "Artwork/abduct.png"));
-            Texture2D tex = new Texture2D(2, 2);
-            tex.LoadImage(imgBytes);
+            if (!string.IsNullOrEmpty(LearnText))
+            {
+	            List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
+	            DialogueEvent.Line line = new DialogueEvent.Line();
+	            line.text = LearnText;
+	            lines.Add(line);
+	            info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+            }
 
-            NewAbility newAbility = new NewAbility(info, typeof(AbductAbility), tex,
-                AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
+            NewAbility newAbility = new NewAbility(
+	            info: info, 
+	            abilityBehaviour: typeof(AbductAbility), 
+	            tex: Utils.GetTextureFromPath(TextureFile),
+                id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, SigilID)
+	            );
             AbductAbility.ability = newAbility.ability;
         }
 
@@ -66,12 +80,9 @@ namespace ZergMod
         
         public override IEnumerator OnResolveOnBoard()
         {
-	        Plugin.Log.LogInfo("[AbductAbility][OnResolveOnBoard] Starting");
-	        
 	        CardSlot oppositeCardSlot = GetOppositeCardSlot();
 	        if (oppositeCardSlot.Card != null)
 	        {
-		        Plugin.Log.LogWarning("[AbductAbility][OnResolveOnBoard] Card in front of Viper full");
 		        Card.Anim.StrongNegationEffect();
 		        yield return new WaitForSeconds(0.3f);
 		        yield break;
@@ -99,9 +110,6 @@ namespace ZergMod
 	        //Singleton<ViewManager>.Instance.Controller.LockState = ViewLockState.Unlocked;
 	        Singleton<ViewManager>.Instance.SwitchToView(Singleton<BoardManager>.Instance.CombatView, false, false);
 	        Singleton<CombatPhaseManager>.Instance.VisualizeClearSniperAbility();
-	        
-	        Plugin.Log.LogInfo("[AbductAbility][OnResolveOnBoard] Done");
-	        yield break;
         }
 
         private IEnumerator ChooseTarget()
@@ -127,12 +135,10 @@ namespace ZergMod
 	        foreach (CardSlot slot in validTargetSlots)
 	        {
 		        string thing = slot != null && slot.Card != null ? slot.Card.Info.displayedName : "empty";
-		        Plugin.Log.LogInfo("[AbductAbility][ChooseTarget] Slot: " + thing);
 	        }
 	        
 	        if (validTargetSlots.Count == 0)
 	        {
-		        Plugin.Log.LogWarning("[AbductAbility][ChooseTarget] No cards to pull");
 		        Card.Anim.StrongNegationEffect();
 		        yield return new WaitForSeconds(0.3f);
 		        yield break;
@@ -146,7 +152,6 @@ namespace ZergMod
 		        {
 			        m_targetedCardSlot = s;
 			        combatPhaseManager.VisualizeConfirmSniperAbility(s);
-			        Plugin.Log.LogWarning("[AbductAbility][ChooseTarget] Clicked on: " + s.Card.Info.displayedName);
 		        });
 	        }
 	        Action<CardSlot> invalidTargetCallback = null;

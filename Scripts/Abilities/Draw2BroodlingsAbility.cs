@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
@@ -11,26 +10,37 @@ namespace ZergMod
 	{
 		public override Ability Ability => ability;
 		public static Ability ability;
+        
+		private const int PowerLevel = 0;
+		private const string SigilID = "Draw Broodling's";
+		private const string SigilName = "Draw Broodling's";
+		private const string Description = "Draw 1 Broodling at the start of your turn\nA Broodling is defined as: 2 Power 2 Health";
+		private const string TextureFile = "Artwork/swarm_seeds.png";
+		private const string LearnText = "These swarm seeds will strike down your foes";
 
 		public static void Initialize()
 		{
 			AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
-			info.powerLevel = 0;
-			info.rulebookName = "Draw Broodling's";
-			info.rulebookDescription = "Draw 1 Broodling at the start of your turn\nA Broodling is defined as: 2 Power 2 Health";
+			info.powerLevel = PowerLevel;
+			info.rulebookName = SigilName;
+			info.rulebookDescription = Description;
 			info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
-			List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
-			DialogueEvent.Line line = new DialogueEvent.Line();
-			line.text = "These swarm seeds will strike down your foes";
-			lines.Add(line);
-			info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+			if (!string.IsNullOrEmpty(LearnText))
+			{
+				List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
+				DialogueEvent.Line line = new DialogueEvent.Line();
+				line.text = LearnText;
+				lines.Add(line);
+				info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+			}
 
-			byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, "Artwork/swarm_seeds.png"));
-			Texture2D tex = new Texture2D(2,2);
-			tex.LoadImage(imgBytes);
-
-			NewAbility newAbility = new NewAbility(info,typeof(Draw2BroodlingsAbility),tex,AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
+			NewAbility newAbility = new NewAbility(
+				info: info, 
+				abilityBehaviour: typeof(Draw2BroodlingsAbility), 
+				tex: Utils.GetTextureFromPath(TextureFile),
+				id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, SigilID)
+			);
 			Draw2BroodlingsAbility.ability = newAbility.ability;
 		}
 

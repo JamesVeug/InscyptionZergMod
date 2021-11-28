@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
@@ -11,26 +10,37 @@ namespace ZergMod
     {
         public override Ability Ability => ability;
         public static Ability ability;
+        
+        private const int PowerLevel = 0;
+        private const string SigilID = "Regestate";
+        private const string SigilName = "Regestate";
+        private const string Description = "When this card is killed it will transform into an Egg for it to regenerate into its original form.\nAn egg has 0 Power and as much Health as the base card.";
+        private const string TextureFile = "Artwork/egg.png";
+        private const string LearnText = "That card seems unbalanced";
 
         public static void Initialize()
         {
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
-            info.powerLevel = 0;
-            info.rulebookName = "Regestate";
-            info.rulebookDescription = "When this card is killed it will transform into an Egg for it to regenerate into its original form.\nAn egg has 0 Power and as much Health as the base card.";
+            info.powerLevel = PowerLevel;
+            info.rulebookName = SigilName;
+            info.rulebookDescription = Description;
             info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
-            List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
-            DialogueEvent.Line line = new DialogueEvent.Line();
-            line.text = "That card seems unbalanced";
-            lines.Add(line);
-            info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+            if (!string.IsNullOrEmpty(LearnText))
+            {
+                List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
+                DialogueEvent.Line line = new DialogueEvent.Line();
+                line.text = LearnText;
+                lines.Add(line);
+                info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+            }
 
-            byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory,"Artwork/egg.png"));
-            Texture2D tex = new Texture2D(2,2);
-            tex.LoadImage(imgBytes);
-
-            NewAbility newAbility = new NewAbility(info,typeof(RegestateAbility),tex,AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
+            NewAbility newAbility = new NewAbility(
+                info: info, 
+                abilityBehaviour: typeof(RegestateAbility), 
+                tex: Utils.GetTextureFromPath(TextureFile),
+                id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, SigilID)
+            );
             RegestateAbility.ability = newAbility.ability;
         }
 

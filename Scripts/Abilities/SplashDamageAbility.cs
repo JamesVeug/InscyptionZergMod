@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
@@ -11,6 +10,13 @@ namespace ZergMod
     {
         public override Ability Ability => ability;
         public static Ability ability;
+        
+        private const int PowerLevel = 0;
+        private const string SigilID = "Splash Damage";
+        private const string SigilName = "Splash Damage";
+        private const string Description = "When a card bearing this sigil deals damage it will also hit the adjacent cards";
+        private const string TextureFile = "Artwork/splash_damage.png";
+        private const string LearnText = "";
 
         private bool activated = false;
         
@@ -19,18 +25,26 @@ namespace ZergMod
         public static void Initialize()
         {
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
-            info.powerLevel = 0;
-            info.rulebookName = "Splash Damage";
-            info.rulebookDescription = "When a card bearing this sigil deals damage it will also hit the adjacent cards";
-            info.metaCategories = new List<AbilityMetaCategory>
-                { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
+            info.powerLevel = PowerLevel;
+            info.rulebookName = SigilName;
+            info.rulebookDescription = Description;
+            info.metaCategories = new List<AbilityMetaCategory> { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
 
-            byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, "Artwork/splash_damage.png"));
-            Texture2D tex = new Texture2D(2, 2);
-            tex.LoadImage(imgBytes);
+            if (!string.IsNullOrEmpty(LearnText))
+            {
+                List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
+                DialogueEvent.Line line = new DialogueEvent.Line();
+                line.text = LearnText;
+                lines.Add(line);
+                info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+            }
 
-            NewAbility newAbility = new NewAbility(info, typeof(SplashDamageAbility), tex,
-                AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
+            NewAbility newAbility = new NewAbility(
+                info: info, 
+                abilityBehaviour: typeof(SplashDamageAbility), 
+                tex: Utils.GetTextureFromPath(TextureFile),
+                id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, SigilID)
+            );
             SplashDamageAbility.ability = newAbility.ability;
         }
 

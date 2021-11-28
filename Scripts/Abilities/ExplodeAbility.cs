@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
@@ -11,22 +10,39 @@ namespace ZergMod
 	{
 		public override Ability Ability => ability;
 		public new static Ability ability;
+        
+		private const int PowerLevel = 0;
+		private const string SigilID = "Explode";
+		private const string SigilName = "Explode";
+		private const string Description = "When a card bearing this sigil deals damage it will also hit the adjacent cards and perish.";
+		private const string TextureFile = "Artwork/explode.png";
+		private const string LearnText = "";
 
 		private bool m_startedAttack = false;
         
 		public new static void Initialize()
 		{
 			AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
-			info.powerLevel = 0;
-			info.rulebookName = "Explode";
-			info.rulebookDescription = "When a card bearing this sigil deals damage it will also hit the adjacent cards and perish.";
+			info.powerLevel = PowerLevel;
+			info.rulebookName = SigilName;
+			info.rulebookDescription = Description;
 			info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
-			byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, "Artwork/explode.png"));
-			Texture2D tex = new Texture2D(2,2);
-			tex.LoadImage(imgBytes);
+			if (!string.IsNullOrEmpty(LearnText))
+			{
+				List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
+				DialogueEvent.Line line = new DialogueEvent.Line();
+				line.text = LearnText;
+				lines.Add(line);
+				info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+			}
 
-			NewAbility newAbility = new NewAbility(info,typeof(ExplodeAbility),tex,AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
+			NewAbility newAbility = new NewAbility(
+				info: info, 
+				abilityBehaviour: typeof(ExplodeAbility), 
+				tex: Utils.GetTextureFromPath(TextureFile),
+				id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, SigilID)
+			);
 			ExplodeAbility.ability = newAbility.ability;
 		}
 

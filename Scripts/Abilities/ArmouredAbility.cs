@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
@@ -14,22 +13,37 @@ namespace ZergMod
 	{
 		public override Ability Ability => ability;
 		public static Ability ability;
+        
+		private const int PowerLevel = 0;
+		private const string SigilID = "Armoured";
+		private const string SigilName = "Armoured";
+		private const string Description = "When a card bearing this sigil takes damage, it will take 1 less damage";
+		private const string TextureFile = "Artwork/armoured.png";
+		private const string LearnText = "";
 
 		public static void Initialize()
 		{
 			AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
-			info.powerLevel = 0;
-			info.rulebookName = "Armoured";
-			info.rulebookDescription = "When a card bearing this sigil takes damage, it will take 1 less damage";
-			info.metaCategories = new List<AbilityMetaCategory>
-				{ AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
+			info.powerLevel = PowerLevel;
+			info.rulebookName = SigilName;
+			info.rulebookDescription = Description;
+			info.metaCategories = new List<AbilityMetaCategory> { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
 
-			byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, "Artwork/armoured.png"));
-			Texture2D tex = new Texture2D(2, 2);
-			tex.LoadImage(imgBytes);
+			if (!string.IsNullOrEmpty(LearnText))
+			{
+				List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
+				DialogueEvent.Line line = new DialogueEvent.Line();
+				line.text = LearnText;
+				lines.Add(line);
+				info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+			}
 
-			AbilityIdentifier identifier = AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName);
-			NewAbility newAbility = new NewAbility(info, typeof(ArmouredAbility), tex,identifier);
+			NewAbility newAbility = new NewAbility(
+				info: info, 
+				abilityBehaviour: typeof(ArmouredAbility), 
+				tex: Utils.GetTextureFromPath(TextureFile),
+				id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, SigilID)
+			);
 			ArmouredAbility.ability = newAbility.ability;
 		}
 

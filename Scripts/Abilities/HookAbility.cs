@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using APIPlugin;
 using DiskCardGame;
-using HarmonyLib;
 using Pixelplacement;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -15,22 +13,37 @@ namespace ZergMod
     {
         public override Ability Ability => ability;
         public static Ability ability;
+        
+        private const int PowerLevel = 0;
+        private const string SigilID = "Fish Hook";
+        private const string SigilName = "Fish Hook";
+        private const string Description = "When a card bearing this sigil is played, a targeted card is moved to your side of the board";
+        private const string TextureFile = "Artwork/fish_hook.png";
+        private const string LearnText = "I don't remember taking a picture of my Hook";
 
         public static void Initialize()
         {
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
-            info.powerLevel = 0;
-            info.rulebookName = "Fish Hook";
-            info.rulebookDescription = "When a card bearing this sigil is played, a targeted card is moved to your side of the board";
-            info.metaCategories = new List<AbilityMetaCategory>
-                { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
+            info.powerLevel = PowerLevel;
+            info.rulebookName = SigilName;
+            info.rulebookDescription = Description;
+            info.metaCategories = new List<AbilityMetaCategory> { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
 
-            byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, "Artwork/fish_hook.png"));
-            Texture2D tex = new Texture2D(2, 2);
-            tex.LoadImage(imgBytes);
+            if (!string.IsNullOrEmpty(LearnText))
+            {
+	            List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
+	            DialogueEvent.Line line = new DialogueEvent.Line();
+	            line.text = LearnText;
+	            lines.Add(line);
+	            info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+            }
 
-            NewAbility newAbility = new NewAbility(info, typeof(HookAbility), tex,
-                AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
+            NewAbility newAbility = new NewAbility(
+	            info: info, 
+	            abilityBehaviour: typeof(HookAbility), 
+	            tex: Utils.GetTextureFromPath(TextureFile),
+	            id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, SigilID)
+            );
             HookAbility.ability = newAbility.ability;
         }
 

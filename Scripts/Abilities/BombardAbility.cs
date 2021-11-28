@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using APIPlugin;
 using DiskCardGame;
-using HarmonyLib;
 using UnityEngine;
 
 namespace ZergMod
@@ -13,22 +10,37 @@ namespace ZergMod
     {
         public override Ability Ability => ability;
         public static Ability ability;
+        
+        private const int PowerLevel = 0;
+        private const string SigilID = "Bombard";
+        private const string SigilName = "Bombard";
+        private const string Description = "When a card bearing this sigil deals damage directly it will damage the opposing card for 1 damage.";
+        private const string TextureFile = "Artwork/bombard.png";
+        private const string LearnText = "Bombarding my side of the board will only weaken that card";
 
         public static void Initialize()
         {
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
-            info.powerLevel = 0;
-            info.rulebookName = "Bombard";
-            info.rulebookDescription = "When a card bearing this sigil deals damage directly it will damage the opposing card for 1 damage.";
-            info.metaCategories = new List<AbilityMetaCategory>
-                { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
+            info.powerLevel = PowerLevel;
+            info.rulebookName = SigilName;
+            info.rulebookDescription = Description;
+            info.metaCategories = new List<AbilityMetaCategory> { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
 
-            byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, "Artwork/bombard.png"));
-            Texture2D tex = new Texture2D(2, 2);
-            tex.LoadImage(imgBytes);
+            if (!string.IsNullOrEmpty(LearnText))
+            {
+                List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
+                DialogueEvent.Line line = new DialogueEvent.Line();
+                line.text = LearnText;
+                lines.Add(line);
+                info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+            }
 
-            NewAbility newAbility = new NewAbility(info, typeof(BombardAbility), tex,
-                AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, info.rulebookName));
+            NewAbility newAbility = new NewAbility(
+                info: info, 
+                abilityBehaviour: typeof(BombardAbility), 
+                tex: Utils.GetTextureFromPath(TextureFile),
+                id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, SigilID)
+            );
             BombardAbility.ability = newAbility.ability;
         }
 
