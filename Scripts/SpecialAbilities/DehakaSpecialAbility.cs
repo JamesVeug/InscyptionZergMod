@@ -15,7 +15,6 @@ namespace DiskCardGame
         private static int m_minDehakakillsForImages = int.MaxValue;
         private static int m_maxDehakakillsForImages = int.MinValue;
 
-        private int m_cachedChangedImageKills = int.MinValue;
         private bool m_activated = false;
 
         public override int Priority => int.MaxValue;
@@ -76,19 +75,12 @@ namespace DiskCardGame
             m_activated = true;
             CustomSaveManager.SaveFile.DehakaKills++;
 
-            GetCurrentKillsPortrait(out int kills);
-            if (kills != m_cachedChangedImageKills)
-            {
-                Singleton<ViewManager>.Instance.SwitchToView(View.Board, false, false);
-                yield return new WaitForSeconds(0.15f);
-                base.Card.Anim.PlayTransformAnimation();
-                yield return new WaitForSeconds(0.15f);
-                RefreshPortrait();
-                yield return new WaitForSeconds(0.5f);
-            }
-            
+            Singleton<ViewManager>.Instance.SwitchToView(View.Board, false, false);
+            yield return new WaitForSeconds(0.15f);
+            base.Card.Anim.PlayTransformAnimation();
+            yield return new WaitForSeconds(0.15f);
             RefreshPortrait();
-            yield break;
+            yield return new WaitForSeconds(0.5f);
         }
 
         public override bool RespondsToTurnEnd(bool playerTurnEnd)
@@ -150,8 +142,6 @@ namespace DiskCardGame
             Card.Info.alternatePortrait = Sprite.Create(tex, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
             Card.Info.alternatePortrait.name = tex.name;
             Card.RenderCard();
-
-            m_cachedChangedImageKills = kills;
         }
     }
 }
