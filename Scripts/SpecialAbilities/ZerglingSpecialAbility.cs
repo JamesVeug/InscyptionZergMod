@@ -32,7 +32,7 @@ namespace DiskCardGame
             
             StatIconInfo iconInfo = new StatIconInfo();
             iconInfo.rulebookName = "Zergling Swarm";
-            iconInfo.rulebookDescription = "The Zergling is a small and fast melee attacker and the backbone of the Zerg army. An individual Zergling is relatively weak, but as part of a group they can rapidly surround and damage enemy ground forces.";
+            iconInfo.rulebookDescription = "Portrait changes as the health increases. Max 6";
             iconInfo.iconType = SpecialStatIcon.CardsInHand;
             iconInfo.iconGraphic = Utils.GetTextureFromPath("Artwork/six_zergling.png");
             iconInfo.metaCategories = new List<AbilityMetaCategory> { AbilityMetaCategory.Part1Modular, AbilityMetaCategory.Part1Rulebook };
