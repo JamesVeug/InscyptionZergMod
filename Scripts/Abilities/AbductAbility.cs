@@ -60,7 +60,18 @@ namespace ZergMod
 		        return false;
 	        }
 
-	        return true;
+	        BoardManager boardManager = Singleton<BoardManager>.Instance;
+	        List<CardSlot> list = new List<CardSlot>(boardManager.GetSlots(Card.OpponentCard));
+	        for (int i = 0; i < list.Count; i++)
+	        {
+		        if (list[i].Card != null)
+		        {
+			        // There is something to abduct
+			        return true;
+		        }
+	        }
+	        
+	        return false;
         }
 
         private CardSlot GetOppositeCardSlot()
@@ -90,7 +101,6 @@ namespace ZergMod
 	        
 	        BoardManager boardManager = Singleton<BoardManager>.Instance;
 	        Singleton<ViewManager>.Instance.Controller.SwitchToControlMode(boardManager.ChoosingSlotViewMode, false);
-	        //Singleton<ViewManager>.Instance.Controller.LockState = ViewLockState.Unlocked;
 	        
 	        // Find who we want to abduct
 	        IEnumerator onResolveOnBoard = ChooseTarget();
@@ -102,8 +112,12 @@ namespace ZergMod
 	        {
 		        // Pull them to the correct slot
 		        PlayableCard playableCard = cardSlot.Card;
-
 		        yield return PullTargetToSlot(playableCard, oppositeCardSlot);
+	        }
+	        else
+	        {
+		        Card.Anim.StrongNegationEffect();
+		        yield return new WaitForSeconds(0.3f);
 	        }
 
 	        Singleton<ViewManager>.Instance.Controller.SwitchToControlMode(boardManager.DefaultViewMode, false);
@@ -130,14 +144,10 @@ namespace ZergMod
 	        }
 
 	        List<CardSlot> allTargetSlots = opposingSlots;
-	        List<CardSlot> validTargetSlots = allTargetSlots.FindAll(x => x.Card != null && !x.Card.Dead);
+	        List<CardSlot> validTargetSlots = opposingSlots;
+	        List<CardSlot> slotsWithcards = allTargetSlots.FindAll(x => x.Card != null && !x.Card.Dead);
 
-	        foreach (CardSlot slot in validTargetSlots)
-	        {
-		        string thing = slot != null && slot.Card != null ? slot.Card.Info.displayedName : "empty";
-	        }
-	        
-	        if (validTargetSlots.Count == 0)
+	        if (slotsWithcards.Count == 0)
 	        {
 		        Card.Anim.StrongNegationEffect();
 		        yield return new WaitForSeconds(0.3f);
