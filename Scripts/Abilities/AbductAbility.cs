@@ -51,48 +51,12 @@ namespace ZergMod
 
         public override bool RespondsToResolveOnBoard()
         {
-	        if (!Card.Slot.IsPlayerSlot)
-		        return false;
-
-	        CardSlot oppositeCardSlot = GetOppositeCardSlot();
-	        if (oppositeCardSlot.Card != null)
-	        {
-		        return false;
-	        }
-
-	        BoardManager boardManager = Singleton<BoardManager>.Instance;
-	        List<CardSlot> list = new List<CardSlot>(boardManager.GetSlots(Card.OpponentCard));
-	        for (int i = 0; i < list.Count; i++)
-	        {
-		        if (list[i].Card != null)
-		        {
-			        // There is something to abduct
-			        return true;
-		        }
-	        }
-	        
-	        return false;
-        }
-
-        private CardSlot GetOppositeCardSlot()
-        {
-	        BoardManager boardManager = Singleton<BoardManager>.Instance;
-	        List<CardSlot> list = new List<CardSlot>(boardManager.GetSlots(Card.OpponentCard));
-	        for (int i = 0; i < list.Count; i++)
-	        {
-		        if (list[i].Index == Card.slot.Index)
-		        {
-			        return list[i];
-		        }
-	        }
-
-	        return null;
+	        return Card.Slot.IsPlayerSlot;
         }
         
         public override IEnumerator OnResolveOnBoard()
         {
-	        CardSlot oppositeCardSlot = GetOppositeCardSlot();
-	        if (oppositeCardSlot.Card != null)
+	        if (!CanAbduct())
 	        {
 		        Card.Anim.StrongNegationEffect();
 		        yield return new WaitForSeconds(0.3f);
@@ -112,6 +76,7 @@ namespace ZergMod
 	        {
 		        // Pull them to the correct slot
 		        PlayableCard playableCard = cardSlot.Card;
+		        CardSlot oppositeCardSlot = GetOppositeCardSlot();
 		        yield return PullTargetToSlot(playableCard, oppositeCardSlot);
 	        }
 	        else
@@ -183,6 +148,43 @@ namespace ZergMod
 	        Tween.Position(otherCard.transform, a + Vector3.up * 0.5f, 0.05f, 0f, Tween.EaseIn, Tween.LoopType.None, null, null, true);
 	        yield return Singleton<BoardManager>.Instance.AssignCardToSlot(otherCard, slot, 0.05f, null, true);
 	        yield return new WaitForSeconds(0.2f);
+        }
+
+        private CardSlot GetOppositeCardSlot()
+        {
+	        BoardManager boardManager = Singleton<BoardManager>.Instance;
+	        List<CardSlot> list = new List<CardSlot>(boardManager.GetSlots(Card.OpponentCard));
+	        for (int i = 0; i < list.Count; i++)
+	        {
+		        if (list[i].Index == Card.slot.Index)
+		        {
+			        return list[i];
+		        }
+	        }
+
+	        return null;
+        }
+
+        private bool CanAbduct()
+        {
+	        CardSlot oppositeCardSlot = GetOppositeCardSlot();
+	        if (oppositeCardSlot.Card != null)
+	        {
+		        return false;
+	        }
+
+	        BoardManager boardManager = Singleton<BoardManager>.Instance;
+	        List<CardSlot> list = new List<CardSlot>(boardManager.GetSlots(Card.OpponentCard));
+	        for (int i = 0; i < list.Count; i++)
+	        {
+		        if (list[i].Card != null)
+		        {
+			        // There is something to abduct
+			        return true;
+		        }
+	        }
+
+	        return false;
         }
     }
 }
