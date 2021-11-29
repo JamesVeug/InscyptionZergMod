@@ -86,7 +86,7 @@ namespace ZergMod
         public override IEnumerator OnDie(bool wasSacrifice, PlayableCard killer)
         {
             activated = false;
-            Singleton<ViewManager>.Instance.SwitchToView(View.Board, false, true);
+            Singleton<ViewManager>.Instance.SwitchToView(View.Board, false);
             yield return new WaitForSeconds(0.15f);
             
             List<CardSlot> opposingSlots = GetValidCardSlotsToFlip(true);
