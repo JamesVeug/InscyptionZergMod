@@ -71,7 +71,27 @@ namespace ZergMod
 
         public override bool RespondsToDealDamage(int amount, PlayableCard target)
         {
-            return !AlreadyDoubleHitSlot() && !target.Dead && !Card.Dead;
+            if (Card.Dead)
+            {
+                return false;
+            }
+            
+            if (AlreadyDoubleHitSlot() && !target.Dead && !Card.Dead)
+            {
+                return false;
+            }
+
+            if (target.Dead)
+            {
+                // Hit a card if it's replaced the slot (Anglers Fish Bucket)
+                CardSlot cardSlot = Utils.GetSlot(target);
+                if (cardSlot.Card == null || cardSlot.Card.Dead)
+                {
+                    return false;
+                }
+            }
+            
+            return true;
         }
 
         public override IEnumerator OnDealDamage(int amount, PlayableCard target)
