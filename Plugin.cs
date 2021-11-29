@@ -59,6 +59,7 @@ namespace ZergMod
             Ravenger.Initialize();
             Devourer.Initialize();
             Guardian.Initialize();
+            CrawlerForest.Initialize();
             
             // Units
             Locust.Initialize();
