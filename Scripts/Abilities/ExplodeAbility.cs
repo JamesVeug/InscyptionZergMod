@@ -14,7 +14,7 @@ namespace ZergMod
 		private const int PowerLevel = 0;
 		private const string SigilID = "Explode";
 		private const string SigilName = "Explode";
-		private const string Description = "When a card bearing this sigil deals damage it will also hit the adjacent cards and perish.";
+		private const string Description = "When a card bearing this sigil deals damage it will also hit the opponents adjacent cards and perish.";
 		private const string TextureFile = "Artwork/explode.png";
 		private const string LearnText = "";
 
