@@ -27,7 +27,7 @@ namespace ZergMod.Scripts.Cards
 
             Texture2D tex = Utils.GetTextureFromPath(TextureFile);
 
-            List<Ability> abilities = new List<Ability> { Ability.Submerge, Ability.GuardDog };
+            List<Ability> abilities = new List<Ability> { SplashDamageAbility.ability, Ability.Submerge };
 
             NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,
