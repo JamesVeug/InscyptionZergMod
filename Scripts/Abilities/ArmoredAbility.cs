@@ -9,14 +9,14 @@ namespace ZergMod
 	/// <summary>
 	/// Credits to Cyantist for ThickShell ability from SigilADay
 	/// </summary>
-	public class ArmouredAbility : AbilityBehaviour
+	public class ArmoredAbility : AbilityBehaviour
 	{
 		public override Ability Ability => ability;
 		public static Ability ability;
         
 		private const int PowerLevel = 0;
 		private const string SigilID = "Armoured";
-		private const string SigilName = "Armoured";
+		private const string SigilName = "Armored";
 		private const string Description = "When a card bearing this sigil takes damage, it will take 1 less damage";
 		private const string TextureFile = "Artwork/armoured.png";
 		private const string LearnText = "";
@@ -40,11 +40,11 @@ namespace ZergMod
 
 			NewAbility newAbility = new NewAbility(
 				info: info, 
-				abilityBehaviour: typeof(ArmouredAbility), 
+				abilityBehaviour: typeof(ArmoredAbility), 
 				tex: Utils.GetTextureFromPath(TextureFile),
 				id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, SigilID)
 			);
-			ArmouredAbility.ability = newAbility.ability;
+			ArmoredAbility.ability = newAbility.ability;
 		}
 
 		private void Start()

@@ -25,7 +25,7 @@ namespace ZergMod.Scripts.Cards
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
             appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
 
-            List<Ability> abilities = new List<Ability> { ArmouredAbility.ability, SplashDamageAbility.ability };
+            List<Ability> abilities = new List<Ability> { ArmoredAbility.ability, SplashDamageAbility.ability };
 
             NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,

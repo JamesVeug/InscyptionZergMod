@@ -44,7 +44,7 @@ namespace ZergMod
             DetectorAbility.Initialize();
             Draw2BroodlingsAbility.Initialize();
             Draw2LocustsAbility.Initialize();
-            ArmouredAbility.Initialize();
+            ArmoredAbility.Initialize();
             SplashDamageAbility.Initialize();
             AbductAbility.Initialize();
             ExplodeAbility.Initialize();
