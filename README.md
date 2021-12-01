@@ -4,11 +4,11 @@ This mod brings the alien race 'Zerg' from the RTS series StarCraft, into the wo
 The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advanced, arthropodal aliens. Dedicated to the pursuit of genetic perfection.
 
 ## Includes:
-- 26 new Cards
+- 28 new Cards
 - 14 new Sigils
 
 ### Cards:
-- **Drone** - 1,1 with Bone digger.
+- **Drone** - 1,1 with Bone digger. Evolves into Crawler Forest
 - **Zergling** - 1,2 with Double Attack. Evolves into Baneling. Special: Zergling Swarm
 - **Broodling** - 1,1 with Brittle.
 - **Locus** - 2,2 with Brittle.
@@ -20,31 +20,33 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Hydralisk** - 3,2. Evolves into Lurker.
 - **Scourge** - 1,1 with Explode and Airborne.
 - **Corrupter** - 2,2 with Airborne. Evolves into Devourer.
+- **Crawler Forest** - Mirror,5 with Mighty Leap and Detector
+- **Egg** - 0,3
 
 ### Rare Cards:
 - **Baneling** - 3,1 with Brittle and Splash Damage
-- **Swam Host** - 0,2 with Draw 2 Locusts and Waterborne
-- **Broodlord** - 0,6 with Draw 2 Broodlings
+- **Swarm Host** - 0,2 with Spawn Locust and Waterborne
+- **Brood lord** - 0,6 with Swarm Seeds
 - **Overseer** - 0,6 with Detector and Stinky
 - **Infestor** - 1,1 with Waterborne and Fish Hook
 - **Dehaka** - 1,2 with Regenerate. Special: Collect Essence
 - **Leviathan** - 2,10 with Burrower and Sharp
 - **Queen of Blades** - 4,4 With Regestate
 - **Viper** - 2,1 With Abduct
-- **Devourer** - 3,3 with Airborne and Armoured.
+- **Devourer** - 3,3 with Airborne and Armored.
 - **Guardian** - 4,6
-- **Ultralisk** - 2,6 with Armoured and Splash Damage.
+- **Ultralisk** - 2,6 with Armored and Splash Damage.
 - **Ravager** - 2,2 with Snipe.
-- **Lurker** - 2,2 with Waterborne and Guardian.
+- **Lurker** - 2,2 with Waterborne and Splash Damage.
 
 ### Abilities:
-- **Draw Broodling's** - Draw 1 Broodling's at the start of your turn
-- **Draw Locust's** - Draw 1 Locusts at the start of your turn
+- **Swarm Seeds** - Draw 1 Broodling at the start of your turn
+- **Spawn Locust** - Draw 1 Locusts at the start of your turn
 - **Regenerate** - The card bearing this sigil Heals 1 health at the end of a turn
 - **Spawn Larva** - The card bearing this sigil will place 2 lava on the board
 - **Double Attack** - When a card bearing this sigil deals damage to a card and survives, it will perform one additional attack.
-- **Regestate** - When this card is killed it will transform into an Egg for it to regenerate into its original form.\nAn egg has 0 Power and as much Health as the base card.
-- **Armoured** - When a card bearing this sigil takes damage, it will take 1 less damage
+- **Regestate** - When this card is killed it will transform into an Egg for it to regenerate into its original form. An egg has 0 Power and as much Health as the base card.
+- **Armored** - When a card bearing this sigil takes damage, it will take 1 less damage
 - **Splash Damage** - When a card bearing this sigil deals damage it will also hit the adjacent cards
 - **Abduct** - When a card bearing this sigil is played, a targeted enemy card is moved to the space in front of it, if that space is empty
 - **Detector** - When a card bearing this sigil is on the board all opponent's submerged cards will be revealed.
@@ -63,7 +65,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **CarbotAnimations** - Original Cartoon art for Star Craft
 - **GeneralSpritz** - Custom Art
 - **Shattered Omega** - Balancing suggestions
-- **Cyantist** - Armoured Ability
+- **Cyantist** - Armored Ability
 
 
 # Installation
@@ -75,6 +77,7 @@ I recommend this tutorial if you are curious how to manually install mods in the
 
 ## Known Issues:
 - Regestate does not work for death cards
+- Armored does not work on some sigils
 
 
 ## Bug reports / Suggestions / Feedback:
@@ -83,6 +86,39 @@ Contact JamesGames on the Inscryption Modding Discord
 
 
 # Update notes:
+
+## `Version: 0.7.0 - 2/12/2021`
+### New:
+- Crawler Forest
+
+### Changes:
+- General
+  - Updated some Descriptions to be more descriptive
+- Lurker
+  - Removed Guard Dog Ability
+  - Added Splash Damage Ability
+- Drone
+  - Added Submerge
+  - Can now Evolve into Crawler Forest
+- Double Attack
+  - Can now double attack cards that are created after the initial cards death 
+- Abduct
+  - Can now be canceled by clicking on an empty slot
+- Spawn Larva
+  - Added new art by General Spritz
+- Armoured
+  - Renamed to Armored
+- Draw Broodling's
+  - Renamed to Swarm Seeds
+- Draw Locust's
+  - Renamed to Spawn Locust
+
+### Fixes:
+- Sometimes Abduct does not wiggle when it can not cast
+- Soft lock when sacrificing a card that has the Detector sigil and has revealed submerged cards
+
+<details>
+  <summary>See all Changes</summary>
 
 ## `Version: 0.6.0 - 28/11/2021`
 ### New:
@@ -307,3 +343,5 @@ Contact JamesGames on the Inscryption Modding Discord
 
 ### Changes:
 - Squirrel art changed to a Larva
+
+</details>

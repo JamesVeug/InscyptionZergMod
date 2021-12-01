@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using BepInEx;
 using BepInEx.Logging;
@@ -16,7 +17,7 @@ namespace ZergMod
     {
 	    public const string PluginGuid = "jamesgames.inscryption.zergmod";
 	    public const string PluginName = "Zerg Mod";
-	    public const string PluginVersion = "0.6.0.0";
+	    public const string PluginVersion = "0.7.0.0";
 	    public const string DecalPath = "Artwork/watermark.png";
 
         public static string Directory;
@@ -29,7 +30,6 @@ namespace ZergMod
             Directory = this.Info.Location.Replace("ZergMod.dll", "");
             new Harmony("jamesgames.inscryption.zergmod").PatchAll();
 
-            
             Egg.Initialize();
             
             // SpecialAbilities
@@ -94,19 +94,21 @@ namespace ZergMod
 	        Texture2D tex = new Texture2D(2,2);
 	        tex.LoadImage(imgBytes);
 
-	        List<Ability> abilities = new List<Ability>{ SplashDamageAbility.ability, ArmouredAbility.ability };
+	        List<Ability> abilities = new List<Ability>{ };
+	        List<SpecialTriggeredAbility> specialAbilities = new List<SpecialTriggeredAbility> { };
 
 	        new CustomCard("Squirrel")
 	        {
 		        displayedName="Larva", 
 		        tex=tex, 
 		        altTex=tex, 
-		        /*baseAttack = 1, 
+		        /*baseAttack = 0, 
 		        baseHealth = 10, 
-		        abilities = abilities,*/
+		        abilities = abilities,
+		        specialStatIcon = SpecialStatIcon.Mirror,
+		        specialAbilities = specialAbilities,*/
 		        decals = Utils.GetDecals()
 	        };
         }
     }
-
 }
