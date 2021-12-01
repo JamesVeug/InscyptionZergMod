@@ -27,7 +27,7 @@ namespace ZergMod.Scripts.Cards
 
             List<Ability> abilities = new List<Ability> { Ability.BoneDigger, Ability.Submerge };
             
-            CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "CrawlerForest");
+            CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Crawler Forest");
             EvolveIdentifier identifier = new EvolveIdentifier("CrawlerForest", 1, new CardModificationInfo(cardInfo));
 
             NewCard.Add(name: DisplayName,
