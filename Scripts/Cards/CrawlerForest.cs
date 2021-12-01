@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class CrawlerForest
     {
+        private const string ID = "CrawlerForest";
         private const string DisplayName = "Crawler Forest";
         private const string Description = "A forest of Spine and Spore crawlers designed to defend you";
         private const string TextureFile = "Artwork/crawler_forest.png";
@@ -27,7 +28,7 @@ namespace ZergMod.Scripts.Cards
             List<Ability> abilities = new List<Ability> { DetectorAbility.ability, Ability.Reach };
             List<SpecialTriggeredAbility> specialAbilities = new List<SpecialTriggeredAbility> { SpecialTriggeredAbility.Mirror };
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,
