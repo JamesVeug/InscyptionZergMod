@@ -8,7 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Broodlord
     {
-        private const string DisplayName = "Broodlord";
+        private const string DisplayName = "Brood lord";
         private const string Description = "Heavy Airborn unit at its max evolution stage";
         private const string TextureFile = "Artwork/broodlord.png";
 
