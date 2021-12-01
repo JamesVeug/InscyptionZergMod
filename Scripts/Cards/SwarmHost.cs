@@ -26,7 +26,7 @@ namespace ZergMod.Scripts.Cards
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
             appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
 
-            List<Ability> abilities = new List<Ability> {Draw2LocustsAbility.ability, Ability.Submerge};
+            List<Ability> abilities = new List<Ability> {SpawnLocustAbility.ability, Ability.Submerge};
 
             NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,

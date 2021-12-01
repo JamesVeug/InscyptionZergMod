@@ -43,7 +43,7 @@ namespace ZergMod
             SpawnLarvaAbility.Initialize();
             DetectorAbility.Initialize();
             SwarmSeedsAbility.Initialize();
-            Draw2LocustsAbility.Initialize();
+            SpawnLocustAbility.Initialize();
             ArmoredAbility.Initialize();
             SplashDamageAbility.Initialize();
             AbductAbility.Initialize();

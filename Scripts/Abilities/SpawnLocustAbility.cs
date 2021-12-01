@@ -6,14 +6,14 @@ using UnityEngine;
 
 namespace ZergMod
 {
-    public class Draw2LocustsAbility : AbilityBehaviour
+    public class SpawnLocustAbility : AbilityBehaviour
 	{
 		public override Ability Ability => ability;
 		public static Ability ability;
         
 		private const int PowerLevel = 0;
 		private const string SigilID = "Draw Locust's";
-		private const string SigilName = "Draw Locust's";
+		private const string SigilName = "Spawn Locust";
 		private const string Description = "Draw 1 Locust at the start of your turn\nA Locust is defined as: 1 Power 1 Health";
 		private const string TextureFile = "Artwork/draw_locusts.png";
 		private const string LearnText = "Although brittle they are dangerous in high numbers";
@@ -37,11 +37,11 @@ namespace ZergMod
 
 			NewAbility newAbility = new NewAbility(
 				info: info, 
-				abilityBehaviour: typeof(Draw2LocustsAbility), 
+				abilityBehaviour: typeof(SpawnLocustAbility), 
 				tex: Utils.GetTextureFromPath(TextureFile),
 				id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, SigilID)
 			);
-			Draw2LocustsAbility.ability = newAbility.ability;
+			SpawnLocustAbility.ability = newAbility.ability;
 		}
 
 		public override bool RespondsToTurnEnd(bool playerTurnEnd)
