@@ -25,7 +25,7 @@ namespace ZergMod.Scripts.Cards
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
             appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
 
-            List<Ability> abilities = new List<Ability> { Draw2BroodlingsAbility.ability };
+            List<Ability> abilities = new List<Ability> { SwarmSeedsAbility.ability };
 
             NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,

@@ -42,7 +42,7 @@ namespace ZergMod
             DoubleAttackAbility.Initialize();
             SpawnLarvaAbility.Initialize();
             DetectorAbility.Initialize();
-            Draw2BroodlingsAbility.Initialize();
+            SwarmSeedsAbility.Initialize();
             Draw2LocustsAbility.Initialize();
             ArmoredAbility.Initialize();
             SplashDamageAbility.Initialize();
@@ -60,6 +60,7 @@ namespace ZergMod
             Devourer.Initialize();
             Guardian.Initialize();
             CrawlerForest.Initialize();
+            Broodlord.Initialize();
             
             // Units
             Locust.Initialize();
@@ -71,7 +72,6 @@ namespace ZergMod
             Queen.Initialize();
             Hydralisk.Initialize();
             Broodling.Initialize();
-            Broodlord.Initialize();
             Drone.Initialize();
             Ultralisk.Initialize();
             Dehaka.Initialize();
