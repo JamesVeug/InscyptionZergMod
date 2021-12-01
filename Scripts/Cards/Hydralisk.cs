@@ -25,8 +25,6 @@ namespace ZergMod.Scripts.Cards
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
 
-            Texture2D tex = Utils.GetTextureFromPath(TextureFile);
-
             CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Lurker");
             EvolveIdentifier identifier = new EvolveIdentifier("Lurker", 1, new CardModificationInfo(cardInfo));
 
@@ -42,7 +40,7 @@ namespace ZergMod.Scripts.Cards
                 bonesCost: BoneCost,
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
-                defaultTex: tex,
+                defaultTex: Utils.GetTextureFromPath(TextureFile),
                 evolveId:identifier,
                 decals: Utils.GetDecals());
         }

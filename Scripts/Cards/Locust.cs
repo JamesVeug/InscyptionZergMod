@@ -23,8 +23,6 @@ namespace ZergMod.Scripts.Cards
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
 
-            Texture2D tex = Utils.GetTextureFromPath(TextureFile);
-
             List<Ability> abilities = new List<Ability> { Ability.Brittle };
 
             NewCard.Add(name: DisplayName,
@@ -39,7 +37,7 @@ namespace ZergMod.Scripts.Cards
                 bonesCost: BoneCost,
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
-                defaultTex: tex,
+                defaultTex: Utils.GetTextureFromPath(TextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals());
         }
