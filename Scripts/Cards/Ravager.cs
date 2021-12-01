@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace ZergMod.Scripts.Cards
 {
-    public static class Ravenger
+    public static class Ravager
     {
         private const string DisplayName = "Ravager";
         private const string Description = "Beware of its snipe. Can be unfortunate to be in its way";

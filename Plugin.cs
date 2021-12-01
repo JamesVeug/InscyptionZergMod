@@ -56,7 +56,7 @@ namespace ZergMod
             Banelings.Initialize();
             Overseer.Initialize();
             Lurker.Initialize();
-            Ravenger.Initialize();
+            Ravager.Initialize();
             Devourer.Initialize();
             Guardian.Initialize();
             CrawlerForest.Initialize();
