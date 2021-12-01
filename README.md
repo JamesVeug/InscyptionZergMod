@@ -15,7 +15,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Infested Terran** - 1,2 with Brittle and Fecundity.
 - **Overlord** - 0,4 with Fledgling and Mighty Leap. Evolves into Overseer.
 - **Roach** - 2,3 with Regenerate. Evolves into Ravager.
-- **Mutalisk** - 1,3 with Airborne and Ricochet.
+- **Mutalisk** - 1,3 with Ricochet. Evolves into Guardian
 - **Queen** - 1,3 With Spawn Larva.
 - **Hydralisk** - 3,2. Evolves into Lurker.
 - **Scourge** - 1,1 with Explode and Airborne.
@@ -103,7 +103,8 @@ Contact JamesGames on the Inscryption Modding Discord
     - Now obtainable after defeating Prospector
 - Mutalisk 
     - Health reverted back to 3 from 1
-    - Removed Bombard ability
+    - Removed Bombard ability 
+    - Removed Airborne ability
     - Added Ricochet ability
 - Roach
 	- Health increased from 2 to 3
