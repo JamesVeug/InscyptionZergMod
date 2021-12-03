@@ -20,11 +20,9 @@ namespace ZergMod.Scripts.Cards
         public static void Initialize()
         {
             List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
-            metaCategories.Add(CardMetaCategory.Rare);
             metaCategories.Add(CardMetaCategory.TraderOffer);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
-            appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
 
             List<Ability> abilities = new List<Ability> {SpawnLocustAbility.ability, Ability.Submerge};
 
