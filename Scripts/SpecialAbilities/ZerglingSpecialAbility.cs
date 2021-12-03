@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using APIPlugin;
@@ -8,7 +9,7 @@ using Plugin = ZergMod.Plugin;
 
 namespace DiskCardGame
 {
-    public class ZerglingSpecialAbility : SpecialCardBehaviour
+    public class ZerglingSpecialAbility : SpecialCardBehaviour, IPortraitChanges
     {
         public SpecialTriggeredAbility SpecialAbility => specialAbility;
         public static SpecialTriggeredAbility specialAbility;
@@ -51,6 +52,12 @@ namespace DiskCardGame
 
             m_zerglingImages[health] = tex;
             m_maxZerglingHealth = Mathf.Max(m_maxZerglingHealth, health);
+        }
+
+        private void Awake()
+        {
+            // Change portrait when the game starts and the ability is first added to the card
+            RefreshPortrait();
         }
 
         public override bool RespondsToPlayFromHand()
@@ -108,12 +115,12 @@ namespace DiskCardGame
             yield return null;
         }
 
-        private bool ShouldRefreshPortrait()
+        public bool ShouldRefreshPortrait()
         {
-            return !PlayableCard.Dead;
+            return true;
         }
 
-        private void RefreshPortrait()
+        public void RefreshPortrait()
         {
             int health = Mathf.Clamp(PlayableCard.Health, 0, m_maxZerglingHealth);
             if (health == 0)

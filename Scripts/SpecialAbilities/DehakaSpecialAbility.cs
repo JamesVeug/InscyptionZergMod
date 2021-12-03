@@ -6,7 +6,7 @@ using UnityEngine;
 using ZergMod;
 namespace DiskCardGame
 {
-    public class DehakaSpecialAbility : SpecialCardBehaviour
+    public class DehakaSpecialAbility : SpecialCardBehaviour, IPortraitChanges
     {
         public SpecialTriggeredAbility SpecialAbility => specialAbility;
         public static SpecialTriggeredAbility specialAbility;
@@ -49,6 +49,12 @@ namespace DiskCardGame
             m_dehakaImages[kills] = tex;
             m_minDehakakillsForImages = Mathf.Min(m_minDehakakillsForImages, kills);
             m_maxDehakakillsForImages = Mathf.Max(m_maxDehakakillsForImages, kills);
+        }
+
+        private void Awake()
+        {
+            // Change portrait when the game starts and the ability is first added to the card
+            RefreshPortrait();
         }
 
         public override bool RespondsToDealDamage(int amount, PlayableCard target)
@@ -105,9 +111,9 @@ namespace DiskCardGame
             yield return null;
         }
 
-        private bool ShouldRefreshPortrait()
+        public bool ShouldRefreshPortrait()
         {
-            return !PlayableCard.Dead;
+            return PlayableCard != null && !PlayableCard.Dead;
         }
 
         private Texture2D GetCurrentKillsPortrait(out int portraitKills)
@@ -129,7 +135,7 @@ namespace DiskCardGame
             return tex;
         }
         
-        private void RefreshPortrait()
+        public void RefreshPortrait()
         {
             Texture2D tex = GetCurrentKillsPortrait(out int kills);
             if (tex == null)
