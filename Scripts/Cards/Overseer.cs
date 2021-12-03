@@ -23,7 +23,6 @@ namespace ZergMod.Scripts.Cards
             metaCategories.Add(CardMetaCategory.TraderOffer);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
-            appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
 
             List<Ability> abilities = new List<Ability> { DetectorAbility.ability, Ability.DebuffEnemy };
 
