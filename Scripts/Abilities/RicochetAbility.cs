@@ -16,11 +16,12 @@ namespace ZergMod
         private const int PowerLevel = 0;
         private const string SigilID = "Ricochet";
         private const string SigilName = "Ricochet";
-        private const string Description = "When a card bearing this sigil deals damage to a card it also hits face for 1 damage.";
+        private const string Description = "When a card bearing this sigil deals damage to a card it will also try hitting over the card for 1 damage.";
         private const string TextureFile = "Artwork/ricochet.png";
         private const string LearnText = "";
 
         private const int Ricochet_Damage = 1;
+        private bool activated = false;
 
         public static void Initialize()
         {
@@ -50,58 +51,43 @@ namespace ZergMod
 
         public override bool RespondsToDealDamage(int amount, PlayableCard target)
         {
-            return true;
+            return !activated && !Card.Dead;
         }
 
         public override IEnumerator OnDealDamage(int amount, PlayableCard target)
         {
+            activated = true;
+            
+            // Wait for them to finish the attack
             yield return new WaitForSeconds(0.125f);
             
+            // Switch to Combat view
             if (Singleton<ViewManager>.Instance.CurrentView != Singleton<BoardManager>.Instance.CombatView)
             {
                 yield return new WaitForSeconds(0.2f);
                 Singleton<ViewManager>.Instance.SwitchToView(Singleton<BoardManager>.Instance.CombatView, false, false);
                 yield return new WaitForSeconds(0.2f);
             }
+
+            // Adjust settings
+            CardModificationInfo flyingModifier = new CardModificationInfo
+            {
+                attackAdjustment = Card.Attack - 1, // Set the damage to 1
+                abilities = new List<Ability> { Ability.Flying } // Allow flying over targets
+            };
+            Card.AddTemporaryMod(flyingModifier);
             
-            AddTeeth();
-
-            CombatPhaseManager3D instance = Singleton<CombatPhaseManager3D>.Instance;
-            yield return instance.VisualizeCardAttackingDirectly(Utils.GetSlot(Card), Utils.GetSlot(target), amount);
-            if (Card.TriggerHandler.RespondsToTrigger(Trigger.DealDamageDirectly, new object[]
-            {
-                Ricochet_Damage
-            }))
-            {
-                yield return Card.TriggerHandler.OnTrigger(Trigger.DealDamageDirectly, new object[]
-                {
-                    Ricochet_Damage
-                });
-            }
+            // Attack
             yield return new WaitForSeconds(0.2f);
+            yield return Singleton<CombatPhaseManager>.Instance.SlotAttackSlot(Card.Slot, Utils.GetSlot(target));
+            yield return new WaitForSeconds(0.2f);
+            
+            // Revert settings
+            Card.RemoveTemporaryMod(flyingModifier);
+            
+            // Learn
             yield return base.LearnAbility(0f);
-        }
-
-        private void AddTeeth()
-        {
-            CombatPhaseManager combatManager = Singleton<CombatPhaseManager>.Instance;
-            var prop = combatManager.GetType().GetProperty("DamageDealtThisPhase",
-                BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic |
-                BindingFlags.GetProperty | BindingFlags.SetProperty);
-            Plugin.Log.LogInfo("[RicochetAbility] prop " + prop);
-
-            int damage = combatManager.GetPrivatePropertyValue<int>("DamageDealtThisPhase");
-            Plugin.Log.LogInfo("[RicochetAbility] damagea " + damage);
-            int newDamage = damage + Ricochet_Damage;
-
-            Type t = typeof(CombatPhaseManager);
-            if (t.GetProperty("DamageDealtThisPhase", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance) ==
-                null)
-                throw new ArgumentOutOfRangeException("propName",
-                    string.Format("Property {0} was not found in Type {1}", "CombatPhaseManager", t.FullName));
-            t.InvokeMember("DamageDealtThisPhase",
-                BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.SetProperty | BindingFlags.Instance, null,
-                combatManager, new object[] { newDamage });
+            activated = false;
         }
     }
 }
