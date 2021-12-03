@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Dehaka";
         private const string Description = "Collects, Kills, takes the essence of its prey.";
         private const string TextureFile = "Artwork/dehaka_1.png";
+        private const string EmitTextureFile = "Artwork/dehaka_1_emit.png";
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 2;
@@ -41,6 +42,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 specialAbilities: specialAbilities,
                 decals: Utils.GetDecals(),

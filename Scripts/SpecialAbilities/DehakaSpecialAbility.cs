@@ -21,9 +21,9 @@ namespace DiskCardGame
 
         public static void Initialize()
         {
-            InitializeTexture(0, "Artwork/dehaka_1.png");
-            InitializeTexture(3, "Artwork/dehaka_2.png");
-            InitializeTexture(6, "Artwork/dehaka_3.png");
+            InitializeTexture(0, "Artwork/dehaka_1.png", "Artwork/dehaka_1_emit.png");
+            InitializeTexture(3, "Artwork/dehaka_2.png", "Artwork/dehaka_2_emit.png");
+            InitializeTexture(6, "Artwork/dehaka_3.png", "Artwork/dehaka_3_emit.png");
             
             SpecialAbilityIdentifier identifier = SpecialAbilityIdentifier.GetID("DehakaSpecialAbility", "DehakaSpecialAbility");
             
@@ -38,14 +38,27 @@ namespace DiskCardGame
             specialAbility = newSpecialAbility.specialTriggeredAbility;
         }
 
-        private static void InitializeTexture(int kills, string fileName)
+        private static void InitializeTexture(int kills, string fileName, string emissiveFileName)
         {
             byte[] imgBytes = File.ReadAllBytes(Path.Combine(ZergMod.Plugin.Directory, fileName));
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
             tex.name = "portrait_" + fileName;
             tex.filterMode = FilterMode.Point;
-
+            
+            if (!NewCard.emissions.ContainsKey(tex.name))
+            {
+                byte[] emissiveImgBytes = File.ReadAllBytes(Path.Combine(ZergMod.Plugin.Directory, emissiveFileName));
+                Texture2D emissiveTex = new Texture2D(2,2);
+                emissiveTex.LoadImage(emissiveImgBytes);
+                emissiveTex.name = tex.name + "_emission";
+                emissiveTex.filterMode = FilterMode.Point;
+                
+                Sprite emissiveSprite = Sprite.Create(emissiveTex, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
+                emissiveSprite.name = tex.name + "_emission";
+                NewCard.emissions.Add(tex.name, emissiveSprite);
+            }
+            
             m_dehakaImages[kills] = tex;
             m_minDehakakillsForImages = Mathf.Min(m_minDehakakillsForImages, kills);
             m_maxDehakakillsForImages = Mathf.Max(m_maxDehakakillsForImages, kills);
@@ -142,7 +155,7 @@ namespace DiskCardGame
             {
                 return;
             }
-            
+
             Card.Info.portraitTex = Sprite.Create(tex, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
             Card.Info.portraitTex.name = tex.name;
             Card.Info.alternatePortrait = Sprite.Create(tex, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
