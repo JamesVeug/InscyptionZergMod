@@ -15,7 +15,7 @@ namespace ZergMod
         public static NewBackgroundBehaviour AddNewBackground(Type type)
         {
             var backgroundBehaviour = new NewBackgroundBehaviour();
-            backgroundBehaviour.Appearance = (CardAppearanceBehaviour.Appearance)((int)(CardAppearanceBehaviour.Appearance.SexyGoat) + AllBehaviours.Count);
+            backgroundBehaviour.Appearance = (CardAppearanceBehaviour.Appearance)((int)(CardAppearanceBehaviour.Appearance.SexyGoat) + AllBehaviours.Count + 1);
             backgroundBehaviour.Behaviour = type;
             
             Behaviours[backgroundBehaviour.Appearance] = backgroundBehaviour;
