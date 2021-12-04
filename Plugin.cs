@@ -7,6 +7,7 @@ using DiskCardGame;
 using HarmonyLib;
 using UnityEngine;
 using APIPlugin;
+using ZergMod.Scripts.Backgrounds;
 using ZergMod.Scripts.Cards;
 
 namespace ZergMod
@@ -30,6 +31,9 @@ namespace ZergMod
             Directory = this.Info.Location.Replace("ZergMod.dll", "");
             new Harmony("jamesgames.inscryption.zergmod").PatchAll();
 
+            // Backgrounds
+            XelNagaBackground.Initialize();
+            
             Egg.Initialize();
             
             // SpecialAbilities
@@ -82,6 +86,7 @@ namespace ZergMod
             Viper.Initialize();
             Scourge.Initialize();
             Corruptor.Initialize();
+            XelNagaArtifact.Initialize();
 
             // Squirrel / Lava
             ChangeSquirrelToLarva();
