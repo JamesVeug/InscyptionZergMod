@@ -8,36 +8,37 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - 14 new Sigils
 
 ### Cards:
-- **Drone** - 1,1 with Bone digger. Evolves into Crawler Forest
-- **Zergling** - 1,2 with Double Attack. Evolves into Baneling. Special: Zergling Swarm
-- **Broodling** - 1,1 with Brittle.
-- **Locus** - 2,2 with Brittle.
+- **Drone** - 1,1 with Bone digger and Submerge. Evolves into Crawler Forest
+- **Zerglings** - 1,2 with Double Attack. Evolves into Baneling. Special: Zergling Swarm
+- **Broodling** - 2,2 with Brittle.
+- **Locust** - 1,1 with Brittle.
 - **Infested Terran** - 1,2 with Brittle and Fecundity.
 - **Overlord** - 0,4 with Fledgling and Mighty Leap. Evolves into Overseer.
 - **Roach** - 2,3 with Regenerate. Evolves into Ravager.
 - **Mutalisk** - 1,3 with Ricochet. Evolves into Guardian
 - **Queen** - 1,3 With Spawn Larva.
 - **Hydralisk** - 3,2. Evolves into Lurker.
-- **Scourge** - 1,1 with Explode and Airborne.
+- **Scourge** - 3,1 with Explode and Airborne.
 - **Corrupter** - 2,2 with Airborne. Evolves into Devourer.
 - **Crawler Forest** - Mirror,5 with Mighty Leap and Detector
 - **Egg** - 0,3
+- **Baneling** - 3,1 with Explode
+- **Overseer** - 0,6 with Detector and Stinky
+- **Guardian** - 4,6
+- **Swarm Host** - 0,2 with Spawn Locust and Waterborne
 
 ### Rare Cards:
-- **Baneling** - 3,1 with Brittle and Splash Damage
-- **Swarm Host** - 0,2 with Spawn Locust and Waterborne
 - **Brood lord** - 0,6 with Swarm Seeds
-- **Overseer** - 0,6 with Detector and Stinky
 - **Infestor** - 1,1 with Waterborne and Fish Hook
 - **Dehaka** - 1,2 with Regenerate. Special: Collect Essence
 - **Leviathan** - 2,10 with Burrower and Sharp
 - **Queen of Blades** - 4,4 With Regestate
 - **Viper** - 2,1 With Abduct
 - **Devourer** - 3,3 with Airborne and Armored.
-- **Guardian** - 4,6
-- **Ultralisk** - 2,6 with Armored and Splash Damage.
+- **Ultralisk** - 2,5 with Armored and Splash Damage.
 - **Ravager** - 2,2 with Snipe.
 - **Lurker** - 2,2 with Waterborne and Splash Damage.
+- **Strange Artifact** - 0,1 with Bone King, Worthy Sacrifice
 
 ### Abilities:
 - **Swarm Seeds** - Draw 1 Broodling at the start of your turn
@@ -87,6 +88,36 @@ Contact JamesGames on the Inscryption Modding Discord
 
 # Update notes:
 
+## `Version: 0.8.0 - 5/1/2021`
+### New:
+- Strange Artifact
+
+### Changes:
+- General
+  - Added first pass emissions to all cards except Zerglings
+  - Removed rare background from cards that are not rare
+- Ricochet
+  - Can now be blocked by Mighty Leap
+- Swarm Host
+  - No longer rare. Obtainable from Trader
+- Dehaka
+  - Blood cost increased from 1 to 2
+- Scourge
+  - Damage increased to 3 from 1
+  - Obtainable now
+
+### Fixes:
+- Dehaka
+  - Fixed portrait not changing on boot
+- Zerglings
+  - Fixed portrait not changing when buffing hp at campfire
+  - Fixed portrait not changing on boot
+- Regestate
+  - Fixed HP of egg not accounting for buffed health from fire.
+
+<details>
+  <summary>See all Changes</summary>
+
 ## `Version: 0.7.0 - 2/12/2021`
 ### New:
 - Crawler Forest
@@ -116,9 +147,6 @@ Contact JamesGames on the Inscryption Modding Discord
 ### Fixes:
 - Sometimes Abduct does not wiggle when it can not cast
 - Soft lock when sacrificing a card that has the Detector sigil and has revealed submerged cards
-
-<details>
-  <summary>See all Changes</summary>
 
 ## `Version: 0.6.0 - 28/11/2021`
 ### New:
