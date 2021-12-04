@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Overseer";
         private const string Description = "The all seeing creature powered to reveal hidden creatures";
         private const string TextureFile = "Artwork/overseer.png";
+        private const string EmitTextureFile = "Artwork/overseer_emit.png";
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 6;
@@ -39,6 +40,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals());
         }

@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Brood lord";
         private const string Description = "Heavy Airborn unit at its max evolution stage";
         private const string TextureFile = "Artwork/broodlord.png";
+        private const string EmitTextureFile = "Artwork/broodlord_emit.png";
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 6;
@@ -40,6 +41,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals());
         }

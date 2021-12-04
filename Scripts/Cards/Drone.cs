@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Drone";
         private const string Description = "Worker unit will gather resources for you";
         private const string TextureFile = "Artwork/drone.png";
+        private const string EmitTextureFile = "Artwork/drone_emit.png";
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 1;
@@ -43,6 +44,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals(),
                 evolveId: identifier);

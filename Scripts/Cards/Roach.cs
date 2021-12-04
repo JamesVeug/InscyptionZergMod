@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Roach";
         private const string Description = "Armored unit that can heal";
         private const string TextureFile = "Artwork/roach.png";
+        private const string EmitTextureFile = "Artwork/roach_emit.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 3;
@@ -44,6 +45,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 evolveId:identifier,
                 decals: Utils.GetDecals());

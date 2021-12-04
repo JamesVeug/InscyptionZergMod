@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Infested Terran";
         private const string Description = "Must be a result of a space virus infesting a human turning them Zerg.";
         private const string TextureFile = "Artwork/infested_terran.png";
+        private const string EmitTextureFile = "Artwork/infested_terran_emit.png";
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 2;
@@ -40,6 +41,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals());
         }

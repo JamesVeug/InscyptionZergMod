@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Infestor";
         private const string Description = "One of my most discusting creations";
         private const string TextureFile = "Artwork/infestor.png";
+        private const string EmitTextureFile = "Artwork/infestor_emit.png";
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 1;
@@ -40,6 +41,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals());
         }

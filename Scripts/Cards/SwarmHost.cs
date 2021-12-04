@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Swarm Host";
         private const string Description = "Those free units are nothing but a distraction";
         private const string TextureFile = "Artwork/swarm_host.png";
+        private const string EmitTextureFile = "Artwork/swarm_host_emit.png";
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 2;
@@ -39,6 +40,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals());
         }

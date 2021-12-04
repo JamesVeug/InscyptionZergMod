@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Corruptor";
         private const string Description = "A squid-like zerg flying unit.";
         private const string TextureFile = "Artwork/corruptor.png";
+        private const string EmitTextureFile = "Artwork/corruptor_emit.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 2;
@@ -43,6 +44,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals(),
                 evolveId:identifier);

@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Scourge";
         private const string Description = "Like little baby mutalisks. But uglier. And they smell way worse when they die.";
         private const string TextureFile = "Artwork/scourge.png";
+        private const string EmitTextureFile = "Artwork/scourge_emit.png";
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 1;
@@ -38,6 +39,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals());
         }

@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Viper";
         private const string Description = "Its long tongue makes for a great Tether";
         private const string TextureFile = "Artwork/viper.png";
+        private const string EmitTextureFile = "Artwork/two_banelings_emit.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 1;
@@ -40,6 +41,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals());
         }

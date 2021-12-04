@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Devourer";
         private const string Description = "Heavy anti-air flyer";
         private const string TextureFile = "Artwork/devourer.png";
+        private const string EmitTextureFile = "Artwork/devourer_emit.png";
 
         private const int BaseAttack = 3;
         private const int BaseHealth = 3;
@@ -41,6 +42,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals());
         }

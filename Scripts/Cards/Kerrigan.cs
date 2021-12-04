@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Queen of Blades";
         private const string Description = "The Hero that never dies";
         private const string TextureFile = "Artwork/kerrigan.png";
+        private const string EmitTextureFile = "Artwork/kerrigan_emit.png";
 
         private const int BaseAttack = 4;
         private const int BaseHealth = 4;
@@ -40,6 +41,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals(),
                 onePerDeck:true);

@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Leviathan";
         private const string Description = "Heavy air transport unit";
         private const string TextureFile = "Artwork/leviathan.png";
+        private const string EmitTextureFile = "Artwork/leviathan_emit.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 10;
@@ -40,6 +41,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals(),
                 onePerDeck:true);

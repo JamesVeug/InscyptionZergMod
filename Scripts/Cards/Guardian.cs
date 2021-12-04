@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Guardian";
         private const string Description = "Despite being devastating in terrestrial combat, guardians are next to useless in space combat";
         private const string TextureFile = "Artwork/guardian.png";
+        private const string EmitTextureFile = "Artwork/guardian_emit.png";
 
         private const int BaseAttack = 4;
         private const int BaseHealth = 6;
@@ -40,6 +41,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals());
         }

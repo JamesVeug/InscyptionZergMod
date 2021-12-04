@@ -12,6 +12,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Crawler Forest";
         private const string Description = "A forest of Spine and Spore crawlers designed to defend you";
         private const string TextureFile = "Artwork/crawler_forest.png";
+        private const string EmitTextureFile = "Artwork/crawler_forest_emit.png";
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 5;
@@ -41,6 +42,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 specialAbilities: specialAbilities,
                 decals: Utils.GetDecals(),

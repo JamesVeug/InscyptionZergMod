@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Lurker";
         private const string Description = "Stay away from its spines. They are beyond deadly";
         private const string TextureFile = "Artwork/lurker.png";
+        private const string EmitTextureFile = "Artwork/lurker_emit.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 2;
@@ -40,6 +41,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals());
         }

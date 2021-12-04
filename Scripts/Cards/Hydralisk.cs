@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Hydralisk";
         private const string Description = "Great for taking out flyers";
         private const string TextureFile = "Artwork/hydralisk.png";
+        private const string EmitTextureFile = "Artwork/hydralisk_emit.png";
 
         private const int BaseAttack = 3;
         private const int BaseHealth = 2;
@@ -41,6 +42,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 evolveId:identifier,
                 decals: Utils.GetDecals());
         }

@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Banelings";
         private const string Description = "Those things are pretty nasty. Next time, you should try not to let them splash you!";
         private const string TextureFile = "Artwork/two_banelings.png";
+        private const string EmitTextureFile = "Artwork/two_banelings_emit.png";
 
         private const int BaseAttack = 3;
         private const int BaseHealth = 1;
@@ -39,6 +40,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals());
         }

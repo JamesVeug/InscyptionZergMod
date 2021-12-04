@@ -11,6 +11,7 @@ namespace ZergMod.Scripts.Cards
         private const string DisplayName = "Ultralisk";
         private const string Description = "Double armoured brute. You don't want to be in his way!";
         private const string TextureFile = "Artwork/ultralisk.png";
+        private const string EmitTextureFile = "Artwork/ultralisk_emit.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 5;
@@ -40,6 +41,7 @@ namespace ZergMod.Scripts.Cards
                 tribes: new List<Tribe> { Tribe.Insect },
                 appearanceBehaviour: appearanceBehaviour,
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
+                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 abilities: abilities,
                 decals: Utils.GetDecals());
         }
