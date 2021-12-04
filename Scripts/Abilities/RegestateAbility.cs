@@ -63,11 +63,11 @@ namespace ZergMod
             Singleton<ViewManager>.Instance.SwitchToView(View.Board, false, false);
             
             CardInfo whatToMutateInto = CardLoader.GetCardByName(this.Card.Info.name);
-            int totalHealth = whatToMutateInto.Health;
+            int totalHealth = this.Card.Health + this.Card.Status.damageTaken;
             int totalEvolves = Mathf.Clamp(Mathf.FloorToInt((float)totalHealth / 4), 1, 3) + 1;
             
             CardInfo egg = (CardInfo)NewCard.cards.Find(info => info.displayedName == "Egg").Clone();
-            egg.baseHealth = whatToMutateInto.baseHealth;
+            egg.baseHealth = totalHealth;
             egg.abilities = new List<Ability> { Ability.Evolve };
             egg.evolveParams = new EvolveParams{turnsToEvolve = totalEvolves, evolution = whatToMutateInto};
             
