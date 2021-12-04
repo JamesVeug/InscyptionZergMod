@@ -13,7 +13,7 @@ namespace ZergMod.Scripts.Cards
         private const string TextureFile = "Artwork/scourge.png";
         private const string EmitTextureFile = "Artwork/scourge_emit.png";
 
-        private const int BaseAttack = 1;
+        private const int BaseAttack = 3;
         private const int BaseHealth = 1;
         private const int BloodCost = 1;
         private const int BoneCost = 0;
@@ -21,6 +21,7 @@ namespace ZergMod.Scripts.Cards
         public static void Initialize()
         {
             List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+            metaCategories.Add(CardMetaCategory.ChoiceNode);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
 
