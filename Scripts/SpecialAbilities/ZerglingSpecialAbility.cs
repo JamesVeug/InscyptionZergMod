@@ -115,6 +115,18 @@ namespace DiskCardGame
             yield return null;
         }
 
+        private int Health()
+        {
+            if (PlayableCard != null)
+            {
+                return PlayableCard.Health;
+            }
+            else
+            {
+                return Card.Info.Health;
+            }
+        }
+
         public bool ShouldRefreshPortrait()
         {
             return true;
@@ -122,7 +134,7 @@ namespace DiskCardGame
 
         public void RefreshPortrait()
         {
-            int health = Mathf.Clamp(PlayableCard.Health, 0, m_maxZerglingHealth);
+            int health = Mathf.Clamp(Health(), 0, m_maxZerglingHealth);
             if (health == 0)
             {
                 return;
