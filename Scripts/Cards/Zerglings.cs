@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Zerglings
     {
+        public const string ID = "Zerglings";
         private const string DisplayName = "Zerglings";
         private const string Description = "Looks friendly but watch your face because your could lose it";
         private const string TextureFile = "Artwork/two_zergling.png";
@@ -32,7 +33,7 @@ namespace ZergMod.Scripts.Cards
             CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Banelings");
             EvolveIdentifier identifier = new EvolveIdentifier("Banelings", 1, new CardModificationInfo(cardInfo));
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

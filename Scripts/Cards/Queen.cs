@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Queen
     {
+        public const string ID = "Queen";
         private const string DisplayName = "Queen";
         private const string Description = "Brings more units to the field faster";
         private const string TextureFile = "Artwork/queen.png";
@@ -28,7 +29,7 @@ namespace ZergMod.Scripts.Cards
 
             List<Ability> abilities = new List<Ability> { SpawnLarvaAbility.ability };
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

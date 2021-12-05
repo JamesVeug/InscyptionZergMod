@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Guardian
     {
+        public const string ID = "Guardian";
         private const string DisplayName = "Guardian";
         private const string Description = "Despite being devastating in terrestrial combat, guardians are next to useless in space combat";
         private const string TextureFile = "Artwork/guardian.png";
@@ -28,7 +29,7 @@ namespace ZergMod.Scripts.Cards
 
             List<Ability> abilities = new List<Ability> {  };
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

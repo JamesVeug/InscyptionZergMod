@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Lurker
     {
+        public const string ID = "Lurker";
         private const string DisplayName = "Lurker";
         private const string Description = "Stay away from its spines. They are beyond deadly";
         private const string TextureFile = "Artwork/lurker.png";
@@ -28,7 +29,7 @@ namespace ZergMod.Scripts.Cards
 
             List<Ability> abilities = new List<Ability> { SplashDamageAbility.ability, Ability.Submerge };
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

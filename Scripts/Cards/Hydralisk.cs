@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Hydralisk
     {
+        public const string ID = "Hydralisk";
         private const string DisplayName = "Hydralisk";
         private const string Description = "Great for taking out flyers";
         private const string TextureFile = "Artwork/hydralisk.png";
@@ -29,7 +30,7 @@ namespace ZergMod.Scripts.Cards
             CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Lurker");
             EvolveIdentifier identifier = new EvolveIdentifier("Lurker", 1, new CardModificationInfo(cardInfo));
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

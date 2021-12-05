@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Ultralisk
     {
+        public const string ID = "Ultralisk";
         private const string DisplayName = "Ultralisk";
         private const string Description = "Double armoured brute. You don't want to be in his way!";
         private const string TextureFile = "Artwork/ultralisk.png";
@@ -28,7 +29,7 @@ namespace ZergMod.Scripts.Cards
 
             List<Ability> abilities = new List<Ability> { ArmoredAbility.ability, SplashDamageAbility.ability };
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

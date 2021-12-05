@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Mutalisk
     {
+        public const string ID = "Mutalisk";
         private const string DisplayName = "Mutalisk";
         private const string Description = "Flying devil";
         private const string TextureFile = "Artwork/mutalisk.png";
@@ -31,7 +32,7 @@ namespace ZergMod.Scripts.Cards
             CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Guardian");
             EvolveIdentifier identifier = new EvolveIdentifier("Guardian", 1, new CardModificationInfo(cardInfo));
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

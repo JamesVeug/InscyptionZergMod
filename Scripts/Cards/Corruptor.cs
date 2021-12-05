@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Corruptor
     {
+        public const string ID = "Corruptor";
         private const string DisplayName = "Corruptor";
         private const string Description = "A squid-like zerg flying unit.";
         private const string TextureFile = "Artwork/corruptor.png";
@@ -31,7 +32,7 @@ namespace ZergMod.Scripts.Cards
             CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Devourer");
             EvolveIdentifier identifier = new EvolveIdentifier("Devourer", 1, new CardModificationInfo(cardInfo));
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

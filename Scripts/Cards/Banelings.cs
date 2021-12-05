@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Banelings
     {
+        public const string ID = "Banelings";
         private const string DisplayName = "Banelings";
         private const string Description = "Those things are pretty nasty. Next time, you should try not to let them splash you!";
         private const string TextureFile = "Artwork/two_banelings.png";
@@ -27,7 +28,7 @@ namespace ZergMod.Scripts.Cards
 
             List<Ability> abilities = new List<Ability> { ExplodeAbility.ability };
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

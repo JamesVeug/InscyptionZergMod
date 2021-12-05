@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Roach
     {
+        public const string ID = "Roach";
         private const string DisplayName = "Roach";
         private const string Description = "Armored unit that can heal";
         private const string TextureFile = "Artwork/roach.png";
@@ -32,7 +33,7 @@ namespace ZergMod.Scripts.Cards
             CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Ravager");
             EvolveIdentifier identifier = new EvolveIdentifier("Ravager", 1, new CardModificationInfo(cardInfo));
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

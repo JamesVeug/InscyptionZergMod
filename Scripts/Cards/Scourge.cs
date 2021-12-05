@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Scourge
     {
+        public const string ID = "Scourge";
         private const string DisplayName = "Scourge";
         private const string Description = "Like little baby mutalisks. But uglier. And they smell way worse when they die.";
         private const string TextureFile = "Artwork/scourge.png";
@@ -27,7 +28,7 @@ namespace ZergMod.Scripts.Cards
 
             List<Ability> abilities = new List<Ability> { ExplodeAbility.ability, Ability.Flying };
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,
