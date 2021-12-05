@@ -1,40 +1,170 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using DiskCardGame;
 using HarmonyLib;
+using UnityEngine;
 
 namespace ZergMod.Patches
 {
-    /*[HarmonyPatch(typeof (PlayableCard), "TakeDamage", new System.Type[] {typeof (int), typeof (PlayableCard)})]
-    public class PlayableCard_TakeDamage
+    [HarmonyPatch(typeof (PlayableCard), "Sacrifice")]
+    public class PlayableCard_Sacrifice
     {
-        public static IEnumerator Postfix(IEnumerator __result, int damage, PlayableCard attacker)
+        public static bool Prefix(PlayableCard __instance, ref IEnumerator __result)
         {
-            Plugin.Log.LogInfo("[PlayableCard_TakeDamage] Deal damage: " + attacker.Info.displayedName + " " + damage);
-            if (attacker.HasAbility(RicochetAbility.ability))
+            if (__instance.HasAbility(BloodBankAbility.ability))
             {
-                CombatPhaseManager3D combatManager = Singleton<CombatPhaseManager3D>.Instance;
-                var prop = combatManager.GetType().GetProperty("DamageDealtThisPhase", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-                int DamageDealtThisPhase = (int)prop.GetValue(combatManager);
-                int newDamageDealt = DamageDealtThisPhase + 1;
-                
-                Plugin.Log.LogInfo("[PlayableCard_TakeDamage] new damage dealt: " + DamageDealtThisPhase + " -> " + newDamageDealt);
-                prop.SetValue(combatManager, newDamageDealt);
-                
-                Plugin.Log.LogInfo("[PlayableCard_TakeDamage] visualizing direct damage");
-                yield return combatManager.VisualizeCardAttackingDirectly(ZergMod.Utils.GetSlot(attacker), ZergMod.Utils.GetSlot(attacker), damage);
-                Plugin.Log.LogInfo("[PlayableCard_TakeDamage] visualizing direct damage done");
-                if (attacker.TriggerHandler.RespondsToTrigger(Trigger.DealDamageDirectly, new object[]
+                __result = SacrificeOverride(__instance);
+                return false;
+            }
+
+            return true;
+        }
+
+        private static IEnumerator SacrificeOverride(PlayableCard __instance)
+        {
+            Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Blood banked! " + __instance);
+            __instance.Anim.SetSacrificeHoverMarkerShown(false);
+            __instance.Anim.SetMarkedForSacrifice(false);
+            __instance.Anim.PlaySacrificeParticles();
+            ProgressionData.SetAbilityLearned(Ability.Sacrificial);
+            if (__instance.TriggerHandler.RespondsToTrigger(Trigger.Sacrifice, Array.Empty<object>()))
+            {
+                yield return __instance.TriggerHandler.OnTrigger(Trigger.Sacrifice, Array.Empty<object>());
+            }
+
+            PlayableCard currentSacrificeDemandingCard = Singleton<BoardManager>.Instance.currentSacrificeDemandingCard;
+            int totalBloodRequired = currentSacrificeDemandingCard.Info.BloodCost;
+            Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Total blood to sacrifice! " + totalBloodRequired);
+
+            List<CardSlot> currentSacrifices = Singleton<BoardManager>.Instance.currentSacrifices;
+            int totalBloodSacrificed = 0;
+            Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Total sacrificing: " + currentSacrifices.Count);
+            for (int i = 0; i < currentSacrifices.Count; i++)
+            {
+                Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Index: " + i);
+                PlayableCard playableCard = currentSacrifices[i].Card;
+                if (playableCard == null)
                 {
-                    attacker.Attack
-                }))
-                {
-                    yield return attacker.TriggerHandler.OnTrigger(Trigger.DealDamageDirectly, new object[]
-                    {
-                        attacker.Attack
-                    });
+                    Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Already dead/destroyed?");
+                    continue;
                 }
-                Plugin.Log.LogInfo("[PlayableCard_TakeDamage] done");
+                
+                Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Getting blood available for: " + playableCard);
+                Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Getting blood available for: " + playableCard.Info.displayedName);
+                if(playableCard.HasAbility(BloodBankAbility.ability))
+                {
+                    Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Found Blood Bank! " + totalBloodSacrificed + " already sacced");
+                    int totalHealthToGive = Mathf.Clamp(playableCard.Health, 0, totalBloodRequired - totalBloodSacrificed);
+                    totalBloodSacrificed += totalHealthToGive;
+                    if (playableCard == __instance)
+                    {
+                        Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Found Card with Blood Bank!");
+                        if (__instance.Health <= totalBloodRequired)
+                        {
+                            Plugin.Log.LogInfo("[PlayableCard_Sacrificed] Killing card. " + __instance.Health + " < " + totalBloodRequired);
+                            yield return __instance.Die(true, null, true);
+                        }
+                        else
+                        {
+                            Plugin.Log.LogInfo("[PlayableCard_Sacrificed] Applying damage card. " + totalHealthToGive);
+                            __instance.Status.damageTaken += totalHealthToGive;
+                        }
+                        break;
+                    }
+                }
+                else
+                {
+                    totalBloodSacrificed += playableCard.HasAbility(Ability.TripleBlood) ? 3 : 1;
+                }
             }
         }
-    }*/
+
+        /*public static MethodBase TargetMethod => AccessTools.Property(typeof(PlayableCard), nameof(PlayableCard.Sacrifice)).GetMethod;
+        
+        static IEnumerator CustomSacrifice(PlayableCard __instance)
+        {
+            Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Transpilered! " + __instance);
+            
+            __instance.Anim.PlaySacrificeSound();
+            if (__instance.HasAbility(BloodBankAbility.ability))
+            {
+                Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Blood banked! " + __instance);
+                __instance.Anim.SetSacrificeHoverMarkerShown(false);
+                __instance.Anim.SetMarkedForSacrifice(false);
+                __instance.Anim.PlaySacrificeParticles();
+                ProgressionData.SetAbilityLearned(Ability.Sacrificial);
+                if (__instance.TriggerHandler.RespondsToTrigger(Trigger.Sacrifice, Array.Empty<object>()))
+                {
+                    yield return __instance.TriggerHandler.OnTrigger(Trigger.Sacrifice, Array.Empty<object>());
+                }
+
+                PlayableCard currentSacrificeDemandingCard = Singleton<BoardManager>.Instance.currentSacrificeDemandingCard;
+                int totalBloodRequired = currentSacrificeDemandingCard.Info.BloodCost;
+                Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Total blood to sacrifice! " + totalBloodRequired);
+
+                List<CardSlot> currentSacrifices = Singleton<BoardManager>.Instance.currentSacrifices;
+                int totalBloodSacrificed = 0;
+                for (int i = 0; i < currentSacrifices.Count; i++)
+                {
+                    PlayableCard playableCard = currentSacrifices[i].Card;
+                    if(playableCard.HasAbility(BloodBankAbility.ability))
+                    {
+                        Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Found Blood Bank! " + totalBloodSacrificed + " already sacced");
+                        int totalHealthToGive = Mathf.Clamp(playableCard.Health, 0, totalBloodRequired - totalBloodSacrificed);
+                        totalBloodSacrificed += totalHealthToGive;
+                        if (playableCard == __instance)
+                        {
+                            Plugin.Log.LogInfo("[PlayableCard_Sacrifice] Found Card with Blood Bank!");
+                            if (__instance.Health <= totalBloodRequired)
+                            {
+                                Plugin.Log.LogInfo("[PlayableCard_Sacrificed] Killing card. " + __instance.Health + " < " + totalBloodRequired);
+                                yield return __instance.Die(true, null, true);
+                            }
+                            else
+                            {
+                                Plugin.Log.LogInfo("[PlayableCard_Sacrificed] Applying damage card. " + totalHealthToGive);
+                                __instance.Status.damageTaken += totalHealthToGive;
+                            }
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        totalBloodSacrificed += playableCard.HasAbility(Ability.TripleBlood) ? 3 : 1;
+                    }
+                }
+            }
+            else if (__instance.HasAbility(Ability.Sacrificial))
+            {
+                __instance.Anim.SetSacrificeHoverMarkerShown(false);
+                __instance.Anim.SetMarkedForSacrifice(false);
+                __instance.Anim.PlaySacrificeParticles();
+                ProgressionData.SetAbilityLearned(Ability.Sacrificial);
+                if (__instance.TriggerHandler.RespondsToTrigger(Trigger.Sacrifice, Array.Empty<object>()))
+                {
+                    yield return __instance.TriggerHandler.OnTrigger(Trigger.Sacrifice, Array.Empty<object>());
+                }
+            }
+            else
+            {
+                __instance.Anim.DeactivateSacrificeHoverMarker();
+                if (__instance.TriggerHandler.RespondsToTrigger(Trigger.Sacrifice, Array.Empty<object>()))
+                {
+                    yield return __instance.TriggerHandler.OnTrigger(Trigger.Sacrifice, Array.Empty<object>());
+                }
+                yield return __instance.Die(true, null, true);
+            }
+            yield break;
+        }
+
+        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instr)
+        {
+            return new[]
+            {
+                new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(Patch), nameof(CustomSacrifice), new[]{typeof(PlayableCard)})),
+                new CodeInstruction(OpCodes.Ret)
+            };
+        }*/
+    }
 }

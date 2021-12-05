@@ -55,6 +55,7 @@ namespace ZergMod
             BombardAbility.Initialize();
             HookAbility.Initialize();
             RicochetAbility.Initialize();
+            BloodBankAbility.Initialize();
             SummonZergAbility.Initialize();
             
             // Evolutions
