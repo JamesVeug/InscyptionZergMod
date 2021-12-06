@@ -26,17 +26,20 @@ namespace ZergMod
 		private static int m_totalWeights = 0; 
 		private static List<Tuple<int, string>> m_dropDates = new List<Tuple<int, string>>()
 		{
-			new Tuple<int, string>(10, Zerglings.ID),
-			new Tuple<int, string>(10, Hydralisk.ID),
-			new Tuple<int, string>(10, Mutalisk.ID),
-			new Tuple<int, string>(10, Roach.ID),
-			new Tuple<int, string>(5, Queen.ID),
-			new Tuple<int, string>(5, Corruptor.ID),
-			new Tuple<int, string>(5, Scourge.ID),
-			new Tuple<int, string>(5, Banelings.ID),
-			new Tuple<int, string>(1, Ultralisk.ID),
-			new Tuple<int, string>(1, Guardian.ID),
-			new Tuple<int, string>(1, Lurker.ID),
+			new Tuple<int, string>(55, Zerglings.ID),
+			new Tuple<int, string>(35, Roach.ID),
+			new Tuple<int, string>(35, Hydralisk.ID),
+			new Tuple<int, string>(35, Corruptor.ID),
+			new Tuple<int, string>(30, Scourge.ID),
+			new Tuple<int, string>(30, Banelings.ID),
+			new Tuple<int, string>(30, Mutalisk.ID),
+			new Tuple<int, string>(30, Lurker.ID),
+			new Tuple<int, string>(20, SwarmHost.ID),
+			new Tuple<int, string>(20, Broodlord.ID),
+			new Tuple<int, string>(20, Ultralisk.ID),
+			new Tuple<int, string>(15, Viper.ID),
+			new Tuple<int, string>(10, Guardian.ID),
+			new Tuple<int, string>(5, Infestor.ID),
 		};
 
 		public static void Initialize()
