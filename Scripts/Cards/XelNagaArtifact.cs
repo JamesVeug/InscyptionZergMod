@@ -32,7 +32,7 @@ namespace ZergMod.Scripts.Cards
             abilities.Add(Ability.QuadrupleBones);
             abilities.Add(Ability.TripleBlood);
             
-            List<Trait> traits = new List<Trait> { Trait.Goat, Trait.KillsSurvivors };
+            List<Trait> traits = new List<Trait> { Trait.Goat };
 
             NewCard.Add(name: ID,
                 displayedName: DisplayName,
