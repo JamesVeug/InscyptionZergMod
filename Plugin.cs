@@ -39,6 +39,7 @@ namespace ZergMod
             // SpecialAbilities
             ZerglingSpecialAbility.Initialize();
             DehakaSpecialAbility.Initialize();
+            LarvaSpecialAbility.Initialize();
             
             // Abilities
             RegenerateAbility.Initialize();
@@ -89,6 +90,7 @@ namespace ZergMod
             Scourge.Initialize();
             Corruptor.Initialize();
             XelNagaArtifact.Initialize();
+            Larva.Initialize();
 
             // Squirrel / Lava
             ChangeSquirrelToLarva();
