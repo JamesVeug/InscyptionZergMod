@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Broodlord
     {
+        public const string ID = "Brood lord";
         private const string DisplayName = "Brood lord";
         private const string Description = "Heavy Airborn unit at its max evolution stage";
         private const string TextureFile = "Artwork/broodlord.png";
@@ -28,7 +29,7 @@ namespace ZergMod.Scripts.Cards
 
             List<Ability> abilities = new List<Ability> { SwarmSeedsAbility.ability };
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

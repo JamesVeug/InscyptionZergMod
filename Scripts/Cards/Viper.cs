@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Viper
     {
+        public const string ID = "Viper";
         private const string DisplayName = "Viper";
         private const string Description = "Its long tongue makes for a great Tether";
         private const string TextureFile = "Artwork/viper.png";
@@ -28,7 +29,7 @@ namespace ZergMod.Scripts.Cards
 
             List<Ability> abilities = new List<Ability> { AbductAbility.ability };
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

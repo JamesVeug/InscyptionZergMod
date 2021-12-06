@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Drone
     {
+        public const string ID = "Drone";
         private const string DisplayName = "Drone";
         private const string Description = "Worker unit will gather resources for you";
         private const string TextureFile = "Artwork/drone.png";
@@ -31,7 +32,7 @@ namespace ZergMod.Scripts.Cards
             CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Crawler Forest");
             EvolveIdentifier identifier = new EvolveIdentifier("CrawlerForest", 1, new CardModificationInfo(cardInfo));
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

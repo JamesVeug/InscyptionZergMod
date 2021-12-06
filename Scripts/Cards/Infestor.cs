@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class Infestor
     {
+        public const string ID = "Infestor";
         private const string DisplayName = "Infestor";
         private const string Description = "One of my most discusting creations";
         private const string TextureFile = "Artwork/infestor.png";
@@ -28,7 +29,7 @@ namespace ZergMod.Scripts.Cards
 
             List<Ability> abilities = new List<Ability> { HookAbility.ability, Ability.Submerge };
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,

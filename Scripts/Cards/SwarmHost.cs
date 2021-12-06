@@ -8,6 +8,7 @@ namespace ZergMod.Scripts.Cards
 {
     public static class SwarmHost
     {
+        public const string ID = "Swarm Host";
         private const string DisplayName = "Swarm Host";
         private const string Description = "Those free units are nothing but a distraction";
         private const string TextureFile = "Artwork/swarm_host.png";
@@ -27,7 +28,7 @@ namespace ZergMod.Scripts.Cards
 
             List<Ability> abilities = new List<Ability> {SpawnLocustAbility.ability, Ability.Submerge};
 
-            NewCard.Add(name: DisplayName,
+            NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
                 baseHealth: BaseHealth,
