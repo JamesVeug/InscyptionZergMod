@@ -72,7 +72,7 @@ namespace ZergMod
             // Adjust settings
             CardModificationInfo flyingModifier = new CardModificationInfo
             {
-                attackAdjustment = Card.Attack - 1, // Set the damage to 1
+                attackAdjustment = -Card.Attack + Ricochet_Damage, // Set the damage to 1
                 abilities = new List<Ability> { Ability.Flying } // Allow flying over targets
             };
             Card.AddTemporaryMod(flyingModifier);
