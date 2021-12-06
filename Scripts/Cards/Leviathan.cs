@@ -13,10 +13,10 @@ namespace ZergMod.Scripts.Cards
         private const string TextureFile = "Artwork/leviathan.png";
         private const string EmitTextureFile = "Artwork/leviathan_emit.png";
 
-        private const int BaseAttack = 2;
-        private const int BaseHealth = 10;
+        private const int BaseAttack = 0;
+        private const int BaseHealth = 20;
         private const int BloodCost = 0;
-        private const int BoneCost = 10;
+        private const int BoneCost = 8;
 
         public static void Initialize()
         {
@@ -26,7 +26,7 @@ namespace ZergMod.Scripts.Cards
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
             appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
 
-            List<Ability> abilities = new List<Ability> { Ability.WhackAMole, Ability.Sharp };
+            List<Ability> abilities = new List<Ability> { BloodBankAbility.ability, SummonZergAbility.ability };
 
             NewCard.Add(name: DisplayName,
                 displayedName: DisplayName,
