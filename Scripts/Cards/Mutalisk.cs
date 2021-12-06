@@ -27,7 +27,7 @@ namespace ZergMod.Scripts.Cards
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
 
-            List<Ability> abilities = new List<Ability> { RicochetAbility.ability };
+            List<Ability> abilities = new List<Ability> { RicochetAbility.ability, RegenerateAbility.ability };
             
             CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Guardian");
             EvolveIdentifier identifier = new EvolveIdentifier("Guardian", 1, new CardModificationInfo(cardInfo));
