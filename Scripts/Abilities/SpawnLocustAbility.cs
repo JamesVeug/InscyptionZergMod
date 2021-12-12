@@ -15,7 +15,7 @@ namespace ZergMod
 		private const string SigilID = "Draw Locust's";
 		private const string SigilName = "Spawn Locust";
 		private const string Description = "Draw 1 Locust at the start of your turn\nA Locust is defined as: 1 Power 1 Health";
-		private const string TextureFile = "Artwork/draw_locusts.png";
+		private const string TextureFile = "Artwork/Sigils/draw_locusts.png";
 		private const string LearnText = "Although brittle they are dangerous in high numbers";
 
 		public static void Initialize()

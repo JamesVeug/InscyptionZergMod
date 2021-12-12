@@ -15,7 +15,7 @@ namespace ZergMod
         private const string SigilID = "Bombard";
         private const string SigilName = "Bombard";
         private const string Description = "When a card bearing this sigil deals damage directly it will damage the opposing card for 1 damage.";
-        private const string TextureFile = "Artwork/bombard.png";
+        private const string TextureFile = "Artwork/Sigils/bombard.png";
         private const string LearnText = "Bombarding my side of the board will only weaken that card";
 
         public static void Initialize()

@@ -11,8 +11,8 @@ namespace ZergMod.Scripts.Cards
         public const string ID = "Drone";
         private const string DisplayName = "Drone";
         private const string Description = "Worker unit will gather resources for you";
-        private const string TextureFile = "Artwork/drone.png";
-        private const string EmitTextureFile = "Artwork/drone_emit.png";
+        private const string TextureFile = "Artwork/Cards/drone.png";
+        private const string EmitTextureFile = "Artwork/Cards/drone_emit.png";
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 1;

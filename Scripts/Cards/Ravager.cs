@@ -10,8 +10,8 @@ namespace ZergMod.Scripts.Cards
     {
         private const string DisplayName = "Ravager";
         private const string Description = "Beware of its snipe. Can be unfortunate to be in its way";
-        private const string TextureFile = "Artwork/ravager.png";
-        private const string EmitTextureFile = "Artwork/ravager_emit.png";
+        private const string TextureFile = "Artwork/Cards/ravager.png";
+        private const string EmitTextureFile = "Artwork/Cards/ravager_emit.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 2;

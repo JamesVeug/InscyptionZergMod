@@ -10,8 +10,8 @@ namespace ZergMod.Scripts.Cards
     {
         private const string DisplayName = "Overseer";
         private const string Description = "The all seeing creature powered to reveal hidden creatures";
-        private const string TextureFile = "Artwork/overseer.png";
-        private const string EmitTextureFile = "Artwork/overseer_emit.png";
+        private const string TextureFile = "Artwork/Cards/overseer.png";
+        private const string EmitTextureFile = "Artwork/Cards/overseer_emit.png";
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 6;

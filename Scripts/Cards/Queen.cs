@@ -11,8 +11,8 @@ namespace ZergMod.Scripts.Cards
         public const string ID = "Queen";
         private const string DisplayName = "Queen";
         private const string Description = "Brings more units to the field faster";
-        private const string TextureFile = "Artwork/queen.png";
-        private const string EmitTextureFile = "Artwork/queen_emit.png";
+        private const string TextureFile = "Artwork/Cards/queen.png";
+        private const string EmitTextureFile = "Artwork/Cards/queen_emit.png";
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 3;

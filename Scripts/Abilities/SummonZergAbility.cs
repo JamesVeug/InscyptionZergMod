@@ -18,7 +18,7 @@ namespace ZergMod
 		private const string SigilID = "Summon Zerg";
 		private const string SigilName = "Summon Zerg";
 		private const string Description = "When a card bearing this sigil takes damage it will create a random zerg card in your hand";
-		private const string TextureFile = "Artwork/drone.png";
+		private const string TextureFile = "Artwork/Cards/drone.png";
 		private const string LearnText = "The swarm grows";
 
 		// First value = Weight for drop. Higher means larger chance to obtain it

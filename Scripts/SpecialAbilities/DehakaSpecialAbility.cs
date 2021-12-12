@@ -21,9 +21,9 @@ namespace DiskCardGame
 
         public static void Initialize()
         {
-            InitializeTexture(0, "Artwork/dehaka_1.png", "Artwork/dehaka_1_emit.png");
-            InitializeTexture(3, "Artwork/dehaka_2.png", "Artwork/dehaka_2_emit.png");
-            InitializeTexture(6, "Artwork/dehaka_3.png", "Artwork/dehaka_3_emit.png");
+            InitializeTexture(0, "Artwork/Cards/dehaka_1.png", "Artwork/Cards/dehaka_1_emit.png");
+            InitializeTexture(3, "Artwork/Cards/dehaka_2.png", "Artwork/Cards/dehaka_2_emit.png");
+            InitializeTexture(6, "Artwork/Cards/dehaka_3.png", "Artwork/Cards/dehaka_3_emit.png");
             
             SpecialAbilityIdentifier identifier = SpecialAbilityIdentifier.GetID("DehakaSpecialAbility", "DehakaSpecialAbility");
             
@@ -31,7 +31,7 @@ namespace DiskCardGame
             iconInfo.rulebookName = "Collect Essence";
             iconInfo.rulebookDescription = "When a card with this sigil kills a stronger card it will steal its essence.";
             iconInfo.iconType = SpecialStatIcon.CardsInHand;
-            iconInfo.iconGraphic = Utils.GetTextureFromPath("Artwork/dehaka_1.png");
+            iconInfo.iconGraphic = Utils.GetTextureFromPath("Artwork/Cards/dehaka_1.png");
             iconInfo.metaCategories = new List<AbilityMetaCategory> { AbilityMetaCategory.Part1Modular, AbilityMetaCategory.Part1Rulebook };
             
             NewSpecialAbility newSpecialAbility = new NewSpecialAbility(typeof(DehakaSpecialAbility), identifier, iconInfo);

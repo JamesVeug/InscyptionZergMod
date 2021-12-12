@@ -11,8 +11,8 @@ namespace ZergMod.Scripts.Cards
         private const string ID = "CrawlerForest";
         private const string DisplayName = "Crawler Forest";
         private const string Description = "A forest of Spine and Spore crawlers designed to defend you";
-        private const string TextureFile = "Artwork/crawler_forest.png";
-        private const string EmitTextureFile = "Artwork/crawler_forest_emit.png";
+        private const string TextureFile = "Artwork/Cards/crawler_forest.png";
+        private const string EmitTextureFile = "Artwork/Cards/crawler_forest_emit.png";
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 5;

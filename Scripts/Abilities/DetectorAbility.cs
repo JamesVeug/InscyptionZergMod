@@ -15,7 +15,7 @@ namespace ZergMod
         private const string SigilID = "Detector";
         private const string SigilName = "Detector";
         private const string Description = "When a card bearing this sigil is on the board all opponent's submerged cards will be revealed.";
-        private const string TextureFile = "Artwork/detector.png";
+        private const string TextureFile = "Artwork/Sigils/detector.png";
         private const string LearnText = "Revealing hidden cards will not help you defeat me";
         
         public override int Priority => this.triggerPriority;

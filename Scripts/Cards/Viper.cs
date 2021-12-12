@@ -11,8 +11,8 @@ namespace ZergMod.Scripts.Cards
         public const string ID = "Viper";
         private const string DisplayName = "Viper";
         private const string Description = "Its long tongue makes for a great Tether";
-        private const string TextureFile = "Artwork/viper.png";
-        private const string EmitTextureFile = "Artwork/viper_emit.png";
+        private const string TextureFile = "Artwork/Cards/viper.png";
+        private const string EmitTextureFile = "Artwork/Cards/viper_emit.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 1;

@@ -17,7 +17,7 @@ namespace ZergMod
         private const string SigilID = "Ricochet";
         private const string SigilName = "Ricochet";
         private const string Description = "When a card bearing this sigil deals damage to a card it will also try hitting over the card for 1 damage.";
-        private const string TextureFile = "Artwork/ricochet.png";
+        private const string TextureFile = "Artwork/Sigils/ricochet.png";
         private const string LearnText = "";
 
         private const int Ricochet_Damage = 1;

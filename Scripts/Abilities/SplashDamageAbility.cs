@@ -15,7 +15,7 @@ namespace ZergMod
         private const string SigilID = "Splash Damage";
         private const string SigilName = "Splash Damage";
         private const string Description = "When a card bearing this sigil deals damage it will also hit the opponents adjacent cards";
-        private const string TextureFile = "Artwork/splash_damage.png";
+        private const string TextureFile = "Artwork/Sigils/splash_damage.png";
         private const string LearnText = "";
 
         private bool activated = false;

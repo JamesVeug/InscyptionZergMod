@@ -10,8 +10,8 @@ namespace ZergMod.Scripts.Cards
     {
         private const string DisplayName = "Leviathan";
         private const string Description = "Heavy air transport unit";
-        private const string TextureFile = "Artwork/leviathan.png";
-        private const string EmitTextureFile = "Artwork/leviathan_emit.png";
+        private const string TextureFile = "Artwork/Cards/leviathan.png";
+        private const string EmitTextureFile = "Artwork/Cards/leviathan_emit.png";
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 20;

@@ -15,7 +15,7 @@ namespace ZergMod
 		private const string SigilID = "Blood Bank";
 		private const string SigilName = "Blood Bank";
 		private const string Description = "When a card bearing this sigil is sacrified, its health is reduced relative to blood required.";
-		private const string TextureFile = "Artwork/drone.png";
+		private const string TextureFile = "Artwork/Cards/drone.png";
 		private const string LearnText = "That's one gigantic card capable of multiple sacrifices in replacement of health";
 
 		public static void Initialize()

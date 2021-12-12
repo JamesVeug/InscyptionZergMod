@@ -11,8 +11,8 @@ namespace ZergMod.Scripts.Cards
         public const string ID = "Larva";
         private const string DisplayName = "Larva";
         private const string Description = "It's hard carapace. Not recommended for consumption ";
-        private const string TextureFile = "Artwork/larva.png";
-        private const string EmitTextureFile = "Artwork/larva_emit.png";
+        private const string TextureFile = "Artwork/Cards/larva.png";
+        private const string EmitTextureFile = "Artwork/Cards/larva_emit.png";
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 3;

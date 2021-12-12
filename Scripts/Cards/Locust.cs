@@ -10,7 +10,7 @@ namespace ZergMod.Scripts.Cards
     {
         private const string DisplayName = "Locust";
         private const string Description = "";
-        private const string TextureFile = "Artwork/locust.png";
+        private const string TextureFile = "Artwork/Cards/locust.png";
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 1;

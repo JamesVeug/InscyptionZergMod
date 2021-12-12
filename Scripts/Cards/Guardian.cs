@@ -11,8 +11,8 @@ namespace ZergMod.Scripts.Cards
         public const string ID = "Guardian";
         private const string DisplayName = "Guardian";
         private const string Description = "Despite being devastating in terrestrial combat, guardians are next to useless in space combat";
-        private const string TextureFile = "Artwork/guardian.png";
-        private const string EmitTextureFile = "Artwork/guardian_emit.png";
+        private const string TextureFile = "Artwork/Cards/guardian.png";
+        private const string EmitTextureFile = "Artwork/Cards/guardian_emit.png";
 
         private const int BaseAttack = 4;
         private const int BaseHealth = 6;

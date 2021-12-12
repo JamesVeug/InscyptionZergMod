@@ -18,7 +18,7 @@ namespace ZergMod
 		private const string SigilID = "Armoured";
 		private const string SigilName = "Armored";
 		private const string Description = "When a card bearing this sigil takes damage, it will take 1 less damage";
-		private const string TextureFile = "Artwork/armoured.png";
+		private const string TextureFile = "Artwork/Sigils/armoured.png";
 		private const string LearnText = "";
 
 		public static void Initialize()

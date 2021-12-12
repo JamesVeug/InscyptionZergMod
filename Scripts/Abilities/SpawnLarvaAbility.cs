@@ -14,7 +14,7 @@ namespace ZergMod
 		private const string SigilID = "Spawn Larva";
 		private const string SigilName = "Spawn Larva";
 		private const string Description = "When placed on the board will create larva on both sides";
-		private const string TextureFile = "Artwork/spawn_larva.png";
+		private const string TextureFile = "Artwork/Sigils/spawn_larva.png";
 		private const string LearnText = "Extra Larva? Trying to rush me i see";
 
 		public override string SpawnedCardId => "Squirrel";

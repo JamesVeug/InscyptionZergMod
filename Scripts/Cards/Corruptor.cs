@@ -11,8 +11,8 @@ namespace ZergMod.Scripts.Cards
         public const string ID = "Corruptor";
         private const string DisplayName = "Corruptor";
         private const string Description = "A squid-like zerg flying unit.";
-        private const string TextureFile = "Artwork/corruptor.png";
-        private const string EmitTextureFile = "Artwork/corruptor_emit.png";
+        private const string TextureFile = "Artwork/Cards/corruptor.png";
+        private const string EmitTextureFile = "Artwork/Cards/corruptor_emit.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 2;

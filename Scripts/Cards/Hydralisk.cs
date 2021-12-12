@@ -11,8 +11,8 @@ namespace ZergMod.Scripts.Cards
         public const string ID = "Hydralisk";
         private const string DisplayName = "Hydralisk";
         private const string Description = "Great for taking out flyers";
-        private const string TextureFile = "Artwork/hydralisk.png";
-        private const string EmitTextureFile = "Artwork/hydralisk_emit.png";
+        private const string TextureFile = "Artwork/Cards/hydralisk.png";
+        private const string EmitTextureFile = "Artwork/Cards/hydralisk_emit.png";
 
         private const int BaseAttack = 3;
         private const int BaseHealth = 2;

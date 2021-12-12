@@ -45,7 +45,7 @@ namespace DiskCardGame
             iconInfo.rulebookName = "Larva";
             iconInfo.rulebookDescription = "When a Larva evolves it will transform into a random Zerg card";
             iconInfo.iconType = SpecialStatIcon.CardsInHand;
-            iconInfo.iconGraphic = Utils.GetTextureFromPath("Artwork/larva.png");
+            iconInfo.iconGraphic = Utils.GetTextureFromPath("Artwork/Cards/larva.png");
             iconInfo.metaCategories = new List<AbilityMetaCategory> { AbilityMetaCategory.Part1Modular, AbilityMetaCategory.Part1Rulebook };
             
             NewSpecialAbility newSpecialAbility = new NewSpecialAbility(typeof(LarvaSpecialAbility), identifier, iconInfo);

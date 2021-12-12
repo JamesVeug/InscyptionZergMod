@@ -15,7 +15,7 @@ namespace ZergMod
         private const string SigilID = "Double Attack";
         private const string SigilName = "Double Attack";
         private const string Description = "When a card bearing this sigil deals damage to a card and survives, it will perform one additional attack.";
-        private const string TextureFile = "Artwork/double_attack.png";
+        private const string TextureFile = "Artwork/Sigils/double_attack.png";
         private const string LearnText = "One attack just isn't enough is it?";
 
         private List<int> attackedSlots = new List<int>();

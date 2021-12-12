@@ -22,12 +22,12 @@ namespace DiskCardGame
 
         public static void Initialize()
         {
-            InitializeTexture(1, "Artwork/zergling.png");
-            InitializeTexture(2, "Artwork/two_zergling.png");
-            InitializeTexture(3, "Artwork/three_zergling.png");
-            InitializeTexture(4, "Artwork/four_zergling.png");
-            InitializeTexture(5, "Artwork/five_zergling.png");
-            InitializeTexture(6, "Artwork/six_zergling.png");
+            InitializeTexture(1, "Artwork/Cards/zergling_1.png");
+            InitializeTexture(2, "Artwork/Cards/zergling_2.png");
+            InitializeTexture(3, "Artwork/Cards/zergling_3.png");
+            InitializeTexture(4, "Artwork/Cards/zergling_4.png");
+            InitializeTexture(5, "Artwork/Cards/zergling_5.png");
+            InitializeTexture(6, "Artwork/Cards/zergling_6.png");
 
             SpecialAbilityIdentifier identifier = SpecialAbilityIdentifier.GetID("ZerglingSpecialAbility", "ZerglingSpecialAbility");
             
@@ -35,7 +35,7 @@ namespace DiskCardGame
             iconInfo.rulebookName = "Zergling Swarm";
             iconInfo.rulebookDescription = "Portrait changes as the health increases. Max 6";
             iconInfo.iconType = SpecialStatIcon.CardsInHand;
-            iconInfo.iconGraphic = Utils.GetTextureFromPath("Artwork/six_zergling.png");
+            iconInfo.iconGraphic = Utils.GetTextureFromPath("Artwork/Cards/zergling_6.png");
             iconInfo.metaCategories = new List<AbilityMetaCategory> { AbilityMetaCategory.Part1Modular, AbilityMetaCategory.Part1Rulebook };
             
             NewSpecialAbility newSpecialAbility = new NewSpecialAbility(typeof(ZerglingSpecialAbility), identifier, iconInfo);

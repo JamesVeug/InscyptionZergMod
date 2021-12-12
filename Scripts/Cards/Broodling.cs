@@ -10,7 +10,7 @@ namespace ZergMod.Scripts.Cards
     {
         private const string DisplayName = "Broodling";
         private const string Description = "";
-        private const string TextureFile = "Artwork/broodling.png";
+        private const string TextureFile = "Artwork/Cards/broodling.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 2;

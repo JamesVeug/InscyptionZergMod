@@ -10,7 +10,7 @@ namespace ZergMod.Scripts.Cards
     {
         private const string DisplayName = "Egg";
         private const string Description = "Egg that is gestating into something else";
-        private const string TextureFile = "Artwork/egg.png";
+        private const string TextureFile = "Artwork/Cards/egg.png";
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 3;

@@ -18,7 +18,7 @@ namespace ZergMod
         private const string SigilID = "Fish Hook";
         private const string SigilName = "Fish Hook";
         private const string Description = "When a card bearing this sigil is played, a targeted card is moved to your side of the board";
-        private const string TextureFile = "Artwork/fish_hook.png";
+        private const string TextureFile = "Artwork/Sigils/fish_hook.png";
         private const string LearnText = "I don't remember taking a picture of my Hook";
 
         public static void Initialize()

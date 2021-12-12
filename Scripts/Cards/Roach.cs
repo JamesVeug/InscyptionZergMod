@@ -11,8 +11,8 @@ namespace ZergMod.Scripts.Cards
         public const string ID = "Roach";
         private const string DisplayName = "Roach";
         private const string Description = "Armored unit that can heal";
-        private const string TextureFile = "Artwork/roach.png";
-        private const string EmitTextureFile = "Artwork/roach_emit.png";
+        private const string TextureFile = "Artwork/Cards/roach.png";
+        private const string EmitTextureFile = "Artwork/Cards/roach_emit.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 3;

@@ -15,7 +15,7 @@ namespace ZergMod
         private const string SigilID = "Regestate";
         private const string SigilName = "Regestate";
         private const string Description = "When this card is killed it will transform into an Egg for it to regenerate into its original form.\nAn egg has 0 Power and as much Health as the base card.";
-        private const string TextureFile = "Artwork/egg.png";
+        private const string TextureFile = "Artwork/Cards/egg.png";
         private const string LearnText = "That card seems unbalanced";
 
         public static void Initialize()

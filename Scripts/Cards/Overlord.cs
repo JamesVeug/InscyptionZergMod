@@ -10,8 +10,8 @@ namespace ZergMod.Scripts.Cards
     {
         private const string DisplayName = "Overlord";
         private const string Description = "Lazy alien balloon";
-        private const string TextureFile = "Artwork/overlord.png";
-        private const string EmitTextureFile = "Artwork/overlord_emit.png";
+        private const string TextureFile = "Artwork/Cards/overlord.png";
+        private const string EmitTextureFile = "Artwork/Cards/overlord_emit.png";
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 4;

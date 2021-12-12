@@ -12,8 +12,8 @@ namespace ZergMod.Scripts.Cards
         private const string ID = "Xel'naga Artifact 1";
         private const string DisplayName = "Strange Artifact";
         private const string Description = "What the hell is that?";
-        private const string TextureFile = "Artwork/xelnaga_artifact.png";
-        private const string EmitTextureFile = "Artwork/xelnaga_artifact_emit.png";
+        private const string TextureFile = "Artwork/Cards/xelnaga_artifact.png";
+        private const string EmitTextureFile = "Artwork/Cards/xelnaga_artifact_emit.png";
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 1;

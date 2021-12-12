@@ -15,7 +15,7 @@ namespace ZergMod
 		private const string SigilID = "Draw Broodling's";
 		private const string SigilName = "Swarm Seeds";
 		private const string Description = "Draw 1 Broodling at the start of your turn\nA Broodling is defined as: 2 Power 2 Health";
-		private const string TextureFile = "Artwork/swarm_seeds.png";
+		private const string TextureFile = "Artwork/Sigils/swarm_seeds.png";
 		private const string LearnText = "These swarm seeds will strike down your foes";
 
 		public static void Initialize()

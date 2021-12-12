@@ -11,7 +11,7 @@ namespace ZergMod.Scripts.Cards
         public const string ID = "Zerglings";
         private const string DisplayName = "Zerglings";
         private const string Description = "Looks friendly but watch your face because your could lose it";
-        private const string TextureFile = "Artwork/two_zergling.png";
+        private const string TextureFile = "Artwork/Cards/zergling_2.png";
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 2;
@@ -30,8 +30,8 @@ namespace ZergMod.Scripts.Cards
             List<SpecialTriggeredAbility> specialAbilities = new List<SpecialTriggeredAbility> { ZerglingSpecialAbility.specialAbility };
 
             // Evolve into banelings
-            CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Banelings");
-            EvolveIdentifier identifier = new EvolveIdentifier("Banelings", 1, new CardModificationInfo(cardInfo));
+            CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Baneling");
+            EvolveIdentifier identifier = new EvolveIdentifier("Baneling", 1, new CardModificationInfo(cardInfo));
 
             NewCard.Add(name: ID,
                 displayedName: DisplayName,

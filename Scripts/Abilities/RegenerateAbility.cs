@@ -15,7 +15,7 @@ namespace ZergMod
         private const string SigilID = "Regenerate";
         private const string SigilName = "Regenerate";
         private const string Description = "The card bearing this sigil Heals 1 health at the end of a turn";
-        private const string TextureFile = "Artwork/regenerate.png";
+        private const string TextureFile = "Artwork/Sigils/regenerate.png";
         private const string LearnText = "Delaying the inevitable i see";
         
         public static void Initialize()

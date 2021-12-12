@@ -11,8 +11,8 @@ namespace ZergMod.Scripts.Cards
         public const string ID = "Ultralisk";
         private const string DisplayName = "Ultralisk";
         private const string Description = "Double armoured brute. You don't want to be in his way!";
-        private const string TextureFile = "Artwork/ultralisk.png";
-        private const string EmitTextureFile = "Artwork/ultralisk_emit.png";
+        private const string TextureFile = "Artwork/Cards/ultralisk.png";
+        private const string EmitTextureFile = "Artwork/Cards/ultralisk_emit.png";
 
         private const int BaseAttack = 2;
         private const int BaseHealth = 5;

@@ -17,7 +17,7 @@ namespace ZergMod
         private const string SigilID = "Abduct";
         private const string SigilName = "Abduct";
         private const string Description = "When a card bearing this sigil is played, a targeted enemy card is moved to the space in front of it, if that space is empty";
-        private const string TextureFile = "Artwork/abduct.png";
+        private const string TextureFile = "Artwork/Sigils/abduct.png";
         private const string LearnText = "";
 
         private CardSlot m_targetedCardSlot = null;

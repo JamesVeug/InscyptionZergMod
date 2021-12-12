@@ -11,8 +11,8 @@ namespace ZergMod.Scripts.Cards
         public const string ID = "Infestor";
         private const string DisplayName = "Infestor";
         private const string Description = "One of my most discusting creations";
-        private const string TextureFile = "Artwork/infestor.png";
-        private const string EmitTextureFile = "Artwork/infestor_emit.png";
+        private const string TextureFile = "Artwork/Cards/infestor.png";
+        private const string EmitTextureFile = "Artwork/Cards/infestor_emit.png";
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 1;

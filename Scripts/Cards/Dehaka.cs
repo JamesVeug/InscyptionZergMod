@@ -10,8 +10,8 @@ namespace ZergMod.Scripts.Cards
     {
         private const string DisplayName = "Dehaka";
         private const string Description = "Collects, Kills, takes the essence of its prey.";
-        private const string TextureFile = "Artwork/dehaka_1.png";
-        private const string EmitTextureFile = "Artwork/dehaka_1_emit.png";
+        private const string TextureFile = "Artwork/Cards/dehaka_1.png";
+        private const string EmitTextureFile = "Artwork/Cards/dehaka_1_emit.png";
 
         private const int BaseAttack = 1;
         private const int BaseHealth = 2;

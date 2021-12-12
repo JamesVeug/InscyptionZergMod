@@ -11,8 +11,8 @@ namespace ZergMod.Scripts.Cards
         public const string ID = "Swarm Host";
         private const string DisplayName = "Swarm Host";
         private const string Description = "Those free units are nothing but a distraction";
-        private const string TextureFile = "Artwork/swarm_host.png";
-        private const string EmitTextureFile = "Artwork/swarm_host_emit.png";
+        private const string TextureFile = "Artwork/Cards/swarmhost.png";
+        private const string EmitTextureFile = "Artwork/Cards/swarmhost_emit.png";
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 2;
