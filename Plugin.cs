@@ -92,32 +92,7 @@ namespace ZergMod
             XelNagaArtifact.Initialize();
             Larva.Initialize();
 
-            // Squirrel / Lava
-            ChangeSquirrelToLarva();
             Logger.LogInfo($"Loaded {PluginName}!");
-        }
-        
-        public void ChangeSquirrelToLarva()
-        {
-	        byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory,"Artwork/larva.png"));
-	        Texture2D tex = new Texture2D(2,2);
-	        tex.LoadImage(imgBytes);
-
-	        List<Ability> abilities = new List<Ability>{ };
-	        List<SpecialTriggeredAbility> specialAbilities = new List<SpecialTriggeredAbility> { };
-
-	        new CustomCard("Squirrel")
-	        {
-		        displayedName="Larva", 
-		        tex=tex, 
-		        altTex=tex, 
-		        /*baseAttack = 0, 
-		        baseHealth = 10, 
-		        abilities = abilities,
-		        specialStatIcon = SpecialStatIcon.Mirror,
-		        specialAbilities = specialAbilities,*/
-		        decals = Utils.GetDecals()
-	        };
         }
     }
 }
