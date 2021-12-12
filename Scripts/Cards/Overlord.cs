@@ -15,7 +15,7 @@ namespace ZergMod.Scripts.Cards
 
         private const int BaseAttack = 0;
         private const int BaseHealth = 4;
-        private const int BloodCost = 1;
+        private const int BloodCost = 2;
         private const int BoneCost = 0;
 
         public static void Initialize()
@@ -26,7 +26,7 @@ namespace ZergMod.Scripts.Cards
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
 
-            List<Ability> abilities = new List<Ability> { Ability.Reach, Ability.Evolve };
+            List<Ability> abilities = new List<Ability> { Ability.Sacrificial, Ability.Reach };
 	        
             // Evolve into Overseer
             CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Overseer");
