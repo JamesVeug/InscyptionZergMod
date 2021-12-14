@@ -4,8 +4,9 @@ This mod brings the alien race 'Zerg' from the RTS series StarCraft, into the wo
 The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advanced, arthropodal aliens. Dedicated to the pursuit of genetic perfection.
 
 ## Includes:
-- 28 new Cards
-- 14 new Sigils
+- 30 new Cards
+- 16 new Sigils
+- 3 new Special Abilities
 
 ### Cards:
 - **Drone** - 1,1 with Bone digger and Submerge. Evolves into Crawler Forest
@@ -13,9 +14,9 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Broodling** - 2,2 with Brittle.
 - **Locust** - 1,1 with Brittle.
 - **Infested Terran** - 1,2 with Brittle and Fecundity.
-- **Overlord** - 0,4 with Fledgling and Mighty Leap. Evolves into Overseer.
+- **Overlord** - 0,4 with Sacrificial and Mighty Leap. Evolves into Overseer.
 - **Roach** - 2,3 with Regenerate. Evolves into Ravager.
-- **Mutalisk** - 1,3 with Ricochet. Evolves into Guardian
+- **Mutalisk** - 1,3 with Ricochet and Regenerate. Evolves into Guardian
 - **Queen** - 1,3 With Spawn Larva.
 - **Hydralisk** - 3,2. Evolves into Lurker.
 - **Scourge** - 3,1 with Explode and Airborne.
@@ -26,23 +27,24 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Overseer** - 0,6 with Detector and Stinky
 - **Guardian** - 4,6
 - **Swarm Host** - 0,2 with Spawn Locust and Waterborne
+- **Larva** - 0,3 with Evolve. Special: Larva, Kills Survivors
 
 ### Rare Cards:
 - **Brood lord** - 0,6 with Swarm Seeds
 - **Infestor** - 1,1 with Waterborne and Fish Hook
 - **Dehaka** - 1,2 with Regenerate. Special: Collect Essence
-- **Leviathan** - 2,10 with Burrower and Sharp
+- **Leviathan** - 0,20 with Blood Bank and Summon Zerg
 - **Queen of Blades** - 4,4 With Regestate
 - **Viper** - 2,1 With Abduct
 - **Devourer** - 3,3 with Airborne and Armored.
 - **Ultralisk** - 2,5 with Armored and Splash Damage.
 - **Ravager** - 2,2 with Snipe.
 - **Lurker** - 2,2 with Waterborne and Splash Damage.
-- **Strange Artifact** - 0,1 with Bone King, Worthy Sacrifice
+- **Strange Artifact** - 0,1 with Bone King and Worthy Sacrifice
 
-### Abilities:
+### Sigils:
 - **Swarm Seeds** - Draw 1 Broodling at the start of your turn
-- **Spawn Locust** - Draw 1 Locusts at the start of your turn
+- **Spawn Locust** - Draw 1 Locust at the start of your turn
 - **Regenerate** - The card bearing this sigil Heals 1 health at the end of a turn
 - **Spawn Larva** - The card bearing this sigil will place 2 lava on the board
 - **Double Attack** - When a card bearing this sigil deals damage to a card and survives, it will perform one additional attack.
@@ -54,11 +56,14 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Explode** - When a card bearing this sigil deals damage it will also hit the adjacent cards and perish.
 - **Bombard** - When a card bearing this sigil deals damage directly it will damage the opposing card for 1 damage.
 - **Ricochet** - When a card bearing this sigil deals damage to a card it also hits face for 1 damage.
-- **Fish Hook** - When a card bearing this sigil is played, a targeted card is moved to your side of the board
+- **Fish Hook** - When a card bearing this sigil is played, a targeted card is moved to your side of the board.
+- **Blood Bank** - When a card bearing this sigil is sacrified, its health is reduced relative to blood required.
+- **Summon Zerg** - When a card bearing this sigil takes damage it will create a random zerg card in your hand
 
 ### Special Abilities:
 - **Zergling Swarm** - Portrait changes as the health increases. Max 6
 - **Collect Essence** - When a card with this sigil kills a stronger card it will steal its essence.
+- **Larva** - When a Larva evolves it will transform into a random Zerg card
 
 
 ## Credits:
@@ -81,12 +86,51 @@ I recommend this tutorial if you are curious how to manually install mods in the
 - Armored does not work on some sigils
 
 
-## Bug reports / Suggestions / Feedback:
-Contact JamesGames on the Inscryption Modding Discord
+### Bug Reports / Suggestions:
+Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issues
 
 
 
 # Update notes:
+
+## `Version: 0.9.0 - 15/12/2021`
+### New:
+- Added Summon Zerg Ability
+- Added Blood Bank Ability
+- Added Larva
+
+### Changes:
+- General
+  - Updated all Portraits with higher resolution art
+- Leviathan
+  - Reduced Power from 2 to 0
+  - Increased Health from 10 to 20
+  - Reduced Bone Cost from 10 to 8
+  - Removed WhackAMole and Sharp Abilities
+  - Added Blood Bank and Summon Zerg Abilities
+- Mutalisk
+  - Added Regenerate
+- Strange Artifact
+  - Can no longer Kill Survivors
+- Squirrel
+  - Reverted back to normal
+- Overlord
+  - Removed Fledgling
+  - Added Sacrificial
+  - Increased Blood from 1 to 2
+
+### Fixes:
+- Viper
+  - Correct Emission
+- Scourge
+  - Fixed Portrait offset
+- Ricochet
+  - Fixed Ricochet damage not setting to 1
+
+
+
+<details>
+  <summary>See all Changes</summary>
 
 ## `Version: 0.8.0 - 5/1/2021`
 ### New:
@@ -115,8 +159,6 @@ Contact JamesGames on the Inscryption Modding Discord
 - Regestate
   - Fixed HP of egg not accounting for buffed health from fire.
 
-<details>
-  <summary>See all Changes</summary>
 
 ## `Version: 0.7.0 - 2/12/2021`
 ### New:
