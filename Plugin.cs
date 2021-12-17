@@ -28,7 +28,7 @@ namespace ZergMod
 	        Log = Logger;
             Logger.LogInfo($"Loading {PluginName}...");
             Directory = this.Info.Location.Replace("ZergMod.dll", "");
-            new Harmony("jamesgames.inscryption.zergmod").PatchAll();
+            new Harmony(PluginGuid).PatchAll();
 
             // Backgrounds
             XelNagaBackground.Initialize();
