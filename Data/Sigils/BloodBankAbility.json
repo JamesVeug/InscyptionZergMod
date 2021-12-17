@@ -2,11 +2,11 @@
 	"@type": "ZergMod.Scripts.Data.AbilityData",
 	"power": 0,
 	"priority": 0,
-	"learnText": "",
-	"name": "",
-	"ruleBookName": "",
-	"ruleDescription": "",
-	"iconPath": "Artwork/zerg.png",
+	"learnText": "That's one gigantic card capable of multiple sacrifices in replacement of health",
+	"name": "Blood Bank",
+	"ruleBookName": "Blood Bank",
+	"ruleDescription": "When a card bearing this sigil is sacrified, its health is reduced relative to blood required.",
+	"iconPath": "Artwork/Sigils/blood_bank.png",
 	"metaCategories": [
 		"Part1Rulebook",
 		"Part1Modular"

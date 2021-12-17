@@ -9,11 +9,11 @@
 	],
 	"power": 0,
 	"priority": 0,
-	"learnText": "",
-	"name": "",
-	"ruleBookName": "",
-	"ruleDescription": "",
-	"iconPath": "Artwork/zerg.png",
+	"learnText": "The swarm grows",
+	"name": "Summon Zerg",
+	"ruleBookName": "Summon Zerg",
+	"ruleDescription": "When a card bearing this sigil takes damage it will create a random zerg card in your hand.",
+	"iconPath": "Artwork/Sigils/summon_zerg.png",
 	"metaCategories": [
 		"Part1Rulebook",
 		"Part1Modular"

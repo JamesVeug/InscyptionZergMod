@@ -3,10 +3,10 @@
 	"power": 0,
 	"priority": 0,
 	"learnText": "",
-	"name": "",
-	"ruleBookName": "",
-	"ruleDescription": "",
-	"iconPath": "Artwork/zerg.png",
+	"name": "Explode",
+	"ruleBookName": "Explode",
+	"ruleDescription": "When a card bearing this sigil deals damage it will also hit the opponents adjacent cards and perish.",
+	"iconPath": "Artwork/Sigils/explode.png",
 	"metaCategories": [
 		"Part1Rulebook",
 		"Part1Modular"

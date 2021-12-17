@@ -6,16 +6,28 @@
 			"minimumKills": 0,
 			"portraitPath": "Artwork/Cards/dehaka_1.png",
 			"portraitEmitPath": "Artwork/Cards/dehaka_1_emit.png"
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.DehakaSpecialAbilityData+PortraitChangeData",
+			"minimumKills": 3,
+			"portraitPath": "Artwork/Cards/dehaka_2.png",
+			"portraitEmitPath": "Artwork/Cards/dehaka_2_emit.png"
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.DehakaSpecialAbilityData+PortraitChangeData",
+			"minimumKills": 6,
+			"portraitPath": "Artwork/Cards/dehaka_3.png",
+			"portraitEmitPath": "Artwork/Cards/dehaka_3_emit.png"
 		}
 	],
 	"iconType": "CardsInHand",
 	"power": 0,
 	"priority": 0,
 	"learnText": "",
-	"name": "",
-	"ruleBookName": "",
-	"ruleDescription": "",
-	"iconPath": "Artwork/zerg.png",
+	"name": "Collect Essence",
+	"ruleBookName": "Collect Essence",
+	"ruleDescription": "When a card with this sigil kills a stronger card it will steal its essence.",
+	"iconPath": "Artwork/Cards/dehaka_1.png",
 	"metaCategories": [
 		"Part1Rulebook",
 		"Part1Modular"

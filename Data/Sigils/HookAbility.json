@@ -2,11 +2,11 @@
 	"@type": "ZergMod.Scripts.Data.AbilityData",
 	"power": 0,
 	"priority": 0,
-	"learnText": "",
-	"name": "",
-	"ruleBookName": "",
-	"ruleDescription": "",
-	"iconPath": "Artwork/zerg.png",
+	"learnText": "I don't remember taking a picture of my Hook...",
+	"name": "Fish Hook",
+	"ruleBookName": "Fish Hook",
+	"ruleDescription": "When a card bearing this sigil is played, a targeted card is moved to your side of the board",
+	"iconPath": "Artwork/Sigils/fish_hook.png",
 	"metaCategories": [
 		"Part1Rulebook",
 		"Part1Modular"

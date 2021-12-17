@@ -5,11 +5,11 @@
 	"maxEvolutions": 3,
 	"power": 0,
 	"priority": 0,
-	"learnText": "",
-	"name": "",
-	"ruleBookName": "",
-	"ruleDescription": "",
-	"iconPath": "Artwork/zerg.png",
+	"learnText": "That card seems unbalanced",
+	"name": "Regestate",
+	"ruleBookName": "Regestate",
+	"ruleDescription": "When this card is killed it will transform into an Egg for it to regenerate into its original form. An egg has 0 Power and as much Health as the base card.",
+	"iconPath": "Artwork/Cards/egg.png",
 	"metaCategories": [
 		"Part1Rulebook",
 		"Part1Modular"

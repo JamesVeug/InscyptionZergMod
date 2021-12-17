@@ -4,10 +4,10 @@
 	"power": 0,
 	"priority": 0,
 	"learnText": "",
-	"name": "",
-	"ruleBookName": "",
-	"ruleDescription": "",
-	"iconPath": "Artwork/zerg.png",
+	"name": "Armoured",
+	"ruleBookName": "Armored",
+	"ruleDescription": "When a card bearing this sigil takes damage, it will take 1 less damage",
+	"iconPath": "Artwork/Sigils/armored.png",
 	"metaCategories": [
 		"Part1Rulebook",
 		"Part1Modular"

@@ -2,11 +2,11 @@
 	"@type": "ZergMod.Scripts.Data.AbilityData",
 	"power": 0,
 	"priority": 0,
-	"learnText": "",
-	"name": "",
-	"ruleBookName": "",
-	"ruleDescription": "",
-	"iconPath": "Artwork/zerg.png",
+	"learnText": "One attack just isn't enough is it?",
+	"name": "Double Attack",
+	"ruleBookName": "Double Attack",
+	"ruleDescription": "When a card bearing this sigil deals damage to a card and survives, it will perform one additional attack.",
+	"iconPath": "Artwork/Sigils/double_attack.png",
 	"metaCategories": [
 		"Part1Rulebook",
 		"Part1Modular"

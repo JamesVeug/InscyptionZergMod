@@ -3,11 +3,11 @@
 	"bombardDamage": 1,
 	"power": 0,
 	"priority": 0,
-	"learnText": "",
-	"name": "",
-	"ruleBookName": "",
-	"ruleDescription": "",
-	"iconPath": "Artwork/zerg.png",
+	"learnText": "Bombarding my side of the board will only weaken that card",
+	"name": "Bombard",
+	"ruleBookName": "Bombard",
+	"ruleDescription": "When a card bearing this sigil deals damage directly it will damage the opposing card for 1 damage.",
+	"iconPath": "Artwork/Sigils/bombard.png",
 	"metaCategories": [
 		"Part1Rulebook",
 		"Part1Modular"

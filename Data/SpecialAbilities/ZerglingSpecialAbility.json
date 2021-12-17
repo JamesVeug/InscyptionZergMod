@@ -3,19 +3,49 @@
 	"portraitChanges": [
 		{
 			"@type": "ZergMod.Scripts.Data.ZerglingSpecialAbilityData+PortraitChangeData",
-			"health": 0,
+			"health": 1,
 			"portraitPath": "Artwork/Cards/zergling_1.png",
-			"portraitEmitPath": "Artwork/Cards/dehaka_1_emit.png"
+			"portraitEmitPath": "Artwork/Cards/zergling_1_emit.png"
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.ZerglingSpecialAbilityData+PortraitChangeData",
+			"health": 2,
+			"portraitPath": "Artwork/Cards/zergling_2.png",
+			"portraitEmitPath": "Artwork/Cards/zergling_2_emit.png"
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.ZerglingSpecialAbilityData+PortraitChangeData",
+			"health": 3,
+			"portraitPath": "Artwork/Cards/zergling_3.png",
+			"portraitEmitPath": "Artwork/Cards/zergling_3_emit.png"
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.ZerglingSpecialAbilityData+PortraitChangeData",
+			"health": 4,
+			"portraitPath": "Artwork/Cards/zergling_4.png",
+			"portraitEmitPath": "Artwork/Cards/zergling_4_emit.png"
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.ZerglingSpecialAbilityData+PortraitChangeData",
+			"health": 5,
+			"portraitPath": "Artwork/Cards/zergling_5.png",
+			"portraitEmitPath": "Artwork/Cards/zergling_5_emit.png"
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.ZerglingSpecialAbilityData+PortraitChangeData",
+			"health": 6,
+			"portraitPath": "Artwork/Cards/zergling_6.png",
+			"portraitEmitPath": "Artwork/Cards/zergling_6_emit.png"
 		}
 	],
 	"iconType": "CardsInHand",
 	"power": 0,
 	"priority": 0,
 	"learnText": "",
-	"name": "",
-	"ruleBookName": "",
-	"ruleDescription": "",
-	"iconPath": "Artwork/zerg.png",
+	"name": "Zergling Swarm",
+	"ruleBookName": "Zergling Swarm",
+	"ruleDescription": "Portrait changes as the health increases. Max 6",
+	"iconPath": "Artwork/Cards/zergling_6.png",
 	"metaCategories": [
 		"Part1Rulebook",
 		"Part1Modular"

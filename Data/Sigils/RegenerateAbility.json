@@ -3,11 +3,11 @@
 	"health": 1,
 	"power": 0,
 	"priority": 0,
-	"learnText": "",
-	"name": "",
-	"ruleBookName": "",
-	"ruleDescription": "",
-	"iconPath": "Artwork/zerg.png",
+	"learnText": "Delaying the inevitable i see",
+	"name": "Regenerate",
+	"ruleBookName": "Regenerate",
+	"ruleDescription": "The card bearing this sigil Heals 1 health at the end of a turn.",
+	"iconPath": "Artwork/Sigils/regenerate.png",
 	"metaCategories": [
 		"Part1Rulebook",
 		"Part1Modular"

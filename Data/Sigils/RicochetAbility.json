@@ -4,10 +4,10 @@
 	"power": 0,
 	"priority": 0,
 	"learnText": "",
-	"name": "",
-	"ruleBookName": "",
-	"ruleDescription": "",
-	"iconPath": "Artwork/zerg.png",
+	"name": "Ricochet",
+	"ruleBookName": "Ricochet",
+	"ruleDescription": "When a card bearing this sigil deals damage to a card it will also try hitting over the card for 1 damage.",
+	"iconPath": "Artwork/Sigils/ricochet.png",
 	"metaCategories": [
 		"Part1Rulebook",
 		"Part1Modular"

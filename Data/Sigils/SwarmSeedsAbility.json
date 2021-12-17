@@ -9,11 +9,11 @@
 	],
 	"power": 0,
 	"priority": 0,
-	"learnText": "",
-	"name": "",
-	"ruleBookName": "",
-	"ruleDescription": "",
-	"iconPath": "Artwork/zerg.png",
+	"learnText": "These swarm seeds will strike down your foes",
+	"name": "Draw Broodling's",
+	"ruleBookName": "Swarm Seeds",
+	"ruleDescription": "Draw 1 Broodling at the start of your turn. A Broodling is defined as: 2 Power 2 Health.",
+	"iconPath": "Artwork/Sigils/swarm_seeds.png",
 	"metaCategories": [
 		"Part1Rulebook",
 		"Part1Modular"
