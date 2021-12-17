@@ -12,7 +12,7 @@ namespace ZergMod.Scripts.Cards
         private const string TextureFile = "Artwork/Cards/hydralisk.png";
         private const string EmitTextureFile = "Artwork/Cards/hydralisk_emit.png";
 
-        private const int BaseAttack = 3;
+        private const int BaseAttack = 2;
         private const int BaseHealth = 2;
         private const int BloodCost = 2;
         private const int BoneCost = 0;
@@ -24,6 +24,8 @@ namespace ZergMod.Scripts.Cards
             metaCategories.Add(CardMetaCategory.TraderOffer);
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
+
+            List<Ability> abilities = new List<Ability> { Ability.Sniper };
 
             CardInfo cardInfo = NewCard.cards.Find(info => info.displayedName == "Lurker");
             EvolveIdentifier identifier = new EvolveIdentifier("Lurker", 1, new CardModificationInfo(cardInfo));
@@ -43,6 +45,7 @@ namespace ZergMod.Scripts.Cards
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
                 emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 evolveId:identifier,
+                abilities:abilities,
                 decals: Utils.GetDecals());
         }
     }
