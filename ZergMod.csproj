@@ -29,5 +29,8 @@
     <Reference Include="Sirenix.Serialization">
       <HintPath>lib\Sirenix.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="TinyJSON, Version=1.0.7069.16240, Culture=neutral, PublicKeyToken=null">
+      <HintPath>lib\TinyJSON.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
