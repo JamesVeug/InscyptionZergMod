@@ -7,7 +7,7 @@ using Pixelplacement;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace ZergMod
+namespace ZergMod.Scripts.Abilities
 {
     public class HookAbility : AbilityBehaviour
     {

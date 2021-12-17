@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
 
-namespace ZergMod
+namespace ZergMod.Scripts.Abilities
 {
     public class BloodBankAbility : AbilityBehaviour
 	{

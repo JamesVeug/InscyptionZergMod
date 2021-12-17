@@ -6,7 +6,7 @@ using DiskCardGame;
 using Pixelplacement;
 using UnityEngine;
 
-namespace ZergMod
+namespace ZergMod.Scripts.Abilities
 {
     public class AbductAbility : AbilityBehaviour
     {

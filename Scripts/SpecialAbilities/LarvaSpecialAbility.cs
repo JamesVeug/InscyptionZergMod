@@ -2,12 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using APIPlugin;
-using ZergMod;
+using DiskCardGame;
 using ZergMod.Scripts.Cards;
-using Plugin = ZergMod.Plugin;
 using Random = UnityEngine.Random;
 
-namespace DiskCardGame
+namespace ZergMod.Scripts.SpecialAbilities
 {
     public class LarvaSpecialAbility : SpecialCardBehaviour
     {

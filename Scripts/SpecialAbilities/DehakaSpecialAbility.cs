@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using APIPlugin;
+using DiskCardGame;
 using UnityEngine;
-using ZergMod;
-namespace DiskCardGame
+
+namespace ZergMod.Scripts.SpecialAbilities
 {
     public class DehakaSpecialAbility : SpecialCardBehaviour, IPortraitChanges
     {

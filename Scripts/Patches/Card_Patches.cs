@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using APIPlugin;
-using BepInEx.Logging;
 using DiskCardGame;
 using HarmonyLib;
-using UnityEngine;
 
-namespace ZergMod.Patches
+namespace ZergMod.Scripts.Patches
 {
     [HarmonyPatch(typeof (Card), "AttachAbilities", new System.Type[] {typeof (CardInfo)})]
     public class Card_AttachAbilities

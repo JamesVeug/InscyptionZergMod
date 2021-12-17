@@ -7,7 +7,7 @@ using UnityEngine;
 using ZergMod.Scripts.Cards;
 using Random = UnityEngine.Random;
 
-namespace ZergMod
+namespace ZergMod.Scripts.Abilities
 {
     public class SummonZergAbility : AbilityBehaviour
 	{

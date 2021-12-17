@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using APIPlugin;
-using BepInEx.Logging;
+﻿using APIPlugin;
 using DiskCardGame;
 using HarmonyLib;
-using UnityEngine;
 
-namespace ZergMod.Patches
+namespace ZergMod.Scripts.Patches
 {
     [HarmonyPatch(typeof (AbilitiesUtil), "GetInfo", new System.Type[] {typeof (Ability)})]
     public class AbilitiesUtil_GetInfo

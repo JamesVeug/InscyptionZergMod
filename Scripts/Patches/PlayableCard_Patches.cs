@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using DiskCardGame;
 using HarmonyLib;
 using UnityEngine;
+using ZergMod.Scripts.Abilities;
 
-namespace ZergMod.Patches
+namespace ZergMod.Scripts.Patches
 {
     [HarmonyPatch(typeof (PlayableCard), "Sacrifice")]
     public class PlayableCard_Sacrifice

@@ -1,7 +1,8 @@
 ﻿using DiskCardGame;
 using HarmonyLib;
+using ZergMod.Scripts.SpecialAbilities;
 
-namespace ZergMod.Patches
+namespace ZergMod.Scripts.Patches
 {
     [HarmonyPatch(typeof(CardInfo), "Attack", MethodType.Getter)]
     public class CardInfo_Attack

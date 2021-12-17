@@ -4,7 +4,7 @@ using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
 
-namespace ZergMod
+namespace ZergMod.Scripts.Abilities
 {
 	/// <summary>
 	/// Credits to Cyantist for ThickShell ability from SigilADay

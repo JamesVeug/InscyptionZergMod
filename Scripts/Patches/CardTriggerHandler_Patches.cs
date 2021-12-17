@@ -1,11 +1,9 @@
 ﻿using System;
 using APIPlugin;
-using BepInEx.Logging;
 using DiskCardGame;
 using HarmonyLib;
-using UnityEngine;
 
-namespace ZergMod.Patches
+namespace ZergMod.Scripts.Patches
 {
     [HarmonyPatch(typeof (CardTriggerHandler), "AddAbility", new System.Type[] {typeof (SpecialTriggeredAbility)})]
     public class CardTriggerHandler_AddAbility

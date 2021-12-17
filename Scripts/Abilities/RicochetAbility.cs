@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
 using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
 
-namespace ZergMod
+namespace ZergMod.Scripts.Abilities
 {
     public class RicochetAbility : AbilityBehaviour
     {

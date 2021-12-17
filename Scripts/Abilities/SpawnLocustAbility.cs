@@ -4,7 +4,7 @@ using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
 
-namespace ZergMod
+namespace ZergMod.Scripts.Abilities
 {
     public class SpawnLocustAbility : AbilityBehaviour
 	{

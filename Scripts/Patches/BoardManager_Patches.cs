@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using DiskCardGame;
 using HarmonyLib;
+using ZergMod.Scripts.Abilities;
 
-namespace ZergMod.Patches
+namespace ZergMod.Scripts.Patches
 {
     [HarmonyPatch(typeof (BoardManager), "GetValueOfSacrifices")]
     public class BoardManager_GetValueOfSacrifices

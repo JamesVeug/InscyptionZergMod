@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using APIPlugin;
+using DiskCardGame;
 using UnityEngine;
-using ZergMod;
-using Plugin = ZergMod.Plugin;
 
-namespace DiskCardGame
+namespace ZergMod.Scripts.SpecialAbilities
 {
     public class ZerglingSpecialAbility : SpecialCardBehaviour, IPortraitChanges
     {

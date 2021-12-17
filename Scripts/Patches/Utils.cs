@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using APIPlugin;
-using BepInEx.Logging;
 using DiskCardGame;
-using HarmonyLib;
 using UnityEngine;
+using ZergMod.Scripts.Abilities;
 
-namespace ZergMod.Patches
+namespace ZergMod.Scripts.Patches
 {
     public static class Utils
     {

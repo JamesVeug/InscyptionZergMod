@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using BepInEx.Logging;
-using DiskCardGame;
-using EasyFeedback.APIs;
+﻿using DiskCardGame;
 using HarmonyLib;
-using UnityEngine;
-using ZergMod;
-using Plugin = APIPlugin.Plugin;
 
-namespace ZergMod.Patches
+namespace ZergMod.Scripts.Patches
 {
     [HarmonyPatch(typeof(Submerge), "RespondsToUpkeep", new System.Type[] { typeof(bool) })]
     public class Submerge_RespondsToUpkeep

@@ -1,7 +1,7 @@
 ﻿using HarmonyLib;
 using UnityEngine;
 
-namespace ZergMod.Patches
+namespace ZergMod.Scripts.Patches
 {
     [HarmonyPatch(typeof (SaveManager), "SaveToFile", new System.Type[] {typeof (bool)})]
     public class SaveManager_SaveToFile
