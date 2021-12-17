@@ -1,0 +1,17 @@
+{
+	"@type": "ZergMod.Scripts.Data.RegestateAbilityData",
+	"cardName": "Egg",
+	"healthPerEvolutions": 4,
+	"maxEvolutions": 3,
+	"power": 0,
+	"priority": 0,
+	"learnText": "",
+	"name": "",
+	"ruleBookName": "",
+	"ruleDescription": "",
+	"iconPath": "Artwork/zerg.png",
+	"metaCategories": [
+		"Part1Rulebook",
+		"Part1Modular"
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"@type": "ZergMod.Scripts.Data.AbilityData",
+	"power": 0,
+	"priority": 0,
+	"learnText": "",
+	"name": "",
+	"ruleBookName": "",
+	"ruleDescription": "",
+	"iconPath": "Artwork/zerg.png",
+	"metaCategories": [
+		"Part1Rulebook",
+		"Part1Modular"
+	]
+}

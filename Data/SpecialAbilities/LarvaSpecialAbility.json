@@ -1,0 +1,23 @@
+{
+	"@type": "ZergMod.Scripts.Data.LarvaSpecialAbilityData",
+	"cardEvolutions": [
+		{
+			"@type": "ZergMod.Scripts.Data.LarvaSpecialAbilityData+WeightData",
+			"cardName": "",
+			"weight": -1
+		}
+	],
+	"turnsUntilEvolve": 0,
+	"iconType": "CardsInHand",
+	"power": 0,
+	"priority": 0,
+	"learnText": "",
+	"name": "",
+	"ruleBookName": "",
+	"ruleDescription": "",
+	"iconPath": "Artwork/zerg.png",
+	"metaCategories": [
+		"Part1Rulebook",
+		"Part1Modular"
+	]
+}

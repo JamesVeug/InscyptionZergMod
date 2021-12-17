@@ -1,0 +1,23 @@
+{
+	"@type": "ZergMod.Scripts.Data.ZerglingSpecialAbilityData",
+	"portraitChanges": [
+		{
+			"@type": "ZergMod.Scripts.Data.ZerglingSpecialAbilityData+PortraitChangeData",
+			"health": 0,
+			"portraitPath": "Artwork/Cards/zergling_1.png",
+			"portraitEmitPath": "Artwork/Cards/dehaka_1_emit.png"
+		}
+	],
+	"iconType": "CardsInHand",
+	"power": 0,
+	"priority": 0,
+	"learnText": "",
+	"name": "",
+	"ruleBookName": "",
+	"ruleDescription": "",
+	"iconPath": "Artwork/zerg.png",
+	"metaCategories": [
+		"Part1Rulebook",
+		"Part1Modular"
+	]
+}
