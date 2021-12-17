@@ -12,7 +12,7 @@ namespace ZergMod.Scripts.Cards
         private const string TextureFile = "Artwork/Cards/guardian.png";
         private const string EmitTextureFile = "Artwork/Cards/guardian_emit.png";
 
-        private const int BaseAttack = 4;
+        private const int BaseAttack = 2;
         private const int BaseHealth = 6;
         private const int BloodCost = 3;
         private const int BoneCost = 0;
@@ -25,7 +25,7 @@ namespace ZergMod.Scripts.Cards
 
             List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
 
-            List<Ability> abilities = new List<Ability> {  };
+            List<Ability> abilities = new List<Ability> { Ability.Sniper };
 
             NewCard.Add(name: ID,
                 displayedName: DisplayName,
