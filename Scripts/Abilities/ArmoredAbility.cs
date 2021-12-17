@@ -1,52 +1,18 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
+using ZergMod.Scripts.Data;
 
 namespace ZergMod.Scripts.Abilities
 {
 	/// <summary>
 	/// Credits to Cyantist for ThickShell ability from SigilADay
 	/// </summary>
-	public class ArmoredAbility : AbilityBehaviour
+	public class ArmoredAbility : ACustomAbilityBehaviour<ArmoredAbilityData>
 	{
-		public override Ability Ability => ability;
-		public static Ability ability;
-        
-		private const int PowerLevel = 0;
-		private const string SigilID = "Armoured";
-		private const string SigilName = "Armored";
-		private const string Description = "When a card bearing this sigil takes damage, it will take 1 less damage";
-		private const string TextureFile = "Artwork/Sigils/armoured.png";
-		private const string LearnText = "";
-
-		public static void Initialize()
-		{
-			AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
-			info.powerLevel = PowerLevel;
-			info.rulebookName = SigilName;
-			info.rulebookDescription = Description;
-			info.metaCategories = new List<AbilityMetaCategory> { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
-
-			if (!string.IsNullOrEmpty(LearnText))
-			{
-				List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
-				DialogueEvent.Line line = new DialogueEvent.Line();
-				line.text = LearnText;
-				lines.Add(line);
-				info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
-			}
-
-			NewAbility newAbility = new NewAbility(
-				info: info, 
-				abilityBehaviour: typeof(ArmoredAbility), 
-				tex: Utils.GetTextureFromPath(TextureFile),
-				id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, SigilID)
-			);
-			ArmoredAbility.ability = newAbility.ability;
-		}
-
+		private bool attacked;
+		private CardModificationInfo mod;
+		
 		private void Start()
 		{
 			this.mod = new CardModificationInfo();
@@ -79,14 +45,11 @@ namespace ZergMod.Scripts.Abilities
 			this.attacked = false;
 			yield return new WaitForSeconds(0.1f);
 			this.mod.healthAdjustment = 0;
-			base.Card.HealDamage(1);
+			base.Card.HealDamage(LoadedData.damageBlocked);
 			base.Card.Anim.LightNegationEffect();
 			yield return new WaitForSeconds(0.1f);
 			yield return base.LearnAbility(0.25f);
 			yield break;
 		}
-
-		private bool attacked;
-		private CardModificationInfo mod;
 	}
 }

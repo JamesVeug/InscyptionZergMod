@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
+using ZergMod.Scripts.Data;
 
 namespace ZergMod
 {
@@ -11,6 +13,49 @@ namespace ZergMod
     {
         private static List<Texture> s_defaultDecals = null;
         
+        public static void InitializeAbility<T>(Type declaringType, out T loadedData, out NewAbility newAbility) where T : AbilityData
+        {
+            loadedData = DataUtil.LoadFromFile<T>("Data/Sigils/" + declaringType.Name);
+            
+            AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
+            info.powerLevel = loadedData.power;
+            info.rulebookName = loadedData.ruleBookName;
+            info.rulebookDescription = loadedData.ruleDescription;
+            info.metaCategories = loadedData.metaCategories;
+
+            if (!string.IsNullOrEmpty(loadedData.learnText))
+            {
+                List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
+                DialogueEvent.Line line = new DialogueEvent.Line();
+                line.text = loadedData.learnText;
+                lines.Add(line);
+                info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+            }
+
+            newAbility = new NewAbility(
+                info: info, 
+                abilityBehaviour: declaringType, 
+                tex: Utils.GetTextureFromPath(loadedData.iconPath),
+                id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, loadedData.name)
+            );
+        }
+        
+        public static void InitializeSpecialAbility<T>(Type declaringType, out T loadedData, out NewSpecialAbility newSpecialAbility) where T : SpecialAbilityData
+        {
+            loadedData = DataUtil.LoadFromFile<T>("Data/SpecialAbilities/" + declaringType.Name);
+            
+            SpecialAbilityIdentifier identifier = SpecialAbilityIdentifier.GetID(Plugin.PluginGuid, loadedData.name);
+            
+            StatIconInfo iconInfo = new StatIconInfo();
+            iconInfo.rulebookName = loadedData.ruleBookName;
+            iconInfo.rulebookDescription = loadedData.ruleDescription;
+            iconInfo.iconType = loadedData.iconType;
+            iconInfo.iconGraphic = GetTextureFromPath(loadedData.iconPath);
+            iconInfo.metaCategories = loadedData.metaCategories;
+            
+            newSpecialAbility = new NewSpecialAbility(declaringType, identifier, iconInfo);
+        }
+
         public static Texture2D GetTextureFromPath(string path)
         {
             byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, path));

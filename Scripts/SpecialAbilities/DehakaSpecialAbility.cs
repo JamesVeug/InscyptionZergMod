@@ -1,42 +1,30 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
+using ZergMod.Scripts.Data;
 
 namespace ZergMod.Scripts.SpecialAbilities
 {
-    public class DehakaSpecialAbility : SpecialCardBehaviour, IPortraitChanges
+    public class DehakaSpecialAbility : ACustomSpecialAbilityBehaviour<DehakaSpecialAbilityData>, IPortraitChanges
     {
-        public SpecialTriggeredAbility SpecialAbility => specialAbility;
-        public static SpecialTriggeredAbility specialAbility;
-
         private static Dictionary<int, Texture2D> m_dehakaImages = new Dictionary<int, Texture2D>();
         private static int m_minDehakakillsForImages = int.MaxValue;
         private static int m_maxDehakakillsForImages = int.MinValue;
 
         private bool m_activated = false;
 
-        public override int Priority => int.MaxValue;
-
-        public static void Initialize()
+        public new static void Initialize(Type declaringType)
         {
-            InitializeTexture(0, "Artwork/Cards/dehaka_1.png", "Artwork/Cards/dehaka_1_emit.png");
-            InitializeTexture(3, "Artwork/Cards/dehaka_2.png", "Artwork/Cards/dehaka_2_emit.png");
-            InitializeTexture(6, "Artwork/Cards/dehaka_3.png", "Artwork/Cards/dehaka_3_emit.png");
+            ACustomSpecialAbilityBehaviour<DehakaSpecialAbilityData>.Initialize(declaringType);
             
-            SpecialAbilityIdentifier identifier = SpecialAbilityIdentifier.GetID("DehakaSpecialAbility", "DehakaSpecialAbility");
-            
-            StatIconInfo iconInfo = new StatIconInfo();
-            iconInfo.rulebookName = "Collect Essence";
-            iconInfo.rulebookDescription = "When a card with this sigil kills a stronger card it will steal its essence.";
-            iconInfo.iconType = SpecialStatIcon.CardsInHand;
-            iconInfo.iconGraphic = Utils.GetTextureFromPath("Artwork/Cards/dehaka_1.png");
-            iconInfo.metaCategories = new List<AbilityMetaCategory> { AbilityMetaCategory.Part1Modular, AbilityMetaCategory.Part1Rulebook };
-            
-            NewSpecialAbility newSpecialAbility = new NewSpecialAbility(typeof(DehakaSpecialAbility), identifier, iconInfo);
-            specialAbility = newSpecialAbility.specialTriggeredAbility;
+            foreach (DehakaSpecialAbilityData.PortraitChangeData data in LoadedData.portraitChanges)
+            {
+                InitializeTexture(data.minimumKills, data.portraitPath, data.portraitEmitPath);
+            }
         }
 
         private static void InitializeTexture(int kills, string fileName, string emissiveFileName)

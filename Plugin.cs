@@ -36,28 +36,28 @@ namespace ZergMod
             Egg.Initialize();
             
             // SpecialAbilities
-            ZerglingSpecialAbility.Initialize();
-            DehakaSpecialAbility.Initialize();
-            LarvaSpecialAbility.Initialize();
+            ZerglingSpecialAbility.Initialize(typeof(ZerglingSpecialAbility));
+            DehakaSpecialAbility.Initialize(typeof(DehakaSpecialAbility));
+            LarvaSpecialAbility.Initialize(typeof(LarvaSpecialAbility));
             
             // Abilities
-            RegenerateAbility.Initialize();
-            RegestateAbility.Initialize();
-            DoubleAttackAbility.Initialize();
-            SpawnLarvaAbility.Initialize();
-            DetectorAbility.Initialize();
-            SwarmSeedsAbility.Initialize();
-            SpawnLocustAbility.Initialize();
-            ArmoredAbility.Initialize();
-            SplashDamageAbility.Initialize();
-            AbductAbility.Initialize();
-            ExplodeAbility.Initialize();
-            BombardAbility.Initialize();
-            HookAbility.Initialize();
-            RicochetAbility.Initialize();
-            BloodBankAbility.Initialize();
-            SummonZergAbility.Initialize();
-            
+            RegenerateAbility.Initialize(typeof(RegenerateAbility));
+            RegestateAbility.Initialize(typeof(RegestateAbility));
+            DoubleAttackAbility.Initialize(typeof(DoubleAttackAbility));
+            SpawnLarvaAbility.Initialize(typeof(SpawnLarvaAbility));
+            DetectorAbility.Initialize(typeof(DetectorAbility));
+            SwarmSeedsAbility.Initialize(typeof(SwarmSeedsAbility));
+            SpawnLocustAbility.Initialize(typeof(SpawnLocustAbility));
+            ArmoredAbility.Initialize(typeof(ArmoredAbility));
+            SplashDamageAbility.Initialize(typeof(SplashDamageAbility));
+            AbductAbility.Initialize(typeof(AbductAbility));
+            ExplodeAbility.Initialize(typeof(ExplodeAbility));
+            BombardAbility.Initialize(typeof(BombardAbility));
+            HookAbility.Initialize(typeof(HookAbility));
+            RicochetAbility.Initialize(typeof(RicochetAbility));
+            BloodBankAbility.Initialize(typeof(BloodBankAbility));
+            SummonZergAbility.Initialize(typeof(SummonZergAbility));
+
             // Evolutions
             Banelings.Initialize();
             Overseer.Initialize();

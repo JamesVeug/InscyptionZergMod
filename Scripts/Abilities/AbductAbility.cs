@@ -1,53 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using APIPlugin;
 using DiskCardGame;
 using Pixelplacement;
 using UnityEngine;
+using ZergMod.Scripts.Data;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class AbductAbility : AbilityBehaviour
+    public class AbductAbility : ACustomAbilityBehaviour<AbilityData>
     {
-        public override Ability Ability => ability;
-        public static Ability ability;
-        
-        private const int PowerLevel = 0;
-        private const string SigilID = "Abduct";
-        private const string SigilName = "Abduct";
-        private const string Description = "When a card bearing this sigil is played, a targeted enemy card is moved to the space in front of it, if that space is empty";
-        private const string TextureFile = "Artwork/Sigils/abduct.png";
-        private const string LearnText = "";
-
         private CardSlot m_targetedCardSlot = null;
-
-        public static void Initialize()
-        {
-            AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
-            info.powerLevel = PowerLevel;
-            info.rulebookName = SigilName;
-            info.rulebookDescription = Description;
-            info.metaCategories = new List<AbilityMetaCategory>
-                { AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
-
-            if (!string.IsNullOrEmpty(LearnText))
-            {
-	            List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
-	            DialogueEvent.Line line = new DialogueEvent.Line();
-	            line.text = LearnText;
-	            lines.Add(line);
-	            info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
-            }
-
-            NewAbility newAbility = new NewAbility(
-	            info: info, 
-	            abilityBehaviour: typeof(AbductAbility), 
-	            tex: Utils.GetTextureFromPath(TextureFile),
-                id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, SigilID)
-	            );
-            AbductAbility.ability = newAbility.ability;
-        }
 
         public override bool RespondsToResolveOnBoard()
         {
@@ -186,5 +149,6 @@ namespace ZergMod.Scripts.Abilities
 
 	        return false;
         }
+
     }
 }

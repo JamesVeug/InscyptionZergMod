@@ -1,55 +1,53 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
+using ZergMod.Scripts.Data;
 
 namespace ZergMod.Scripts.SpecialAbilities
 {
-    public class ZerglingSpecialAbility : SpecialCardBehaviour, IPortraitChanges
+    public class ZerglingSpecialAbility : ACustomSpecialAbilityBehaviour<ZerglingSpecialAbilityData>, IPortraitChanges
     {
-        public SpecialTriggeredAbility SpecialAbility => specialAbility;
-        public static SpecialTriggeredAbility specialAbility;
-
-        public static int MaxZerglingsToSwarm = 6;
-        public static int SwarmDamageBonus = 1;
-        
         private static Dictionary<int, Texture2D> m_zerglingImages = new Dictionary<int, Texture2D>();
         private static int m_maxZerglingHealth = 0;
 
-        public static void Initialize()
+        public new static void Initialize(Type declaringType)
         {
-            InitializeTexture(1, "Artwork/Cards/zergling_1.png");
-            InitializeTexture(2, "Artwork/Cards/zergling_2.png");
-            InitializeTexture(3, "Artwork/Cards/zergling_3.png");
-            InitializeTexture(4, "Artwork/Cards/zergling_4.png");
-            InitializeTexture(5, "Artwork/Cards/zergling_5.png");
-            InitializeTexture(6, "Artwork/Cards/zergling_6.png");
-
-            SpecialAbilityIdentifier identifier = SpecialAbilityIdentifier.GetID("ZerglingSpecialAbility", "ZerglingSpecialAbility");
+            ACustomSpecialAbilityBehaviour<ZerglingSpecialAbilityData>.Initialize(declaringType);
             
-            StatIconInfo iconInfo = new StatIconInfo();
-            iconInfo.rulebookName = "Zergling Swarm";
-            iconInfo.rulebookDescription = "Portrait changes as the health increases. Max 6";
-            iconInfo.iconType = SpecialStatIcon.CardsInHand;
-            iconInfo.iconGraphic = Utils.GetTextureFromPath("Artwork/Cards/zergling_6.png");
-            iconInfo.metaCategories = new List<AbilityMetaCategory> { AbilityMetaCategory.Part1Modular, AbilityMetaCategory.Part1Rulebook };
-            
-            NewSpecialAbility newSpecialAbility = new NewSpecialAbility(typeof(ZerglingSpecialAbility), identifier, iconInfo);
-            specialAbility = newSpecialAbility.specialTriggeredAbility;
+            foreach (ZerglingSpecialAbilityData.PortraitChangeData changeData in LoadedData.portraitChanges)
+            {
+                InitializeTexture(changeData);
+            }
         }
 
-        private static void InitializeTexture(int health, string fileName)
+        private static void InitializeTexture(ZerglingSpecialAbilityData.PortraitChangeData data)
         {
-            byte[] imgBytes = File.ReadAllBytes(Path.Combine(ZergMod.Plugin.Directory, fileName));
+            // Max Health cache
+            m_maxZerglingHealth = Mathf.Max(m_maxZerglingHealth, data.health);
+            
+            // Texture
+            byte[] texBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, data.portraitPath));
             Texture2D tex = new Texture2D(2,2);
-            tex.LoadImage(imgBytes);
-            tex.name = "portrait_" + fileName;
+            tex.LoadImage(texBytes);
+            tex.name = "portrait_" + data.portraitPath;
             tex.filterMode = FilterMode.Point;
 
-            m_zerglingImages[health] = tex;
-            m_maxZerglingHealth = Mathf.Max(m_maxZerglingHealth, health);
+            m_zerglingImages[data.health] = tex;
+            
+            // Emit Texture
+            byte[] emissiveImgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, data.portraitEmitPath));
+            Texture2D emissiveTex = new Texture2D(2,2);
+            emissiveTex.LoadImage(emissiveImgBytes);
+            emissiveTex.name = tex.name + "_emission";
+            emissiveTex.filterMode = FilterMode.Point;
+                
+            Sprite emissiveSprite = Sprite.Create(emissiveTex, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
+            emissiveSprite.name = tex.name + "_emission";
+            NewCard.emissions.Add(tex.name, emissiveSprite);
         }
 
         private void Awake()
@@ -141,6 +139,8 @@ namespace ZergMod.Scripts.SpecialAbilities
             Texture2D tex = m_zerglingImages[health];
             Card.Info.portraitTex = Sprite.Create(tex, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
             Card.Info.portraitTex.name = tex.name;
+            Card.Info.alternatePortrait = Sprite.Create(tex, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
+            Card.Info.alternatePortrait.name = tex.name;
             Card.RenderCard();
         }
     }
