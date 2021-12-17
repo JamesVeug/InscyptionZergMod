@@ -10,13 +10,16 @@ namespace ZergMod.Scripts.Abilities
 {
     public class SummonZergAbility : ACustomAbilityBehaviour<SummonZergAbilityData>
 	{
+		public override Ability Ability => ability;
+		public static Ability ability = Ability.None;
+		
 		// First value = Weight for drop. Higher means larger chance to obtain it
 		// Second value = Name of what card will selected
 		private static int m_totalWeights = 0; 
 
-		public new static void Initialize(Type declaringType)
+		public static void Initialize(Type declaringType)
 		{
-			ACustomAbilityBehaviour<SummonZergAbilityData>.Initialize(declaringType);
+			ability = InitializeBase(declaringType);
 			
 			// Sort by ascending drop rates
 			LoadedData.cardEvolutions.Sort((a,b)=>a.weight - b.weight);

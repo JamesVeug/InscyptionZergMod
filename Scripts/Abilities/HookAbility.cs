@@ -11,6 +11,14 @@ namespace ZergMod.Scripts.Abilities
 {
     public class HookAbility : ACustomAbilityBehaviour<AbilityData>
     {
+	    public override Ability Ability => ability;
+	    public static Ability ability = Ability.None;
+		
+	    public static void Initialize(Type declaringType)
+	    {
+		    ability = InitializeBase(declaringType);
+	    }
+	    
 	    public override bool RespondsToResolveOnBoard()
         {
 	        return Utils.GetSlot(Card).IsPlayerSlot;

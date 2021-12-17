@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DiskCardGame;
 using UnityEngine;
@@ -8,8 +9,16 @@ namespace ZergMod.Scripts.Abilities
 {
     public class DoubleAttackAbility : ACustomAbilityBehaviour<AbilityData>
     {
+        public override Ability Ability => ability;
+        public static Ability ability = Ability.None;
+        
         private List<int> attackedSlots = new List<int>();
         private CardSlot directAttackSlot = null; // Gross yes. But i'm lazy
+		
+        public static void Initialize(Type declaringType)
+        {
+            ability = InitializeBase(declaringType);
+        }
 
         public override bool RespondsToSlotTargetedForAttack(CardSlot slot, PlayableCard attacker)
         {

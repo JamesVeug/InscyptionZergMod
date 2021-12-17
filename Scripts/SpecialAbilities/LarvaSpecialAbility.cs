@@ -9,13 +9,16 @@ namespace ZergMod.Scripts.SpecialAbilities
 {
     public class LarvaSpecialAbility : ACustomSpecialAbilityBehaviour<LarvaSpecialAbilityData>
     {
+        public SpecialTriggeredAbility SpecialAbility => specialAbility;
+        public static SpecialTriggeredAbility specialAbility = SpecialTriggeredAbility.None;
+        
         // First value = Weight for choice. Higher means larger chance to evolve into it
         // Second value = Name of what card to evolve into
         private static int m_totalWeights = 0; 
         
-        public new static void Initialize(Type declaringType)
+        public static void Initialize(Type declaringType)
         {
-            ACustomSpecialAbilityBehaviour<LarvaSpecialAbilityData>.Initialize(declaringType);
+            specialAbility = InitializeBase(declaringType);
             
             // Sort by ascending drop rates
             LoadedData.cardEvolutions.Sort((a,b)=>a.weight - b.weight);

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DiskCardGame;
 using UnityEngine;
@@ -8,7 +9,15 @@ namespace ZergMod.Scripts.Abilities
 {
     public class RicochetAbility : ACustomAbilityBehaviour<RicochetAbilityData>
     {
+        public override Ability Ability => ability;
+        public static Ability ability = Ability.None;
+		
         private bool activated = false;
+        
+        public static void Initialize(Type declaringType)
+        {
+            ability = InitializeBase(declaringType);
+        }
         
         public override bool RespondsToDealDamage(int amount, PlayableCard target)
         {

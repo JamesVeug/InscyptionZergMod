@@ -11,12 +11,15 @@ namespace ZergMod.Scripts.SpecialAbilities
 {
     public class ZerglingSpecialAbility : ACustomSpecialAbilityBehaviour<ZerglingSpecialAbilityData>, IPortraitChanges
     {
+        public SpecialTriggeredAbility SpecialAbility => specialAbility;
+        public static SpecialTriggeredAbility specialAbility = SpecialTriggeredAbility.None;
+        
         private static Dictionary<int, Texture2D> m_zerglingImages = new Dictionary<int, Texture2D>();
         private static int m_maxZerglingHealth = 0;
 
-        public new static void Initialize(Type declaringType)
+        public static void Initialize(Type declaringType)
         {
-            ACustomSpecialAbilityBehaviour<ZerglingSpecialAbilityData>.Initialize(declaringType);
+            specialAbility = InitializeBase(declaringType);
             
             foreach (ZerglingSpecialAbilityData.PortraitChangeData changeData in LoadedData.portraitChanges)
             {

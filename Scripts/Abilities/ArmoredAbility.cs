@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using DiskCardGame;
 using UnityEngine;
 using ZergMod.Scripts.Data;
@@ -10,8 +11,16 @@ namespace ZergMod.Scripts.Abilities
 	/// </summary>
 	public class ArmoredAbility : ACustomAbilityBehaviour<ArmoredAbilityData>
 	{
+		public override Ability Ability => ability;
+		public static Ability ability = Ability.None;
+	    
 		private bool attacked;
 		private CardModificationInfo mod;
+
+		public static void Initialize(Type declaringType)
+		{
+			ability = InitializeBase(declaringType);
+		}
 		
 		private void Start()
 		{

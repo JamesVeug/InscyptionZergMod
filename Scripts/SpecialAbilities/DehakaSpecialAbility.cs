@@ -11,15 +11,18 @@ namespace ZergMod.Scripts.SpecialAbilities
 {
     public class DehakaSpecialAbility : ACustomSpecialAbilityBehaviour<DehakaSpecialAbilityData>, IPortraitChanges
     {
+        public SpecialTriggeredAbility SpecialAbility => specialAbility;
+        public static SpecialTriggeredAbility specialAbility = SpecialTriggeredAbility.None;
+        
         private static Dictionary<int, Texture2D> m_dehakaImages = new Dictionary<int, Texture2D>();
         private static int m_minDehakakillsForImages = int.MaxValue;
         private static int m_maxDehakakillsForImages = int.MinValue;
 
         private bool m_activated = false;
 
-        public new static void Initialize(Type declaringType)
+        public static void Initialize(Type declaringType)
         {
-            ACustomSpecialAbilityBehaviour<DehakaSpecialAbilityData>.Initialize(declaringType);
+            specialAbility = InitializeBase(declaringType);
             
             foreach (DehakaSpecialAbilityData.PortraitChangeData data in LoadedData.portraitChanges)
             {

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using APIPlugin;
 using DiskCardGame;
@@ -9,6 +10,14 @@ namespace ZergMod.Scripts.Abilities
 {
     public class RegestateAbility : ACustomAbilityBehaviour<RegestateAbilityData>
     {
+        public override Ability Ability => ability;
+        public static Ability ability = Ability.None;
+		
+        public static void Initialize(Type declaringType)
+        {
+            ability = InitializeBase(declaringType);
+        }
+        
         public override bool RespondsToDie(bool wasSacrifice, PlayableCard killer)
         {
             if (wasSacrifice) 
@@ -29,7 +38,7 @@ namespace ZergMod.Scripts.Abilities
             
             CardInfo whatToMutateInto = CardLoader.GetCardByName(this.Card.Info.name);
             int totalHealth = this.Card.Health + this.Card.Status.damageTaken;
-            int totalEvolves = Mathf.Clamp(Mathf.FloorToInt((float)totalHealth / LoadedData.maxEvolutions), 1, LoadedData.maxEvolutions) + 1;
+            int totalEvolves = Mathf.Clamp(Mathf.FloorToInt((float)totalHealth / LoadedData.healthPerEvolutions), 1, LoadedData.maxEvolutions) + 1;
             
             CardInfo egg = (CardInfo)NewCard.cards.Find(info => info.displayedName == LoadedData.cardName).Clone();
             egg.baseHealth = totalHealth;

@@ -1,12 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using DiskCardGame;
 
 namespace ZergMod.Scripts.Abilities
 {
     public class ExplodeAbility : SplashDamageAbility
 	{
+		public override Ability Ability => ability;
+		public new static Ability ability = Ability.None;
+		
 		private bool m_startedAttack = false;
-
+		
+		public new static void Initialize(Type declaringType)
+		{
+			ability = InitializeBase(declaringType);
+		}
+		
 		public override IEnumerator OnDealDamage(int amount, PlayableCard target)
 		{
 			m_startedAttack = true;
