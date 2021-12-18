@@ -33,7 +33,7 @@
 		},
 		{
 			"@type": "ZergMod.Scripts.Data.LarvaSpecialAbilityData+WeightData",
-			"cardName": "Corrupter",
+			"cardName": "Corruptor",
 			"weight": 10
 		},
 		{

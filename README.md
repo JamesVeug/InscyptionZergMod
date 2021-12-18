@@ -20,7 +20,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Queen** - 1,3 With Spawn Larva.
 - **Hydralisk** - 3,2. Evolves into Lurker.
 - **Scourge** - 3,1 with Explode and Airborne.
-- **Corrupter** - 2,2 with Airborne. Evolves into Devourer.
+- **Corruptor** - 2,2 with Airborne. Evolves into Devourer.
 - **Crawler Forest** - Mirror,5 with Mighty Leap and Detector
 - **Egg** - 0,3
 - **Baneling** - 3,1 with Explode
@@ -268,7 +268,7 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 ### New:
 - Added Viper - 2,1 with Abduct
 - Added Scourge - 1,1 with Explode and Airborne
-- Added Corrupter - 2,2 with Airborne. Evolves into Devourer
+- Added Corruptor - 2,2 with Airborne. Evolves into Devourer
 - Added Devourer - 3,3 with Airborne and Armoured
 - Added Guardian - 4,6
 
