@@ -1,0 +1,14 @@
+{
+	"name": "Egg",
+	"displayedName": "Egg",
+	"description": "Egg that is gestating into something else",
+	"metaCategories": [],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"baseAttack": 0,
+	"baseHealth": 3,
+	"bloodCost": 0,
+	"bonesCost": 0,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/egg.png"
+}

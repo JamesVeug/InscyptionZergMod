@@ -1,0 +1,25 @@
+{
+	"name": "Queen of Blades",
+	"displayedName": "Queen of Blades",
+	"description": "The Hero that never dies",
+	"metaCategories": [
+		"Rare"
+	],
+	"cardComplexity": "Advanced",
+	"temple": "Nature",
+	"baseAttack": 4,
+	"baseHealth": 4,
+	"bloodCost": 3,
+	"bonesCost": 0,
+	"appearanceBehaviour": [
+		"RareCardBackground"
+	],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/kerrigan.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/kerrigan_emit.png",
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Regestate"
+		}
+	]
+}

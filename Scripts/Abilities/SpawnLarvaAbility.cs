@@ -1,6 +1,6 @@
 ﻿using System;
 using DiskCardGame;
-using ZergMod.Scripts.Data;
+using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {

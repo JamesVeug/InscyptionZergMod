@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ZergMod.Scripts.Data
+namespace ZergMod.Scripts.Data.Sigils
 {
     [Serializable]
     public class RegestateAbilityData : AbilityData

@@ -1,0 +1,27 @@
+{
+	"name": "Larva",
+	"displayedName": "Larva",
+	"description": "It's hard carapace. Not recommended for consumption ",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"baseAttack": 0,
+	"baseHealth": 3,
+	"bloodCost": 1,
+	"bonesCost": 0,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/larva.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/larva_emit.png",
+	"abilities": [
+		"Evolve"
+	],
+	"customSpecialAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Larva"
+		}
+	]
+}

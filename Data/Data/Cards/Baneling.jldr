@@ -1,0 +1,23 @@
+{
+	"name": "Baneling",
+	"displayedName": "Baneling",
+	"description": "Those things are pretty nasty. Next time, you should try not to let them splash you!",
+	"metaCategories": [
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"baseAttack": 3,
+	"baseHealth": 1,
+	"bloodCost": 0,
+	"bonesCost": 2,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/baneling.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/baneling_emit.png",
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Explode"
+		}
+	]
+}

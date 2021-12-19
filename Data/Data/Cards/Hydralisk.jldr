@@ -1,0 +1,28 @@
+{
+	"name": "Hydralisk",
+	"displayedName": "Hydralisk",
+	"description": "Great for taking out flyers",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"baseAttack": 2,
+	"baseHealth": 2,
+	"bloodCost": 2,
+	"bonesCost": 0,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/hydralisk.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/hydralisk_emit.png",
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Double Attack"
+		}
+	],
+	"evolution": {
+		"name": "Lurker",
+		"turnsToEvolve": 1
+	}
+}

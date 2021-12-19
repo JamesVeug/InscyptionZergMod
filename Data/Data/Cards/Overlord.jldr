@@ -1,0 +1,26 @@
+{
+	"name": "Overlord",
+	"displayedName": "Overlord",
+	"description": "Lazy alien balloon",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"baseAttack": 0,
+	"baseHealth": 4,
+	"bloodCost": 2,
+	"bonesCost": 0,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/overlord.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/overlord_emit.png",
+	"abilities": [
+		"Sacrificial",
+		"Reach"
+	],
+	"evolution": {
+		"name": "Overseer",
+		"turnsToEvolve": 1
+	}
+}

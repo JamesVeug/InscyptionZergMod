@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using DiskCardGame;
 using Pixelplacement;
 using UnityEngine;
-using ZergMod.Scripts.Data;
+using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {

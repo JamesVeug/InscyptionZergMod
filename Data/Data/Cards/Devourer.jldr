@@ -1,0 +1,29 @@
+{
+	"name": "Devourer",
+	"displayedName": "Devourer",
+	"description": "Heavy anti-air flyer",
+	"metaCategories": [
+		"Rare",
+		"TraderOffer"
+	],
+	"cardComplexity": "Intermediate",
+	"temple": "Nature",
+	"baseAttack": 3,
+	"baseHealth": 3,
+	"bloodCost": 3,
+	"bonesCost": 0,
+	"appearanceBehaviour": [
+		"RareCardBackground"
+	],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/devourer.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/devourer_emit.png",
+	"abilities": [
+		"Flying"
+	],
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Armoured"
+		}
+	]
+}

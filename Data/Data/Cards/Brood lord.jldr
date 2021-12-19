@@ -1,0 +1,25 @@
+{
+	"name": "Brood lord",
+	"displayedName": "Brood lord",
+	"description": "Heavy Airborn unit at its max evolution stage",
+	"metaCategories": [
+		"Rare"
+	],
+	"cardComplexity": "Intermediate",
+	"temple": "Nature",
+	"baseAttack": 0,
+	"baseHealth": 6,
+	"bloodCost": 3,
+	"bonesCost": 0,
+	"appearanceBehaviour": [
+		"RareCardBackground"
+	],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/broodlord.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/broodlord_emit.png",
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Draw Broodling's"
+		}
+	]
+}

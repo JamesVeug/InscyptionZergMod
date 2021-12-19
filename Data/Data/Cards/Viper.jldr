@@ -1,0 +1,25 @@
+{
+	"name": "Viper",
+	"displayedName": "Viper",
+	"description": "Its long tongue makes for a great Tether",
+	"metaCategories": [
+		"Rare"
+	],
+	"cardComplexity": "Intermediate",
+	"temple": "Nature",
+	"baseAttack": 2,
+	"baseHealth": 1,
+	"bloodCost": 2,
+	"bonesCost": 0,
+	"appearanceBehaviour": [
+		"RareCardBackground"
+	],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/viper.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/viper_emit.png",
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Abduct"
+		}
+	]
+}

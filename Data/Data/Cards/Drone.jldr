@@ -1,0 +1,26 @@
+{
+	"name": "Drone",
+	"displayedName": "Drone",
+	"description": "Worker unit will gather resources for you",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"baseAttack": 1,
+	"baseHealth": 1,
+	"bloodCost": 1,
+	"bonesCost": 0,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/drone.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/drone_emit.png",
+	"abilities": [
+		"BoneDigger",
+		"Submerge"
+	],
+	"evolution": {
+		"name": "CrawlerForest",
+		"turnsToEvolve": 1
+	}
+}

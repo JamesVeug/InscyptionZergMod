@@ -1,0 +1,32 @@
+{
+	"name": "Mutalisk",
+	"displayedName": "Mutalisk",
+	"description": "Flying devil",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"baseAttack": 1,
+	"baseHealth": 3,
+	"bloodCost": 2,
+	"bonesCost": 0,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/mutalisk.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/mutalisk_emit.png",
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Ricochet"
+		},
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Regenerate"
+		}
+	],
+	"evolution": {
+		"name": "Guardian",
+		"turnsToEvolve": 1
+	}
+}

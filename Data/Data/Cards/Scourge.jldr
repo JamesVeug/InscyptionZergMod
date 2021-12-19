@@ -1,0 +1,26 @@
+{
+	"name": "Scourge",
+	"displayedName": "Scourge",
+	"description": "Like little baby mutalisks. But uglier. And they smell way worse when they die.",
+	"metaCategories": [
+		"ChoiceNode"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"baseAttack": 3,
+	"baseHealth": 1,
+	"bloodCost": 1,
+	"bonesCost": 0,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/scourge.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/scourge_emit.png",
+	"abilities": [
+		"Flying"
+	],
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Explode"
+		}
+	]
+}

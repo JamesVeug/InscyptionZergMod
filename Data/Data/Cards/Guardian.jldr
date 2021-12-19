@@ -1,0 +1,21 @@
+{
+	"name": "Guardian",
+	"displayedName": "Guardian",
+	"description": "Despite being devastating in terrestrial combat, guardians are next to useless in space combat",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Intermediate",
+	"temple": "Nature",
+	"baseAttack": 2,
+	"baseHealth": 6,
+	"bloodCost": 3,
+	"bonesCost": 0,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/guardian.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/guardian_emit.png",
+	"abilities": [
+		"Sniper"
+	]
+}

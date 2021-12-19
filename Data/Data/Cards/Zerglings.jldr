@@ -1,0 +1,33 @@
+{
+	"name": "Zerglings",
+	"displayedName": "Zerglings",
+	"description": "Looks friendly but watch your face because your could lose it",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"baseAttack": 1,
+	"baseHealth": 2,
+	"bloodCost": 1,
+	"bonesCost": 0,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/zergling_2.png",
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Double Attack"
+		}
+	],
+	"customSpecialAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Zergling Swarm"
+		}
+	],
+	"evolution": {
+		"name": "Baneling",
+		"turnsToEvolve": 1
+	}
+}

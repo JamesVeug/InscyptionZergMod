@@ -1,0 +1,28 @@
+{
+	"name": "Roach",
+	"displayedName": "Roach",
+	"description": "Armored unit that can heal",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"baseAttack": 2,
+	"baseHealth": 3,
+	"bloodCost": 2,
+	"bonesCost": 0,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/roach.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/roach_emit.png",
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Regenerate"
+		}
+	],
+	"evolution": {
+		"name": "Ravager",
+		"turnsToEvolve": 1
+	}
+}

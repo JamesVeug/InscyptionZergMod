@@ -1,0 +1,28 @@
+{
+	"name": "Infestor",
+	"displayedName": "Infestor",
+	"description": "One of my most discusting creations",
+	"metaCategories": [
+		"Rare"
+	],
+	"cardComplexity": "Intermediate",
+	"temple": "Nature",
+	"baseAttack": 1,
+	"baseHealth": 1,
+	"bloodCost": 2,
+	"bonesCost": 0,
+	"appearanceBehaviour": [
+		"RareCardBackground"
+	],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/infestor.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/infestor_emit.png",
+	"abilities": [
+		"Submerge"
+	],
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Fish Hook"
+		}
+	]
+}

@@ -1,0 +1,26 @@
+{
+	"name": "Overseer",
+	"displayedName": "Overseer",
+	"description": "The all seeing creature powered to reveal hidden creatures",
+	"metaCategories": [
+		"TraderOffer"
+	],
+	"cardComplexity": "Advanced",
+	"temple": "Nature",
+	"baseAttack": 0,
+	"baseHealth": 6,
+	"bloodCost": 2,
+	"bonesCost": 0,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/overseer.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/overseer_emit.png",
+	"abilities": [
+		"DebuffEnemy"
+	],
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Detector"
+		}
+	]
+}

@@ -2,7 +2,7 @@
 using System.Collections;
 using APIPlugin;
 using DiskCardGame;
-using ZergMod.Scripts.Data;
+using ZergMod.Scripts.Data.Sigils;
 using Random = UnityEngine.Random;
 
 namespace ZergMod.Scripts.SpecialAbilities

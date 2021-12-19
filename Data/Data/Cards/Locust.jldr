@@ -1,0 +1,17 @@
+{
+	"name": "Locust",
+	"displayedName": "Locust",
+	"description": null,
+	"metaCategories": [],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"baseAttack": 1,
+	"baseHealth": 1,
+	"bloodCost": 0,
+	"bonesCost": 1,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/locust.png",
+	"abilities": [
+		"Brittle"
+	]
+}

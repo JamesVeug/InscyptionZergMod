@@ -1,0 +1,29 @@
+{
+	"name": "Leviathan",
+	"displayedName": "Leviathan",
+	"description": "Heavy air transport unit",
+	"metaCategories": [
+		"Rare"
+	],
+	"cardComplexity": "Advanced",
+	"temple": "Nature",
+	"baseAttack": 0,
+	"baseHealth": 20,
+	"bloodCost": 0,
+	"bonesCost": 8,
+	"appearanceBehaviour": [
+		"RareCardBackground"
+	],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/leviathan.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/leviathan_emit.png",
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Blood Bank"
+		},
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Summon Zerg"
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
+	"power": 0,
+	"priority": 0,
+	"learnText": "",
+	"name": "Abduct",
+	"ruleBookName": "Abduct",
+	"ruleDescription": "When a card bearing this sigil is played, a targeted enemy card is moved to the space in front of it, if that space is empty",
+	"iconPath": "Artwork/Sigils/abduct.png",
+	"metaCategories": [
+		"Part1Rulebook",
+		"Part1Modular"
+	]
+}

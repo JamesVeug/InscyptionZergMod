@@ -1,0 +1,14 @@
+{
+	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
+	"power": 0,
+	"priority": 1000000,
+	"learnText": "Revealing hidden cards will not help you defeat me.",
+	"name": "Detector",
+	"ruleBookName": "Detector",
+	"ruleDescription": "When a card bearing this sigil is on the board all opponent's submerged cards will be revealed.",
+	"iconPath": "Artwork/Sigils/detector.png",
+	"metaCategories": [
+		"Part1Rulebook",
+		"Part1Modular"
+	]
+}

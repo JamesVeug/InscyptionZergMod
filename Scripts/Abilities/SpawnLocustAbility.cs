@@ -2,7 +2,7 @@
 using System.Collections;
 using DiskCardGame;
 using UnityEngine;
-using ZergMod.Scripts.Data;
+using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
