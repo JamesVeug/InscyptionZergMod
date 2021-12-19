@@ -38,7 +38,7 @@
 		},
 		{
 			"@type": "ZergMod.Scripts.Data.Sigils.LarvaSpecialAbilityData+WeightData",
-			"cardName": "Banelings",
+			"cardName": "Baneling",
 			"weight": 5
 		},
 		{
