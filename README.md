@@ -18,14 +18,14 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Roach** - 2,3 with Regenerate. Evolves into Ravager.
 - **Mutalisk** - 1,3 with Ricochet and Regenerate. Evolves into Guardian
 - **Queen** - 1,3 With Spawn Larva.
-- **Hydralisk** - 3,2. Evolves into Lurker.
+- **Hydralisk** - 3,2 with Double Attack. Evolves into Lurker.
 - **Scourge** - 3,1 with Explode and Airborne.
 - **Corruptor** - 2,2 with Airborne. Evolves into Devourer.
 - **Crawler Forest** - Mirror,5 with Mighty Leap and Detector
 - **Egg** - 0,3
 - **Baneling** - 3,1 with Explode
 - **Overseer** - 0,6 with Detector and Stinky
-- **Guardian** - 4,6
+- **Guardian** - 2,6 with Snipe
 - **Swarm Host** - 0,2 with Spawn Locust and Waterborne
 - **Larva** - 0,3 with Evolve. Special: Larva, Kills Survivors
 
@@ -68,9 +68,9 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 
 ## Credits:
 - **JamesGames** - Creator
-- **CarbotAnimations** - Original Cartoon art for Star Craft
+- **CarbotAnimations** - Original Cartoon art for StarCraft - https://www.youtube.com/c/CarbotAnimations
 - **GeneralSpritz** - Custom Art
-- **Shattered Omega** - Balancing suggestions
+- **Shattered Omega** - Balancing
 - **Cyantist** - Armored Ability
 
 
@@ -93,15 +93,21 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 # Update notes:
 
-## `Version: 0.9.0 - 15/12/2021`
+## `Version: 0.9.0 - 20/12/2021`
 ### New:
+- Added Larva
+- Added Larva Special Ability
 - Added Summon Zerg Ability
 - Added Blood Bank Ability
-- Added Larva
 
 ### Changes:
 - General
+  - Bumped API dependency from 1.12.0 to 1.13.0
+  - Added JSONLoader 1.7.0 dependency
+  - All cards now loaded by JSONLoader
+  - All sigils now loaded by JSON
   - Updated all Portraits with higher resolution art
+  - Special abilities GUID changed to jamesgames.inscryption.zergmod
 - Leviathan
   - Reduced Power from 2 to 0
   - Increased Health from 10 to 20
@@ -110,6 +116,9 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
   - Added Blood Bank and Summon Zerg Abilities
 - Mutalisk
   - Added Regenerate
+- Hydralisk
+    - Damage reduced from 3 to 2
+    - Added Double Attack
 - Strange Artifact
   - Can no longer Kill Survivors
 - Squirrel
@@ -118,8 +127,17 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
   - Removed Fledgling
   - Added Sacrificial
   - Increased Blood from 1 to 2
+- Guardian
+    - Damage reduced from 4 to 2
+    - Added Snipe
+- Detector
+  - Added new art by General Spritz
+- Corrupter
+    - Renamed to Corruptor
 
 ### Fixes:
+- General
+  - Infester and queen sizes not 114x94
 - Viper
   - Correct Emission
 - Scourge
