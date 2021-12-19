@@ -1,9 +1,12 @@
 using System.Collections.Generic;
+using System.IO;
 using BepInEx;
 using BepInEx.Logging;
 using DiskCardGame;
 using HarmonyLib;
 using APIPlugin;
+using TinyJSON;
+using UnityEngine;
 using ZergMod.Scripts.Abilities;
 using ZergMod.Scripts.Backgrounds;
 using ZergMod.Scripts.Cards;
@@ -33,13 +36,11 @@ namespace ZergMod
             // Backgrounds
             XelNagaBackground.Initialize();
             
-            Egg.Initialize();
-            
             // SpecialAbilities
             ZerglingSpecialAbility.Initialize(typeof(ZerglingSpecialAbility));
             DehakaSpecialAbility.Initialize(typeof(DehakaSpecialAbility));
             LarvaSpecialAbility.Initialize(typeof(LarvaSpecialAbility));
-            
+	        
             // Abilities
             RegenerateAbility.Initialize(typeof(RegenerateAbility));
             RegestateAbility.Initialize(typeof(RegestateAbility));
@@ -58,38 +59,8 @@ namespace ZergMod
             BloodBankAbility.Initialize(typeof(BloodBankAbility));
             SummonZergAbility.Initialize(typeof(SummonZergAbility));
 
-            // Evolutions
-            Banelings.Initialize();
-            Overseer.Initialize();
-            Lurker.Initialize();
-            Ravager.Initialize();
-            Devourer.Initialize();
-            Guardian.Initialize();
-            CrawlerForest.Initialize();
-            Broodlord.Initialize();
-            
-            // Units
-            Locust.Initialize();
-            Zerglings.Initialize();
-            Roach.Initialize();
-            Mutalisk.Initialize();
-            Overlord.Initialize();
-            Kerrigan.Initialize();
-            Queen.Initialize();
-            Hydralisk.Initialize();
-            Broodling.Initialize();
-            Drone.Initialize();
-            Ultralisk.Initialize();
-            Dehaka.Initialize();
-            InfestedTerran.Initialize();
-            Infestor.Initialize();
-            SwarmHost.Initialize();
-            Leviathan.Initialize();
-            Viper.Initialize();
-            Scourge.Initialize();
-            Corruptor.Initialize();
+            // Cards
             XelNagaArtifact.Initialize();
-            Larva.Initialize();
 
             Logger.LogInfo($"Loaded {PluginName}!");
         }
