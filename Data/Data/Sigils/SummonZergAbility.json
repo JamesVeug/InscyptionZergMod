@@ -3,8 +3,88 @@
 	"cardEvolutions": [
 		{
 			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
-			"cardName": "",
-			"weight": -1
+			"cardName": "Zerglings",
+			"weight": 55
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Roach",
+			"weight": 35
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Hydralisk",
+			"weight": 35
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Corruptor",
+			"weight": 35
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Baneling",
+			"weight": 30
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Mutalisk",
+			"weight": 30
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Lurker",
+			"weight": 30
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Swarm Host",
+			"weight": 20
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Brood lord",
+			"weight": 20
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Ultralisk",
+			"weight": 20
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Viper",
+			"weight": 15
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Guardian",
+			"weight": 10
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Infestor",
+			"weight": 5
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Queen",
+			"weight": 0
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Drone",
+			"weight": 0
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Overseer",
+			"weight": 0
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
+			"cardName": "Overlord",
+			"weight": 0
 		}
 	],
 	"power": 0,
