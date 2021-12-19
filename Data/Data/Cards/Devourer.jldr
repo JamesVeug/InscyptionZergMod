@@ -8,6 +8,7 @@
 	],
 	"cardComplexity": "Intermediate",
 	"temple": "Nature",
+	"tribes": ["Insect"],
 	"baseAttack": 3,
 	"baseHealth": 3,
 	"bloodCost": 3,
