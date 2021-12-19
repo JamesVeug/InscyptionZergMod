@@ -36,7 +36,7 @@ namespace ZergMod
                 info: info, 
                 abilityBehaviour: declaringType, 
                 tex: Utils.GetTextureFromPath(loadedData.iconPath),
-                id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, loadedData.name)
+                id: AbilityIdentifier.GetID(Plugin.PluginGuid, loadedData.name)
             );
         }
         

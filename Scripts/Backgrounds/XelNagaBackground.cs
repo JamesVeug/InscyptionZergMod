@@ -1,4 +1,5 @@
-﻿using DiskCardGame;
+﻿using APIPlugin;
+using DiskCardGame;
 
 namespace ZergMod.Scripts.Backgrounds
 {
@@ -10,11 +11,10 @@ namespace ZergMod.Scripts.Backgrounds
 
         public static void Initialize()
         {
-            NewBackgroundBehaviour newBackgroundBehaviour = NewBackgroundBehaviour.AddNewBackground(typeof(XelNagaBackground));
+            NewCardAppearanceBehaviour newBackgroundBehaviour = NewCardAppearanceBehaviour.AddNewBackground(typeof(XelNagaBackground), "XelNagaBackground");
             CustomAppearance = newBackgroundBehaviour.Appearance;
         }
         
-        // Token: 0x060014EE RID: 5358 RVA: 0x00046502 File Offset: 0x00044702
         public override void ApplyAppearance()
         {
             base.Card.RenderInfo.baseTextureOverride = Utils.GetTextureFromPath(TextureFile);
