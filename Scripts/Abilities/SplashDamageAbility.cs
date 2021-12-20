@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DiskCardGame;
+using UnityEngine;
 using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
@@ -21,13 +22,20 @@ namespace ZergMod.Scripts.Abilities
         public override bool RespondsToDealDamage(int amount, PlayableCard target)
         {
             CardSlot slot = Utils.GetSlot(target);
-            return !Card.Dead && !activated && slot != null;
+            return !activated && slot != null;
         }
 
         public override IEnumerator OnDealDamage(int amount, PlayableCard target)
         {
             yield return this.PreSuccessfulTriggerSequence();
 
+            if (Singleton<ViewManager>.Instance.CurrentView != View.Board)
+            {
+                yield return new WaitForSeconds(0.2f);
+                Singleton<ViewManager>.Instance.SwitchToView(View.Board, false, false);
+                yield return new WaitForSeconds(0.2f);
+            }
+            
             activated = true;
             
             CardSlot cardSlot = Utils.GetSlot(target);
