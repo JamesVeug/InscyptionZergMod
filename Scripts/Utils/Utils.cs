@@ -6,6 +6,7 @@ using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
 using ZergMod.Scripts.Data;
+using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod
 {
@@ -56,11 +57,17 @@ namespace ZergMod
             newSpecialAbility = new NewSpecialAbility(declaringType, identifier, iconInfo);
         }
 
+        public static Dictionary<Texture2D, string> TextureToPath = new Dictionary<Texture2D, string>();
         public static Texture2D GetTextureFromPath(string path)
         {
             byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, path));
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
+
+            /*if (!TextureToPath.TryGetValue(tex, out _))
+            {
+                TextureToPath[tex] = path;
+            }*/
 
             return tex;
         }

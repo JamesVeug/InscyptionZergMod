@@ -28,6 +28,8 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Guardian** - 2,6 with Snipe
 - **Swarm Host** - 0,2 with Spawn Locust and Waterborne
 - **Larva** - 0,3 with Evolve. Special: Larva, Kills Survivors
+- **Lurker** - 2,2 with Waterborne and Splash Damage.
+- **Ravager** - 2,2 with Snipe.
 
 ### Rare Cards:
 - **Brood lord** - 0,6 with Swarm Seeds
@@ -38,8 +40,6 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Viper** - 2,1 With Abduct
 - **Devourer** - 3,3 with Airborne and Armored.
 - **Ultralisk** - 2,5 with Armored and Splash Damage.
-- **Ravager** - 2,2 with Snipe.
-- **Lurker** - 2,2 with Waterborne and Splash Damage.
 - **Strange Artifact** - 0,1 with Bone King and Worthy Sacrifice
 
 ### Sigils:
@@ -93,7 +93,7 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 # Update notes:
 
-## `Version: 0.9.0 - 20/12/2021`
+## `Version: 0.9.0 - 21/12/2021`
 ### New:
 - Added Larva
 - Added Larva Special Ability
@@ -134,6 +134,8 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
   - Added new art by General Spritz
 - Corrupter
     - Renamed to Corruptor
+- Lurker
+    - No longer rare
 
 ### Fixes:
 - General

@@ -1,11 +1,11 @@
 {
     "name": "ZergMod",
-    "version_number": "0.8.0",
+    "version_number": "0.9.0",
     "website_url": "https://github.com/JamesVeug/InscyptionZergMod",
     "description": "A StarCraft inspired mod that brings Zerg into the world of Inscryption",
     "dependencies": [
         "BepInEx-BepInExPack_Inscryption-5.4.1701",
         "API_dev-API-1.13.0",
-        "MADH.inscryption.JSONLoader-1.7.0"
+        "MADH95Mods-JSONCardLoader-1.7.2"
     ]
 }
