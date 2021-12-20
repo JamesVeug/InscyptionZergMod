@@ -30,10 +30,11 @@ namespace ZergMod.Scripts.Abilities
 
 		private IEnumerator CreateCards()
 		{
-			if (Singleton<ViewManager>.Instance.CurrentView != View.Default)
+			View currentView = Singleton<ViewManager>.Instance.CurrentView;
+			if (currentView != View.Hand)
 			{
 				yield return new WaitForSeconds(0.2f);
-				Singleton<ViewManager>.Instance.SwitchToView(View.Default, false, false);
+				Singleton<ViewManager>.Instance.SwitchToView(View.Hand, false, false);
 				yield return new WaitForSeconds(0.2f);
 			}
 
@@ -41,7 +42,13 @@ namespace ZergMod.Scripts.Abilities
 			yield return Singleton<CardSpawner>.Instance.SpawnCardToHand(cardByName, null, 0.25f, null);
 			yield return new WaitForSeconds(0.45f);
 			yield return base.LearnAbility(0.1f);
-			yield break;
+			
+			if (currentView != View.Hand)
+			{
+				yield return new WaitForSeconds(0.2f);
+				Singleton<ViewManager>.Instance.SwitchToView(currentView, false, false);
+				yield return new WaitForSeconds(0.2f);
+			}
 		}
 	}
 }
