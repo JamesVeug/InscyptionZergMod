@@ -14,7 +14,9 @@ namespace ZergMod.Scripts.SpecialAbilities
         
         // First value = Weight for choice. Higher means larger chance to evolve into it
         // Second value = Name of what card to evolve into
-        private static int m_totalWeights = 0; 
+        private static int m_totalWeights = 0;
+
+        private bool m_randomized = false;
         
         public static void Initialize(Type declaringType)
         {
@@ -28,21 +30,44 @@ namespace ZergMod.Scripts.SpecialAbilities
             }
         }
 
-        public override bool RespondsToPlayFromHand()
+        public override bool RespondsToDrawn()
         {
-            return Card.Info.HasAbility(Ability.Evolve);
+            return ShouldRandomize();
         }
 
-        public override IEnumerator OnPlayFromHand()
+        public override IEnumerator OnDrawn()
         {
-            EvolveParams infoEvolveParams = Card.Info.evolveParams;
-            if (infoEvolveParams == null)
+            // Drawn in hand
+            yield return Randomize();
+        }
+
+        public override bool RespondsToResolveOnBoard()
+        {
+            // Placed on board by a spell
+            return ShouldRandomize();
+        }
+
+        public override IEnumerator OnResolveOnBoard()
+        {
+            yield return Randomize();
+        }
+
+        private bool ShouldRandomize()
+        {
+            return !m_randomized && Card.Info.HasAbility(Ability.Evolve);
+        }
+
+        private IEnumerator Randomize()
+        {
+            CardInfo cardInfo = Card.Info;
+            cardInfo.evolveParams = new EvolveParams
             {
-                infoEvolveParams = new EvolveParams();
-                infoEvolveParams.turnsToEvolve = LoadedData.turnsUntilEvolve;
-                Card.Info.evolveParams = infoEvolveParams;
-            }
-            infoEvolveParams.evolution = GetRandomCard();
+                turnsToEvolve = LoadedData.turnsUntilEvolve,
+                evolution = GetRandomCard()
+            };
+            Card.SetInfo(cardInfo);
+            
+            m_randomized = true;
             yield return null;
         }
         
