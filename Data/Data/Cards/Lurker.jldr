@@ -3,7 +3,7 @@
 	"displayedName": "Lurker",
 	"description": "Stay away from its spines. They are beyond deadly",
 	"metaCategories": [
-		"Rare"
+		"TraderOffer"
 	],
 	"cardComplexity": "Advanced",
 	"temple": "Nature",
@@ -12,9 +12,7 @@
 	"baseHealth": 2,
 	"bloodCost": 2,
 	"bonesCost": 0,
-	"appearanceBehaviour": [
-		"RareCardBackground"
-	],
+	"appearanceBehaviour": [],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/lurker.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/lurker_emit.png",
 	"abilities": [
