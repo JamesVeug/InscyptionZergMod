@@ -7,8 +7,10 @@
 		"TraderOffer"
 	],
 	"cardComplexity": "Simple",
+	"onePerDeck": true,
 	"temple": "Nature",
 	"tribes": ["Insect"],
+	"traits": ["KillsSurvivors"],
 	"baseAttack": 0,
 	"baseHealth": 3,
 	"bloodCost": 1,

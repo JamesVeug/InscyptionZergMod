@@ -6,6 +6,7 @@
 		"Rare"
 	],
 	"cardComplexity": "Simple",
+	"onePerDeck": true,
 	"temple": "Nature",
 	"tribes": ["Insect"],
 	"baseAttack": 1,
