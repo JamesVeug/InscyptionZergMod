@@ -7,7 +7,7 @@ using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class RicochetAbility : ACustomAbilityBehaviour<RicochetAbilityData>
+    public class RicochetAbility : ACustomAbilityBehaviour<RicochetAbility, RicochetAbilityData>
     {
         public override Ability Ability => ability;
         public static Ability ability = Ability.None;

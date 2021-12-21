@@ -4,7 +4,7 @@ using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class SpawnLarvaAbility : ACustomCreateCardsAdjacent<CreateCardsAbilityData>
+    public class SpawnLarvaAbility : ACustomCreateCardsAdjacent<SpawnLarvaAbility, CreateCardsAbilityData>
 	{
 		public override Ability Ability => ability;
 		public static Ability ability = Ability.None;

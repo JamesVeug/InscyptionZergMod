@@ -7,7 +7,7 @@ using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class SplashDamageAbility : ACustomAbilityBehaviour<AbilityData>
+    public class SplashDamageAbility : ACustomAbilityBehaviour<SplashDamageAbility, AbilityData>
     {
         public override Ability Ability => ability;
         public static Ability ability = Ability.None;

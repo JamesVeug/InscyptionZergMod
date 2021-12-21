@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class SummonZergAbility : ACustomAbilityBehaviour<SummonZergAbilityData>
+    public class SummonZergAbility : ACustomAbilityBehaviour<SummonZergAbility, SummonZergAbilityData>
 	{
 		public override Ability Ability => ability;
 		public static Ability ability = Ability.None;
@@ -20,13 +20,6 @@ namespace ZergMod.Scripts.Abilities
 		public static void Initialize(Type declaringType)
 		{
 			ability = InitializeBase(declaringType);
-			
-			// Sort by ascending drop rates
-			LoadedData.cardEvolutions.Sort((a,b)=>a.weight - b.weight);
-			foreach (WeightData data in LoadedData.cardEvolutions)
-			{
-				m_totalWeights += data.weight;
-			}
 		}
 
 		public override bool RespondsToTakeDamage(PlayableCard source)

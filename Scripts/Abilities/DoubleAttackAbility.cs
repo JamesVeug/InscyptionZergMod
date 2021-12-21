@@ -7,7 +7,7 @@ using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class DoubleAttackAbility : ACustomAbilityBehaviour<AbilityData>
+    public class DoubleAttackAbility : ACustomAbilityBehaviour<DoubleAttackAbility, AbilityData>
     {
         public override Ability Ability => ability;
         public static Ability ability = Ability.None;

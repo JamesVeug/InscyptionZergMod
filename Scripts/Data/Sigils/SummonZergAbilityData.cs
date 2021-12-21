@@ -23,5 +23,16 @@ namespace ZergMod.Scripts.Data.Sigils
                 cardName = ""
             }
         };
+
+        public int TotalWeights { get; private set; } 
+
+        public override void OnPostLoad()
+        {
+            cardEvolutions.Sort((a,b)=>a.weight - b.weight);
+            foreach (WeightData data in cardEvolutions)
+            {
+                TotalWeights += data.weight;
+            }
+        }
     }
 }

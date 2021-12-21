@@ -9,7 +9,7 @@ using Object = UnityEngine.Object;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class HookAbility : ACustomAbilityBehaviour<AbilityData>
+    public class HookAbility : ACustomAbilityBehaviour<HookAbility, AbilityData>
     {
 	    public override Ability Ability => ability;
 	    public static Ability ability = Ability.None;

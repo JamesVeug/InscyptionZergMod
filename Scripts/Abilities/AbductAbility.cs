@@ -8,7 +8,7 @@ using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class AbductAbility : ACustomAbilityBehaviour<AbilityData>
+    public class AbductAbility : ACustomAbilityBehaviour<AbductAbility, AbilityData>
     {
 	    public override Ability Ability => ability;
 	    public static Ability ability = Ability.None;

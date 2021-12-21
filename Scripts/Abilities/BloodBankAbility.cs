@@ -4,7 +4,7 @@ using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class BloodBankAbility : ACustomAbilityBehaviour<AbilityData>
+    public class BloodBankAbility : ACustomAbilityBehaviour<BloodBankAbility, AbilityData>
 	{
 		public override Ability Ability => ability;
 		public static Ability ability = Ability.None;

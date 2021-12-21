@@ -12,11 +12,14 @@ namespace ZergMod
 {
     public static class Utils
     {
+        public static Dictionary<Type, AData> s_dataLookup = new Dictionary<Type, AData>();
+        
         private static List<Texture> s_defaultDecals = null;
         
-        public static void InitializeAbility<T>(Type declaringType, out T loadedData, out NewAbility newAbility) where T : AbilityData
+        public static void InitializeAbility<T>(Type declaringType, out NewAbility newAbility) where T : AbilityData
         {
-            loadedData = DataUtil.LoadFromFile<T>("Data/Sigils/" + declaringType.Name);
+            T loadedData = DataUtil.LoadFromFile<T>("Data/Sigils/" + declaringType.Name);
+            s_dataLookup[declaringType] = loadedData;
             
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
             info.powerLevel = loadedData.power;

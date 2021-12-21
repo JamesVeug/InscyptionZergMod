@@ -5,16 +5,16 @@ using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public abstract class ACustomAbilityBehaviour<T> : AbilityBehaviour where T : AbilityData
+    public abstract class ACustomAbilityBehaviour<Y, T> : AbilityBehaviour where T : AbilityData where Y : AbilityBehaviour
     {
-        public static T LoadedData => m_loadedData;
-        private static T m_loadedData = null;
+        public T LoadedData => m_loadedData ?? (m_loadedData = (T)Utils.s_dataLookup[typeof(Y)]);
+        protected T m_loadedData = null;
         
         public override int Priority => LoadedData.priority;
 
         protected static Ability InitializeBase(Type declaringType)
         {
-            Utils.InitializeAbility(declaringType, out m_loadedData, out NewAbility newAbility);
+            Utils.InitializeAbility<T>(declaringType, out NewAbility newAbility);
             return newAbility.ability;
         }
     }

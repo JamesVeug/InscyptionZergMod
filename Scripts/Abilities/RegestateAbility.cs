@@ -8,7 +8,7 @@ using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class RegestateAbility : ACustomAbilityBehaviour<RegestateAbilityData>
+    public class RegestateAbility : ACustomAbilityBehaviour<RegestateAbility, RegestateAbilityData>
     {
         public override Ability Ability => ability;
         public static Ability ability = Ability.None;

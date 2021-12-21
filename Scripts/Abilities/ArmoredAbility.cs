@@ -9,7 +9,7 @@ namespace ZergMod.Scripts.Abilities
 	/// <summary>
 	/// Credits to Cyantist for ThickShell ability from SigilADay
 	/// </summary>
-	public class ArmoredAbility : ACustomAbilityBehaviour<ArmoredAbilityData>
+	public class ArmoredAbility : ACustomAbilityBehaviour<ArmoredAbility, ArmoredAbilityData>
 	{
 		public override Ability Ability => ability;
 		public static Ability ability = Ability.None;

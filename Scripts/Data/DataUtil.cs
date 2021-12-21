@@ -34,6 +34,10 @@ namespace ZergMod.Scripts.Data
             {
                 Plugin.Log.LogWarning("Failed to load " + str);
             }
+            else
+            {
+                loadedData.OnPostLoad();
+            }
 
             return loadedData;
         }

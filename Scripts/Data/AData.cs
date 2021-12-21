@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using DiskCardGame;
 
 namespace ZergMod.Scripts.Data
 {
@@ -8,5 +6,10 @@ namespace ZergMod.Scripts.Data
     public abstract class AData
     {
         public string name = "";
+
+        public virtual void OnPostLoad()
+        {
+            
+        }
     }
 }

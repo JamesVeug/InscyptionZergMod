@@ -6,7 +6,7 @@ using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class RegenerateAbility : ACustomAbilityBehaviour<RegenerateAbilityData>
+    public class RegenerateAbility : ACustomAbilityBehaviour<RegenerateAbility, RegenerateAbilityData>
     {
         public override Ability Ability => ability;
         public static Ability ability = Ability.None;

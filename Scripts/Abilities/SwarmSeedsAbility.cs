@@ -6,7 +6,7 @@ using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class SwarmSeedsAbility : ACustomAbilityBehaviour<SummonZergAbilityData>
+    public class SwarmSeedsAbility : ACustomAbilityBehaviour<SwarmSeedsAbility, SummonZergAbilityData>
 	{
 		public override Ability Ability => ability;
 		public static Ability ability = Ability.None;

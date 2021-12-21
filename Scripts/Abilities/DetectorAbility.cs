@@ -2,12 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using DiskCardGame;
+using TinyJSON;
 using UnityEngine;
 using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class DetectorAbility : ACustomAbilityBehaviour<AbilityData>
+    public class DetectorAbility : ACustomAbilityBehaviour<DetectorAbility, AbilityData>
     {
         public override Ability Ability => ability;
         public static Ability ability = Ability.None;
@@ -18,9 +19,14 @@ namespace ZergMod.Scripts.Abilities
         }
         
         public override int Priority => this.triggerPriority;
-        private int triggerPriority = LoadedData.power;
+        private int triggerPriority = 0;
 
         private bool activated = false;
+
+        private void Awake()
+        {
+            triggerPriority = LoadedData.power;
+        }
 
         public override bool RespondsToResolveOnBoard()
         {
