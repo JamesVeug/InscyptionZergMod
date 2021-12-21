@@ -3,17 +3,18 @@
 	"displayedName": "Queen",
 	"description": "Brings more units to the field faster",
 	"metaCategories": [
-		"ChoiceNode",
-		"TraderOffer"
+		"Rare"
 	],
 	"cardComplexity": "Simple",
 	"temple": "Nature",
-	"tribes": ["Insect"],"tribes": ["Insect"],
+	"tribes": ["Insect"],
 	"baseAttack": 1,
 	"baseHealth": 3,
 	"bloodCost": 2,
 	"bonesCost": 0,
-	"appearanceBehaviour": [],
+	"appearanceBehaviour": [
+		"RareCardBackground"
+	],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/queen.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/queen_emit.png",
 	"customAbilities": [
