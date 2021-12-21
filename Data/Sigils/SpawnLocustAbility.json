@@ -1,5 +1,7 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
+	"@type": "ZergMod.Scripts.Data.Sigils.CreateCardsAbilityData",
+	"spawnCardId": "Locust",
+	"cannotSpawnDialogue": "No room for a Locust!",
 	"power": 0,
 	"priority": 0,
 	"learnText": "Although brittle they are dangerous in high numbers",
