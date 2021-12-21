@@ -3,7 +3,7 @@
 	"displayedName": "Devourer",
 	"description": "Heavy anti-air flyer",
 	"metaCategories": [
-		"Rare",
+		"ChoiceNode",
 		"TraderOffer"
 	],
 	"cardComplexity": "Intermediate",
@@ -13,9 +13,7 @@
 	"baseHealth": 3,
 	"bloodCost": 3,
 	"bonesCost": 0,
-	"appearanceBehaviour": [
-		"RareCardBackground"
-	],
+	"appearanceBehaviour": [],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/devourer.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/devourer_emit.png",
 	"abilities": [
