@@ -3,8 +3,7 @@
 	"displayedName": "Infested Terran",
 	"description": "Must be a result of a space virus infesting a human turning them Zerg.",
 	"metaCategories": [
-		"ChoiceNode",
-		"TraderOffer"
+		"Rare"
 	],
 	"cardComplexity": "Simple",
 	"temple": "Nature",
@@ -13,7 +12,9 @@
 	"baseHealth": 2,
 	"bloodCost": 0,
 	"bonesCost": 2,
-	"appearanceBehaviour": [],
+	"appearanceBehaviour": [
+		"RareCardBackground"
+	],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/infested_terran.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/infested_terran_emit.png",
 	"abilities": [
