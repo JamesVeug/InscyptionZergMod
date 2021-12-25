@@ -7,6 +7,7 @@ using DiskCardGame;
 using UnityEngine;
 using ZergMod.Scripts.Data;
 using ZergMod.Scripts.Data.Sigils;
+using Object = UnityEngine.Object;
 
 namespace ZergMod
 {
@@ -40,7 +41,7 @@ namespace ZergMod
                 info: info, 
                 abilityBehaviour: declaringType, 
                 tex: Utils.GetTextureFromPath(loadedData.iconPath),
-                id: AbilityIdentifier.GetID(Plugin.PluginGuid, loadedData.name)
+                id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, loadedData.name)
             );
         }
         
@@ -74,6 +75,7 @@ namespace ZergMod
 
             return tex;
         }
+        
         public static List<Texture> GetDecals()
         {
             if (s_defaultDecals == null)
@@ -85,25 +87,52 @@ namespace ZergMod
             return s_defaultDecals;
         }
         
-        public static void PrintHierarchy(GameObject go)
+        public static void PrintHierarchy(GameObject go, bool printParents)
         {
-            List<Transform> hierarchy = new List<Transform>();
-
-            Transform t = go.transform;
-            while (t != null)
+            string prefix = "";
+            if (printParents)
             {
-                hierarchy.Add(t);
-                t = t.parent;
+                List<Transform> hierarchy = new List<Transform>();
+                
+                Transform t = go.transform.parent;
+                while (t != null)
+                {
+                    hierarchy.Add(t);
+                    t = t.parent;
+                }
+
+                for (int i = hierarchy.Count - 1; i >= 0; i--)
+                {
+                    Transform tran = hierarchy[i];
+                    string text = prefix + tran.gameObject.name + "(" + tran.gameObject.GetInstanceID() + ")";
+                    Plugin.Log.LogInfo(prefix + text);
+
+                    prefix += "\t";
+                }
             }
 
-            string prefix = "";
-            for (int i = hierarchy.Count - 1; i >= 0; i--)
-            {
-                Transform tran = hierarchy[i];
-                string text = prefix + tran.gameObject.name + "(" + tran.gameObject.GetInstanceID() + ")";
-                Plugin.Log.LogInfo(text);
+            PrintGameObject(go, prefix);
+        }
 
-                prefix += "\t";
+        private static void PrintGameObject(GameObject go, string prefix = "")
+        {
+            string text = prefix + go.name + "(" + go.GetInstanceID() + ")";
+            Plugin.Log.LogInfo(prefix + text);
+            Plugin.Log.LogInfo(prefix + "- Components: " + go.transform.childCount);
+            foreach (Component component in go.GetComponents<Component>())
+            {
+                Plugin.Log.LogInfo(prefix + "-- " + component.GetType());
+                if (component is SpriteRenderer spriteRenderer)
+                {
+                    Plugin.Log.LogInfo(prefix + "-- Name: " + spriteRenderer.name);
+                    Plugin.Log.LogInfo(prefix + "-- Sprite Name: " + spriteRenderer.sprite.name);
+                }
+            }
+
+            Plugin.Log.LogInfo(prefix + "- Children: " + go.transform.childCount);
+            for (int i = 0; i < go.transform.childCount; i++)
+            {
+                PrintGameObject(go.transform.GetChild(i).gameObject, prefix + "- -\t");
             }
         }
         

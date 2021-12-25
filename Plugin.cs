@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using BepInEx;
@@ -62,11 +63,191 @@ namespace ZergMod
             // Cards
             XelNagaArtifact.Initialize();
 
+
+            InitializeDeathCards();
+
             // JsonDumpNewCards();
 
             // Squirrel / Lava
             //ChangeSquirrelToLarva();
+            
             Logger.LogInfo($"Loaded {PluginName}!");
+        }
+
+        private static void InitializeDeathCards()
+        {
+	        int diamondBase = CustomDeathCard.AddNewBase("diamond", "Artwork/Cards/DeathCards/deathcard_base_diamond.png");
+	        int heartBase = CustomDeathCard.AddNewBase("heart", "Artwork/Cards/DeathCards/deathcard_base_heart.png");
+	        int ovalBase = CustomDeathCard.AddNewBase("oval", "Artwork/Cards/DeathCards/deathcard_base_oval.png");
+	        int roundBase = CustomDeathCard.AddNewBase("round", "Artwork/Cards/DeathCards/deathcard_base_round.png");
+	        int squareBase = CustomDeathCard.AddNewBase("square", "Artwork/Cards/DeathCards/deathcard_base_square.png");
+
+	        NewCard.Add(name: "pig_tail",
+		        displayedName: "Bacon",
+		        baseAttack: 0,
+		        baseHealth: 2,
+		        metaCategories: new List<CardMetaCategory>(),
+		        cardComplexity: CardComplexity.Simple,
+		        temple: CardTemple.Nature,
+		        description: "",
+		        bloodCost: 1,
+		        bonesCost: 0,
+		        abilities: new List<Ability>(),
+		        appearanceBehaviour: new List<CardAppearanceBehaviour.Appearance>(),
+		        defaultTex: Utils.GetTextureFromPath("Artwork/Cards/bacon_portrait.png"),
+		        traits: new List<Trait>(),
+		        decals: Utils.GetDecals(),
+		        onePerDeck:true);
+	        
+	        CustomDeathCard.AddNewDeathCard(name: "Pig",
+		        attack: 1,
+		        health: 2,
+		        boneCost: 2,
+		        bloodCost: 0,
+		        figurineType: CustomDeathCard.AddNewHead("pig", "Artwork/Cards/DeathCards/deathcard_head_pig.png"),
+		        mouthIndex: CustomDeathCard.AddNewMouth("pig", "Artwork/Cards/DeathCards/deathcard_mouth_pig.png"),
+		        eyesIndex: CustomDeathCard.AddNewEyes("pig", "Artwork/Cards/DeathCards/deathcard_eyes_pig.png",
+			        "Artwork/Cards/DeathCards/deathcard_eyes_emit_pig.png"),
+		        baseIndex: heartBase,
+		        abilities: new List<Ability>()
+		        {
+			        Ability.TailOnHit
+		        },
+		        new TailParams()
+		        {
+			        tail = NewCard.cards.Find((a)=>a.name == "pig_tail")
+		        });
+
+	        CustomDeathCard.AddNewDeathCard(name: "Winter",
+		        attack: 1,
+		        health: 2,
+		        boneCost: 2,
+		        bloodCost: 0,
+		        figurineType: CustomDeathCard.AddNewHead("winter", "Artwork/Cards/DeathCards/deathcard_head_winter.png"),
+		        mouthIndex: CustomDeathCard.AddNewMouth("winter", "Artwork/Cards/DeathCards/deathcard_mouth_winter.png"),
+		        eyesIndex: CustomDeathCard.AddNewEyes("winter", "Artwork/Cards/DeathCards/deathcard_eyes_winter.png",
+			        "Artwork/Cards/DeathCards/deathcard_eyes_emit_winter.png"),
+		        baseIndex: squareBase,
+		        abilities: new List<Ability>()
+		        {
+			        Ability.Deathtouch,
+		        });
+
+	        CustomDeathCard.AddNewDeathCard(name: "Lowko",
+		        attack: 1,
+		        health: 1,
+		        boneCost: 3,
+		        bloodCost: 0,
+		        figurineType: CustomDeathCard.AddNewHead("lowko", "Artwork/Cards/DeathCards/deathcard_head_lowko.png"),
+		        mouthIndex: CustomDeathCard.AddNewMouth("lowko", "Artwork/Cards/DeathCards/deathcard_mouth_lowko.png"),
+		        eyesIndex: CustomDeathCard.AddNewEyes("lowko", "Artwork/Cards/DeathCards/deathcard_eyes_lowko.png",
+			        "Artwork/Cards/DeathCards/deathcard_eyes_emit_lowko.png"),
+		        baseIndex: diamondBase,
+		        abilities: new List<Ability>()
+		        {
+			        Ability.TriStrike,
+		        });
+
+	        CustomDeathCard.AddNewDeathCard(name: "Tasteless",
+		        attack: 1,
+		        health: 1,
+		        boneCost: 2,
+		        bloodCost: 0,
+		        figurineType: CompositeFigurine.FigurineType.Wildling,
+		        mouthIndex: 5,
+		        eyesIndex: 3,
+		        baseIndex: heartBase,
+		        abilities: new List<Ability>()
+		        {
+			        Ability.Flying,
+			        Ability.RandomConsumable,
+		        });
+
+	        CustomDeathCard.AddNewDeathCard(name: "Rotterdam",
+		        attack: 0,
+		        health: 3,
+		        boneCost: 2,
+		        bloodCost: 0,
+		        figurineType: CompositeFigurine.FigurineType.Wildling,
+		        mouthIndex: 5,
+		        eyesIndex: 3,
+		        baseIndex: heartBase,
+		        abilities: new List<Ability>()
+		        {
+			        Ability.BeesOnHit,
+		        });
+
+	        CustomDeathCard.AddNewDeathCard(name: "Vibe",
+		        attack: 1,
+		        health: 3,
+		        boneCost: 0,
+		        bloodCost: 2,
+		        figurineType: CompositeFigurine.FigurineType.Robot,
+		        mouthIndex: 5,
+		        eyesIndex: 3,
+		        baseIndex: diamondBase,
+		        abilities: new List<Ability>()
+		        {
+			        Ability.CorpseEater,
+		        });
+
+	        CustomDeathCard.AddNewDeathCard(name: "Livi",
+		        attack: 2,
+		        health: 1,
+		        boneCost: 3,
+		        bloodCost: 0,
+		        baseIndex: CustomDeathCard.AddNewBase("livi", "Artwork/Cards/DeathCards/livibee_full.png",
+			        "Artwork/Cards/DeathCards/livibee_full_emit.png", false, false, false),
+		        abilities: new List<Ability>()
+		        {
+			        Ability.Sniper,
+			        Ability.Strafe,
+		        });
+
+	        CustomDeathCard.AddNewDeathCard(name: "Florencio",
+		        attack: 1,
+		        health: 1,
+		        boneCost: 0,
+		        bloodCost: 1,
+		        figurineType: CustomDeathCard.AddNewHead("florencio", "Artwork/Cards/DeathCards/deathcard_head_flo.png"),
+		        mouthIndex: CustomDeathCard.AddNewMouth("florencio", "Artwork/Cards/DeathCards/deathcard_mouth_flo.png"),
+		        eyesIndex: CustomDeathCard.AddNewEyes("florencio", "Artwork/Cards/DeathCards/deathcard_eyes_flo.png",
+			        "Artwork/Cards/DeathCards/deathcard_eyes_emit_flo.png"),
+		        baseIndex: roundBase,
+		        abilities: new List<Ability>()
+		        {
+			        Ability.DrawCopyOnDeath,
+		        });
+
+	        CustomDeathCard.AddNewDeathCard(name: "sOs",
+		        attack: 1,
+		        health: 1,
+		        boneCost: 1,
+		        bloodCost: 0,
+		        figurineType: CompositeFigurine.FigurineType.Prospector,
+		        mouthIndex: 2,
+		        eyesIndex: 0,
+		        baseIndex: squareBase,
+		        abilities: new List<Ability>()
+		        {
+			        Ability.Sentry,
+			        Ability.WhackAMole,
+		        });
+
+	        CustomDeathCard.AddNewDeathCard(name: "Serral",
+		        attack: 1,
+		        health: 1,
+		        boneCost: 3,
+		        bloodCost: 0,
+		        figurineType: CompositeFigurine.FigurineType.Robot,
+		        mouthIndex: 2,
+		        eyesIndex: 0,
+		        baseIndex: squareBase,
+		        abilities: new List<Ability>()
+		        {
+			        Ability.TriStrike,
+			        Ability.Strafe,
+		        });
         }
 
         private void JsonDumpNewCards()
