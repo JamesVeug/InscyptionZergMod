@@ -14,5 +14,8 @@
 	"texture": "JamesGames-ZergMod/Artwork/Cards/broodling.png",
 	"abilities": [
 		"Brittle"
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

@@ -25,5 +25,8 @@
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Fish Hook"
 		}
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

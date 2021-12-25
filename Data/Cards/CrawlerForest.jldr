@@ -26,5 +26,8 @@
 	],
 	"specialAbilities": [
 		"Mirror"
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

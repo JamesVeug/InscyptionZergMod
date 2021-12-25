@@ -22,5 +22,8 @@
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Abduct"
 		}
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

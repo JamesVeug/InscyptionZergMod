@@ -11,5 +11,8 @@
 	"bloodCost": 0,
 	"bonesCost": 0,
 	"appearanceBehaviour": [],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/egg.png"
+	"texture": "JamesGames-ZergMod/Artwork/Cards/egg.png",
+	"tail": {
+		"name": "biomass"
+	}
 }

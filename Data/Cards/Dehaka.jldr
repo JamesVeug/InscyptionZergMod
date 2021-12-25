@@ -29,5 +29,8 @@
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Collect Essence"
 		}
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

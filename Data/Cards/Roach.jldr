@@ -25,5 +25,8 @@
 	"evolution": {
 		"name": "Ravager",
 		"turnsToEvolve": 1
+	},
+	"tail": {
+		"name": "biomass"
 	}
 }

@@ -26,5 +26,8 @@
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Splash Damage"
 		}
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

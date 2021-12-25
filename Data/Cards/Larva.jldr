@@ -26,5 +26,8 @@
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Larva"
 		}
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

@@ -23,5 +23,8 @@
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Regestate"
 		}
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

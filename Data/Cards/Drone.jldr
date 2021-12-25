@@ -23,5 +23,8 @@
 	"evolution": {
 		"name": "CrawlerForest",
 		"turnsToEvolve": 1
+	},
+	"tail": {
+		"name": "biomass"
 	}
 }

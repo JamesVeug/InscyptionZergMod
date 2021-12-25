@@ -18,5 +18,8 @@
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/guardian_emit.png",
 	"abilities": [
 		"Sniper"
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

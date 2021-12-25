@@ -20,5 +20,8 @@
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Explode"
 		}
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

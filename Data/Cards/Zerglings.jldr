@@ -30,5 +30,8 @@
 	"evolution": {
 		"name": "Baneling",
 		"turnsToEvolve": 1
+	},
+	"tail": {
+		"name": "biomass"
 	}
 }

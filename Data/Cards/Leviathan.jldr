@@ -27,5 +27,8 @@
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Summon Zerg"
 		}
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

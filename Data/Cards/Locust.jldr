@@ -14,5 +14,9 @@
 	"texture": "JamesGames-ZergMod/Artwork/Cards/locust.png",
 	"abilities": [
 		"Brittle"
-	]
+	],
+	"tail": {
+		"name": "a_mutalisk_wing",
+		"tailLostPortrait": "JamesGames-ZergMod/Artwork/Cards/biomass.png"
+	}
 }

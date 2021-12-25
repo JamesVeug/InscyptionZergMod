@@ -24,5 +24,8 @@
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Armoured"
 		}
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

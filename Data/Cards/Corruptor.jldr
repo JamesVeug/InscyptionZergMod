@@ -22,5 +22,8 @@
 	"evolution": {
 		"name": "Devourer",
 		"turnsToEvolve": 1
+	},
+	"tail": {
+		"name": "biomass"
 	}
 }

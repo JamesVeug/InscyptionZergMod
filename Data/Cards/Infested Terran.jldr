@@ -20,5 +20,8 @@
 	"abilities": [
 		"Brittle",
 		"DrawCopy"
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

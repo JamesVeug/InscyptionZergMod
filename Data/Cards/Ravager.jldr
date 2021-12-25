@@ -17,5 +17,8 @@
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/ravager_emit.png",
 	"abilities": [
 		"Sniper"
-	]
+	],
+	"tail": {
+		"name": "biomass"
+	}
 }

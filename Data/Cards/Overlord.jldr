@@ -23,5 +23,8 @@
 	"evolution": {
 		"name": "Overseer",
 		"turnsToEvolve": 1
+	},
+	"tail": {
+		"name": "biomass"
 	}
 }
