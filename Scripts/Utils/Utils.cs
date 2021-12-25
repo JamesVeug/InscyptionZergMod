@@ -8,6 +8,7 @@ using UnityEngine;
 using ZergMod.Scripts;
 using ZergMod.Scripts.Data;
 using ZergMod.Scripts.Data.Sigils;
+using Object = UnityEngine.Object;
 
 namespace ZergMod
 {
