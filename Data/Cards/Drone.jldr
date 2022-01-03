@@ -18,7 +18,7 @@
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/drone_emit.png",
 	"abilities": [
 		"BoneDigger",
-		"Submerge"
+		"Evolve"
 	],
 	"evolution": {
 		"name": "CrawlerForest",
