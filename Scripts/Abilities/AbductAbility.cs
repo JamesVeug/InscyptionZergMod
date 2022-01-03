@@ -43,12 +43,10 @@ namespace ZergMod.Scripts.Abilities
 	        
 	        // Make sure its a valid target
 	        CardSlot cardSlot = m_targetedCardSlot;
-	        if (cardSlot != null && cardSlot.Card != null)
+	        if (cardSlot != null && (cardSlot.Card != null && cardSlot.Card != this.Card))
 	        {
 		        // Pull them to the correct slot
-		        PlayableCard playableCard = cardSlot.Card;
-		        CardSlot oppositeCardSlot = GetOppositeCardSlot();
-		        yield return PullTargetToSlot(playableCard, oppositeCardSlot);
+		        yield return PullTargetToNearestSlot(cardSlot);
 	        }
 	        else
 	        {
@@ -64,32 +62,29 @@ namespace ZergMod.Scripts.Abilities
 
         private IEnumerator ChooseTarget()
         {
+	        Plugin.Log.LogInfo("ChooseTarget A");
 	        CombatPhaseManager combatPhaseManager = Singleton<CombatPhaseManager>.Instance;
 	        BoardManager boardManager = Singleton<BoardManager>.Instance;
-	        List<CardSlot> opposingSlots = new List<CardSlot>(boardManager.GetSlots(Card.OpponentCard));
+	        List<CardSlot> allSlots = new List<CardSlot>(boardManager.AllSlots);
 
 	        Action<CardSlot> callback1 = null;
 	        Action<CardSlot> callback2 = null;
 	        
+	        Plugin.Log.LogInfo("ChooseTarget B");
 	        combatPhaseManager.VisualizeStartSniperAbility(Card.slot);
 	        
+	        Plugin.Log.LogInfo("ChooseTarget C");
 	        CardSlot cardSlot = Singleton<InteractionCursor>.Instance.CurrentInteractable as CardSlot;
-	        if (cardSlot != null && opposingSlots.Contains(cardSlot))
+	        if (cardSlot != null && allSlots.Contains(cardSlot))
 	        {
 		        combatPhaseManager.VisualizeAimSniperAbility(Card.slot, cardSlot);
 	        }
 
-	        List<CardSlot> allTargetSlots = opposingSlots;
-	        List<CardSlot> validTargetSlots = opposingSlots;
-	        List<CardSlot> slotsWithcards = allTargetSlots.FindAll(x => x.Card != null && !x.Card.Dead);
+	        Plugin.Log.LogInfo("ChooseTarget D");
+	        List<CardSlot> allTargetSlots = allSlots;
+	        List<CardSlot> validTargetSlots = allSlots;
 
-	        if (slotsWithcards.Count == 0)
-	        {
-		        Card.Anim.StrongNegationEffect();
-		        yield return new WaitForSeconds(0.3f);
-		        yield break;
-	        }
-
+	        Plugin.Log.LogInfo("ChooseTarget E");
 	        m_targetedCardSlot = null;
 	        Action<CardSlot> targetSelectedCallback;
 	        if ((targetSelectedCallback = callback1) == null)
@@ -100,6 +95,8 @@ namespace ZergMod.Scripts.Abilities
 			        combatPhaseManager.VisualizeConfirmSniperAbility(s);
 		        });
 	        }
+	        
+	        Plugin.Log.LogInfo("ChooseTarget F");
 	        Action<CardSlot> invalidTargetCallback = null;
 	        Action<CardSlot> slotCursorEnterCallback;
 	        if ((slotCursorEnterCallback = callback2) == null)
@@ -109,52 +106,121 @@ namespace ZergMod.Scripts.Abilities
 			        combatPhaseManager.VisualizeAimSniperAbility(Card.slot, s);
 		        });
 	        }
+
+	        Plugin.Log.LogInfo("ChooseTarget G");
 	        yield return boardManager.ChooseTarget(allTargetSlots, validTargetSlots, targetSelectedCallback, invalidTargetCallback, slotCursorEnterCallback, () => false, CursorType.Target);
         }
+
+        private IEnumerator WiggleEffect()
+        {
+	        Card.Anim.StrongNegationEffect();
+	        yield return new WaitForSeconds(0.3f);
+        }
         
-        private IEnumerator PullTargetToSlot(PlayableCard otherCard, CardSlot slot)
+        private IEnumerator PullTargetToNearestSlot(CardSlot targetSlot)
         {
 	        yield return base.PreSuccessfulTriggerSequence();
-	        Vector3 a = (otherCard.Slot.transform.position + slot.transform.position) / 2f;
-	        Tween.Position(otherCard.transform, a + Vector3.up * 0.5f, 0.05f, 0f, Tween.EaseIn, Tween.LoopType.None, null, null, true);
-	        yield return Singleton<BoardManager>.Instance.AssignCardToSlot(otherCard, slot, 0.05f, null, true);
-	        yield return new WaitForSeconds(0.2f);
-        }
 
-        private CardSlot GetOppositeCardSlot()
-        {
-	        BoardManager boardManager = Singleton<BoardManager>.Instance;
-	        List<CardSlot> list = new List<CardSlot>(boardManager.GetSlots(Card.OpponentCard));
-	        for (int i = 0; i < list.Count; i++)
+	        PlayableCard targetCard = targetSlot.Card;
+	        List<CardSlot> slots = new List<CardSlot>(Singleton<BoardManager>.Instance.GetSlots(targetSlot.IsPlayerSlot));
+	        slots.RemoveAll((slot) => slot.Card != null);
+
+	        CardSlot currentSlot = Utils.GetSlot(this.Card);
+
+	        CardSlot destinationSlot = null;
+	        bool pullFromLeft = targetSlot.Index < currentSlot.Index;
+	        foreach (CardSlot slot in slots)
 	        {
-		        if (list[i].Index == Card.slot.Index)
+		        if (pullFromLeft)
 		        {
-			        return list[i];
+			        if (slot.Index <= currentSlot.Index && (destinationSlot == null || slot.Index > destinationSlot.Index))
+			        {
+				        destinationSlot = slot;
+			        }
+		        }
+		        else
+		        {
+			        if (slot.Index >= currentSlot.Index && (destinationSlot == null || slot.Index < destinationSlot.Index))
+			        {
+				        destinationSlot = slot;
+			        }
 		        }
 	        }
 
-	        return null;
+	        if (destinationSlot == null)
+	        {
+		        Plugin.Log.LogInfo("No destination slot found! " + pullFromLeft);
+		        yield return WiggleEffect();
+		        yield break;
+	        }
+
+	        Vector3 a = (targetSlot.transform.position + destinationSlot.transform.position) / 2f;
+	        Tween.Position(targetCard.transform, a + Vector3.up * 0.5f, 0.05f, 0f, Tween.EaseIn, Tween.LoopType.None, null, null, true);
+	        yield return Singleton<BoardManager>.Instance.AssignCardToSlot(targetCard, destinationSlot, 0.05f, null, true);
+	        yield return new WaitForSeconds(0.2f);
         }
 
         private bool CanAbduct()
         {
-	        CardSlot oppositeCardSlot = GetOppositeCardSlot();
-	        if (oppositeCardSlot.Card != null)
+	        return CanAbductSlots(Singleton<BoardManager>.Instance.opponentSlots) ||
+	               CanAbductSlots(Singleton<BoardManager>.Instance.playerSlots);
+        }
+
+        private bool CanAbductSlots(List<CardSlot> slots)
+        {
+	        int currentSlotIndex = Utils.GetSlot(Card).Index;
+
+
+	        CardSlot furthestLeftSlot = slots.Find((a) => a.Card != null && a.Card != this.Card);
+	        CardSlot furthestRightSlot = slots.FindLast((a) => a.Card != null && a.Card != this.Card);
+
+	        bool hasCardsToAbduct = furthestLeftSlot != null;
+	        if (!hasCardsToAbduct)
 	        {
 		        return false;
 	        }
 
-	        BoardManager boardManager = Singleton<BoardManager>.Instance;
-	        List<CardSlot> list = new List<CardSlot>(boardManager.GetSlots(Card.OpponentCard));
-	        for (int i = 0; i < list.Count; i++)
+	        int closestLeftEmptySlot = -1;
+	        int closestRightEmptySlot = -1;
+	        int furthestCardOnRight = int.MinValue;
+	        int furthestCardOnLeft = int.MaxValue;
+	        foreach (CardSlot slot in slots)
 	        {
-		        if (list[i].Card != null)
+		        int slotIndex = slot.Index;
+		        if (slot.Card == null)
 		        {
-			        // There is something to abduct
-			        return true;
+			        // Empty slot
+			        if (slotIndex > closestLeftEmptySlot && slotIndex <= currentSlotIndex)
+			        {
+				        // Pull from left
+				        closestLeftEmptySlot = slotIndex;
+			        }
+			        if (slotIndex < closestRightEmptySlot && slotIndex >= currentSlotIndex)
+			        {
+				        // Pull from Right
+				        closestRightEmptySlot = slotIndex;
+			        }
+		        }
+		        else if(slot.Card != this.Card && slotIndex != currentSlotIndex)
+		        {
+			        // Card in slot
+			        furthestCardOnRight = Mathf.Max(furthestCardOnRight, slotIndex);
+			        furthestCardOnLeft = Mathf.Min(furthestCardOnLeft, slotIndex);
 		        }
 	        }
 
+			// Can pull from left
+	        if (closestLeftEmptySlot > furthestCardOnLeft)
+	        {
+		        return true;
+	        }
+	        
+	        // Can pull from Right
+	        if (closestRightEmptySlot < furthestCardOnRight)
+	        {
+		        return true;
+	        }
+	        
 	        return false;
         }
 
