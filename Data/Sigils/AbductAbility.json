@@ -5,7 +5,7 @@
 	"learnText": "",
 	"name": "Abduct",
 	"ruleBookName": "Abduct",
-	"ruleDescription": "When a card bearing this sigil is played, a targeted enemy card is moved to the space in front of it, if that space is empty",
+	"ruleDescription": "When a card bearing this sigil is played, a targeted card is moved to the closest empty slot.",
 	"iconPath": "Artwork/Sigils/abduct.png",
 	"metaCategories": [
 		"Part1Rulebook",

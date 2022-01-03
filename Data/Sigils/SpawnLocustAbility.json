@@ -1,13 +1,13 @@
 {
 	"@type": "ZergMod.Scripts.Data.Sigils.CreateCardsAbilityData",
 	"spawnCardId": "Locust",
-	"cannotSpawnDialogue": "No room for a Locust!",
+	"cannotSpawnDialogue": "No room for any Locusts!",
 	"power": 0,
 	"priority": 0,
 	"learnText": "Although brittle they are dangerous in high numbers",
 	"name": "Draw Locust's",
 	"ruleBookName": "Spawn Locust",
-	"ruleDescription": "Draw 1 Locust at the start of your turn. A Locust is defined as: 1 Power 1 Health",
+	"ruleDescription": "Place 2 Locust on the board adjacent to the card with this sigil at the start of your turn. A Locust is defined as: 1 Power 2 Health",
 	"iconPath": "Artwork/Sigils/draw_locusts.png",
 	"metaCategories": [
 		"Part1Rulebook",

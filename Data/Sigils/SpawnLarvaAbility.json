@@ -7,7 +7,7 @@
 	"learnText": "Extra Larva? Trying to rush me i see",
 	"name": "Spawn Larva",
 	"ruleBookName": "Spawn Larva",
-	"ruleDescription": "When placed on the board will create larva on both sides. A larva is defined as 0 Power 3 Health with Fledgling.",
+	"ruleDescription": "When placed on the board will create larva on both sides of the card with this sigil. A larva is defined as 0 Power 3 Health with Fledgling.",
 	"iconPath": "Artwork/Sigils/spawn_larva.png",
 	"metaCategories": [
 		"Part1Rulebook",
