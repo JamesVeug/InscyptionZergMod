@@ -64,9 +64,6 @@ namespace ZergMod
             // Cards
             XelNagaArtifact.Initialize();
 
-
-            InitializeDeathCards();
-
             // JsonDumpNewCards();
 
             // Squirrel / Lava
