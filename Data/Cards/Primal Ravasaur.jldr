@@ -17,5 +17,11 @@
 	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_ravasaur.png",
 	"tail": {
 		"name": "biomass"
-	}
+	},
+	"customSpecialAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "PrimalZerg"
+		}
+	]
 }

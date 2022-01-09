@@ -1,7 +1,7 @@
 {
 	"name": "PrimalZergling",
 	"displayedName": "Primal Zergling",
-	"description": "",
+	"description": "It's power comes from defeating similar cards through sacrifices",
 	"metaCategories": [
 		"ChoiceNode",
 		"TraderOffer"
@@ -10,12 +10,18 @@
 	"temple": "Nature",
 	"tribes": ["Insect"],
 	"baseAttack": 1,
-	"baseHealth": 3,
+	"baseHealth": 2,
 	"bloodCost": 1,
 	"bonesCost": 0,
 	"appearanceBehaviour": [],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_zergling.png",
 	"tail": {
 		"name": "biomass"
-	}
+	},
+	"customSpecialAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "PrimalZerg"
+		}
+	]
 }
