@@ -43,7 +43,8 @@ namespace ZergMod.Scripts.Abilities
 	        
 	        // Make sure its a valid target
 	        CardSlot cardSlot = m_targetedCardSlot;
-	        if (cardSlot != null && (cardSlot.Card != null && cardSlot.Card != this.Card))
+	        CardSlot slot = Utils.GetSlot(this.Card);
+	        if (cardSlot != null && (cardSlot.Card != null && cardSlot.Card != this.Card && cardSlot.Index != slot.Index))
 	        {
 		        // Pull them to the correct slot
 		        yield return PullTargetToNearestSlot(cardSlot);
@@ -55,7 +56,6 @@ namespace ZergMod.Scripts.Abilities
 	        }
 
 	        Singleton<ViewManager>.Instance.Controller.SwitchToControlMode(boardManager.DefaultViewMode, false);
-	        //Singleton<ViewManager>.Instance.Controller.LockState = ViewLockState.Unlocked;
 	        Singleton<ViewManager>.Instance.SwitchToView(Singleton<BoardManager>.Instance.CombatView, false, false);
 	        Singleton<CombatPhaseManager>.Instance.VisualizeClearSniperAbility();
         }
