@@ -87,7 +87,7 @@
 			"weight": 0
 		}
 	],
-	"power": 0,
+	"power": 9,
 	"priority": 0,
 	"learnText": "The swarm grows",
 	"name": "Summon Zerg",
