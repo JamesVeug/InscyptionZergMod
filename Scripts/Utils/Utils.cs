@@ -143,20 +143,15 @@ namespace ZergMod
         {
             if (cardToGetSlot.Slot != null)
             {
-                //Plugin.Log.LogInfo("[SplashDamageAbility][GetSlot] Slot cached");
                 return cardToGetSlot.Slot;
             }
 
             CardSlot cardSlot = cardToGetSlot.transform.parent.GetComponent<CardSlot>();
             if (cardSlot != null)
             {
-                //Plugin.Log.LogInfo("[SplashDamageAbility][GetSlot] Found slot in parent");
                 return cardSlot;
             }
 
-            int cardToGetSlotID = cardToGetSlot.gameObject.GetInstanceID();
-            Plugin.Log.LogInfo("[SplashDamageAbility][GetSlot] Getting slot for " + cardToGetSlotID);
-            
             List<CardSlot> allSlots = new List<CardSlot>();
             allSlots.AddRange(Singleton<BoardManager>.Instance.GetSlots(false));
             allSlots.AddRange(Singleton<BoardManager>.Instance.GetSlots(true));
@@ -173,20 +168,12 @@ namespace ZergMod
                 if (card == null)
                     continue;
                 
-                //Plugin.Log.LogInfo("[SplashDamageAbility][GetSlot] Slot " + slot.Index + " has " + card.Info.displayedName + " from queue: " + card.OriginatedFromQueue);
                 if (card.gameObject == cardToGetSlot.gameObject)
                 {
-                    //Plugin.Log.LogInfo("[SplashDamageAbility][GetSlot] Card is in slot " + slot.Index);
                     return slot;
-                }
-                else
-                {
-                    int slotCardID = card.gameObject.GetInstanceID();
-                    //Plugin.Log.LogInfo("[SplashDamageAbility][GetSlot] " + cardToGetSlotID + " != " + slotCardID);
                 }
             }
 
-            Plugin.Log.LogInfo("[SplashDamageAbility][GetSlot] Could not find slot for " + cardToGetSlotID);
             return null;
         }
         

@@ -82,18 +82,14 @@ namespace ZergMod.Scripts.Patches
     {
         public static void Postfix(DeathCardPortrait __instance, CardInfo card)
         {
-            Plugin.Log.LogInfo("DeathCardPortrait.ApplyCardInfo " + card.displayedName);
             Transform transform = __instance.transform.Find("Body");
             if (transform != null)
             {
-                Plugin.Log.LogInfo("\tDeathCardPortrait has a Body");
                 if (transform.TryGetComponent(out SpriteRenderer spriteRenderer))
                 {
                     if (card.portraitTex != null && !card.portraitTex.name.Contains("adder"))
                     {
                         spriteRenderer.sprite = card.portraitTex;
-                        Plugin.Log.LogInfo($"\tReplacing DeathCard with custom Body {spriteRenderer.sprite.name} {card.portraitTex.name}");
-                        ZergMod.Utils.PrintHierarchy(__instance.gameObject, false);
                     }
                 }
             }
