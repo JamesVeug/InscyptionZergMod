@@ -13,8 +13,9 @@
 	"baseHealth": 2,
 	"bloodCost": 1,
 	"bonesCost": 0,
-	"appearanceBehaviour": [],
+	"appearanceBehaviour": ["SexyGoat"],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/overlord.png",
+	"altTexture": "JamesGames-ZergMod/Artwork/Cards/overlord_alt.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/overlord_emit.png",
 	"abilities": [
 		"Sacrificial",
