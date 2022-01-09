@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DiskCardGame;
 using ZergMod.Scripts.Data.Sigils;
+using UnityEngine;
 
 namespace ZergMod.Scripts.SpecialAbilities
 {
@@ -11,8 +12,6 @@ namespace ZergMod.Scripts.SpecialAbilities
         public SpecialTriggeredAbility SpecialAbility => specialAbility;
         public static SpecialTriggeredAbility specialAbility = SpecialTriggeredAbility.None;
 
-        private bool triggered = false;
-
         public static void Initialize(Type declaringType)
         {
             specialAbility = InitializeBase(declaringType);
@@ -20,12 +19,6 @@ namespace ZergMod.Scripts.SpecialAbilities
 
         public override bool RespondsToSacrifice()
         {
-            Plugin.Log.LogInfo("[RespondsToSacrifice]");
-            if (triggered)
-            {
-                return false;
-            }
-            
             if (PlayableCard == null)
             {
                 return false;
@@ -40,9 +33,7 @@ namespace ZergMod.Scripts.SpecialAbilities
                 return false;
             }
 
-            Plugin.Log.LogInfo("[RespondsToSacrifice] Responding");
             return true;
-
         }
 
         private NextPrimalEvolution GetNextEvolution()
@@ -57,58 +48,83 @@ namespace ZergMod.Scripts.SpecialAbilities
 
             return null;
         }
+
+        private List<CardModificationInfo> GetMods(PlayableCard card)
+        {
+            List<CardModificationInfo> mods = new List<CardModificationInfo>();
+            foreach (CardModificationInfo mod in card.Info.Mods)
+            {
+                // Only transfer abilities
+                if (mod.abilities.Count > 0)
+                {
+                    /*foreach (Ability ability in mod.abilities)
+                    {
+                        Plugin.Log.LogInfo("[OnSacrifice][Mod] " + (int)ability + " " + ability.ToString());
+                    }*/
+
+                    CardModificationInfo clone = (CardModificationInfo)mod.Clone();
+                    clone.fromCardMerge = true;
+                    mods.Add(clone);
+                }
+            }
+            
+            foreach (CardModificationInfo mod in card.TemporaryMods)
+            {
+                // Only transfer abilities
+                if (mod.abilities.Count > 0)
+                {
+                    /*foreach (Ability ability in mod.abilities)
+                    {
+                        Plugin.Log.LogInfo("[OnSacrifice][Mod] " + (int)ability + " " + ability.ToString());
+                    }*/
+
+                    CardModificationInfo clone = (CardModificationInfo)mod.Clone();
+                    clone.fromCardMerge = true;
+                    mods.Add(clone);
+                }
+            }
+
+            return mods;
+        }
         
         public override IEnumerator OnSacrifice()
         {
-            Plugin.Log.LogInfo("[OnSacrifice] " + this.PlayableCard.Info.name);
-            triggered = true;
             NextPrimalEvolution nextEvolution = GetNextEvolution();
             
             PlayableCard demandingCard = Singleton<BoardManager>.Instance.currentSacrificeDemandingCard;
-            CardSlot slot = Utils.GetSlot(demandingCard);
-            int slotIndex = slot != null ? slot.Index : -1;
-            Plugin.Log.LogInfo("[OnSacrifice] With " + demandingCard.Info.name + " slot " + slotIndex);
+            List<CardModificationInfo> mods = GetMods(PlayableCard);
 
-            CardInfo evolvedCard = null;
+            CardInfo cardInfo;
             if (nextEvolution != null && !string.IsNullOrEmpty(nextEvolution.NextEvolutionName))
             {
-                Plugin.Log.LogInfo("[OnSacrifice] Next Evolution: " + nextEvolution.NextEvolutionName);
-                evolvedCard = CardLoader.GetCardByName(nextEvolution.NextEvolutionName);
+                // Turn the card in the players hand into another card
+                cardInfo = CardLoader.GetCardByName(nextEvolution.NextEvolutionName);
+                //Plugin.Log.LogInfo("[OnSacrifice][Mod] New evolution");
+
+                mods.AddRange(GetMods(demandingCard));
             }
             else
             {
                 // No next evolution. Let them stack though for fun
-                CardInfo info = (CardInfo)demandingCard.Info.Clone();
-                Plugin.Log.LogInfo($"[OnSacrifice] No next Evolution {info.baseAttack} => {info.baseAttack + 1}");
-                info.baseAttack += 1;
-                info.baseHealth += 2;
-
-                info.name = "Primal " + info.name;
-                evolvedCard = info;
+                cardInfo = demandingCard.Info;
+                
+                CardModificationInfo mod = new CardModificationInfo();
+                mod.attackAdjustment = LoadedData.DefaultAttackBuff;
+                mod.healthAdjustment = LoadedData.DefaultHealthBuff;
+                mods.Add(mod);
+                //Plugin.Log.LogInfo("[OnSacrifice][Mod] Upgraded");
             }
 
-            List<CardModificationInfo> cardModificationInfos = new List<CardModificationInfo>();
-            foreach (CardModificationInfo mod in demandingCard.Info.Mods)
+            yield return new WaitForSeconds(0.2f);
+            
+            foreach (CardModificationInfo mod in mods)
             {
-                cardModificationInfos.Add((CardModificationInfo)mod.Clone());
+                demandingCard.AddTemporaryMod(mod);
             }
+            demandingCard.SetInfo(cardInfo);
+            demandingCard.Anim.StrongNegationEffect();
             
-            evolvedCard.mods.AddRange(cardModificationInfos);
-            
-            demandingCard.SetInfo(evolvedCard);
-            Plugin.Log.LogInfo("[OnSacrifice] Done " + demandingCard.Info.name);
-            yield return null;
-        }
-
-        public override bool RespondsToUpkeep(bool playerUpkeep)
-        {
-            return playerUpkeep;
-        }
-
-        public override IEnumerator OnUpkeep(bool playerUpkeep)
-        {
-            triggered = false;
-            yield return null;
+            yield return new WaitForSeconds(0.2f);
         }
     }
 }
