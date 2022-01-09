@@ -42,6 +42,7 @@ namespace ZergMod
             DehakaSpecialAbility.Initialize(typeof(DehakaSpecialAbility));
             LarvaSpecialAbility.Initialize(typeof(LarvaSpecialAbility));
             PrimalSpecialAbility.Initialize(typeof(PrimalSpecialAbility));
+            BroodLordSpecialAbility.Initialize(typeof(BroodLordSpecialAbility));
 	        
             // Abilities
             RegenerateAbility.Initialize(typeof(RegenerateAbility));

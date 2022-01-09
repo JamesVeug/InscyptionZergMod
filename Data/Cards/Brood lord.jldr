@@ -1,7 +1,7 @@
 {
 	"name": "Brood lord",
 	"displayedName": "Brood lord",
-	"description": "Heavy Airborn unit at its max evolution stage",
+	"description": "A Zerg Heavy airborne siege unit that creates Broodlings every turn.",
 	"metaCategories": [
 		"Rare"
 	],
@@ -25,5 +25,11 @@
 	],
 	"tail": {
 		"name": "biomass"
-	}
+	},
+	"customSpecialAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Brood Lord"
+		}
+	]
 }

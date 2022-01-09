@@ -1,18 +1,11 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.SummonZergAbilityData",
-	"cardEvolutions": [
-		{
-			"@type": "ZergMod.Scripts.Data.Sigils.WeightData",
-			"cardName": "",
-			"weight": -1
-		}
-	],
+	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
 	"power": 0,
 	"priority": 0,
-	"learnText": "These swarm seeds will strike down your foes",
+	"learnText": "This locust although weak will in time strike down your foe",
 	"name": "Draw Broodling's",
 	"ruleBookName": "Swarm Seeds",
-	"ruleDescription": "Draw 1 Broodling at the start of your turn. A Broodling is defined as: 2 Power 2 Health.",
+	"ruleDescription": "Draw 1 Broodling when placed on the board. A Broodling is defined as: 2 Power 2 Health.",
 	"iconPath": "Artwork/Sigils/swarm_seeds.png",
 	"metaCategories": [
 		"Part1Rulebook",
