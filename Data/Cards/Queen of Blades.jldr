@@ -9,19 +9,20 @@
 	"onePerDeck": true,
 	"temple": "Nature",
 	"tribes": ["Insect"],
-	"baseAttack": 4,
-	"baseHealth": 4,
-	"bloodCost": 3,
+	"baseAttack": 2,
+	"baseHealth": 6,
+	"bloodCost": 4,
 	"bonesCost": 0,
 	"appearanceBehaviour": [
 		"RareCardBackground"
 	],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/kerrigan.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/kerrigan_emit.png",
+	"abilities": ["TriStrike"],
 	"customAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
-			"name": "Regestate"
+			"name": "Splash Damage"
 		}
 	],
 	"tail": {
