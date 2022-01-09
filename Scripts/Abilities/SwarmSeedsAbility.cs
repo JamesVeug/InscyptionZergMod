@@ -6,7 +6,7 @@ using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
-    public class SwarmSeedsAbility : ACustomAbilityBehaviour<SwarmSeedsAbility, SummonZergAbilityData>
+    public class SwarmSeedsAbility : ACustomAbilityBehaviour<SwarmSeedsAbility, AbilityData>
 	{
 		public override Ability Ability => ability;
 		public static Ability ability = Ability.None;
@@ -16,12 +16,12 @@ namespace ZergMod.Scripts.Abilities
 			ability = InitializeBase(declaringType);
 		}
 		
-		public override bool RespondsToTurnEnd(bool playerTurnEnd)
+		public override bool RespondsToResolveOnBoard()
 		{
-			return !Card.Dead && !playerTurnEnd && Card.slot.IsPlayerSlot;
+			return !Card.Dead && Card.slot.IsPlayerSlot;
 		}
 
-		public override IEnumerator OnTurnEnd(bool playerTurnEnd)
+		public override IEnumerator OnResolveOnBoard()
 		{
 			yield return PreSuccessfulTriggerSequence();
 			yield return CreateCards();
@@ -38,10 +38,9 @@ namespace ZergMod.Scripts.Abilities
 				yield return new WaitForSeconds(0.2f);
 			}
 
-			CardInfo cardByName = CardLoader.GetCardByName("Broodling");
+			CardInfo cardByName = CardLoader.GetCardByName("PrimalZergling");
 			yield return Singleton<CardSpawner>.Instance.SpawnCardToHand(cardByName, null, 0.25f, null);
 			yield return new WaitForSeconds(0.45f);
-			yield return base.LearnAbility(0.1f);
 			
 			if (currentView != View.Hand)
 			{
