@@ -1,0 +1,21 @@
+{
+	"name": "PrimalRavasaur",
+	"displayedName": "Primal Ravasaur",
+	"description": "",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tribes": ["Insect"],
+	"baseAttack": 3,
+	"baseHealth": 3,
+	"bloodCost": 2,
+	"bonesCost": 0,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_ravasaur.png",
+	"tail": {
+		"name": "biomass"
+	}
+}

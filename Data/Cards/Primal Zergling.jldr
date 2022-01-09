@@ -1,0 +1,21 @@
+{
+	"name": "PrimalZergling",
+	"displayedName": "Primal Zergling",
+	"description": "",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tribes": ["Insect"],
+	"baseAttack": 1,
+	"baseHealth": 3,
+	"bloodCost": 1,
+	"bonesCost": 0,
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_zergling.png",
+	"tail": {
+		"name": "biomass"
+	}
+}
