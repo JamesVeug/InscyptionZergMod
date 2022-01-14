@@ -1,6 +1,6 @@
 {
 	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
-	"power": 0,
+	"power": 9,
 	"priority": 0,
 	"learnText": "I don't remember taking a picture of my Hook...",
 	"name": "Fish Hook",
