@@ -13,6 +13,7 @@
 	"baseHealth": 3,
 	"bloodCost": 2,
 	"bonesCost": 0,
+	"decals": ["Artwork/watermark.png"],
 	"appearanceBehaviour": [],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_ravasaur.png",
 	"tail": {

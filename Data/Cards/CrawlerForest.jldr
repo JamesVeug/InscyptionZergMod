@@ -10,6 +10,7 @@
 	"baseHealth": 5,
 	"bloodCost": 0,
 	"bonesCost": 0,
+	"decals": ["Artwork/watermark.png"],
 	"appearanceBehaviour": [
 		"TerrainBackground"
 	],

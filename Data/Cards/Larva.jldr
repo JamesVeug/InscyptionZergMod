@@ -15,6 +15,7 @@
 	"baseHealth": 3,
 	"bloodCost": 1,
 	"bonesCost": 0,
+	"decals": ["Artwork/watermark.png"],
 	"appearanceBehaviour": [],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/larva.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/larva_emit.png",

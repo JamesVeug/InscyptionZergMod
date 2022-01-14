@@ -13,6 +13,7 @@
 	"baseHealth": 20,
 	"bloodCost": 0,
 	"bonesCost": 8,
+	"decals": ["Artwork/watermark.png"],
 	"appearanceBehaviour": [
 		"RareCardBackground"
 	],
