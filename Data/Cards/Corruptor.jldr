@@ -10,7 +10,7 @@
 	"temple": "Nature",
 	"tribes": ["Insect"],
 	"baseAttack": 2,
-	"baseHealth": 2,
+	"baseHealth": 3,
 	"bloodCost": 2,
 	"bonesCost": 0,
 	"appearanceBehaviour": [],
