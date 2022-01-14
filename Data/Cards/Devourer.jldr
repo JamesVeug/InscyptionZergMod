@@ -13,7 +13,7 @@
 	"baseHealth": 3,
 	"bloodCost": 3,
 	"bonesCost": 0,
-	"decals": ["Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"appearanceBehaviour": [],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/devourer.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/devourer_emit.png",

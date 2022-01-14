@@ -13,7 +13,7 @@
 	"baseHealth": 6,
 	"bloodCost": 4,
 	"bonesCost": 0,
-	"decals": ["Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"appearanceBehaviour": [
 		"RareCardBackground"
 	],

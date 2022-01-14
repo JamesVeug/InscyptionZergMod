@@ -13,7 +13,7 @@
 	"baseHealth": 5,
 	"bloodCost": 3,
 	"bonesCost": 0,
-	"decals": ["Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"appearanceBehaviour": [],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/guardian.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/guardian_emit.png",

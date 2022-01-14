@@ -10,7 +10,7 @@
 	"baseHealth": 3,
 	"bloodCost": 0,
 	"bonesCost": 0,
-	"decals": ["Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"appearanceBehaviour": [],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/egg.png",
 	"tail": {

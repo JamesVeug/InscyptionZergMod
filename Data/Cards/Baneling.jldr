@@ -12,7 +12,7 @@
 	"baseHealth": 1,
 	"bloodCost": 0,
 	"bonesCost": 2,
-	"decals": ["Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"appearanceBehaviour": [],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/baneling.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/baneling_emit.png",

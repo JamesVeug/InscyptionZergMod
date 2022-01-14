@@ -13,7 +13,7 @@
 	"baseHealth": 2,
 	"bloodCost": 1,
 	"bonesCost": 0,
-	"decals": ["Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"appearanceBehaviour": ["SexyGoat"],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/overlord.png",
 	"altTexture": "JamesGames-ZergMod/Artwork/Cards/overlord_alt.png",
