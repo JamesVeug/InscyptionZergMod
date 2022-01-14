@@ -4,20 +4,18 @@ This mod brings the alien race 'Zerg' from the RTS series StarCraft, into the wo
 The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advanced, arthropodal aliens. Dedicated to the pursuit of genetic perfection.
 
 ## Includes:
-- 30 new Cards
+- 32 new Cards
 - 16 new Sigils
-- 3 new Special Abilities
+- 5 new Special Abilities
 
 ### Cards:
-- **Drone** - 1,1 with Bone digger and Submerge. Evolves into Crawler Forest
+- **Drone** - 1,1 with Bone digger and Evolve. Evolves into Crawler Forest
 - **Zerglings** - 1,2 with Double Attack. Evolves into Baneling. Special: Zergling Swarm
 - **Broodling** - 2,2 with Brittle.
-- **Locust** - 1,1 with Brittle.
-- **Infested Terran** - 1,2 with Brittle and Fecundity.
+- **Locust** - 1,2 with Brittle.
 - **Overlord** - 0,4 with Sacrificial and Mighty Leap. Evolves into Overseer.
 - **Roach** - 2,3 with Regenerate. Evolves into Ravager.
 - **Mutalisk** - 1,3 with Ricochet and Regenerate. Evolves into Guardian
-- **Queen** - 1,3 With Spawn Larva.
 - **Hydralisk** - 3,2 with Double Attack. Evolves into Lurker.
 - **Scourge** - 3,1 with Explode and Airborne.
 - **Corruptor** - 2,2 with Airborne. Evolves into Devourer.
@@ -25,28 +23,32 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Egg** - 0,3
 - **Baneling** - 3,1 with Explode
 - **Overseer** - 0,6 with Detector and Stinky
-- **Guardian** - 2,6 with Snipe
+- **Guardian** - 3,5 with Snipe
 - **Swarm Host** - 0,2 with Spawn Locust and Waterborne
 - **Larva** - 0,3 with Evolve. Special: Larva, Kills Survivors
 - **Lurker** - 2,2 with Waterborne and Splash Damage.
 - **Ravager** - 2,2 with Snipe.
+- **Devourer** - 3,3 with Airborne and Armored.
+- **Primal Zergling** - 1,2. Special Primal Zerg
+- **Ravasaur** - 3,3. Special Primal Zerg
 
 ### Rare Cards:
 - **Brood lord** - 0,6 with Swarm Seeds
 - **Infestor** - 1,1 with Waterborne and Fish Hook
 - **Dehaka** - 1,2 with Regenerate. Special: Collect Essence
 - **Leviathan** - 0,20 with Blood Bank and Summon Zerg
-- **Queen of Blades** - 4,4 With Regestate
+- **Queen of Blades** - 2,6 With Trifurcated Strike and Splash Damage
 - **Viper** - 2,1 With Abduct
-- **Devourer** - 3,3 with Airborne and Armored.
 - **Ultralisk** - 2,5 with Armored and Splash Damage.
 - **Strange Artifact** - 0,1 with Bone King and Worthy Sacrifice
+- **Queen** - 1,3 With Spawn Larva.
+- **Infested Terran** - 1,2 with Brittle and Fecundity.
 
 ### Sigils:
-- **Swarm Seeds** - Draw 1 Broodling at the start of your turn
-- **Spawn Locust** - Draw 1 Locust at the start of your turn
+- **Swarm Seeds** - Draw 1 Broodling when placed on the board.
+- **Spawn Locust** - Place 2 Locust on the board adjacent to the card with this sigil at the start of your turn
 - **Regenerate** - The card bearing this sigil Heals 1 health at the end of a turn
-- **Spawn Larva** - The card bearing this sigil will place 2 lava on the board
+- **Spawn Larva** - The card bearing this sigil will place 2 lava on the board every turn
 - **Double Attack** - When a card bearing this sigil deals damage to a card and survives, it will perform one additional attack.
 - **Regestate** - When this card is killed it will transform into an Egg for it to regenerate into its original form. An egg has 0 Power and as much Health as the base card.
 - **Armored** - When a card bearing this sigil takes damage, it will take 1 less damage
@@ -64,6 +66,8 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Zergling Swarm** - Portrait changes as the health increases. Max 6
 - **Collect Essence** - When a card with this sigil kills a stronger card it will steal its essence.
 - **Larva** - When a Larva evolves it will transform into a random Zerg card
+- **Primal Zerg** - Each Card when sacrificed using the same type of card will cause it to evolve into a stronger form.
+- **Brood Lord** - Brood lords are a Zerg siege unit that generate Broodlings in your hand every turn.
 
 
 ## Credits:
@@ -72,6 +76,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **GeneralSpritz** - Custom Art
 - **Shattered Omega** - Balancing
 - **Cyantist** - Armored Ability
+- **CountryGump from Deviant Art** - Art for Primal Zerg 
 
 
 # Installation
@@ -84,6 +89,7 @@ I recommend this tutorial if you are curious how to manually install mods in the
 ## Known Issues:
 - Regestate does not work for death cards
 - Armored does not work on some sigils
+- Transferred sigils onto sacrificed Primal Zerg appear blank.
 
 
 ### Bug Reports / Suggestions:
@@ -92,6 +98,60 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 
 # Update notes:
+
+## `Version: 0.10.0 - 9/1/2022`
+### Added:
+- Added Primal Zergling
+- Added Ravasaur
+- Added Primal Zerg Special Ability
+- Added Brood Lord Special Ability
+
+### Changes:
+- General
+  - Changed Tail of all Zerg units to Biomass except Mutalisk that has a Unique Tail image
+- Brood lord
+  - Now gives 1 Broodling at the start of your turn 
+- Guardian
+  - Increased Power from 2 to 3
+  - Decreased Health from 6 to 5
+- Spawn Locust
+  - Changed to Place 2 Locust on the board adjacent to the card with this sigil at the start of your turn
+- Queen of Blades
+  - Removed Regestate ability
+  - Added Trifurcated Strike ability
+  - Added Splash Damage ability
+  - Reduced power from 4 to 2
+  - Increased health from 4 to 6
+  - Increased blood cost from 3 to 4
+- Overlord
+  - Added meme eye alternative portrait image
+- Hydralisk
+  - Added meme eye alternative portrait image
+- Drone
+  - Replaced Submerge with Evolve
+- Locust
+  - Increased Health from 1 to 2
+- Abduct
+  - Can now pull any card to the closest slot.
+- Devourer
+  - No longer Rare
+- Queen
+  - Now Rare
+- Infested Terran
+  - Now Rare
+- Spawn Larva
+  - No longer accessible from Wood Carver
+- Summon Zerg
+  - No longer accessible from Wood Carver
+
+### Fixes:
+- General
+  - Some special abilities triggered twice
+
+
+
+<details>
+  <summary>See all Changes</summary>
 
 ## `Version: 0.9.0 - 21/12/2021`
 ### New:
@@ -128,14 +188,14 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
   - Added Sacrificial
   - Increased Blood from 1 to 2
 - Guardian
-    - Damage reduced from 4 to 2
-    - Added Snipe
+  - Damage reduced from 4 to 2
+  - Added Snipe
 - Detector
   - Added new art by General Spritz
 - Corrupter
-    - Renamed to Corruptor
+  - Renamed to Corruptor
 - Lurker
-    - No longer rare
+  - No longer rare
 
 ### Fixes:
 - General
@@ -147,10 +207,6 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 - Ricochet
   - Fixed Ricochet damage not setting to 1
 
-
-
-<details>
-  <summary>See all Changes</summary>
 
 ## `Version: 0.8.0 - 5/1/2021`
 ### New:
