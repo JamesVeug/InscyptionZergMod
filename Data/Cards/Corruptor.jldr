@@ -1,7 +1,7 @@
 {
 	"name": "Corruptor",
 	"displayedName": "Corruptor",
-	"description": "A squid-like zerg flying unit.",
+	"description": "The Swarm’s deadly air units...",
 	"metaCategories": [
 		"ChoiceNode",
 		"TraderOffer"

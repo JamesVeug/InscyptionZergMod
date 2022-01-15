@@ -89,10 +89,10 @@
 	],
 	"power": 9,
 	"priority": 0,
-	"learnText": "The swarm grows",
+	"learnText": "Another Zerg out of billions...",
 	"name": "Summon Zerg",
 	"ruleBookName": "Summon Zerg",
-	"ruleDescription": "When a card bearing this sigil takes damage it will create a random zerg card in your hand.",
+	"ruleDescription": "Whenever a card bearing this sigil takes damage, a random Zerg card is created in your hand.",
 	"iconPath": "Artwork/Sigils/summon_zerg.png",
 	"metaCategories": [
 		"Part1Rulebook",

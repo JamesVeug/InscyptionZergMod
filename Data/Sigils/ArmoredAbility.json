@@ -3,10 +3,10 @@
 	"damageBlocked": 1,
 	"power": 0,
 	"priority": 0,
-	"learnText": "",
+	"learnText": "A near impenetrable defense.",
 	"name": "Armoured",
 	"ruleBookName": "Armored",
-	"ruleDescription": "When a card bearing this sigil takes damage, it will take 1 less damage",
+	"ruleDescription": "All attacks this creature receives are reduced by 1 damage.",
 	"iconPath": "Artwork/Sigils/armored.png",
 	"metaCategories": [
 		"Part1Rulebook",

@@ -2,10 +2,10 @@
 	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
 	"power": 0,
 	"priority": 1000000,
-	"learnText": "Revealing hidden cards will not help you defeat me.",
+	"learnText": "None can hide from it’s piercing gaze.",
 	"name": "Detector",
 	"ruleBookName": "Detector",
-	"ruleDescription": "When a card bearing this sigil is on the board all opponent's submerged cards will be revealed.",
+	"ruleDescription": "As long as a card bearing this sigil is on the board, all Waterborne creatures are revealed and can be attacked as normal.",
 	"iconPath": "Artwork/Sigils/detector.png",
 	"metaCategories": [
 		"Part1Rulebook",

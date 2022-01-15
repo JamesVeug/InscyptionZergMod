@@ -1,7 +1,7 @@
 {
 	"name": "Roach",
 	"displayedName": "Roach",
-	"description": "Armored unit that can heal",
+	"description": "These creatures will survive mostly anything, given time.",
 	"metaCategories": [
 		"ChoiceNode",
 		"TraderOffer"

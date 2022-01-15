@@ -3,10 +3,10 @@
 	"ricochetDamage": 1,
 	"power": 0,
 	"priority": 0,
-	"learnText": "",
+	"learnText": "A bizarre attack. But effective.",
 	"name": "Ricochet",
 	"ruleBookName": "Ricochet",
-	"ruleDescription": "When a card bearing this sigil deals damage to a card it will also try hitting over the card for 1 damage.",
+	"ruleDescription": "When a card bearing this sigil deals damage to a creature, it will also deal 1 flying damage.",
 	"iconPath": "Artwork/Sigils/ricochet.png",
 	"metaCategories": [
 		"Part1Rulebook",

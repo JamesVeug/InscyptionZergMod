@@ -2,10 +2,10 @@
 	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
 	"power": 0,
 	"priority": 0,
-	"learnText": "",
+	"learnText": "Nowhere is far enough away.",
 	"name": "Abduct",
 	"ruleBookName": "Abduct",
-	"ruleDescription": "When a card bearing this sigil is played, a targeted card is moved to the closest empty slot.",
+	"ruleDescription": "Whenever a card bearing this sigil is played, you may move any enemy creature to the nearest empty space.",
 	"iconPath": "Artwork/Sigils/abduct.png",
 	"metaCategories": [
 		"Part1Rulebook",

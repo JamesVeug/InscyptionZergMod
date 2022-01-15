@@ -1,7 +1,7 @@
 {
 	"name": "Devourer",
 	"displayedName": "Devourer",
-	"description": "Heavy anti-air flyer",
+	"description": "Little can take down these resilient flying tanks...",
 	"metaCategories": [
 		"ChoiceNode",
 		"TraderOffer"

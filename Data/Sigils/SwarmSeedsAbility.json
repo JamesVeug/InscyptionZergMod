@@ -2,10 +2,10 @@
 	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
 	"power": 0,
 	"priority": 0,
-	"learnText": "This locust although weak will in time strike down your foe",
+	"learnText": "How ferocious...",
 	"name": "Draw Broodling's",
 	"ruleBookName": "Swarm Seeds",
-	"ruleDescription": "Draw 1 Broodling when placed on the board. A Broodling is defined as: 2 Power 2 Health.",
+	"ruleDescription": "When a card bearing this sigil is played, a Broodling is placed in your hand. A Broodling is defined as 2 power 2 health with Brittle.",
 	"iconPath": "Artwork/Sigils/swarm_seeds.png",
 	"metaCategories": [
 		"Part1Rulebook",

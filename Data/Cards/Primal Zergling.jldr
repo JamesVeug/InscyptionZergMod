@@ -1,7 +1,7 @@
 {
 	"name": "PrimalZergling",
 	"displayedName": "Primal Zergling",
-	"description": "It's power comes from defeating similar cards through sacrifices",
+	"description": "These ancient Zerg can steal essence to evolve and grow strong.",
 	"metaCategories": [
 		"ChoiceNode",
 		"TraderOffer"

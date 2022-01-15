@@ -2,10 +2,10 @@
 	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
 	"power": 4,
 	"priority": 100,
-	"learnText": "",
+	"learnText": "A worthy sacrifice...",
 	"name": "Explode",
 	"ruleBookName": "Explode",
-	"ruleDescription": "When a card bearing this sigil deals damage it will also hit the opponents adjacent cards and perish.",
+	"ruleDescription": "When a card bearing this sigil attacks, the damage is also applied to the creatures adjacent to the target. This creature then perishes.",
 	"iconPath": "Artwork/Sigils/explode.png",
 	"metaCategories": [
 		"Part1Rulebook",

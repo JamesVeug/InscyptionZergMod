@@ -3,10 +3,10 @@
 	"health": 1,
 	"power": 0,
 	"priority": 0,
-	"learnText": "Delaying the inevitable i see",
+	"learnText": "What powerful resilience...",
 	"name": "Regenerate",
 	"ruleBookName": "Regenerate",
-	"ruleDescription": "The card bearing this sigil Heals 1 health at the end of a turn.",
+	"ruleDescription": "At the start of your turn, a creature bearing this sigil will heal one health.",
 	"iconPath": "Artwork/Sigils/regenerate.png",
 	"metaCategories": [
 		"Part1Rulebook",

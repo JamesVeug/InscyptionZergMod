@@ -2,10 +2,10 @@
 	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
 	"power": 9,
 	"priority": 0,
-	"learnText": "I don't remember taking a picture of my Hook...",
+	"learnText": "Use that creature well.",
 	"name": "Fish Hook",
 	"ruleBookName": "Fish Hook",
-	"ruleDescription": "When a card bearing this sigil is played, a targeted card is moved to your side of the board",
+	"ruleDescription": "Whenever a card bearing this sigil is played, you may hook an opposing creature to your side of the board, if there is room.",
 	"iconPath": "Artwork/Sigils/fish_hook.png",
 	"metaCategories": [
 		"Part1Rulebook",

@@ -1,7 +1,7 @@
 {
 	"name": "Zerglings",
 	"displayedName": "Zerglings",
-	"description": "Looks friendly but watch your face because your could lose it",
+	"description": "The most numerous creatures of the Swarm...",
 	"metaCategories": [
 		"ChoiceNode",
 		"TraderOffer"

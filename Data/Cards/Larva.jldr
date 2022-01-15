@@ -1,7 +1,7 @@
 {
 	"name": "Larva",
 	"displayedName": "Larva",
-	"description": "It's hard carapace. Not recommended for consumption ",
+	"description": "Beware, even this small [c:bR]worm[c:] can be deadly...",
 	"metaCategories": [
 		"ChoiceNode",
 		"TraderOffer"

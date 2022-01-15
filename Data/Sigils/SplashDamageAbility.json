@@ -2,10 +2,10 @@
 	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
 	"power": 6,
 	"priority": 100,
-	"learnText": "",
+	"learnText": "They shouldn’t have stood so close to each other.",
 	"name": "Splash Damage",
 	"ruleBookName": "Splash Damage",
-	"ruleDescription": "When a card bearing this sigil deals damage it will also hit the opponents adjacent cards",
+	"ruleDescription": "Whenever a card bearing this sigil attacks, the damage will also apply to the creatures adjacent to the target.",
 	"iconPath": "Artwork/Sigils/splash_damage.png",
 	"metaCategories": [
 		"Part1Rulebook",

@@ -2,10 +2,10 @@
 	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
 	"power": 0,
 	"priority": 0,
-	"learnText": "That's one gigantic card capable of multiple sacrifices in replacement of health",
+	"learnText": "Your creatures need not die to bleed.",
 	"name": "Blood Bank",
 	"ruleBookName": "Blood Bank",
-	"ruleDescription": "When a card bearing this sigil is sacrified, its health is reduced relative to blood required.",
+	"ruleDescription": "Whenever a card bearing this sigil is sacrificed to summon another card, the cost is reduced from this creature’s current health.",
 	"iconPath": "Artwork/Sigils/blood_bank.png",
 	"metaCategories": [
 		"Part1Rulebook",

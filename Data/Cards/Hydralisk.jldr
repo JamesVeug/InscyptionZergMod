@@ -1,7 +1,7 @@
 {
 	"name": "Hydralisk",
 	"displayedName": "Hydralisk",
-	"description": "Great for taking out flyers",
+	"description": "Rapid-fire spines will devastate any creature.",
 	"metaCategories": [
 		"ChoiceNode",
 		"TraderOffer"

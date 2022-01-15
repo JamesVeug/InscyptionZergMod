@@ -1,7 +1,7 @@
 {
 	"name": "Guardian",
 	"displayedName": "Guardian",
-	"description": "Despite being devastating in terrestrial combat, guardians are next to useless in space combat",
+	"description": "Nowhere is safe from their reach...",
 	"metaCategories": [
 		"ChoiceNode",
 		"TraderOffer"
