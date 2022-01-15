@@ -1,6 +1,6 @@
 {
 	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
-	"power": 0,
+	"power": 6,
 	"priority": 100,
 	"learnText": "",
 	"name": "Splash Damage",
