@@ -1,7 +1,7 @@
 {
 	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
 	"power": 0,
-	"priority": 0,
+	"priority": 100,
 	"learnText": "",
 	"name": "Explode",
 	"ruleBookName": "Explode",
