@@ -10,6 +10,7 @@
 	"baseHealth": 5,
 	"bloodCost": 0,
 	"bonesCost": 0,
+	"traits": ["Terrain"],
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"appearanceBehaviour": [
 		"TerrainBackground"
@@ -25,6 +26,7 @@
 			"name": "Detector"
 		}
 	],
+	"specialStatIcon": "Mirror",
 	"specialAbilities": [
 		"Mirror"
 	],
