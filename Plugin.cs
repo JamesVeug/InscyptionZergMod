@@ -46,7 +46,6 @@ namespace ZergMod
 	        
             // Abilities
             RegenerateAbility.Initialize(typeof(RegenerateAbility));
-            RegestateAbility.Initialize(typeof(RegestateAbility));
             DoubleAttackAbility.Initialize(typeof(DoubleAttackAbility));
             SpawnLarvaAbility.Initialize(typeof(SpawnLarvaAbility));
             DetectorAbility.Initialize(typeof(DetectorAbility));
@@ -56,7 +55,6 @@ namespace ZergMod
             SplashDamageAbility.Initialize(typeof(SplashDamageAbility));
             AbductAbility.Initialize(typeof(AbductAbility));
             ExplodeAbility.Initialize(typeof(ExplodeAbility));
-            BombardAbility.Initialize(typeof(BombardAbility));
             HookAbility.Initialize(typeof(HookAbility));
             RicochetAbility.Initialize(typeof(RicochetAbility));
             BloodBankAbility.Initialize(typeof(BloodBankAbility));
