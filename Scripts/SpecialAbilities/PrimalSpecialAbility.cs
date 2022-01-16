@@ -13,6 +13,8 @@ namespace ZergMod.Scripts.SpecialAbilities
         public SpecialTriggeredAbility SpecialAbility => specialAbility;
         public static SpecialTriggeredAbility specialAbility = SpecialTriggeredAbility.None;
 
+        private int totalCardsSacrificed = 0;
+
         public static void Initialize(Type declaringType)
         {
             specialAbility = InitializeBase(declaringType);
@@ -63,12 +65,13 @@ namespace ZergMod.Scripts.SpecialAbilities
             }
 
             yield return new WaitForSeconds(0.2f);
-            
+
             demandingCard.SetInfo(cardInfo);
             foreach (CardModificationInfo mod in mods)
             {
                 demandingCard.AddTemporaryMod(mod);
             }
+
             demandingCard.Anim.StrongNegationEffect();
             
             yield return new WaitForSeconds(0.2f);
@@ -84,8 +87,16 @@ namespace ZergMod.Scripts.SpecialAbilities
                     mods.Add(ability);
                 }
             }
+            
+            string dehaka = "Dehaka";
             foreach (CardModificationInfo mod in playableCard.Info.Mods)
             {
+                if(mod.fromTotem) continue;
+                if(mod.fromCardMerge) continue;
+                if(mod.fromDuplicateMerge) continue;
+                if(mod.fromLatch) continue;
+                if(mod.fromOverclock) continue;
+
                 for (int i = 0; i < mod.abilities.Count; i++)
                 {
                     if (!mods.Contains(mod.abilities[i]))
@@ -94,8 +105,10 @@ namespace ZergMod.Scripts.SpecialAbilities
                     }
                 }
             }
-            foreach (CardModificationInfo mod in playableCard.TemporaryMods)
+            /*foreach (CardModificationInfo mod in playableCard.TemporaryMods)
             {
+                if(mod.fromTotem) continue;
+                
                 for (int i = 0; i < mod.abilities.Count; i++)
                 {
                     if (!mods.Contains(mod.abilities[i]))
@@ -103,7 +116,7 @@ namespace ZergMod.Scripts.SpecialAbilities
                         mods.Add(mod.abilities[i]);
                     }
                 }
-            }
+            }*/
 
             if (mods.Count == 0)
             {
@@ -111,17 +124,63 @@ namespace ZergMod.Scripts.SpecialAbilities
             }
 
             int random = UnityEngine.Random.Range(0, mods.Count);
+            Ability newAbility = mods[random];
             CardModificationInfo clone = new CardModificationInfo()
             {
                 abilities = new List<Ability>()
                 {
-                    mods[random]
+                    newAbility
                 }
             };
+
+            //Plugin.Log.LogInfo("[PrimalSpecialAbility]");
             
-            PlayableCard.AddTemporaryMod(clone);
+            bool isDehaka = PlayableCard.Info.name == dehaka;
+            if (isDehaka)
+            {
+                //Plugin.Log.LogInfo("[PrimalSpecialAbility] Dehaka");
+                clone.singletonId = dehaka + totalCardsSacrificed++;
+                
+                // Gross. What if we add a second?
+                CardInfo cardInfo = PlayableCard.Info;
+                List<CardModificationInfo> infoMods = cardInfo.Mods;
+                RemoveDehakaMod(infoMods, clone.singletonId);
+                
+                cardInfo.Mods.Add(clone);
+                PlayableCard.SetInfo(cardInfo);
+
+                CardInfo info = RunState.Run.playerDeck.Cards.Find((a) => a.name == dehaka);
+                if (info != null)
+                {
+                    //Plugin.Log.LogInfo("[PrimalSpecialAbility] Updating deck");
+                    List<CardModificationInfo> modificationInfos = info.Mods;
+                    RemoveDehakaMod(modificationInfos, clone.singletonId);
+                    modificationInfos.Add((CardModificationInfo)clone.Clone());
+                    RunState.Run.playerDeck.UpdateModDictionary();
+                }
+                else
+                {
+                    //Plugin.Log.LogInfo("[PrimalSpecialAbility] Dehaka not in deck");
+                }
+            }
+            else
+            {
+                //Plugin.Log.LogInfo("[PrimalSpecialAbility] Not Dehaka " + PlayableCard.Info.name);
+                PlayableCard.AddTemporaryMod(clone);
+            }
+            
             PlayableCard.Anim.StrongNegationEffect();
             yield return new WaitForSeconds(0.2f);
+            //Plugin.Log.LogInfo("[PrimalSpecialAbility] Done");
+        }
+
+        private static void RemoveDehakaMod(List<CardModificationInfo> infoMods, string cloneSingletonId)
+        {
+            CardModificationInfo dehakaAbility = infoMods.Find((a) => a.singletonId == cloneSingletonId);
+            if (dehakaAbility != null)
+            {
+                infoMods.Remove(dehakaAbility);
+            }
         }
 
         private NextPrimalEvolution GetNextEvolution()
@@ -163,6 +222,17 @@ namespace ZergMod.Scripts.SpecialAbilities
             }
 
             return mods;
+        }
+
+        public override bool RespondsToTurnEnd(bool playerTurnEnd)
+        {
+            return !PlayableCard.Dead;
+        }
+
+        public override IEnumerator OnTurnEnd(bool playerTurnEnd)
+        {
+            totalCardsSacrificed = 0;
+            yield break;
         }
     }
 }
