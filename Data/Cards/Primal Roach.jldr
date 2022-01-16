@@ -1,0 +1,34 @@
+{
+	"name": "PrimalRoach",
+	"displayedName": "Primal Roach",
+	"description": "These ancient Zerg can steal essence to evolve and grow strong.",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tribes": ["Insect"],
+	"baseAttack": 2,
+	"baseHealth": 3,
+	"bloodCost": 1,
+	"bonesCost": 0,
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_roach.png",
+	"tail": {
+		"name": "biomass"
+	},
+	"customSpecialAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "PrimalZerg"
+		}
+	],
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Armoured"
+		}
+	]
+}
