@@ -37,47 +37,6 @@ namespace ZergMod.Scripts.SpecialAbilities
             return true;
         }
 
-        private NextPrimalEvolution GetNextEvolution()
-        {
-            for (int i = 0; i < LoadedData.evolutions.Count; i++)
-            {
-                if (LoadedData.evolutions[i].Name == this.PlayableCard.Info.name)
-                {
-                    return LoadedData.evolutions[i];
-                }
-            }
-
-            return null;
-        }
-
-        private List<CardModificationInfo> GetMods(PlayableCard card)
-        {
-            List<CardModificationInfo> mods = new List<CardModificationInfo>();
-            foreach (CardModificationInfo mod in card.Info.Mods)
-            {
-                // Only transfer abilities
-                if (mod.abilities.Count > 0)
-                {
-                    CardModificationInfo clone = (CardModificationInfo)mod.Clone();
-                    clone.fromCardMerge = true;
-                    mods.Add(clone);
-                }
-            }
-            
-            foreach (CardModificationInfo mod in card.TemporaryMods)
-            {
-                // Only transfer abilities
-                if (mod.abilities.Count > 0)
-                {
-                    CardModificationInfo clone = (CardModificationInfo)mod.Clone();
-                    clone.fromCardMerge = true;
-                    mods.Add(clone);
-                }
-            }
-
-            return mods;
-        }
-
         public override IEnumerator OnSacrifice()
         {
             NextPrimalEvolution nextEvolution = GetNextEvolution();
@@ -163,6 +122,47 @@ namespace ZergMod.Scripts.SpecialAbilities
             PlayableCard.AddTemporaryMod(clone);
             PlayableCard.Anim.StrongNegationEffect();
             yield return new WaitForSeconds(0.2f);
+        }
+
+        private NextPrimalEvolution GetNextEvolution()
+        {
+            for (int i = 0; i < LoadedData.evolutions.Count; i++)
+            {
+                if (LoadedData.evolutions[i].Name == this.PlayableCard.Info.name)
+                {
+                    return LoadedData.evolutions[i];
+                }
+            }
+
+            return null;
+        }
+
+        private List<CardModificationInfo> GetMods(PlayableCard card)
+        {
+            List<CardModificationInfo> mods = new List<CardModificationInfo>();
+            foreach (CardModificationInfo mod in card.Info.Mods)
+            {
+                // Only transfer abilities
+                if (mod.abilities.Count > 0)
+                {
+                    CardModificationInfo clone = (CardModificationInfo)mod.Clone();
+                    clone.fromCardMerge = true;
+                    mods.Add(clone);
+                }
+            }
+            
+            foreach (CardModificationInfo mod in card.TemporaryMods)
+            {
+                // Only transfer abilities
+                if (mod.abilities.Count > 0)
+                {
+                    CardModificationInfo clone = (CardModificationInfo)mod.Clone();
+                    clone.fromCardMerge = true;
+                    mods.Add(clone);
+                }
+            }
+
+            return mods;
         }
     }
 }

@@ -7,11 +7,8 @@ namespace ZergMod.Scripts.Patches
     [HarmonyPatch(typeof (AbilitiesUtil), "GetInfo", new System.Type[] {typeof (Ability)})]
     public class AbilitiesUtil_GetInfo
     {
-        public static bool Prefix(
-            ref Ability ability,
-            ref AbilityInfo __result)
+        public static bool Prefix(ref Ability ability, ref AbilityInfo __result)
         {
-            //Plugin.Log.LogInfo("[AbilitiesUtil_GetInfo] Getting AbilityInfo for " + ability);
             if (ability == Ability.None)
             {
                 Plugin.Log.LogWarning("[AbilitiesUtil_GetInfo] Ability is None. Overriding with TailOnHit because i'm lazy");
@@ -26,13 +23,11 @@ namespace ZergMod.Scripts.Patches
             {
                 if (newAbility.ability == ability)
                 {
-                    //Plugin.Log.LogInfo("[AbilitiesUtil_GetInfo] Got custom AbilityInfo for " + ability);
                     __result = newAbility.info;
                     return false;
                 }
             }
             
-            //Plugin.Log.LogInfo("[AbilitiesUtil_GetInfo] " + ability + " is not a custom ability");
             return true;
         }
     }
