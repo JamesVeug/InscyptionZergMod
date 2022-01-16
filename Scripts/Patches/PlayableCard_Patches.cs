@@ -5,6 +5,7 @@ using DiskCardGame;
 using HarmonyLib;
 using UnityEngine;
 using ZergMod.Scripts.Abilities;
+using ZergMod.Scripts.SpecialAbilities;
 
 namespace ZergMod.Scripts.Patches
 {
@@ -20,6 +21,20 @@ namespace ZergMod.Scripts.Patches
             }
 
             return true;
+        }
+
+        public static IEnumerator Postfix(IEnumerator result, PlayableCard __instance)
+        {
+            PlayableCard demandingCard = Singleton<BoardManager>.Instance.currentSacrificeDemandingCard;
+            if (demandingCard != null &&
+                demandingCard.Info.specialAbilities.Contains(PrimalSpecialAbility.specialAbility))
+            {
+                PrimalSpecialAbility primalSpecialAbility = demandingCard.gameObject.GetComponent<PrimalSpecialAbility>();
+
+                yield return primalSpecialAbility.OnOtherSacrificed(__instance);
+            }
+
+            yield return result;
         }
 
         private static IEnumerator SacrificeOverride(PlayableCard __instance)

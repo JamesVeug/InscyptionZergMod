@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DiskCardGame;
 using ZergMod.Scripts.Data.Sigils;
 using UnityEngine;
+using Random = System.Random;
 
 namespace ZergMod.Scripts.SpecialAbilities
 {
@@ -57,11 +58,6 @@ namespace ZergMod.Scripts.SpecialAbilities
                 // Only transfer abilities
                 if (mod.abilities.Count > 0)
                 {
-                    /*foreach (Ability ability in mod.abilities)
-                    {
-                        Plugin.Log.LogInfo("[OnSacrifice][Mod] " + (int)ability + " " + ability.ToString());
-                    }*/
-
                     CardModificationInfo clone = (CardModificationInfo)mod.Clone();
                     clone.fromCardMerge = true;
                     mods.Add(clone);
@@ -73,11 +69,6 @@ namespace ZergMod.Scripts.SpecialAbilities
                 // Only transfer abilities
                 if (mod.abilities.Count > 0)
                 {
-                    /*foreach (Ability ability in mod.abilities)
-                    {
-                        Plugin.Log.LogInfo("[OnSacrifice][Mod] " + (int)ability + " " + ability.ToString());
-                    }*/
-
                     CardModificationInfo clone = (CardModificationInfo)mod.Clone();
                     clone.fromCardMerge = true;
                     mods.Add(clone);
@@ -86,21 +77,19 @@ namespace ZergMod.Scripts.SpecialAbilities
 
             return mods;
         }
-        
+
         public override IEnumerator OnSacrifice()
         {
             NextPrimalEvolution nextEvolution = GetNextEvolution();
             
             PlayableCard demandingCard = Singleton<BoardManager>.Instance.currentSacrificeDemandingCard;
-            List<CardModificationInfo> mods = GetMods(PlayableCard);
+            List<CardModificationInfo> mods = new List<CardModificationInfo>();
 
             CardInfo cardInfo;
             if (nextEvolution != null && !string.IsNullOrEmpty(nextEvolution.NextEvolutionName))
             {
                 // Turn the card in the players hand into another card
                 cardInfo = CardLoader.GetCardByName(nextEvolution.NextEvolutionName);
-                //Plugin.Log.LogInfo("[OnSacrifice][Mod] New evolution");
-
                 mods.AddRange(GetMods(demandingCard));
             }
             else
@@ -112,18 +101,67 @@ namespace ZergMod.Scripts.SpecialAbilities
                 mod.attackAdjustment = LoadedData.DefaultAttackBuff;
                 mod.healthAdjustment = LoadedData.DefaultHealthBuff;
                 mods.Add(mod);
-                //Plugin.Log.LogInfo("[OnSacrifice][Mod] Upgraded");
             }
 
             yield return new WaitForSeconds(0.2f);
             
+            demandingCard.SetInfo(cardInfo);
             foreach (CardModificationInfo mod in mods)
             {
                 demandingCard.AddTemporaryMod(mod);
             }
-            demandingCard.SetInfo(cardInfo);
             demandingCard.Anim.StrongNegationEffect();
             
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        public IEnumerator OnOtherSacrificed(PlayableCard playableCard)
+        {
+            List<Ability> mods = new List<Ability>();
+            foreach (Ability ability in playableCard.Info.abilities)
+            {
+                if (!mods.Contains(ability))
+                {
+                    mods.Add(ability);
+                }
+            }
+            foreach (CardModificationInfo mod in playableCard.Info.Mods)
+            {
+                for (int i = 0; i < mod.abilities.Count; i++)
+                {
+                    if (!mods.Contains(mod.abilities[i]))
+                    {
+                        mods.Add(mod.abilities[i]);
+                    }
+                }
+            }
+            foreach (CardModificationInfo mod in playableCard.TemporaryMods)
+            {
+                for (int i = 0; i < mod.abilities.Count; i++)
+                {
+                    if (!mods.Contains(mod.abilities[i]))
+                    {
+                        mods.Add(mod.abilities[i]);
+                    }
+                }
+            }
+
+            if (mods.Count == 0)
+            {
+                yield break;
+            }
+
+            int random = UnityEngine.Random.Range(0, mods.Count);
+            CardModificationInfo clone = new CardModificationInfo()
+            {
+                abilities = new List<Ability>()
+                {
+                    mods[random]
+                }
+            };
+            
+            PlayableCard.AddTemporaryMod(clone);
+            PlayableCard.Anim.StrongNegationEffect();
             yield return new WaitForSeconds(0.2f);
         }
     }
