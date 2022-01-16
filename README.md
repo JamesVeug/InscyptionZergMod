@@ -9,40 +9,41 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - 5 new Special Abilities
 
 ### Cards:
-- **Drone** - 1,1 with Bone digger and Evolve. Evolves into Crawler Forest
-- **Zerglings** - 1,2 with Double Attack. Evolves into Baneling. Special: Zergling Swarm
-- **Broodling** - 2,2 with Brittle.
-- **Locust** - 1,2 with Brittle.
-- **Overlord** - 0,4 with Sacrificial and Mighty Leap. Evolves into Overseer.
-- **Roach** - 2,3 with Regenerate. Evolves into Ravager.
-- **Mutalisk** - 1,3 with Ricochet and Regenerate. Evolves into Guardian
-- **Hydralisk** - 3,2 with Double Attack. Evolves into Lurker.
-- **Scourge** - 3,1 with Explode and Airborne.
-- **Corruptor** - 2,2 with Airborne. Evolves into Devourer.
-- **Crawler Forest** - Mirror,5 with Mighty Leap and Detector
-- **Egg** - 0,3
-- **Baneling** - 3,1 with Explode
-- **Overseer** - 0,6 with Detector and Stinky
-- **Guardian** - 3,5 with Snipe
-- **Swarm Host** - 0,2 with Spawn Locust and Waterborne
-- **Larva** - 0,3 with Evolve. Special: Larva, Kills Survivors
-- **Lurker** - 2,2 with Waterborne and Splash Damage.
-- **Ravager** - 2,2 with Snipe.
-- **Devourer** - 3,3 with Airborne and Armored.
-- **Primal Zergling** - 1,2. Special Primal Zerg
-- **Ravasaur** - 3,3. Special Primal Zerg
+- **Strange Artifact** - 0,1 1https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Bone King, Worthy Sacrifice.
+- **Baneling** - 3,1 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_bone.png?raw=true Sigils: Explode.
+- **Broodling** - 2,2 1https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_bone.png?raw=true Sigils: Brittle.
+- **Corruptor** - 2,3 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Airborne. Evolves into Devourer
+- **Crawler Forest** - 0,5 Sigils: Mighty Leap, Detector. Specials: Mirror
+- **Devourer** - 3,3 3https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Airborne, Armored.
+- **Drone** - 1,1 1https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Bone Digger, Fledgling. Evolves into Crawler Forest
+- **Guardian** - 3,5 3https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Sniper.
+- **Hydralisk** - 2,2 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Double Attack. Evolves into Lurker
+- **Larva** - 0,3 1https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Fledgling. Specials: Larva.
+- **Locust** - 1,2 1https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_bone.png?raw=true Sigils: Brittle.
+- **Lurker** - 2,2 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Waterborne, Splash Damage.
+- **Mutalisk** - 1,3 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Ricochet, Regenerate. Evolves into Guardian
+- **Overlord** - 0,2 1https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Many Lives, Mighty Leap. Evolves into Overseer
+- **Overseer** - 0,6 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Stinky, Detector.
+- **Primal Igniter** - 2,4 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Splash Damage. Specials: Primal Zerg.
+- **Primal Ravasaur** - 3,3 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Specials: Primal Zerg
+- **Primal Roach** - 2,3 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Armored. Specials: Primal Zerg.
+- **Primal Zergling** - 1,2 1https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Specials: Primal Zerg
+- **Ravager** - 2,2 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Sniper.
+- **Roach** - 2,3 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Regenerate. Evolves into Ravager
+- **Scourge** - 3,1 1https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Airborne, Explode.
+- **Swarm Host** - 0,2 1https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Waterborne, Spawn Locust.
+- **Zerglings** - 1,2 1https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Double Attack. Evolves into Baneling Specials: Zergling Swarm.
 
 ### Rare Cards:
-- **Brood lord** - 0,6 with Swarm Seeds
-- **Infestor** - 1,1 with Waterborne and Fish Hook
-- **Dehaka** - 1,2 with Regenerate. Special: Collect Essence
-- **Leviathan** - 0,20 with Blood Bank and Summon Zerg
-- **Queen of Blades** - 2,6 With Trifurcated Strike and Splash Damage
-- **Viper** - 2,1 With Abduct
-- **Ultralisk** - 2,5 with Armored and Splash Damage.
-- **Strange Artifact** - 0,1 with Bone King and Worthy Sacrifice
-- **Queen** - 1,3 With Spawn Larva.
-- **Infested Terran** - 1,2 with Brittle and Fecundity.
+- **Brood lord** - 0,6 3https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Swarm Seeds. Specials: Brood Lord.
+- **Dehaka** - 1,2 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Regenerate. Specials: Collect Essence., Primal Zerg
+- **Infested Terran** - 1,2 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_bone.png?raw=true Sigils: Brittle, Fecundity.
+- **Infestor** - 1,1 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Waterborne, Fish Hook.
+- **Leviathan** - 0,20 8https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_bone.png?raw=true Sigils: Blood Bank, Summon Zerg.
+- **Queen of Blades** - 2,6 4https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Trifurcated Strike, Splash Damage.
+- **Queen** - 1,3 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Spawn Larva.
+- **Ultralisk** - 3,5 3https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Armored, Splash Damage.
+- **Viper** - 2,1 2https://github.com/JamesVeug/InscyptionZergMod/tree/main/Artwork\Git\cost_blood.png?raw=true Sigils: Abduct.
 
 ### Sigils:
 - **Swarm Seeds** - Draw 1 Broodling when placed on the board.
