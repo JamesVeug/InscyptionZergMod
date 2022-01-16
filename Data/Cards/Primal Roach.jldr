@@ -1,7 +1,7 @@
 {
 	"name": "PrimalRoach",
 	"displayedName": "Primal Roach",
-	"description": "These ancient Zerg can steal essence to evolve and grow strong.",
+	"description": "A resilient and adept hunter from an ancient world...",
 	"metaCategories": [
 		"ChoiceNode",
 		"TraderOffer"
@@ -11,7 +11,7 @@
 	"tribes": ["Insect"],
 	"baseAttack": 2,
 	"baseHealth": 3,
-	"bloodCost": 1,
+	"bloodCost": 2,
 	"bonesCost": 0,
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"appearanceBehaviour": [],
