@@ -70,4 +70,21 @@ namespace ZergMod.Scripts.Patches
             }
         }
     }
+    
+    [HarmonyPatch(typeof (PlayableCard), "TransformIntoCard", new System.Type[] {typeof(CardInfo), typeof(Action)})]
+    public class PlayableCard_TransformIntoCard
+    {
+        public static IEnumerator Postfix(IEnumerator result, PlayableCard __instance, CardInfo evolvedInfo, Action onTransformedCallback = null)
+        {
+            yield return result;
+            if (__instance.HasAbility(DetectorAbility.ability))
+            {
+                DetectorAbility detectorAbility = __instance.GetComponent<DetectorAbility>();
+                if (detectorAbility.ShouldRevealCards())
+                {
+                    yield return detectorAbility.RevealSubmurgedCards();
+                }
+            }
+        }
+    }
 }

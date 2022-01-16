@@ -30,13 +30,18 @@ namespace ZergMod.Scripts.Abilities
 
         public override bool RespondsToResolveOnBoard()
         {
-            return Singleton<TurnManager>.Instance.IsPlayerTurn && GetValidCardSlotsToFlip(false).Count > 0;
+            return ShouldRevealCards();
         }
 
         public override IEnumerator OnResolveOnBoard()
         {
+            yield return RevealSubmurgedCards();
+        }
+
+        public IEnumerator RevealSubmurgedCards()
+        {
             activated = true;
-            
+
             Singleton<ViewManager>.Instance.SwitchToView(View.Board, false);
             yield return new WaitForSeconds(0.15f);
             yield return base.PreSuccessfulTriggerSequence();
@@ -46,13 +51,13 @@ namespace ZergMod.Scripts.Abilities
             {
                 PlayableCard card = opposingSlots[i].Card;
                 yield return base.LearnAbility(0f);
-                        
+
                 // Our targeted
                 card.SetFaceDown(false, false);
                 card.UpdateFaceUpOnBoardEffects();
                 yield return new WaitForSeconds(0.3f);
             }
-            
+
             this.triggerPriority = int.MinValue + 1;
             yield return new WaitForSeconds(0.3f); // Because its happening too fast maybe?
         }
@@ -107,6 +112,11 @@ namespace ZergMod.Scripts.Abilities
             }
 
             return slots;
+        }
+
+        public bool ShouldRevealCards()
+        {
+            return Singleton<TurnManager>.Instance.IsPlayerTurn && GetValidCardSlotsToFlip(false).Count > 0;
         }
     }
 }
