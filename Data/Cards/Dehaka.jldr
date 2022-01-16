@@ -29,6 +29,10 @@
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Collect Essence"
+		},
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "PrimalZerg"
 		}
 	],
 	"tail": {
