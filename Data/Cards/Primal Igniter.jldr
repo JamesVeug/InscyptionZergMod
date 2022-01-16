@@ -1,0 +1,34 @@
+{
+	"name": "PrimalIgniter",
+	"displayedName": "Primal Igniter",
+	"description": "These ancient Zerg can steal essence to evolve and grow strong.",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tribes": ["Insect"],
+	"baseAttack": 2,
+	"baseHealth": 4,
+	"bloodCost": 2,
+	"bonesCost": 0,
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_igniter.png",
+	"tail": {
+		"name": "biomass"
+	},
+	"customSpecialAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "PrimalZerg"
+		}
+	],
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Splash Damage"
+		}
+	]
+}
