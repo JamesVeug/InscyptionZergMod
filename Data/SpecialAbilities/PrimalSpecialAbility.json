@@ -5,6 +5,11 @@
 			"@type": "ZergMod.Scripts.Data.Sigils.NextPrimalEvolution",
 			"Name": "PrimalZergling",
 			"NextEvolutionName": "PrimalRavasaur"
+		},
+		{
+			"@type": "ZergMod.Scripts.Data.Sigils.NextPrimalEvolution",
+			"Name": "PrimalRoach",
+			"NextEvolutionName": "PrimalIgniter"
 		}
 	],
 	"DefaultAttackBuff": 1,
