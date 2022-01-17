@@ -44,7 +44,7 @@
 	"learnText": "",
 	"name": "Zergling Swarm",
 	"ruleBookName": "Zergling Swarm",
-	"ruleDescription": "Portrait changes as the health increases. Max 6",
+	"ruleDescription": "For every point of health this creature has, the portrait will gain 1 Zergling up to 6.",
 	"iconPath": "Artwork/Cards/zergling_6.png",
 	"metaCategories": [
 		"Part1Rulebook",

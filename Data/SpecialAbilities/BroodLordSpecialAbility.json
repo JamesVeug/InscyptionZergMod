@@ -6,7 +6,7 @@
 	"learnText": "",
 	"name": "Brood Lord",
 	"ruleBookName": "Brood Lord",
-	"ruleDescription": "Brood lords are a Zerg siege unit that generate Broodlings in your hand every turn.",
+	"ruleDescription": "As long as this creature is on the board, a Broodling is created in your hand at the start of your turn, up to 3 maximum.",
 	"iconPath": "Artwork/Cards/broodlord.png",
 	"metaCategories": [
 		"Part1Rulebook",

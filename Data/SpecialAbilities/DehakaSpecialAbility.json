@@ -26,7 +26,7 @@
 	"learnText": "",
 	"name": "Collect Essence",
 	"ruleBookName": "Collect Essence",
-	"ruleDescription": "When a card with this sigil kills a stronger card it will steal its essence.",
+	"ruleDescription": "This Primal leader will permanently grow stronger after defeating more powerful cards.",
 	"iconPath": "Artwork/Cards/dehaka_1.png",
 	"metaCategories": [
 		"Part1Rulebook",

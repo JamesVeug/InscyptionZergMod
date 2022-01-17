@@ -19,7 +19,7 @@
 	"learnText": "",
 	"name": "PrimalZerg",
 	"ruleBookName": "Primal Zerg",
-	"ruleDescription": "The primal zerg are a zerg subspecies from the planet Zerus. They retain the physical and psychological traits of the original zerg who avoided incorporation into the Zerg Swarm. Each Card when sacrificed using the same type of card will cause it to evolve into a stronger form.",
+	"ruleDescription": "All Primal Zerg will grow stronger depending on what creatures were sacrificed to summon them.",
 	"iconPath": "Artwork/Cards/primal_zergling.png",
 	"metaCategories": [
 		"Part1Rulebook",

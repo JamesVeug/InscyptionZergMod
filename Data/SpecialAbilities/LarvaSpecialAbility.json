@@ -54,7 +54,7 @@
 	"learnText": "",
 	"name": "Larva",
 	"ruleBookName": "Larva",
-	"ruleDescription": "When a Larva evolves it will transform into a random Zerg card.",
+	"ruleDescription": "The Larva will evolve into a random Zerg when it matures.",
 	"iconPath": "Artwork/Cards/larva.png",
 	"metaCategories": [
 		"Part1Rulebook",
