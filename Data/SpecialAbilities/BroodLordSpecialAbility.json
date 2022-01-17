@@ -1,6 +1,7 @@
 {
 	"@type": "ZergMod.Scripts.Data.Sigils.BroodLordSpecialAbilityData",
 	"cardCreatedName": "Broodling",
+	"maxCards": 3,
 	"power": 0,
 	"priority": 0,
 	"learnText": "",

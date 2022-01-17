@@ -12,6 +12,8 @@ namespace ZergMod.Scripts.SpecialAbilities
         public SpecialTriggeredAbility SpecialAbility => specialAbility;
         public static SpecialTriggeredAbility specialAbility = SpecialTriggeredAbility.None;
 
+        private int cardsGiven = 0;
+
         public static void Initialize(Type declaringType)
         {
             specialAbility = InitializeBase(declaringType);
@@ -19,7 +21,7 @@ namespace ZergMod.Scripts.SpecialAbilities
 
         public override bool RespondsToUpkeep(bool playerUpkeep)
         {
-            return !PlayableCard.Dead && playerUpkeep && PlayableCard.slot.IsPlayerSlot;
+            return cardsGiven < LoadedData.maxCards && !PlayableCard.Dead && playerUpkeep && PlayableCard.slot.IsPlayerSlot;
         }
 
         public override IEnumerator OnUpkeep(bool playerUpkeep)
@@ -35,6 +37,7 @@ namespace ZergMod.Scripts.SpecialAbilities
             CardInfo cardByName = CardLoader.GetCardByName(LoadedData.cardCreatedName);
             yield return Singleton<CardSpawner>.Instance.SpawnCardToHand(cardByName, null, 0.25f, null);
             yield return new WaitForSeconds(0.45f);
+            cardsGiven++;
 			
             if (currentView != View.Hand)
             {
