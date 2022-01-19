@@ -13,13 +13,22 @@ namespace ZergMod.Scripts.Patches
             int num = __result;
             foreach (CardSlot cardSlot in sacrifices)
             {
-                if (cardSlot != null && cardSlot.Card != null)
+                PlayableCard card = cardSlot.Card;
+                if (cardSlot != null && card != null)
                 {
-                    if (cardSlot.Card.HasAbility(BloodBankAbility.ability))
+                    if (card.HasAbility(BloodBankAbility.ability) && !card.HasAbility(Ability.Sacrificial))
                     {
                         ProgressionData.SetAbilityLearned(BloodBankAbility.ability);
-                        num += cardSlot.Card.Health;
-                        num -= cardSlot.Card.HasAbility(Ability.TripleBlood) ? 3 : 1; // Because original method already treated this as 1
+                        if (card.HasAbility(Ability.TripleBlood))
+                        {
+                            // -3 because Prefix adds +3 for Triple blood
+                            num += card.Health * 3 - 3; // Card has 5 health. So total 15 blood for a sacrifice
+                        }
+                        else
+                        {
+                            // -1 because Prefix adds +1 for non-triple blood cards 
+                            num += card.Health - 1; // Card has 5 health. So total 5 Health for a sacrifice
+                        }
                     }
                 }
             }
