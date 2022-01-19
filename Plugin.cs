@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using BepInEx;
@@ -21,7 +20,7 @@ namespace ZergMod
     {
 	    public const string PluginGuid = "jamesgames.inscryption.zergmod";
 	    public const string PluginName = "Zerg Mod";
-	    public const string PluginVersion = "0.10.0.0";
+	    public const string PluginVersion = "0.11.0.0";
 	    public const string DecalPath = "Artwork/watermark.png";
 
         public static string Directory;
@@ -63,10 +62,8 @@ namespace ZergMod
             // Cards
             XelNagaArtifact.Initialize();
 
-            // JsonDumpNewCards();
-
             // Squirrel / Lava
-            //ChangeSquirrelToLarva();
+            ChangeSquirrelToLarva();
             
             Logger.LogInfo($"Loaded {PluginName}!");
         }
@@ -386,22 +383,13 @@ namespace ZergMod
 
         public void ChangeSquirrelToLarva()
         {
-	        List<Ability> abilities = new List<Ability> { Ability.TriStrike };
-	        List<SpecialTriggeredAbility> specialAbilities = new List<SpecialTriggeredAbility> { LarvaSpecialAbility.specialAbility };
-	        List<CardAppearanceBehaviour.Appearance> appearances = new List<CardAppearanceBehaviour.Appearance>
-		        {
-			        CardAppearanceBehaviour.Appearance.RareCardBackground
-		        };
+	        List<Ability> abilities = new List<Ability> { BloodBankAbility.ability, Ability.TripleBlood };
 
 	        new CustomCard("Squirrel")
 	        {
-		        displayedName = "Zerg",
-		        baseAttack = 7, 
-		        baseHealth = 7, 
-		        appearanceBehaviour = appearances,
-		        tex = Utils.GetTextureFromPath("Artwork/zerg.png"),
+		        baseAttack = 0, 
+		        baseHealth = 10, 
 		        abilities = abilities,
-		        specialAbilities = specialAbilities,
 		        decals = Utils.GetDecals()
 	        };
         }
