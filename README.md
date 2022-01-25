@@ -38,7 +38,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Infestor** - 1,1 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Waterborne, Fish Hook.
 - **Leviathan** - 0,20 - ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) Sigils: Blood Bank, Summon Zerg.
 - **Queen** - 1,3 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Spawn Larva.
-- **Queen of Blades** - 2,6 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Trifurcated Strike, Splash Damage.
+- **Queen of Blades** - 2,6 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Bifurcated Strike, Splash Damage.
 - **Ultralisk** - 3,5 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Armored, Splash Damage.
 - **Viper** - 2,1 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Abduct.
 
@@ -84,7 +84,6 @@ I recommend this tutorial if you are curious how to manually install mods in the
 
 
 ## Known Issues:
-- Regestate does not work for death cards
 - Armored does not work on some sigils
 - Transferred sigils onto sacrificed Primal Zerg appear blank.
 
@@ -95,6 +94,22 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 
 # Update notes:
+
+## `Version: 1.0.0 - 25/1/2022`
+### Changes:
+- Queen of Blades
+    - Replaced Trifurcated with Bifurcated
+
+### Fixes:
+- Primal Zerg
+  - Fixed Emits not showing
+- Blood Bank
+  - Fixed not working with triple blood
+  - Fixed sacrificing with other cards still taking full hp
+
+<details>
+  <summary>See all Changes</summary>
+
 
 ## `Version: 0.11.0 - 17/1/2022`
 ### Added:
@@ -146,8 +161,6 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 - Detector
   - Fixed not revealing cards when a card is transformed into something that has Detector (Drone)
 
-<details>
-  <summary>See all Changes</summary>
 
 ## `Version: 0.10.0 - 9/1/2022`
 ### Added:
