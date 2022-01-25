@@ -16,6 +16,7 @@
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"appearanceBehaviour": [],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_roach.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/primal_roach_emit.png",
 	"tail": {
 		"name": "biomass"
 	},
