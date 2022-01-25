@@ -19,7 +19,7 @@
 	],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/kerrigan.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/kerrigan_emit.png",
-	"abilities": ["TriStrike"],
+	"abilities": ["SplitStrike"],
 	"customAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
