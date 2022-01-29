@@ -5,9 +5,9 @@ using System.Reflection;
 using APIPlugin;
 using DiskCardGame;
 using UnityEngine;
+using ZergMod.Scripts;
 using ZergMod.Scripts.Data;
 using ZergMod.Scripts.Data.Sigils;
-using Object = UnityEngine.Object;
 
 namespace ZergMod
 {
@@ -19,7 +19,7 @@ namespace ZergMod
         
         public static void InitializeAbility<T>(Type declaringType, out NewAbility newAbility) where T : AbilityData
         {
-            T loadedData = DataUtil.LoadFromFile<T>("Data/Sigils/" + declaringType.Name);
+            T loadedData = DataUtil.LoadFromFile<T>("Data/Sigils/" + declaringType.Name + ".customsigil");
             s_dataLookup[declaringType] = loadedData;
             
             AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
@@ -47,7 +47,7 @@ namespace ZergMod
         
         public static void InitializeSpecialAbility<T>(Type declaringType, out T loadedData, out NewSpecialAbility newSpecialAbility) where T : SpecialAbilityData
         {
-            loadedData = DataUtil.LoadFromFile<T>("Data/SpecialAbilities/" + declaringType.Name);
+            loadedData = DataUtil.LoadFromFile<T>("Data/SpecialAbilities/" + declaringType.Name + ".customsigil");
             
             SpecialAbilityIdentifier identifier = SpecialAbilityIdentifier.GetID(Plugin.PluginGuid, loadedData.name);
             
@@ -197,6 +197,30 @@ namespace ZergMod
             }
 
             return slots;
+        }
+
+        public static int GetRandomWeight(int totalWeight)
+        {
+            int randomSeed = SaveManager.SaveFile.GetCurrentRandomSeed() + Singleton<GlobalTriggerHandler>.Instance.NumTriggersThisBattle + 1;
+            return SeededRandom.Range(0, totalWeight, randomSeed);
+        }
+
+        public static CardInfo GetRandomWeightedCard(List<WeightData> weights, int totalWeight)
+        {
+            int expectedWeight = Utils.GetRandomWeight(totalWeight);
+            int currentWeight = 0;
+            for (var i = 0; i < weights.Count; i++)
+            {
+                WeightData data = weights[i];
+                currentWeight += data.weight;
+                if (currentWeight >= expectedWeight)
+                {
+                    return CardLoader.GetCardByName(data.cardName);
+                }
+            }
+
+            string cardName = weights[weights.Count - 1].cardName;
+            return CardLoader.GetCardByName(cardName);
         }
         
         /// <summary>

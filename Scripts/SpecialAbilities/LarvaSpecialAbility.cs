@@ -11,23 +11,12 @@ namespace ZergMod.Scripts.SpecialAbilities
     {
         public SpecialTriggeredAbility SpecialAbility => specialAbility;
         public static SpecialTriggeredAbility specialAbility = SpecialTriggeredAbility.None;
-        
-        // First value = Weight for choice. Higher means larger chance to evolve into it
-        // Second value = Name of what card to evolve into
-        private static int m_totalWeights = 0;
 
         private bool m_randomized = false;
         
         public static void Initialize(Type declaringType)
         {
             specialAbility = InitializeBase(declaringType);
-            
-            // Sort by ascending drop rates
-            LoadedData.cardEvolutions.Sort((a,b)=>a.weight - b.weight);
-            foreach (LarvaSpecialAbilityData.WeightData data in LoadedData.cardEvolutions)
-            {
-                m_totalWeights += data.weight;
-            }
         }
 
         public override bool RespondsToDrawn()
@@ -63,28 +52,12 @@ namespace ZergMod.Scripts.SpecialAbilities
             cardInfo.evolveParams = new EvolveParams
             {
                 turnsToEvolve = LoadedData.turnsUntilEvolve,
-                evolution = GetRandomCard()
+                evolution = Utils.GetRandomWeightedCard(LoadedData.cardEvolutions, LoadedData.TotalWeights)
             };
             Card.SetInfo(cardInfo);
             
             m_randomized = true;
             yield return null;
-        }
-        
-        private CardInfo GetRandomCard()
-        {
-            int expectedWeight = Random.Range(0, m_totalWeights);
-            int currentWeight = 0;
-            foreach (LarvaSpecialAbilityData.WeightData data in LoadedData.cardEvolutions)
-            {
-                currentWeight += data.weight;
-                if (currentWeight >= expectedWeight)
-                {
-                    return CardLoader.GetCardByName(data.cardName);
-                }
-            }
-
-            return CardLoader.GetCardByName(LoadedData.cardEvolutions[LoadedData.cardEvolutions.Count - 1].cardName);
         }
     }
 }

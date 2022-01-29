@@ -8,8 +8,7 @@ namespace ZergMod.Scripts.Data
     {
         public static T LoadFromFile<T>(string path) where T : AData
         {
-            string fullPath = Path.Combine(Plugin.Directory, path + ".json");
-            //Plugin.Log.LogInfo($"Loading {fullPath}");
+            string fullPath = Path.Combine(Plugin.Directory, path);
             
             if (!File.Exists(fullPath))
             {
@@ -24,12 +23,9 @@ namespace ZergMod.Scripts.Data
             // Read JSON
             string text = File.ReadAllText(fullPath);
             string str = text.Substring(text.LastIndexOf(Path.DirectorySeparatorChar) + 1);
-            //Plugin.Log.LogInfo($"JSON: {str}");
             
             // Deserialize JSON
             JSON.MakeInto(JSON.Load(str), out T loadedData);
-            //Plugin.Log.LogInfo($"Rulebook Name: {loadedData.ruleBookName}");
-            
             if (loadedData == null)
             {
                 Plugin.Log.LogWarning("Failed to load " + str);

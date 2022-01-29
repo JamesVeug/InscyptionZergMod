@@ -5,13 +5,6 @@ using UnityEngine;
 namespace ZergMod.Scripts.Data.Sigils
 {
     [Serializable]
-    public class WeightData
-    {
-        public string cardName = "";
-        public int weight = 0;
-    }
-    
-    [Serializable]
     public class SummonZergAbilityData : AbilityData
     {
         [SerializeField]

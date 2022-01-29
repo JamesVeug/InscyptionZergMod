@@ -1,0 +1,96 @@
+{
+	"@type": "ZergMod.Scripts.Data.Sigils.SummonZergAbilityData",
+	"cardEvolutions": [
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Zerglings",
+			"weight": 55
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Roach",
+			"weight": 35
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Hydralisk",
+			"weight": 35
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Drone",
+			"weight": 30
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Corruptor",
+			"weight": 35
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Baneling",
+			"weight": 30
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Mutalisk",
+			"weight": 30
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Lurker",
+			"weight": 30
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Overlord",
+			"weight": 30
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Swarm Host",
+			"weight": 20
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Brood lord",
+			"weight": 20
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Viper",
+			"weight": 15
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Ultralisk",
+			"weight": 10
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Guardian",
+			"weight": 10
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Overseer",
+			"weight": 10
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Queen",
+			"weight": 10
+		}
+	],
+	"power": 9,
+	"priority": 0,
+	"learnText": "Another Zerg out of billions...",
+	"name": "Summon Zerg",
+	"ruleBookName": "Summon Zerg",
+	"ruleDescription": "Whenever a card bearing this sigil takes damage, a random Zerg card is created in your hand.",
+	"iconPath": "Artwork/Sigils/summon_zerg.png",
+	"metaCategories": [
+		"Part1Rulebook",
+		"Part1Modular"
+	]
+}

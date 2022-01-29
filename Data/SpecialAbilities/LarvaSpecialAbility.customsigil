@@ -1,0 +1,63 @@
+{
+	"@type": "ZergMod.Scripts.Data.Sigils.LarvaSpecialAbilityData",
+	"cardEvolutions": [
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Zerglings",
+			"weight": 40
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Mutalisk",
+			"weight": 30
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Roach",
+			"weight": 20
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Drone",
+			"weight": 20
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Hydralisk",
+			"weight": 20
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Scourge",
+			"weight": 20
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Corruptor",
+			"weight": 20
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Baneling",
+			"weight": 20
+		},
+		{
+			"@type": "ZergMod.Scripts.WeightData",
+			"cardName": "Ultralisk",
+			"weight": 10
+		}
+	],
+	"turnsUntilEvolve": 1,
+	"iconType": "CardsInHand",
+	"power": 0,
+	"priority": 0,
+	"learnText": "",
+	"name": "Larva",
+	"ruleBookName": "Larva",
+	"ruleDescription": "The Larva will evolve into a random Zerg when it matures.",
+	"iconPath": "Artwork/Cards/larva.png",
+	"metaCategories": [
+		"Part1Rulebook",
+		"Part1Modular"
+	]
+}

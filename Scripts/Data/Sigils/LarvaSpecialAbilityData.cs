@@ -7,13 +7,6 @@ namespace ZergMod.Scripts.Data.Sigils
     [Serializable]
     public class LarvaSpecialAbilityData : SpecialAbilityData
     {
-        [Serializable]
-        public class WeightData
-        {
-            public string cardName = "";
-            public int weight = 0;
-        }
-        
         [SerializeField]
         public List<WeightData> cardEvolutions = new List<WeightData>()
         {
@@ -25,5 +18,16 @@ namespace ZergMod.Scripts.Data.Sigils
         };
 
         public int turnsUntilEvolve;
+
+        public int TotalWeights { get; private set; } 
+
+        public override void OnPostLoad()
+        {
+            cardEvolutions.Sort((a,b)=>a.weight - b.weight);
+            foreach (WeightData data in cardEvolutions)
+            {
+                TotalWeights += data.weight;
+            }
+        }
     }
 }
