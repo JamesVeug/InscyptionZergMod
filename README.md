@@ -46,7 +46,6 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Abduct** - Whenever a card bearing this sigil is played, you may move any enemy creature to the nearest empty space.
 - **Armored** - All attacks this creature receives are reduced by 1 damage.
 - **Blood Bank** - Whenever a card bearing this sigil is sacrificed to summon another card, the cost is reduced from this creature’s current health.
-- **Dead** - A card bearing this sigil can not be Sacrificed, Merged or buffed at the Fire Pit.
 - **Detector** - As long as a card bearing this sigil is on the board, all Waterborne creatures are revealed and can be attacked as normal.
 - **Double Attack** - Whenever a card bearing this sigil attacks a creature and that creature survives, this creature will attack a second time.
 - **Explode** - When a card bearing this sigil attacks, the damage is also applied to the creatures adjacent to the target. This creature then perishes.
