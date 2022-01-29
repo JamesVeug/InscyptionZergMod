@@ -5,42 +5,42 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 
 ### Includes:
 - 30 New Cards:
-- 15 New Sigils:
+- 14 New Sigils:
 - 5 New Special Abilities:
 
 ### Cards:
-- **Baneling** - 3,1 - ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) Sigils: Explode.
-- **Corruptor** - 2,3 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Airborne. Evolves into Devourer
-- **Devourer** - 3,3 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Airborne, Armored.
-- **Drone** - 1,1 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Bone Digger, Fledgling. Evolves into Crawler Forest
-- **Guardian** - 3,5 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Sniper.
-- **Hydralisk** - 2,2 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Double Attack. Evolves into Lurker
-- **Larva** - 0,3 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Fledgling. Specials: Larva.
-- **Lurker** - 2,2 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Waterborne, Splash Damage.
-- **Mutalisk** - 1,3 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Ricochet, Regenerate. Evolves into Guardian
-- **Overlord** - 0,2 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Many Lives, Mighty Leap. Evolves into Overseer
-- **Overseer** - 0,6 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Stinky, Detector.
-- **Primal Igniter** - 2,4 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Splash Damage. Specials: Primal Zerg.
-- **Primal Ravasaur** - 3,3 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Specials: Primal Zerg
-- **Primal Roach** - 2,3 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Armored. Specials: Primal Zerg.
-- **Primal Zergling** - 1,2 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Specials: Primal Zerg
-- **Ravager** - 2,2 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Sniper.
-- **Roach** - 2,3 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Regenerate. Evolves into Ravager
-- **Scourge** - 3,1 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Airborne, Explode.
-- **Strange Artifact** - 0,1 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Bone King, Worthy Sacrifice.
-- **Swarm Host** - 0,2 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Waterborne, Spawn Locust.
-- **Zerglings** - 1,2 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Double Attack. Evolves into Baneling Specials: Zergling Swarm.
+- **Baneling** - 3,1 - <img align="center" src="https://tinyurl.com/2p86btxk"> <img align="center" src="https://tinyurl.com/2p86btxk"> Sigils: Explode. Tribes: Insect.
+- **Corruptor** - 2,3 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Airborne. Evolves into Devourer Tribes: Insect.
+- **Devourer** - 3,3 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Airborne, Armored. Tribes: Insect.
+- **Drone** - 1,1 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Bone Digger, Bone Digger. Evolves into Crawler Forest Tribes: Insect.
+- **Guardian** - 3,5 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Sniper. Tribes: Insect.
+- **Hydralisk** - 2,2 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Double Attack. Evolves into Lurker Tribes: Insect.
+- **Larva** - 0,1 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Fledgling, Nano Armor. Specials: Larva Traits: KillsSurvivors. Tribes: Insect.
+- **Lurker** - 2,2 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Waterborne, Splash Damage. Tribes: Insect.
+- **Mutalisk** - 1,3 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Ricochet, Regenerate. Evolves into Guardian Tribes: Insect.
+- **Overlord** - 0,2 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Many Lives, Mighty Leap. Evolves into Overseer Tribes: Insect.
+- **Overseer** - 0,6 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Stinky, Detector. Tribes: Insect.
+- **Primal Ravasaur** - 3,2 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Specials: Primal Zerg Tribes: Insect.
+- **Primal Roach** - 2,2 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Armored. Specials: Primal Zerg. Tribes: Insect.
+- **Primal Zergling** - 1,2 - <img align="center" src="https://tinyurl.com/34daekbw"> Specials: Primal Zerg Tribes: Insect.
+- **Ravager** - 2,2 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Sniper. Tribes: Insect.
+- **Roach** - 2,3 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Regenerate. Evolves into Ravager Tribes: Insect.
+- **Scourge** - 3,1 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Airborne, Explode. Tribes: Insect.
+- **Strange Artifact** - 0,1 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Bone King, Worthy Sacrifice. Traits: Goat.
+- **Swarm Host** - 0,2 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Waterborne, Spawn Locust. Tribes: Insect.
+- **Zerglings** - 1,2 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Double Attack. Evolves into Baneling Specials: Zergling Swarm. Tribes: Insect.
 
 ### Rare Cards:
-- **Brood lord** - 0,6 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Swarm Seeds. Specials: Brood Lord.
-- **Dehaka** - 1,2 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Regenerate. Specials: Collect Essence., Primal Zerg
-- **Infested Terran** - 1,2 - ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) Sigils: Brittle, Fecundity.
-- **Infestor** - 1,1 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Waterborne, Fish Hook.
-- **Leviathan** - 0,20 - ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) ![Bone Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone.png) Sigils: Blood Bank, Summon Zerg.
-- **Queen** - 1,3 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Spawn Larva.
-- **Queen of Blades** - 2,6 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Bifurcated Strike, Splash Damage.
-- **Ultralisk** - 3,5 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Armored, Splash Damage.
-- **Viper** - 2,1 - ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) ![Blood Cost](https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_blood.png) Sigils: Abduct.
+- **Brood lord** - 0,6 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Swarm Seeds. Specials: Brood Lord. Tribes: Insect.
+- **Dehaka** - 2,2 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Regenerate. Specials: Collect Essence., Primal Zerg Tribes: Insect.
+- **Infested Terran** - 1,2 - <img align="center" src="https://tinyurl.com/2p86btxk"> <img align="center" src="https://tinyurl.com/2p86btxk"> Sigils: Brittle, Fecundity. Tribes: Insect.
+- **Infestor** - 1,1 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Waterborne, Fish Hook. Tribes: Insect.
+- **Leviathan** - 0,20 - <img align="center" src="https://tinyurl.com/2p86btxk"><img align="center" src="https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone_8.png"> Sigils: Blood Bank, Summon Zerg. Tribes: Insect.
+- **Primal Igniter** - 3,4 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Splash Damage. Specials: Primal Zerg. Tribes: Insect.
+- **Queen** - 1,3 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Spawn Larva. Tribes: Insect.
+- **Queen of Blades** - 2,6 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Bifurcated Strike, Splash Damage. Tribes: Insect.
+- **Ultralisk** - 3,5 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Armored, Splash Damage. Tribes: Insect.
+- **Viper** - 2,1 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Abduct. Tribes: Insect.
 
 ### Sigils:
 - **Abduct** - Whenever a card bearing this sigil is played, you may move any enemy creature to the nearest empty space.
@@ -94,6 +94,47 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 # Update notes:
 
+## `Version: 1.1.0 - 29/1/2022`
+### Added:
+- General
+  - Added Dependency: Kopie_RuleBook_Expender to view descriptions of Act 2/3 sigils
+  - Added Dependency: Multiple_Sigil_Render_Fix to view more than 2 base sigils on 1 card
+
+### Changes:
+- General
+  - Removed some Logs coming up in console
+- Dehaka
+  - Increased Damage from 1 to 2
+- Larva
+  - Replaced Fledgling with Nano Shield
+- Drone
+  - Health decreased from 3 to 1
+  - Replaced Fledgling with Bone Digger
+- Primal Igniter
+  - Now Rare
+  - Damage increased from 2 to 3
+  - Blood increased from 2 to 3
+- Ravasaur
+  - Health decreased from 3 to 2
+- Primal Roach
+  - Health decreased from 3 to 2
+- Queen of Blades
+  - Damage increased from 2 to 3
+- Summon Zerg
+  - Balanced change to get certain cards
+- Larva Special Ability
+  - Balanced change to get certain cards
+
+### Fixes:
+- General
+  - Fixed sigils spamming config view
+- Summon Zerg
+  - Fixed it always giving the same card
+
+<details>
+  <summary>See all Changes</summary>
+
+
 ## `Version: 1.0.0 - 25/1/2022`
 ### Changes:
 - Queen of Blades
@@ -105,9 +146,6 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 - Blood Bank
   - Fixed not working with triple blood
   - Fixed sacrificing with other cards still taking full hp
-
-<details>
-  <summary>See all Changes</summary>
 
 
 ## `Version: 0.11.0 - 17/1/2022`
@@ -235,8 +273,8 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 - Mutalisk
   - Added Regenerate
 - Hydralisk
-    - Damage reduced from 3 to 2
-    - Added Double Attack
+  - Damage reduced from 3 to 2
+  - Added Double Attack
 - Strange Artifact
   - Can no longer Kill Survivors
 - Squirrel
