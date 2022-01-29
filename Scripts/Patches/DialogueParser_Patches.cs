@@ -11,7 +11,6 @@ namespace ZergMod.Scripts.Patches
         public static bool Prefix(DialogueParser __instance, string code, Color defaultColor, ref Color __result)
         {
             string stringValue = DialogueParser.GetStringValue(code, "c");
-            Plugin.Log.LogInfo($"stringValue: '{stringValue}'");
             switch (stringValue)
             {
                 case "purple":

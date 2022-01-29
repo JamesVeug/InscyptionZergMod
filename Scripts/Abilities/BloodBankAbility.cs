@@ -46,7 +46,6 @@ namespace ZergMod.Scripts.Abilities
 			// Record how much blood has been sacrificed before use
 			int bloodCost = GetValueOfSacrifice(slot);
 			m_totalBloodSacrificed += bloodCost;
-			Plugin.Log.LogInfo($"[BloodBankAbility] Recorded blood: {bloodCost} total {m_totalBloodSacrificed}");
 			yield return null;
 		}
 
