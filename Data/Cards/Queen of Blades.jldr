@@ -9,7 +9,7 @@
 	"onePerDeck": true,
 	"temple": "Nature",
 	"tribes": ["Insect"],
-	"baseAttack": 2,
+	"baseAttack": 3,
 	"baseHealth": 6,
 	"bloodCost": 4,
 	"bonesCost": 0,
