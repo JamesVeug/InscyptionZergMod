@@ -6,6 +6,8 @@
     "dependencies": [
         "BepInEx-BepInExPack_Inscryption-5.4.1701",
         "API_dev-API-1.13.0",
+        "Kopie-Kopie_RuleBook_Expender-3.1.0",
+        "Memez4Life-Multiple_Sigil_Render_Fix-1.0.9",
         "MADH95Mods-JSONCardLoader-1.7.2"
     ]
 }
