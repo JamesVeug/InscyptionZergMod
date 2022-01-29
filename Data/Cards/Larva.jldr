@@ -12,7 +12,7 @@
 	"tribes": ["Insect"],
 	"traits": ["KillsSurvivors"],
 	"baseAttack": 0,
-	"baseHealth": 3,
+	"baseHealth": 1,
 	"bloodCost": 1,
 	"bonesCost": 0,
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
@@ -20,7 +20,8 @@
 	"texture": "JamesGames-ZergMod/Artwork/Cards/larva.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/larva_emit.png",
 	"abilities": [
-		"Evolve"
+		"Evolve",
+		"DeathShield"
 	],
 	"customSpecialAbilities": [
 		{
