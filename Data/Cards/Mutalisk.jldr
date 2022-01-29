@@ -20,11 +20,11 @@
 	"customAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
-			"name": "Ricochet"
+			"name": "Regenerate"
 		},
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
-			"name": "Regenerate"
+			"name": "Ricochet"
 		}
 	],
 	"evolution": {
