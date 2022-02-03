@@ -1,0 +1,20 @@
+{
+	"name": "Zealot",
+	"displayedName": "Zealot",
+	"description": "Wait... what?",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tribes": ["Bird"],
+	"baseAttack": 2,
+	"baseHealth": 2,
+	"bloodCost": 0,
+	"bonesCost": 4,
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_protoss.png"],
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/zealot.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/Zealot_emit.png"
+}

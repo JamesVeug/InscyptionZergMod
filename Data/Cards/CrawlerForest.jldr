@@ -11,18 +11,18 @@
 	"bloodCost": 0,
 	"bonesCost": 0,
 	"traits": ["Terrain"],
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [
 		"TerrainBackground"
 	],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/crawler_forest.png",
-	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/crawler_forest_emit.png",
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/crawler_forest.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/crawler_forest_emit.png",
 	"abilities": [
 		"Reach"
 	],
 	"customAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Detector"
 		}
 	],

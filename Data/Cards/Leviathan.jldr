@@ -13,19 +13,19 @@
 	"baseHealth": 20,
 	"bloodCost": 0,
 	"bonesCost": 8,
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [
 		"RareCardBackground"
 	],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/leviathan.png",
-	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/leviathan_emit.png",
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/leviathan.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/leviathan_emit.png",
 	"customAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Blood Bank"
 		},
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Summon Zerg"
 		}
 	],

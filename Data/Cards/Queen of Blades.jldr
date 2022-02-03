@@ -13,16 +13,16 @@
 	"baseHealth": 6,
 	"bloodCost": 4,
 	"bonesCost": 0,
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [
 		"RareCardBackground"
 	],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/kerrigan.png",
-	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/kerrigan_emit.png",
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/kerrigan.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/kerrigan_emit.png",
 	"abilities": ["SplitStrike"],
 	"customAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Splash Damage"
 		}
 	],

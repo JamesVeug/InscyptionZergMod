@@ -1,5 +1,8 @@
+using System.Collections.Generic;
+using APIPlugin;
 using BepInEx;
 using BepInEx.Logging;
+using DiskCardGame;
 using HarmonyLib;
 using ZergMod.Scripts.Abilities;
 using ZergMod.Scripts.Backgrounds;
@@ -12,10 +15,10 @@ namespace ZergMod
     [BepInDependency("cyantist.inscryption.api", BepInDependency.DependencyFlags.HardDependency)]
     public class Plugin : BaseUnityPlugin
     {
-	    public const string PluginGuid = "jamesgames.inscryption.zergmod";
-	    public const string PluginName = "Zerg Mod";
-	    public const string PluginVersion = "1.1.0.0";
-	    public const string DecalPath = "Artwork/watermark.png";
+	    public const string PluginGuid = "jamesgames.inscryption.zergmodkaycee";
+	    public const string PluginName = "Zerg Mod Kaycee";
+	    public const string PluginVersion = "1.1.1.0";
+	    public const string DecalPath = "Artwork/watermark_zerg.png";
 
         public static string Directory;
         public static ManualLogSource Log;
@@ -55,8 +58,25 @@ namespace ZergMod
 
             // Cards
             XelNagaArtifact.Initialize();
+
+            //ChangeSquirrelToLarva();
             
             Logger.LogInfo($"Loaded {PluginName}!");
+        }
+        
+        public void ChangeSquirrelToLarva()
+        {
+	        List<Ability> abilities = new List<Ability> { };
+
+	        new CustomCard("Squirrel")
+	        {
+		        displayedName = "Marine",
+		        baseAttack = 1, 
+		        baseHealth = 1, 
+		        abilities = abilities,
+		        decals = Utils.GetDecals(),
+		        tex = Utils.GetTextureFromPath("Artwork/Cards/marine.png")
+	        };
         }
     }
 }

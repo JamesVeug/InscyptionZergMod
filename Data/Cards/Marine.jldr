@@ -1,0 +1,20 @@
+{
+	"name": "Marine",
+	"displayedName": "Marine",
+	"description": "How did that in there?",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tribes": ["Canine"],
+	"baseAttack": 1,
+	"baseHealth": 1,
+	"bloodCost": 0,
+	"bonesCost": 2,
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_terran.png"],
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/Marine.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/Marine_emit.png"
+}

@@ -12,13 +12,13 @@
 	"baseHealth": 1,
 	"bloodCost": 0,
 	"bonesCost": 2,
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/baneling.png",
-	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/baneling_emit.png",
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/baneling.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/baneling_emit.png",
 	"customAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Explode"
 		}
 	],

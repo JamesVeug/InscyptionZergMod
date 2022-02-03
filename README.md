@@ -94,6 +94,10 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 # Update notes:
 
+## `Version: 1.1.1 - 3/2/2022`
+### Changes:
+  - Added support for Kaycees mod
+
 ## `Version: 1.1.0 - 29/1/2022`
 ### Added:
 - General

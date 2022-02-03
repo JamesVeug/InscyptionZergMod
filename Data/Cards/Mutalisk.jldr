@@ -13,17 +13,17 @@
 	"baseHealth": 3,
 	"bloodCost": 2,
 	"bonesCost": 0,
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/mutalisk.png",
-	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/mutalisk_emit.png",
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/mutalisk.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/mutalisk_emit.png",
 	"customAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Regenerate"
 		},
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Ricochet"
 		}
 	],
@@ -33,6 +33,6 @@
 	},
 	"tail": {
 		"name": "a_mutalisk_wing",
-		"tailLostPortrait": "JamesGames-ZergMod/Artwork/Cards/mutalisk_nowing.png"
+		"tailLostPortrait": "JamesGames-ZergModKaycee/Artwork/Cards/mutalisk_nowing.png"
 	}
 }

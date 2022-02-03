@@ -10,7 +10,7 @@
 	"baseHealth": 2,
 	"bloodCost": 0,
 	"bonesCost": 0,
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/biomass.png"
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/biomass.png"
 }

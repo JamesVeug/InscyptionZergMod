@@ -12,16 +12,16 @@
 	"baseHealth": 2,
 	"bloodCost": 1,
 	"bonesCost": 0,
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/swarmhost.png",
-	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/swarmhost_emit.png",
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/swarmhost.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/swarmhost_emit.png",
 	"abilities": [
 		"Submerge"
 	],
 	"customAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Draw Locust's"
 		}
 	],

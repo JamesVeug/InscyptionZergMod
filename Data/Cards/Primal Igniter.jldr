@@ -12,24 +12,24 @@
 	"baseHealth": 4,
 	"bloodCost": 3,
 	"bonesCost": 0,
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [
 		"RareCardBackground"
 	],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_igniter.png",
-	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/primal_igniter_emit.png",
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/primal_igniter.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/primal_igniter_emit.png",
 	"tail": {
 		"name": "biomass"
 	},
 	"customSpecialAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "PrimalZerg"
 		}
 	],
 	"customAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Splash Damage"
 		}
 	]

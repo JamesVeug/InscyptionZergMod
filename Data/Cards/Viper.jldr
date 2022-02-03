@@ -12,15 +12,15 @@
 	"baseHealth": 1,
 	"bloodCost": 2,
 	"bonesCost": 0,
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [
 		"RareCardBackground"
 	],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/viper.png",
-	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/viper_emit.png",
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/viper.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/viper_emit.png",
 	"customAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Abduct"
 		}
 	],

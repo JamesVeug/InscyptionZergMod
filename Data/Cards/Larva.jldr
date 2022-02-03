@@ -15,17 +15,17 @@
 	"baseHealth": 1,
 	"bloodCost": 1,
 	"bonesCost": 0,
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/larva.png",
-	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/larva_emit.png",
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/larva.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/larva_emit.png",
 	"abilities": [
 		"Evolve",
 		"DeathShield"
 	],
 	"customSpecialAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Larva"
 		}
 	],

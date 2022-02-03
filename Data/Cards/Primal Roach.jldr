@@ -13,22 +13,22 @@
 	"baseHealth": 2,
 	"bloodCost": 2,
 	"bonesCost": 0,
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_roach.png",
-	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/primal_roach_emit.png",
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/primal_roach.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/primal_roach_emit.png",
 	"tail": {
 		"name": "biomass"
 	},
 	"customSpecialAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "PrimalZerg"
 		}
 	],
 	"customAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Armoured"
 		}
 	]

@@ -12,18 +12,18 @@
 	"baseHealth": 1,
 	"bloodCost": 2,
 	"bonesCost": 0,
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [
 		"RareCardBackground"
 	],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/infestor.png",
-	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/infestor_emit.png",
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/infestor.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/infestor_emit.png",
 	"abilities": [
 		"Submerge"
 	],
 	"customAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Fish Hook"
 		}
 	],

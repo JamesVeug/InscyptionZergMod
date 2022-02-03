@@ -13,10 +13,10 @@
 	"baseHealth": 3,
 	"bloodCost": 2,
 	"bonesCost": 0,
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/corruptor.png",
-	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/corruptor_emit.png",
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/corruptor.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/corruptor_emit.png",
 	"abilities": [
 		"Flying"
 	],

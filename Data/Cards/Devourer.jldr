@@ -13,16 +13,16 @@
 	"baseHealth": 3,
 	"bloodCost": 3,
 	"bonesCost": 0,
-	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
 	"appearanceBehaviour": [],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/devourer.png",
-	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/devourer_emit.png",
+	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/devourer.png",
+	"emissionTexture": "JamesGames-ZergModKaycee/Artwork/Cards/devourer_emit.png",
 	"abilities": [
 		"Flying"
 	],
 	"customAbilities": [
 		{
-			"GUID": "jamesgames.inscryption.zergmod",
+			"GUID": "jamesgames.inscryption.zergmodkaycee",
 			"name": "Armoured"
 		}
 	],
