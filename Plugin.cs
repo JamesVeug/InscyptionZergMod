@@ -1,5 +1,8 @@
+using System.Collections.Generic;
+using APIPlugin;
 using BepInEx;
 using BepInEx.Logging;
+using DiskCardGame;
 using HarmonyLib;
 using ZergMod.Scripts.Abilities;
 using ZergMod.Scripts.Backgrounds;
@@ -56,8 +59,23 @@ namespace ZergMod
 
             // Cards
             XelNagaArtifact.Initialize();
+
+            //ChangeSquirrelToLarva();
             
             Logger.LogInfo($"Loaded {PluginName}!");
+        }
+        
+        public void ChangeSquirrelToLarva()
+        {
+	        List<Ability> abilities = new List<Ability> { StrafeCreepTumorAbility.ability };
+
+	        new CustomCard("Squirrel")
+	        {
+		        baseAttack = 1, 
+		        baseHealth = 10, 
+		        abilities = abilities,
+		        decals = Utils.GetDecals(),
+	        };
         }
     }
 }
