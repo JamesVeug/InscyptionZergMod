@@ -4,6 +4,7 @@ using BepInEx;
 using BepInEx.Logging;
 using DiskCardGame;
 using HarmonyLib;
+using InscryptionAPI.Card;
 using ZergMod.Scripts.Abilities;
 using ZergMod.Scripts.Backgrounds;
 using ZergMod.Scripts.Cards;
@@ -69,13 +70,11 @@ namespace ZergMod
         {
 	        List<Ability> abilities = new List<Ability> { StrafeCreepTumorAbility.ability };
 
-	        new CustomCard("Squirrel")
-	        {
-		        baseAttack = 1, 
-		        baseHealth = 10, 
-		        abilities = abilities,
-		        decals = Utils.GetDecals(),
-	        };
+	        CardInfo card = CardManager.BaseGameCards.CardByName("Squirrel");
+	        card.baseAttack = 1;
+	        card.baseHealth = 10;
+	        card.abilities = abilities;
+	        card.decals = Utils.GetDecals();
         }
     }
 }

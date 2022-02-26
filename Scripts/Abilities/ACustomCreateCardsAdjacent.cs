@@ -24,7 +24,7 @@ namespace ZergMod.Scripts.Abilities
 
         protected static Ability InitializeBase(Type declaringType)
         {
-            Utils.InitializeAbility<T>(declaringType, out NewAbility newAbility);
+            Utils.InitializeAbility<T>(declaringType, out AbilityInfo newAbility);
             return newAbility.ability;
         }
     }

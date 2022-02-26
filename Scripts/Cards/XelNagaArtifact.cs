@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using APIPlugin;
 using DiskCardGame;
+using InscryptionAPI.Card;
 using ZergMod.Scripts.Backgrounds;
 
 namespace ZergMod.Scripts.Cards
@@ -32,23 +33,23 @@ namespace ZergMod.Scripts.Cards
             
             List<Trait> traits = new List<Trait> { Trait.Goat };
 
-            NewCard.Add(name: ID,
-                displayedName: DisplayName,
-                baseAttack: BaseAttack,
-                baseHealth: BaseHealth,
-                metaCategories: metaCategories,
-                cardComplexity: CardComplexity.Simple,
-                temple: CardTemple.Nature,
-                description: Description,
-                bloodCost: BloodCost,
-                bonesCost: BoneCost,
-                abilities: abilities,
-                appearanceBehaviour: appearanceBehaviour,
-                defaultTex: Utils.GetTextureFromPath(TextureFile),
-                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
-                traits: traits,
-                decals: Utils.GetDecals(),
-                onePerDeck:true);
+            CardInfo card = CardManager.New(name: ID,
+                displayName: DisplayName,
+                attack: BaseAttack,
+                health: BaseHealth,
+                description: Description);
+
+            card.metaCategories = metaCategories;
+            card.cardComplexity = CardComplexity.Simple;
+            card.temple = CardTemple.Nature;
+            card.SetCost(BloodCost, BoneCost);
+            card.abilities = abilities;
+            card.appearanceBehaviour = appearanceBehaviour;
+            card.SetPortrait(Utils.GetTextureFromPath(TextureFile));
+            card.SetEmissivePortrait(Utils.GetTextureFromPath(EmitTextureFile));
+            card.traits = traits;
+            card.decals = Utils.GetDecals();
+            card.onePerDeck = true;
         }
     }
 }

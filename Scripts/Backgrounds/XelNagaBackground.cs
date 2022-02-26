@@ -1,5 +1,6 @@
 ﻿using APIPlugin;
 using DiskCardGame;
+using InscryptionAPI.Card;
 
 namespace ZergMod.Scripts.Backgrounds
 {
@@ -11,8 +12,8 @@ namespace ZergMod.Scripts.Backgrounds
 
         public static void Initialize()
         {
-            NewCardAppearanceBehaviour newBackgroundBehaviour = NewCardAppearanceBehaviour.AddNewBackground(typeof(XelNagaBackground), "XelNagaBackground");
-            CustomAppearance = newBackgroundBehaviour.Appearance;
+            CardAppearanceBehaviourManager.FullCardAppearanceBehaviour newBackgroundBehaviour = CardAppearanceBehaviourManager.Add(Plugin.PluginGuid, "XelNagaBackground", typeof(XelNagaBackground));
+            CustomAppearance = newBackgroundBehaviour.Id;
         }
         
         public override void ApplyAppearance()
