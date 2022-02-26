@@ -25,7 +25,5 @@
 			"name": "Explode"
 		}
 	],
-	"tail": {
-		"name": "biomass"
-	}
+	"tailName": "biomass"
 }

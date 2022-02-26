@@ -27,7 +27,5 @@
 			"name": "Fish Hook"
 		}
 	],
-	"tail": {
-		"name": "biomass"
-	}
+	"tailName": "biomass"
 }

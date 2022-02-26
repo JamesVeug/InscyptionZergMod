@@ -17,9 +17,7 @@
 	"appearanceBehaviour": [],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_zergling.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/primal_zergling_emit.png",
-	"tail": {
-		"name": "biomass"
-	},
+	"tailName": "biomass",
 	"customSpecialAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",

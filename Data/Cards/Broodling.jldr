@@ -16,7 +16,5 @@
 	"abilities": [
 		"Brittle"
 	],
-	"tail": {
-		"name": "biomass"
-	}
+	"tailName": "biomass"
 }

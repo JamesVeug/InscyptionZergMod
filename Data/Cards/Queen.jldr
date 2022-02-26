@@ -24,7 +24,5 @@
 			"name": "Spawn Larva"
 		}
 	],
-	"tail": {
-		"name": "biomass"
-	}
+	"tailName": "biomass"
 }

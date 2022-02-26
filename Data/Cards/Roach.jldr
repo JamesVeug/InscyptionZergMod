@@ -23,11 +23,7 @@
 			"name": "Regenerate"
 		}
 	],
-	"evolution": {
-		"name": "Ravager",
-		"turnsToEvolve": 1
-	},
-	"tail": {
-		"name": "biomass"
-	}
+	"evolveIntoName": "Ravager",
+	"evolveTurns": 1,
+	"tailName": "biomass"
 }

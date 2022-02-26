@@ -18,9 +18,7 @@
 	],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_igniter.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/primal_igniter_emit.png",
-	"tail": {
-		"name": "biomass"
-	},
+	"tailName": "biomass",
 	"customSpecialAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",

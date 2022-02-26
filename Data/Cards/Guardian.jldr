@@ -20,7 +20,5 @@
 	"abilities": [
 		"Sniper"
 	],
-	"tail": {
-		"name": "biomass"
-	}
+	"tailName": "biomass"
 }

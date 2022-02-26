@@ -29,7 +29,5 @@
 			"name": "Summon Zerg"
 		}
 	],
-	"tail": {
-		"name": "biomass"
-	}
+	"tailName": "biomass"
 }

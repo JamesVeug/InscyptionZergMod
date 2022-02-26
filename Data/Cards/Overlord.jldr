@@ -22,11 +22,7 @@
 		"Sacrificial",
 		"Reach"
 	],
-	"evolution": {
-		"name": "Overseer",
-		"turnsToEvolve": 1
-	},
-	"tail": {
-		"name": "biomass"
-	}
+	"evolveIntoName": "Overseer",
+	"evolveTurns": 1,
+	"tailName": "biomass"
 }

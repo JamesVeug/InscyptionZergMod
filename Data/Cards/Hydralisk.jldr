@@ -24,11 +24,7 @@
 			"name": "Double Attack"
 		}
 	],
-	"evolution": {
-		"name": "Lurker",
-		"turnsToEvolve": 1
-	},
-	"tail": {
-		"name": "biomass"
-	}
+	"evolveIntoName": "Lurker",
+	"evolveTurns": 1,
+	"tailName": "biomass"
 }

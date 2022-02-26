@@ -21,11 +21,7 @@
 		"BoneDigger",
 		"BoneDigger"
 	],
-	"evolution": {
-		"name": "CrawlerForest",
-		"turnsToEvolve": 1
-	},
-	"tail": {
-		"name": "biomass"
-	}
+	"evolveIntoName": "CrawlerForest",
+	"evolveTurns": 1,
+	"tailName": "biomass"
 }

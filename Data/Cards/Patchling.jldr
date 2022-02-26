@@ -17,7 +17,5 @@
 		"RareCardBackground"
 	],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/zergling_2.png",
-	"tail": {
-		"name": "biomass"
-	}
+	"tailName": "biomass"
 }

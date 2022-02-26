@@ -35,7 +35,5 @@
 			"name": "PrimalZerg"
 		}
 	],
-	"tail": {
-		"name": "biomass"
-	}
+	"tailName": "biomass"
 }

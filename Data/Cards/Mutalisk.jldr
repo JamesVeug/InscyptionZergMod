@@ -27,12 +27,8 @@
 			"name": "Ricochet"
 		}
 	],
-	"evolution": {
-		"name": "Guardian",
-		"turnsToEvolve": 1
-	},
-	"tail": {
-		"name": "a_mutalisk_wing",
-		"tailLostPortrait": "JamesGames-ZergMod/Artwork/Cards/mutalisk_nowing.png"
-	}
+	"evolveIntoName": "Guardian",
+	"evolveTurns": 1,
+	"tailName": "a_mutalisk_wing",
+	"tailLostPortrait": "JamesGames-ZergMod/Artwork/Cards/mutalisk_nowing.png"
 }

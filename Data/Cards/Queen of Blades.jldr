@@ -26,7 +26,5 @@
 			"name": "Splash Damage"
 		}
 	],
-	"tail": {
-		"name": "biomass"
-	}
+	"tailName": "biomass"
 }

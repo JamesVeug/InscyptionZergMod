@@ -20,11 +20,7 @@
 	"abilities": [
 		"Flying"
 	],
-	"evolution": {
-		"name": "Devourer",
-		"turnsToEvolve": 1
-	},
-	"tail": {
-		"name": "biomass"
-	}
+	"evolveIntoName": "Devourer",
+	"evolveTurns": 1,
+	"tailName": "biomass"
 }

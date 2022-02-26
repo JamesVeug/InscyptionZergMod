@@ -26,7 +26,5 @@
 			"name": "Armoured"
 		}
 	],
-	"tail": {
-		"name": "biomass"
-	}
+	"tailName": "biomass"
 }

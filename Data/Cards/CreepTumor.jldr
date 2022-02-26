@@ -18,7 +18,5 @@
 		"Submerge",
 		"BuffNeighbours"
 	],
-	"tail": {
-		"name": "biomass"
-	}
+	"tailName": "biomass"
 }

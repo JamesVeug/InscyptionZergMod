@@ -24,9 +24,7 @@
 			"name": "Draw Broodling's"
 		}
 	],
-	"tail": {
-		"name": "biomass"
-	},
+	"tailName": "biomass",
 	"customSpecialAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",

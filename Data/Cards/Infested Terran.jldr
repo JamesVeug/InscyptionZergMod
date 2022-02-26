@@ -22,7 +22,5 @@
 		"Brittle",
 		"DrawCopy"
 	],
-	"tail": {
-		"name": "biomass"
-	}
+	"tailName": "biomass"
 }

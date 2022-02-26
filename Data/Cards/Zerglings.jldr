@@ -28,11 +28,7 @@
 			"name": "Zergling Swarm"
 		}
 	],
-	"evolution": {
-		"name": "Baneling",
-		"turnsToEvolve": 1
-	},
-	"tail": {
-		"name": "biomass"
-	}
+	"evolveIntoName": "Baneling",
+	"evolveTurns": 1,
+	"tailName": "biomass"
 }
