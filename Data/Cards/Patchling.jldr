@@ -12,11 +12,11 @@
 	"baseHealth": 1,
 	"bloodCost": 0,
 	"bonesCost": 0,
-	"decals": ["JamesGames-ZergModKaycee/Artwork/watermark_zerg.png"],
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"appearanceBehaviour": [
 		"RareCardBackground"
 	],
-	"texture": "JamesGames-ZergModKaycee/Artwork/Cards/zergling_2.png",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/zergling_2.png",
 	"tail": {
 		"name": "biomass"
 	}
