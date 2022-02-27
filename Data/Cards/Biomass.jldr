@@ -5,7 +5,7 @@
 	"metaCategories": [],
 	"cardComplexity": "Simple",
 	"temple": "Nature",
-	"tribes": [],
+	"tribes": ["Insect"],
 	"baseAttack": 0,
 	"baseHealth": 2,
 	"bloodCost": 0,
