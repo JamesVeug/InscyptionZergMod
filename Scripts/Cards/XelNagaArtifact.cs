@@ -30,8 +30,10 @@ namespace ZergMod.Scripts.Cards
             List<Ability> abilities = new List<Ability>{ };
             abilities.Add(Ability.QuadrupleBones);
             abilities.Add(Ability.TripleBlood);
-            
+
             List<Trait> traits = new List<Trait> { Trait.Goat };
+            
+            List<Tribe> tribes = new List<Tribe> { Tribe.Insect, Tribe.Bird, Tribe.Canine };
 
             CardInfo card = CardManager.New(name: ID,
                 displayName: DisplayName,
@@ -48,6 +50,7 @@ namespace ZergMod.Scripts.Cards
             card.SetPortrait(Utils.GetTextureFromPath(TextureFile));
             card.SetEmissivePortrait(Utils.GetTextureFromPath(EmitTextureFile));
             card.traits = traits;
+            card.tribes = tribes;
             card.decals = Utils.GetDecals();
             card.onePerDeck = true;
         }
