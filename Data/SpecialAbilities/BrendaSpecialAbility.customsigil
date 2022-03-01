@@ -1,0 +1,14 @@
+{
+	"@type": "ZergMod.Scripts.Data.Sigils.BrendaSpecialAbilityData",
+	"power": 0,
+	"priority": 0,
+	"learnText": "",
+	"name": "Brenda",
+	"ruleBookName": "",
+	"ruleDescription": "",
+	"iconPath": "Artwork/Cards/Brenda.png",
+	"metaCategories": [
+		"Part1Rulebook",
+		"Part1Modular"
+	]
+}

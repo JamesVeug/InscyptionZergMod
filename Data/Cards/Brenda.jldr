@@ -24,6 +24,12 @@
 			"name": "StrafeCreepTumor"
 		}
 	],
+	"customSpecialAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Brenda"
+		}
+	],
 	"tail": {
 		"name": "biomass"
 	}
