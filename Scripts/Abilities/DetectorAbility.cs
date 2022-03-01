@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using DiskCardGame;
-using TinyJSON;
 using UnityEngine;
 using ZergMod.Scripts.Data.Sigils;
 
