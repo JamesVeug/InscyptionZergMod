@@ -76,6 +76,17 @@ namespace ZergMod.Scripts.Abilities
             yield return null;
         }
 
+        public override bool RespondsToOtherCardDie(PlayableCard card, CardSlot deathSlot, bool fromCombat, PlayableCard killer)
+        {
+            return attackedSlots.Contains(deathSlot.Index);
+        }
+
+        public override IEnumerator OnOtherCardDie(PlayableCard card, CardSlot deathSlot, bool fromCombat, PlayableCard killer)
+        {
+            attackedSlots.Remove(deathSlot.Index);
+            yield return null;
+        }
+
         public override IEnumerator OnOtherCardDealtDamage(PlayableCard attacker, int amount, PlayableCard target)
         {
             attackedSlots.Add(target.slot.Index);
