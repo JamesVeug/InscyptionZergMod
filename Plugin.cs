@@ -57,6 +57,7 @@ namespace ZergMod
             BloodBankAbility.Initialize(typeof(BloodBankAbility));
             SummonZergAbility.Initialize(typeof(SummonZergAbility));
             StrafeCreepTumorAbility.Initialize(typeof(StrafeCreepTumorAbility));
+            SwarmAbility.Initialize(typeof(SwarmAbility));
 
             // Cards
             XelNagaArtifact.Initialize();
