@@ -31,7 +31,8 @@ namespace ZergMod.Scripts.Cards
             abilities.Add(Ability.TripleBlood);
             
             List<Trait> traits = new List<Trait> { Trait.Goat };
-
+            List<Tribe> tribes = new List<Tribe>() { Tribe.Insect, Tribe.Bird, Tribe.Canine };
+            
             NewCard.Add(name: ID,
                 displayedName: DisplayName,
                 baseAttack: BaseAttack,
@@ -47,6 +48,7 @@ namespace ZergMod.Scripts.Cards
                 defaultTex: Utils.GetTextureFromPath(TextureFile),
                 emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
                 traits: traits,
+                tribes: tribes,
                 decals: Utils.GetDecals(),
                 onePerDeck:true);
         }
