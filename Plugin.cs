@@ -4,6 +4,7 @@ using BepInEx;
 using BepInEx.Logging;
 using DiskCardGame;
 using HarmonyLib;
+using SpritzMod.Scripts;
 using ZergMod.Scripts.Abilities;
 using ZergMod.Scripts.Backgrounds;
 using ZergMod.Scripts.Cards;
@@ -61,6 +62,9 @@ namespace ZergMod
 
             // Cards
             XelNagaArtifact.Initialize();
+            
+            // Encounters
+            EvolveSequencer.Initialize();
 
             //ChangeSquirrelToLarva();
             

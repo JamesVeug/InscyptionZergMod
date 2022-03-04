@@ -68,6 +68,8 @@ namespace ZergMod
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
+            tex.filterMode = FilterMode.Point;
+
             /*if (!TextureToPath.TryGetValue(tex, out _))
             {
                 TextureToPath[tex] = path;
@@ -298,6 +300,28 @@ namespace ZergMod
             }
             if (fi == null) throw new ArgumentOutOfRangeException("propName", string.Format("Field {0} was not found in Type {1}", propName, obj.GetType().FullName));
             fi.SetValue(obj, val);
+        }
+        
+        public static GameObject FindObjectInChildren(GameObject parent, string name)
+        {
+            foreach (Transform child in parent.transform)
+            {
+                if (child.gameObject.name == name)
+                {
+                    return child.gameObject;
+                }
+            }
+            
+            foreach (Transform child in parent.transform)
+            {
+                GameObject foundChild = FindObjectInChildren(child.gameObject, name);
+                if (foundChild != null)
+                {
+                    return foundChild;
+                }
+            }
+
+            return null;
         }
     }
 }
