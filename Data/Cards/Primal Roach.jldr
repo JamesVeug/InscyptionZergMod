@@ -20,6 +20,10 @@
 	"tail": {
 		"name": "biomass"
 	},
+	"evolution": {
+		"name": "PrimalIgniter",
+		"turnsToEvolve": 1
+	},
 	"customSpecialAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",

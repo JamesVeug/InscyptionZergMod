@@ -20,6 +20,10 @@
 	"tail": {
 		"name": "biomass"
 	},
+	"evolution": {
+		"name": "PrimalRavasaur",
+		"turnsToEvolve": 1
+	},
 	"customSpecialAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
