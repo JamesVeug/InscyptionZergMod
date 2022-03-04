@@ -67,12 +67,12 @@ namespace ZergMod.Scripts.Abilities
 
         public override bool RespondsToDealDamage(int amount, PlayableCard target)
         {
-            return true;
+            return target != null;
         }
 
         public override IEnumerator OnDealDamage(int amount, PlayableCard target)
         {
-            attackedSlots.Add(target.slot.Index);
+            attackedSlots.Add(Utils.GetSlot(target).Index);
             yield return null;
         }
 
