@@ -16,7 +16,8 @@
 	"appearanceBehaviour": [
 		"RareCardBackground"
 	],
-	"texture": "JamesGames-ZergMod/Artwork/Cards/zergling_2.png",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/patchling.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/patchling_emit.png",
 	"tail": {
 		"name": "biomass"
 	}
