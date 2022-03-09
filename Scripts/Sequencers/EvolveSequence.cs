@@ -30,7 +30,9 @@ namespace SpritzMod.Scripts
             /*can be empty*/
             List<NodeData.SelectionCondition> generationPrerequisites = new List<NodeData.SelectionCondition>
             {
-	            
+	            new NodeData.WithinRegionIndexRange(1, int.MaxValue),
+	            new NodeData.WithinGridYRange(4, int.MaxValue),
+	            new NodeData.PreviousNodesContent(typeof(CardRemoveNodeData), false),
             };
             
             /*conditions at which the node always generates instead of other nodes, can be empty*/
