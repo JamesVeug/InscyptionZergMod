@@ -20,7 +20,7 @@ namespace ZergMod.Scripts.SpecialAbilities
             specialAbility = InitializeBase(declaringType);
         }
 
-        public override bool RespondsToSacrifice()
+        /*public override bool RespondsToSacrifice()
         {
             if (PlayableCard == null)
             {
@@ -75,7 +75,7 @@ namespace ZergMod.Scripts.SpecialAbilities
             demandingCard.Anim.StrongNegationEffect();
             
             yield return new WaitForSeconds(0.2f);
-        }
+        }*/
 
         public IEnumerator OnOtherSacrificed(PlayableCard playableCard)
         {
@@ -88,7 +88,6 @@ namespace ZergMod.Scripts.SpecialAbilities
                 }
             }
             
-            string dehaka = "Dehaka";
             foreach (CardModificationInfo mod in playableCard.Info.Mods)
             {
                 if(mod.fromTotem) continue;
@@ -105,26 +104,14 @@ namespace ZergMod.Scripts.SpecialAbilities
                     }
                 }
             }
-            /*foreach (CardModificationInfo mod in playableCard.TemporaryMods)
-            {
-                if(mod.fromTotem) continue;
-                
-                for (int i = 0; i < mod.abilities.Count; i++)
-                {
-                    if (!mods.Contains(mod.abilities[i]))
-                    {
-                        mods.Add(mod.abilities[i]);
-                    }
-                }
-            }*/
 
             if (mods.Count == 0)
             {
                 yield break;
             }
 
-            int random = UnityEngine.Random.Range(0, mods.Count);
-            Ability newAbility = mods[random];
+            mods.Sort(SortByPowerLevelDecending);
+            Ability newAbility = mods[0];
             CardModificationInfo clone = new CardModificationInfo()
             {
                 abilities = new List<Ability>()
@@ -133,12 +120,12 @@ namespace ZergMod.Scripts.SpecialAbilities
                 }
             };
 
-            //Plugin.Log.LogInfo("[PrimalSpecialAbility]");
-            
+            // Dehaka keeps the new mods permanently
+            // Other abilities get added temporarily
+            string dehaka = "Dehaka";
             bool isDehaka = PlayableCard.Info.name == dehaka;
             if (isDehaka)
             {
-                //Plugin.Log.LogInfo("[PrimalSpecialAbility] Dehaka");
                 clone.singletonId = dehaka + totalCardsSacrificed++;
                 
                 // Gross. What if we add a second?
@@ -152,26 +139,43 @@ namespace ZergMod.Scripts.SpecialAbilities
                 CardInfo info = RunState.Run.playerDeck.Cards.Find((a) => a.name == dehaka);
                 if (info != null)
                 {
-                    //Plugin.Log.LogInfo("[PrimalSpecialAbility] Updating deck");
                     List<CardModificationInfo> modificationInfos = info.Mods;
                     RemoveDehakaMod(modificationInfos, clone.singletonId);
                     modificationInfos.Add((CardModificationInfo)clone.Clone());
                     RunState.Run.playerDeck.UpdateModDictionary();
                 }
-                else
-                {
-                    //Plugin.Log.LogInfo("[PrimalSpecialAbility] Dehaka not in deck");
-                }
             }
             else
             {
-                //Plugin.Log.LogInfo("[PrimalSpecialAbility] Not Dehaka " + PlayableCard.Info.name);
                 PlayableCard.AddTemporaryMod(clone);
             }
             
             PlayableCard.Anim.StrongNegationEffect();
             yield return new WaitForSeconds(0.2f);
-            //Plugin.Log.LogInfo("[PrimalSpecialAbility] Done");
+        }
+
+        private int SortByPowerLevelDecending(Ability x, Ability y)
+        {
+            AbilityInfo xInfo = AbilitiesUtil.GetInfo(x);
+            AbilityInfo yInfo = AbilitiesUtil.GetInfo(y);
+            if (xInfo != null)
+            {
+                if (yInfo == null)
+                {
+                    return -1;
+                }
+
+                // Highest power level to the left
+                return yInfo.powerLevel - xInfo.powerLevel;
+            }
+
+            if (yInfo == null)
+            {
+                // No info for both
+                return 0;
+            }
+
+            return 1;
         }
 
         private static void RemoveDehakaMod(List<CardModificationInfo> infoMods, string cloneSingletonId)
