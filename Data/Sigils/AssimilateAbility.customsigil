@@ -1,0 +1,14 @@
+{
+	"@type": "ZergMod.Scripts.Data.Sigils.AssimilateData",
+	"power": 0,
+	"priority": 7,
+	"learnText": "Nowhere is far enough away.",
+	"name": "assimilate",
+	"ruleBookName": "Assimilate",
+	"ruleDescription": "When a card bearing this Sigil kills another card it, the killer will Evolve.",
+	"iconPath": "Artwork/Sigils/assimilate.png",
+	"metaCategories": [
+		"Part1Rulebook",
+		"Part1Modular"
+	]
+}

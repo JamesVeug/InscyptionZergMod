@@ -20,10 +20,6 @@
 	"tail": {
 		"name": "biomass"
 	},
-	"evolution": {
-		"name": "PrimalIgniter",
-		"turnsToEvolve": 1
-	},
 	"customSpecialAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
@@ -33,7 +29,15 @@
 	"customAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "assimilate"
+		},
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Armoured"
 		}
-	]
+	],
+	"evolution": {
+		"name": "PrimalIgniter",
+		"turnsToEvolve": 1
+	}
 }

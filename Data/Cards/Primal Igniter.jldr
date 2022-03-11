@@ -31,6 +31,10 @@
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Splash Damage"
+		},
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "assimilate"
 		}
 	]
 }
