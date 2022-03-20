@@ -2,12 +2,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using DiskCardGame;
-using NodeAPI;
+using InscryptionAPI.Encounters;
+using InscryptionAPI.Helpers;
 using UnityEngine;
 
 namespace ZergMod.Scripts
 {
-    public class EvolveSequencer : CustomSpecialNodeSequencer
+	public class EvolveSequencerNodeData : CustomNodeData
+	{
+		public override void Initialize()
+		{
+			// This node can only generate if the BaseDifficulty challenge is active
+			this.AddGenerationPrerequisite(() => AscensionSaveData.Data.ChallengeIsActive(AscensionChallenge.BaseDifficulty));
+        
+			// This node is forced to generate if more than one BaseDifficulty challenge is active
+			// and a deck trial node has been placed on the map already
+			this.AddForceGenerationCondition((y, nodes) => AscensionSaveData.Data.GetNumChallengesOfTypeActive(AscensionChallenge.BaseDifficulty) > 1 
+			                                               && nodes.Exists(n => n is DeckTrialNodeData));
+		}
+	}
+	
+    public class EvolveSequencer : MonoBehaviour, ICustomNodeSequence
     {
         private CardMergeSequencer sequencer = null;
         private CardSingleChoicesSequencer cardChoiceSequencer = null;
@@ -15,34 +30,16 @@ namespace ZergMod.Scripts
 
         public static void Initialize()
         {
-            /*Can be NewNode.MapNodeType.Other or NewNode.MapNodeType.SpecialCardChoice*/
-            NewNode.MapNodeType mapNodeType = NewNode.MapNodeType.SpecialCardChoice;
-
-            List<Texture2D> mapAnimationFrames = new List<Texture2D>
-            {
-                Utils.GetTextureFromPath("Artwork/Sequencers/evolve_1.png"),
-                Utils.GetTextureFromPath("Artwork/Sequencers/evolve_2.png"),
-                Utils.GetTextureFromPath("Artwork/Sequencers/evolve_3.png"),
-                Utils.GetTextureFromPath("Artwork/Sequencers/evolve_4.png")
-            };
-
-            /*can be empty*/
-            List<NodeData.SelectionCondition> generationPrerequisites = new List<NodeData.SelectionCondition>
-            {
-	            new NodeData.WithinRegionIndexRange(1, int.MaxValue),
-	            new NodeData.WithinGridYRange(2, int.MaxValue),
-            };
-            
-            /*conditions at which the node always generates instead of other nodes, can be empty*/
-            /*you can use something like new CustomPreviousNodesContent("Nodes_Name_For_Code_Purposes", false) (this type is built into nodeapi) for it to always generate once for debug*/
-            List<NodeData.SelectionCondition> forceGenerationConditions = new List<NodeData.SelectionCondition>
-            {
-	            
-            };
-            
-            new NewNode("EvolveSequence", mapNodeType , mapAnimationFrames, typeof(EvolveSequencer), 
-                generationPrerequisites,
-                forceGenerationConditions);
+	        NodeManager.Add<EvolveSequencer, EvolveSequencerNodeData>(
+		        new[]
+		        {
+			        TextureHelper.GetImageAsTexture("Artwork/Sequencers/evolve_1.png", typeof(EvolveSequencer).Assembly),
+			        TextureHelper.GetImageAsTexture("Artwork/Sequencers/evolve_2.png", typeof(EvolveSequencer).Assembly),
+			        TextureHelper.GetImageAsTexture("Artwork/Sequencers/evolve_3.png", typeof(EvolveSequencer).Assembly),
+			        TextureHelper.GetImageAsTexture("Artwork/Sequencers/evolve_4.png", typeof(EvolveSequencer).Assembly)
+		        },
+		        NodeManager.NodePosition.Act1Available
+	        );
         }
 
         private CardMergeSequencer CloneCardMergeSequence()
@@ -69,7 +66,7 @@ namespace ZergMod.Scripts
 	        eyeTexture = deckTrialSequencer.snakeEyeTexture;
         }
 
-        public override IEnumerator DoCustomSequence()
+        public IEnumerator ExecuteCustomSequence(CustomNodeData nodeData)
         {
             sequencer.hostSlot.Disable();
             sequencer.sacrificeSlot.Disable();
