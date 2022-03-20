@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using DiskCardGame;
 using InscryptionAPI.Helpers;
+using InscryptionAPI.Saves;
 using UnityEngine;
 using ZergMod.Scripts.Data.Sigils;
 
@@ -13,6 +14,12 @@ namespace ZergMod.Scripts.SpecialAbilities
     {
         public SpecialTriggeredAbility SpecialAbility => specialAbility;
         public static SpecialTriggeredAbility specialAbility = SpecialTriggeredAbility.None;
+
+        public static int SavedDehakaKills
+        {
+            get => ModdedSaveManager.SaveData.GetValueAsInt(Plugin.PluginGuid, "DehakaKills");
+            set => ModdedSaveManager.SaveData.SetValue(Plugin.PluginGuid, "DehakaKills", value);
+        }
         
         private static Dictionary<int, Sprite> m_dehakaImages = new Dictionary<int, Sprite>();
         private static int m_minDehakakillsForImages = int.MaxValue;
@@ -76,11 +83,11 @@ namespace ZergMod.Scripts.SpecialAbilities
 
             return false;
         }
-
+        
         public override IEnumerator OnDealDamage(int amount, PlayableCard target)
         {
             m_activated = true;
-            CustomSaveManager.SaveFile.DehakaKills++;
+            SavedDehakaKills = SavedDehakaKills + 1;
 
             Singleton<ViewManager>.Instance.SwitchToView(View.Board, false, false);
             yield return new WaitForSeconds(0.15f);
@@ -119,7 +126,7 @@ namespace ZergMod.Scripts.SpecialAbilities
 
         private Sprite GetCurrentKillsPortrait(out int portraitKills)
         {
-            int kills = CustomSaveManager.SaveFile.DehakaKills;
+            int kills = SavedDehakaKills;
             Sprite tex = null;
             int max = int.MinValue;
             foreach (KeyValuePair<int,Sprite> pair in m_dehakaImages)

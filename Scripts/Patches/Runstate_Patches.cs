@@ -1,6 +1,6 @@
-﻿using APIPlugin;
-using DiskCardGame;
+﻿using DiskCardGame;
 using HarmonyLib;
+using ZergMod.Scripts.SpecialAbilities;
 
 namespace ZergMod.Scripts.Patches
 {
@@ -10,7 +10,7 @@ namespace ZergMod.Scripts.Patches
         [HarmonyPostfix]
         public static void Postfix()
         {
-            CustomSaveManager.SaveFile.DehakaKills = 0;
+            DehakaSpecialAbility.SavedDehakaKills = 0;
         }
     }
 }

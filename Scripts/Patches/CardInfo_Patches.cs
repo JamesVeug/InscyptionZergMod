@@ -11,7 +11,7 @@ namespace ZergMod.Scripts.Patches
         {
             if (__instance.specialAbilities.Contains(DehakaSpecialAbility.specialAbility))
             {
-                __result += CustomSaveManager.SaveFile.DehakaKills;
+                __result += DehakaSpecialAbility.SavedDehakaKills;
             }
         }
     }
@@ -23,7 +23,7 @@ namespace ZergMod.Scripts.Patches
         {
             if (__instance.specialAbilities.Contains(DehakaSpecialAbility.specialAbility))
             {
-                __result += CustomSaveManager.SaveFile.DehakaKills;
+                __result += DehakaSpecialAbility.SavedDehakaKills;
             }
         }
     }
