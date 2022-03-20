@@ -11,7 +11,6 @@ namespace ZergMod.Scripts.Abilities
     {
         public override Ability Ability => SwarmAbility.ability;
         public static Ability ability;
-        public static Trigger OnOtherCardAttackEndedTrigger = (Trigger)10000; 
         
         private List<int> attackedSlots = new List<int>();
         
@@ -27,42 +26,8 @@ namespace ZergMod.Scripts.Abilities
 
         public override IEnumerator OnAttackEnded()
         {
-            //Plugin.Log.LogInfo($"[OnAttackEnded] {this.Card.slot.Index}");
             attackedSlots.Clear();
             yield return null;
-        }
-
-        public override bool RespondsToOtherCardDealtDamage(PlayableCard attacker, int amount, PlayableCard target)
-        {
-            //Plugin.Log.LogInfo($"[RespondsToOtherCardDealtDamage] {this.Card.Info.displayedName}. {attacker.Info.displayedName}->{target.Info.displayedName}");
-            //Plugin.Log.LogInfo($"[RespondsToOtherCardDealtDamage] {this.Card.slot.Index}. {attacker.slot.Index}->{target.slot.Index}");
-
-            if (target.Dead)
-            {
-                //Plugin.Log.LogInfo("[RespondsToOtherCardDealtDamage] target is dead");
-                return false;
-            }
-            
-            if (attacker.OpponentCard != this.Card.OpponentCard)
-            {
-                //Plugin.Log.LogInfo("[RespondsToOtherCardDealtDamage] attacker card not owned by this card");
-                return false;
-            }
-
-            int slotDifference = Mathf.Abs(attacker.slot.Index - this.Card.slot.Index);
-            if (slotDifference != 1)
-            {
-                //Plugin.Log.LogInfo($"[RespondsToOtherCardDealtDamage] Not a neighbor: {slotDifference}");
-                return false;
-            }
-
-            if (attackedSlots.Contains(target.slot.Index))
-            {
-                //Plugin.Log.LogInfo($"[RespondsToOtherCardDealtDamage] Slot already attacked");
-                return false;
-            }
-            
-            return true;
         }
 
         public override bool RespondsToDealDamage(int amount, PlayableCard target)
@@ -87,13 +52,39 @@ namespace ZergMod.Scripts.Abilities
             yield return null;
         }
 
+        public override bool RespondsToOtherCardDealtDamage(PlayableCard attacker, int amount, PlayableCard target)
+        {
+            if (target.Dead)
+            {
+                return false;
+            }
+            
+            if (attacker.OpponentCard != this.Card.OpponentCard)
+            {
+                return false;
+            }
+
+            int slotDifference = Mathf.Abs(attacker.slot.Index - this.Card.slot.Index);
+            if (slotDifference != 1)
+            {
+                return false;
+            }
+
+            if (attackedSlots.Contains(target.slot.Index))
+            {
+                return false;
+            }
+            
+            return true;
+        }
+
         public override IEnumerator OnOtherCardDealtDamage(PlayableCard attacker, int amount, PlayableCard target)
         {
-            attackedSlots.Add(target.slot.Index);
+            CardSlot targetSlot = Utils.GetSlot(target);
+            attackedSlots.Add(targetSlot.Index);
             yield return base.PreSuccessfulTriggerSequence();
-            yield return Singleton<CombatPhaseManager>.Instance.SlotAttackSlot(Card.slot, target.slot, 0f);
+            yield return Singleton<CombatPhaseManager>.Instance.SlotAttackSlot(Card.slot, targetSlot, 0f);
             yield return base.LearnAbility(0.1f);
-            Plugin.Log.LogInfo($"[OnOtherCardDealtDamage] Attacked {target.slot.Index}");
         }
     }
 }

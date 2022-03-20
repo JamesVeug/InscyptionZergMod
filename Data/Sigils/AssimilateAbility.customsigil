@@ -1,5 +1,5 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.AssimilateData",
+	"@type": "ZergMod.Scripts.Data.Sigils.AssimilateAbilityData",
 	"power": 0,
 	"priority": 7,
 	"learnText": "Nowhere is far enough away.",

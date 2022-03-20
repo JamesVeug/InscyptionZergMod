@@ -15,7 +15,6 @@ namespace ZergMod.Scripts.Abilities
         {
             get
             {
-                Plugin.Log.LogInfo("[ACustomCreateCardsAdjacent] " + LoadedData.name + " " + LoadedData.spawnCardId + " " + Ability);
                 return LoadedData.spawnCardId;
             }
         }

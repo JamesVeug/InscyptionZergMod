@@ -41,6 +41,11 @@ namespace ZergMod.Scripts.Abilities
                 }
                 evolution.Mods.Add(clone);
             }
+
+            if (evolution.abilities.Contains(Ability))
+            {
+                Card.Status.hiddenAbilities.Add(Ability);
+            }
             
             yield return PreSuccessfulTriggerSequence();
             yield return Card.TransformIntoCard(evolution, RemoveTemporaryModsWithEvolve);
@@ -48,10 +53,11 @@ namespace ZergMod.Scripts.Abilities
             yield return LearnAbility(0.5f);
         }
         
-        protected virtual CardInfo GetTransformCardInfo()
+        protected CardInfo GetTransformCardInfo()
         {
             return (Card.Info.evolveParams != null) ? (Card.Info.evolveParams.evolution.Clone() as CardInfo) : EvolveParams.GetDefaultEvolution(base.Card.Info);
         }
+        
         private void RemoveTemporaryModsWithEvolve()
         {
             bool hasAbilities = Card.Info.Abilities.Contains(Ability.Evolve) || Card.Info.Abilities.Contains(Ability);
