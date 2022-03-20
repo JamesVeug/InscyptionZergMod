@@ -31,15 +31,14 @@ namespace SpritzMod.Scripts
             List<NodeData.SelectionCondition> generationPrerequisites = new List<NodeData.SelectionCondition>
             {
 	            new NodeData.WithinRegionIndexRange(1, int.MaxValue),
-	            new NodeData.WithinGridYRange(4, int.MaxValue),
-	            new NodeData.PreviousNodesContent(typeof(CardRemoveNodeData), false),
+	            new NodeData.WithinGridYRange(2, int.MaxValue),
             };
             
             /*conditions at which the node always generates instead of other nodes, can be empty*/
             /*you can use something like new CustomPreviousNodesContent("Nodes_Name_For_Code_Purposes", false) (this type is built into nodeapi) for it to always generate once for debug*/
             List<NodeData.SelectionCondition> forceGenerationConditions = new List<NodeData.SelectionCondition>
             {
-                new CustomPreviousNodesContent("EvolveSequence", false)
+	            
             };
             
             new NewNode("EvolveSequence", mapNodeType , mapAnimationFrames, typeof(EvolveSequencer), 
