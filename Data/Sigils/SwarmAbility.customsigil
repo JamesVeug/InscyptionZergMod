@@ -1,0 +1,14 @@
+{
+	"@type": "ZergMod.Scripts.Data.Sigils.SwarmAbilityData",
+	"power": 5,
+	"priority": 0,
+	"learnText": "",
+	"name": "Swarm",
+	"ruleBookName": "Swarm",
+	"ruleDescription": "When an adjacent card attacks a card, this card will also attack the same card.",
+	"iconPath": "Artwork/Sigils/swarm.png",
+	"metaCategories": [
+		"Part1Rulebook",
+		"Part1Modular"
+	]
+}

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using APIPlugin;
 using BepInEx;
 using BepInEx.Logging;
 using DiskCardGame;
@@ -40,6 +39,7 @@ namespace ZergMod
             LarvaSpecialAbility.Initialize(typeof(LarvaSpecialAbility));
             PrimalSpecialAbility.Initialize(typeof(PrimalSpecialAbility));
             BroodLordSpecialAbility.Initialize(typeof(BroodLordSpecialAbility));
+            BrendaSpecialAbility.Initialize(typeof(BrendaSpecialAbility));
 	        
             // Abilities
             RegenerateAbility.Initialize(typeof(RegenerateAbility));
@@ -57,9 +57,15 @@ namespace ZergMod
             BloodBankAbility.Initialize(typeof(BloodBankAbility));
             SummonZergAbility.Initialize(typeof(SummonZergAbility));
             StrafeCreepTumorAbility.Initialize(typeof(StrafeCreepTumorAbility));
+            SwarmAbility.Initialize(typeof(SwarmAbility));
+            AssimilateAbility.Initialize(typeof(AssimilateAbility));
+            RandomConsumableOnDeathAbility.Initialize(typeof(RandomConsumableOnDeathAbility));
 
             // Cards
             XelNagaArtifact.Initialize();
+            
+            // Encounters
+            EvolveSequencer.Initialize();
 
             //ChangeSquirrelToLarva();
             

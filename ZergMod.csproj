@@ -29,6 +29,9 @@
     <Reference Include="JSONLoader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>lib\JSONLoader.dll</HintPath>
     </Reference>
+    <Reference Include="NodeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>lib\NodeAPI.dll</HintPath>
+    </Reference>
     <Reference Include="Sirenix.Serialization">
       <HintPath>lib\Sirenix.Serialization.dll</HintPath>
     </Reference>

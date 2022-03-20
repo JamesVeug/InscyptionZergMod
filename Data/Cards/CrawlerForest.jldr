@@ -6,9 +6,9 @@
 	"cardComplexity": "Intermediate",
 	"temple": "Nature",
 	"tribes": ["Insect"],
-	"baseAttack": 0,
-	"baseHealth": 5,
-	"bloodCost": 0,
+	"baseAttack": 1,
+	"baseHealth": 4,
+	"bloodCost": 2,
 	"bonesCost": 0,
 	"traits": ["Terrain"],
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
@@ -18,17 +18,13 @@
 	"texture": "JamesGames-ZergMod/Artwork/Cards/crawler_forest.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/crawler_forest_emit.png",
 	"abilities": [
-		"Reach"
+		"AllStrike"
 	],
 	"customAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Detector"
 		}
-	],
-	"specialStatIcon": "Mirror",
-	"specialAbilities": [
-		"Mirror"
 	],
 	"tailName": "biomass"
 }

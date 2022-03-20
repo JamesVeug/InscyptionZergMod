@@ -32,7 +32,6 @@ namespace ZergMod.Scripts.Cards
             abilities.Add(Ability.TripleBlood);
 
             List<Trait> traits = new List<Trait> { Trait.Goat };
-            
             List<Tribe> tribes = new List<Tribe> { Tribe.Insect, Tribe.Bird, Tribe.Canine };
 
             CardInfo card = CardManager.New(name: ID,

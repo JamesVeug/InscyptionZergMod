@@ -18,10 +18,14 @@
 	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_zergling.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/primal_zergling_emit.png",
 	"tailName": "biomass",
-	"customSpecialAbilities": [
+	"customAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
-			"name": "PrimalZerg"
+			"name": "assimilate"
 		}
-	]
+	],
+	"evolution": {
+		"name": "PrimalRavasaur",
+		"turnsToEvolve": 1
+	}
 }

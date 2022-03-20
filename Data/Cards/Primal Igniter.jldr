@@ -19,16 +19,14 @@
 	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_igniter.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/primal_igniter_emit.png",
 	"tailName": "biomass",
-	"customSpecialAbilities": [
-		{
-			"GUID": "jamesgames.inscryption.zergmod",
-			"name": "PrimalZerg"
-		}
-	],
 	"customAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Splash Damage"
+		},
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "assimilate"
 		}
 	]
 }

@@ -1,0 +1,14 @@
+{
+	"@type": "ZergMod.Scripts.Data.Sigils.BrendaSpecialAbilityData",
+	"power": 0,
+	"priority": 0,
+	"learnText": "Back before the war we used to be able ot fly!",
+	"name": "Brenda",
+	"ruleBookName": "Brenda",
+	"ruleDescription": "Popular character used by WinterGaming to mock Queens getting out of position.",
+	"iconPath": "Artwork/Cards/Brenda.png",
+	"metaCategories": [
+		"Part1Rulebook",
+		"Part1Modular"
+	]
+}

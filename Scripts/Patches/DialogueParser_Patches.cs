@@ -16,6 +16,9 @@ namespace ZergMod.Scripts.Patches
                 case "purple":
                     __result = new Color(0.3f, 0, 0.7f);
                     return false;
+                case "light_green":
+                    __result = new Color(0, 0.75f, 0);
+                    return false;
             }
 
             return true;

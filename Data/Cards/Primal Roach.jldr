@@ -18,16 +18,18 @@
 	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_roach.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/primal_roach_emit.png",
 	"tailName": "biomass",
-	"customSpecialAbilities": [
+	"customAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
-			"name": "PrimalZerg"
-		}
-	],
-	"customAbilities": [
+			"name": "assimilate"
+		},
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
 			"name": "Armoured"
 		}
-	]
+	],
+	"evolution": {
+		"name": "PrimalIgniter",
+		"turnsToEvolve": 1
+	}
 }
