@@ -27,9 +27,9 @@ namespace ZergMod.Scripts.Abilities
             yield return new WaitForSeconds(0.2f);
             Singleton<ViewManager>.Instance.SwitchToView(View.Default, false, false);
             yield return new WaitForSeconds(0.25f);
-            if (RunState.Run.consumables.Count < 3)
+            if (RunState.Run.consumables.Count < RunState.Run.MaxConsumables)
             {
-                RunState.Run.consumables.Add(ItemsUtil.GetRandomConsumable(base.GetRandomSeed()).name);
+                RunState.Run.consumables.Add(ItemsUtil.GetRandomUnlockedConsumable(base.GetRandomSeed()).name);
                 Singleton<ItemsManager>.Instance.UpdateItems(false);
             }
             else
@@ -39,6 +39,7 @@ namespace ZergMod.Scripts.Abilities
                 Singleton<ItemsManager>.Instance.ShakeConsumableSlots(0f);
             }
             yield return new WaitForSeconds(0.2f);
+            yield return base.LearnAbility(0f);
         }
 
     }
