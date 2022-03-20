@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using DiskCardGame;
 using NodeAPI;
 using UnityEngine;
-using ZergMod;
 
-namespace SpritzMod.Scripts
+namespace ZergMod.Scripts
 {
     public class EvolveSequencer : CustomSpecialNodeSequencer
     {
