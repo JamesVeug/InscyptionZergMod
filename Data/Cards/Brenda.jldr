@@ -1,0 +1,28 @@
+{
+	"name": "Brenda",
+	"displayedName": "Brenda",
+	"description": "Back in my day we used to fly!",
+	"metaCategories": [
+		"Rare"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tribes": ["Insect"],
+	"baseAttack": 1,
+	"baseHealth": 3,
+	"bloodCost": 2,
+	"bonesCost": 0,
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"appearanceBehaviour": [
+		"RareCardBackground"
+	],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/brenda.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/brenda_emit.png",
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "StrafeCreepTumor"
+		}
+	],
+	"tailName": "biomass"
+}

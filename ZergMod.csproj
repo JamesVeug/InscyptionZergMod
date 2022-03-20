@@ -36,14 +36,4 @@
       <HintPath>lib\TinyJSON.dll</HintPath>
     </Reference>
   </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="lib\TinyJSON.dll" />
-    <None Remove="lib\JSONLoader.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="lib\JSONLoader.dll" />
-    <Content Include="lib\TinyJSON.dll" />
-  </ItemGroup>
 </Project>

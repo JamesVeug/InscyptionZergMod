@@ -1,0 +1,34 @@
+{
+	"name": "Brood lord",
+	"displayedName": "Brood lord",
+	"description": "The mother of many dangerous broods...",
+	"metaCategories": [
+		"Rare"
+	],
+	"cardComplexity": "Intermediate",
+	"temple": "Nature",
+	"tribes": ["Insect"],
+	"baseAttack": 0,
+	"baseHealth": 6,
+	"bloodCost": 3,
+	"bonesCost": 0,
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"appearanceBehaviour": [
+		"RareCardBackground"
+	],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/broodlord.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/broodlord_emit.png",
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Draw Broodling's"
+		}
+	],
+	"tailName": "biomass",
+	"customSpecialAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Brood Lord"
+		}
+	]
+}

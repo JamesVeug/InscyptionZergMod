@@ -1,0 +1,29 @@
+{
+	"name": "Roach",
+	"displayedName": "Roach",
+	"description": "These creatures will survive mostly anything, given time.",
+	"metaCategories": [
+		"ChoiceNode",
+		"TraderOffer"
+	],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tribes": ["Insect"],
+	"baseAttack": 2,
+	"baseHealth": 3,
+	"bloodCost": 2,
+	"bonesCost": 0,
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"appearanceBehaviour": [],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/roach.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/roach_emit.png",
+	"customAbilities": [
+		{
+			"GUID": "jamesgames.inscryption.zergmod",
+			"name": "Regenerate"
+		}
+	],
+	"evolveIntoName": "Ravager",
+	"evolveTurns": 1,
+	"tailName": "biomass"
+}

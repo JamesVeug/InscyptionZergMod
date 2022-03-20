@@ -5,9 +5,9 @@
     "description": "A StarCraft inspired mod that brings Zerg into the world of Inscryption",
     "dependencies": [
         "BepInEx-BepInExPack_Inscryption-5.4.1701",
-        "Kaycee_Reuploads-API-2.0.0",
+        "API_dev-API-1.13.0",
         "Kopie-Kopie_RuleBook_Expender-3.1.0",
         "Memez4Life-Multiple_Sigil_Render_Fix-1.0.9",
-        "Kaycee_Reuploads-JSONCardLoader-1.8.2"
+        "MADH95Mods-JSONCardLoader-1.7.2"
     ]
 }
