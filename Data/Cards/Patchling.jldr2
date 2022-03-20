@@ -1,0 +1,17 @@
+{
+	"name": "JSON_Patchling",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Patchling",
+	"baseAttack": 1,
+	"baseHealth": 1,
+	"metaCategories": ["Rare"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "The original Zergling. Lets hope Sgt Patches' butt is enjoying a breeze",
+	"appearanceBehaviour": ["RareCardBackground"],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/zergling_2.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/patchling_emit.png",
+	"tribes": ["Insect"]
+}

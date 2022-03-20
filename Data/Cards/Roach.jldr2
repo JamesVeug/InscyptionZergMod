@@ -1,0 +1,18 @@
+{
+	"name": "JSON_Roach",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Roach",
+	"baseAttack": 2,
+	"baseHealth": 3,
+	"bloodCost": 2,
+	"abilities": ["jamesgames.inscryption.zergmod.Regenerate"],
+	"metaCategories": ["ChoiceNode","TraderOffer"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "These creatures will survive mostly anything, given time.",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/roach.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/roach_emit.png",
+	"tribes": ["Insect"]
+}

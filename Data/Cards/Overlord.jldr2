@@ -1,0 +1,19 @@
+{
+	"name": "JSON_Overlord",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Overlord",
+	"baseHealth": 2,
+	"bloodCost": 1,
+	"abilities": ["Sacrificial","Reach"],
+	"metaCategories": ["ChoiceNode","TraderOffer"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "Any good army has a good supply...",
+	"appearanceBehaviour": ["SexyGoat"],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/overlord.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/overlord_emit.png",
+	"altTexture": "JamesGames-ZergMod/Artwork/Cards/overlord_alt.png",
+	"tribes": ["Insect"]
+}

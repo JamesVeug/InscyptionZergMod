@@ -1,0 +1,20 @@
+{
+	"name": "JSON_Infested Terran",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Infested Terran",
+	"baseAttack": 1,
+	"baseHealth": 2,
+	"bonesCost": 2,
+	"energyCost": 0,
+	"abilities": ["Brittle","DrawCopy"],
+	"metaCategories": ["Rare"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "The best of humanity, turned against them.",
+	"appearanceBehaviour": ["RareCardBackground"],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/infested_terran.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/infested_terran_emit.png",
+	"tribes": ["Insect"]
+}

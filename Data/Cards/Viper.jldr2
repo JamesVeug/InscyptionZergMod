@@ -1,0 +1,19 @@
+{
+	"name": "JSON_Viper",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Viper",
+	"baseAttack": 2,
+	"baseHealth": 1,
+	"bloodCost": 2,
+	"abilities": ["jamesgames.inscryption.zergmod.Abduct"],
+	"metaCategories": ["Rare"],
+	"cardComplexity": "Intermediate",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "This Zerg can pull any creature with it’s long tongue.",
+	"appearanceBehaviour": ["RareCardBackground"],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/viper.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/viper_emit.png",
+	"tribes": ["Insect"]
+}

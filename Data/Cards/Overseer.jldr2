@@ -1,0 +1,17 @@
+{
+	"name": "JSON_Overseer",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Overseer",
+	"baseHealth": 6,
+	"bloodCost": 2,
+	"abilities": ["DebuffEnemy","jamesgames.inscryption.zergmod.Detector"],
+	"metaCategories": ["TraderOffer"],
+	"cardComplexity": "Advanced",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "Nothing can hide from the Zerg.",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/overseer.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/overseer_emit.png",
+	"tribes": ["Insect"]
+}

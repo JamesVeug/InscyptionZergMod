@@ -1,0 +1,20 @@
+{
+	"name": "JSON_Larva",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Larva",
+	"baseHealth": 1,
+	"bloodCost": 1,
+	"abilities": ["Evolve","DeathShield"],
+	"specialAbilities": ["jamesgames.inscryption.zergmod.Larva"],
+	"metaCategories": ["ChoiceNode","TraderOffer"],
+	"cardComplexity": "Simple",
+	"onePerDeck": True,
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "Beware, even this small [c:bR]worm[c:] can be deadly...",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/larva.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/larva_emit.png",
+	"tribes": ["Insect"],
+	"traits": ["KillsSurvivors"]
+}

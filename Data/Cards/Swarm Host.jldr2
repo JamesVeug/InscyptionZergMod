@@ -1,0 +1,17 @@
+{
+	"name": "JSON_Swarm Host",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Swarm Host",
+	"baseHealth": 2,
+	"bloodCost": 1,
+	"abilities": ["Submerge","jamesgames.inscryption.zergmod.Draw Locust's"],
+	"metaCategories": ["TraderOffer"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "An entire army can be birthed from this creature.",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/swarmhost.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/swarmhost_emit.png",
+	"tribes": ["Insect"]
+}

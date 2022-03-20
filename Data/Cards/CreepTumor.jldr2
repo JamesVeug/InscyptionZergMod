@@ -1,0 +1,15 @@
+{
+	"name": "JSON_CreepTumor",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Creep Tumor",
+	"baseHealth": 1,
+	"abilities": ["Submerge","BuffNeighbours"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "This living globs of tissue will empower the Zerg.",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/creep_tumor.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/creep_tumor_emit.png",
+	"tribes": ["Insect"]
+}

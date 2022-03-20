@@ -1,0 +1,19 @@
+{
+	"name": "JSON_Infestor",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Infestor",
+	"baseAttack": 1,
+	"baseHealth": 1,
+	"bloodCost": 2,
+	"abilities": ["Submerge","jamesgames.inscryption.zergmod.Fish Hook"],
+	"metaCategories": ["Rare"],
+	"cardComplexity": "Intermediate",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "Any creature can bend to the Infestor’s will.",
+	"appearanceBehaviour": ["RareCardBackground"],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/infestor.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/infestor_emit.png",
+	"tribes": ["Insect"]
+}

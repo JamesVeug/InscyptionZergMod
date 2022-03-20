@@ -1,0 +1,11 @@
+{
+	"name": "a_mutalisk_wing",
+	"modPrefix": "Zerg Mog",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Wing",
+	"baseHealth": 2,
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/mutalisk_wing.png"
+}

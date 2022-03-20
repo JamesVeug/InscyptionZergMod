@@ -1,0 +1,17 @@
+{
+	"name": "JSON_Locust",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Locust",
+	"baseAttack": 1,
+	"baseHealth": 2,
+	"bonesCost": 1,
+	"energyCost": 0,
+	"abilities": ["Brittle"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "ul",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/locust.png",
+	"tribes": ["Insect"]
+}

@@ -1,0 +1,19 @@
+{
+	"name": "JSON_Baneling",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Baneling",
+	"baseAttack": 3,
+	"baseHealth": 1,
+	"bonesCost": 2,
+	"energyCost": 0,
+	"abilities": ["jamesgames.inscryption.zergmod.Explode"],
+	"metaCategories": ["TraderOffer"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "These Zerg have the most noble of deaths...",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/baneling.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/baneling_emit.png",
+	"tribes": ["Insect"]
+}

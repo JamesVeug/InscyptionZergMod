@@ -1,0 +1,19 @@
+{
+	"name": "JSON_Queen",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Queen",
+	"baseAttack": 1,
+	"baseHealth": 3,
+	"bloodCost": 2,
+	"abilities": ["jamesgames.inscryption.zergmod.Spawn Larva"],
+	"metaCategories": ["Rare"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "The caring broodmother of the Swarm...",
+	"appearanceBehaviour": ["RareCardBackground"],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/queen.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/queen_emit.png",
+	"tribes": ["Insect"]
+}

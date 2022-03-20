@@ -1,0 +1,17 @@
+{
+	"name": "JSON_Broodling",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Broodling",
+	"baseAttack": 2,
+	"baseHealth": 2,
+	"bonesCost": 1,
+	"energyCost": 0,
+	"abilities": ["Brittle"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "ul",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/broodling.png",
+	"tribes": ["Insect"]
+}

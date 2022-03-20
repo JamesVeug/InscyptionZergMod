@@ -1,0 +1,19 @@
+{
+	"name": "JSON_Ultralisk",
+	"modPrefix": "Zerg Mod",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Ultralisk",
+	"baseAttack": 3,
+	"baseHealth": 5,
+	"bloodCost": 3,
+	"abilities": ["jamesgames.inscryption.zergmod.Armoured","jamesgames.inscryption.zergmod.Splash Damage"],
+	"metaCategories": ["Rare"],
+	"cardComplexity": "Intermediate",
+	"temple": "Nature",
+	"tailName": "biomass",
+	"description": "The largest and mightiest Zerg monster...",
+	"appearanceBehaviour": ["RareCardBackground"],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/ultralisk.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/ultralisk_emit.png",
+	"tribes": ["Insect"]
+}
