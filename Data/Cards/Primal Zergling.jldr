@@ -20,12 +20,6 @@
 	"tail": {
 		"name": "biomass"
 	},
-	"customSpecialAbilities": [
-		{
-			"GUID": "jamesgames.inscryption.zergmod",
-			"name": "PrimalZerg"
-		}
-	],
 	"customAbilities": [
 		{
 			"GUID": "jamesgames.inscryption.zergmod",
