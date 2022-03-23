@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Drone",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Drone",
 	"baseAttack": 1,
@@ -10,9 +10,10 @@
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "These simple workers hide a devastating defense...",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/drone.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/drone_emit.png",
-	"tribes": ["Insect"]
+	"tribes": ["Insect"],
+	"evolveIntoName": "Zerg_JSON_CrawlerForest"
 }

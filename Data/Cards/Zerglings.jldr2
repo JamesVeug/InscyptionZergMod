@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Zerglings",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Zerglings",
 	"baseAttack": 1,
@@ -11,8 +11,9 @@
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "The most numerous creatures of the Swarm...",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/zergling_2.png",
-	"tribes": ["Insect"]
+	"tribes": ["Insect"],
+	"evolveIntoName": "Zerg_JSON_Baneling"
 }

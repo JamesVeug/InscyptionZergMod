@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Overseer",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Overseer",
 	"baseHealth": 6,
@@ -9,7 +9,7 @@
 	"metaCategories": ["TraderOffer"],
 	"cardComplexity": "Advanced",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "Nothing can hide from the Zerg.",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/overseer.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/overseer_emit.png",

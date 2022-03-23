@@ -58,13 +58,7 @@ namespace ZergMod
             byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, path));
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
-
             tex.filterMode = FilterMode.Point;
-
-            /*if (!TextureToPath.TryGetValue(tex, out _))
-            {
-                TextureToPath[tex] = path;
-            }*/
 
             return tex;
         }

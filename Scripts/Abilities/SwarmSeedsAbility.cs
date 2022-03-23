@@ -38,7 +38,7 @@ namespace ZergMod.Scripts.Abilities
 				yield return new WaitForSeconds(0.2f);
 			}
 
-			CardInfo cardByName = CardLoader.GetCardByName("Broodling");
+			CardInfo cardByName = CardLoader.GetCardByName("Zerg_JSON_Broodling");
 			yield return Singleton<CardSpawner>.Instance.SpawnCardToHand(cardByName, null, 0.25f, null);
 			yield return new WaitForSeconds(0.45f);
 			

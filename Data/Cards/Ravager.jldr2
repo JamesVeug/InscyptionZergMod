@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Ravager",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Ravager",
 	"baseAttack": 2,
@@ -10,7 +10,7 @@
 	"metaCategories": ["TraderOffer"],
 	"cardComplexity": "Intermediate",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "Devastating siege units of the Swarm.",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/ravager.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/ravager_emit.png",

@@ -1,12 +1,12 @@
 {
 	"name": "JSON_biomass",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Biomass",
+	"abilities": ["Morsel"],
 	"baseHealth": 2,
 	"cardComplexity": "Simple",
 	"temple": "Nature",
-	"tailName": "biomass",
-	"texture": "JamesGames-ZergMod/Artwork/Cards/biomass.png",
-	"tribes": ["Insect"]
+	"tailName": "Zerg_JSON_biomass",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/biomass.png"
 }

@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Hydralisk",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Hydralisk",
 	"baseAttack": 2,
@@ -10,11 +10,12 @@
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "Rapid-fire spines will devastate any creature.",
 	"appearanceBehaviour": ["SexyGoat"],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/hydralisk.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/hydralisk_emit.png",
 	"altTexture": "JamesGames-ZergMod/Artwork/Cards/hydralisk_alt.png",
-	"tribes": ["Insect"]
+	"tribes": ["Insect"],
+	"evolveIntoName": "Zerg_JSON_Lurker"
 }

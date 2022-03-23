@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Queen",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Queen",
 	"baseAttack": 1,
@@ -10,7 +10,7 @@
 	"metaCategories": ["Rare"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "The caring broodmother of the Swarm...",
 	"appearanceBehaviour": ["RareCardBackground"],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/queen.png",

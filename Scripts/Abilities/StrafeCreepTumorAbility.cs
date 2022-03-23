@@ -81,7 +81,7 @@ namespace ZergMod.Scripts.Abilities
 
         public override IEnumerator PostSuccessfulMoveSequence(CardSlot oldSlot)
         {
-	        CardInfo creepTumorInfo = ScriptableObjectLoader<CardInfo>.AllData.Find((CardInfo info) => info.name == "CreepTumor");
+	        CardInfo creepTumorInfo = ScriptableObjectLoader<CardInfo>.AllData.Find((CardInfo info) => info.name == "Zerg_JSON_CreepTumor");
 
 	        PlayableCard creepTumor = CardSpawner.SpawnPlayableCardWithCopiedMods(creepTumorInfo, base.Card, Ability.TailOnHit);
 	        creepTumor.transform.position = oldSlot.transform.position + Vector3.back * 2f + Vector3.up * 2f;

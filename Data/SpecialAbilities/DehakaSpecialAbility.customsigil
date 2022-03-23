@@ -20,7 +20,6 @@
 			"portraitEmitPath": "Artwork/Cards/dehaka_3_emit.png"
 		}
 	],
-	"iconType": "CardsInHand",
 	"power": 0,
 	"priority": 0,
 	"learnText": "",

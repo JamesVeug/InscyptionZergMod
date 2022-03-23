@@ -1,20 +1,19 @@
 {
 	"name": "JSON_PrimalZergling",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Primal Zergling",
 	"baseAttack": 1,
 	"baseHealth": 2,
 	"bloodCost": 1,
-	"abilities": ["jamesgames.inscryption.zergmod.assimilate"],
+	"abilities": ["jamesgames.inscryption.zergmod.Assimilate"],
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "These ancient Zerg can steal essence to evolve and grow strong.",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_zergling.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/primal_zergling_emit.png",
 	"tribes": ["Insect"],
-	"evolveIntoName": "JSON_PrimalRavasaur",
-	"evolveTurns": 1
+	"evolveIntoName": "Zerg_JSON_PrimalRavasaur"
 }

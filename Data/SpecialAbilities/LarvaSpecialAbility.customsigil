@@ -3,47 +3,47 @@
 	"cardEvolutions": [
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Zerglings",
+			"cardName": "Zerg_JSON_Zerglings",
 			"weight": 40
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Mutalisk",
+			"cardName": "Zerg_JSON_Mutalisk",
 			"weight": 30
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Roach",
+			"cardName": "Zerg_JSON_Roach",
 			"weight": 20
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Drone",
+			"cardName": "Zerg_JSON_Drone",
 			"weight": 20
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Hydralisk",
+			"cardName": "Zerg_JSON_Hydralisk",
 			"weight": 20
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Scourge",
+			"cardName": "Zerg_JSON_Scourge",
 			"weight": 20
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Corruptor",
+			"cardName": "Zerg_JSON_Corruptor",
 			"weight": 20
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Baneling",
+			"cardName": "Zerg_JSON_Baneling",
 			"weight": 20
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Ultralisk",
+			"cardName": "Zerg_JSON_Ultralisk",
 			"weight": 10
 		}
 	],

@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Guardian",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Guardian",
 	"baseAttack": 3,
@@ -10,7 +10,7 @@
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Intermediate",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "Nowhere is safe from their reach...",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/guardian.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/guardian_emit.png",

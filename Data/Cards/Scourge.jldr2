@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Scourge",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Scourge",
 	"baseAttack": 3,
@@ -10,7 +10,7 @@
 	"metaCategories": ["ChoiceNode"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "The deadly bombs of the skies...",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/scourge.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/scourge_emit.png",

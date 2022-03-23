@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Mutalisk",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Mutalisk",
 	"baseAttack": 1,
@@ -10,9 +10,10 @@
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "Nothing can hide from their seeking glaives.",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/mutalisk.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/mutalisk_emit.png",
-	"tribes": ["Insect"]
+	"tribes": ["Insect"],
+	"evolveIntoName": "Zerg_JSON_Guardian"
 }

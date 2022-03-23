@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Corruptor",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Corruptor",
 	"baseAttack": 2,
@@ -10,9 +10,10 @@
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "The Swarm’s deadly air units...",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/corruptor.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/corruptor_emit.png",
-	"tribes": ["Insect"]
+	"tribes": ["Insect"],
+	"evolveIntoName": "Zerg_JSON_Devourer"
 }

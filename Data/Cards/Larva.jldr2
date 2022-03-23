@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Larva",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Larva",
 	"baseHealth": 1,
@@ -11,7 +11,7 @@
 	"cardComplexity": "Simple",
 	"onePerDeck": True,
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "Beware, even this small [c:bR]worm[c:] can be deadly...",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/larva.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/larva_emit.png",

@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Lurker",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Lurker",
 	"baseAttack": 2,
@@ -10,7 +10,7 @@
 	"metaCategories": ["TraderOffer"],
 	"cardComplexity": "Advanced",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "This ferocious beast lies in wait to ambush it’s prey.",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/lurker.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/lurker_emit.png",

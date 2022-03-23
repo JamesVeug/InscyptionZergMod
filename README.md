@@ -1,4 +1,4 @@
-# Zerg Mod
+# Zerg
 This mod brings the alien race 'Zerg' from the RTS series StarCraft, into the world of Inscryption.
 
 The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advanced, arthropodal aliens. Dedicated to the pursuit of genetic perfection.

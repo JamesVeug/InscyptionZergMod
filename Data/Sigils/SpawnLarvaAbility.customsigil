@@ -1,6 +1,6 @@
 {
 	"@type": "ZergMod.Scripts.Data.Sigils.CreateCardsAbilityData",
-	"spawnCardId": "Larva",
+	"spawnCardId": "Zerg_JSON_Larva",
 	"cannotSpawnDialogue": "No room for Larva!",
 	"power": 9,
 	"priority": 0,

@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Viper",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Viper",
 	"baseAttack": 2,
@@ -10,7 +10,7 @@
 	"metaCategories": ["Rare"],
 	"cardComplexity": "Intermediate",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "This Zerg can pull any creature with it’s long tongue.",
 	"appearanceBehaviour": ["RareCardBackground"],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/viper.png",

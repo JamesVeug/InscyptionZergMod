@@ -4,6 +4,7 @@ using BepInEx.Logging;
 using DiskCardGame;
 using HarmonyLib;
 using InscryptionAPI.Card;
+using InscryptionAPI.Helpers;
 using ZergMod.Scripts;
 using ZergMod.Scripts.Abilities;
 using ZergMod.Scripts.Backgrounds;

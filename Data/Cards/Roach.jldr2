@@ -1,6 +1,6 @@
 {
 	"name": "JSON_Roach",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Roach",
 	"baseAttack": 2,
@@ -10,9 +10,10 @@
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "These creatures will survive mostly anything, given time.",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/roach.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/roach_emit.png",
-	"tribes": ["Insect"]
+	"tribes": ["Insect"],
+	"evolveIntoName": "Zerg_JSON_Ravager"
 }

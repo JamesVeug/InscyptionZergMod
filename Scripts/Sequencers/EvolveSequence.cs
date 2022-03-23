@@ -13,12 +13,12 @@ namespace ZergMod.Scripts
 		public override void Initialize()
 		{
 			// This node can only generate if the BaseDifficulty challenge is active
-			this.AddGenerationPrerequisite(() => AscensionSaveData.Data.ChallengeIsActive(AscensionChallenge.BaseDifficulty));
+			/*this.AddGenerationPrerequisite(() => AscensionSaveData.Data.ChallengeIsActive(AscensionChallenge.BaseDifficulty));
         
 			// This node is forced to generate if more than one BaseDifficulty challenge is active
 			// and a deck trial node has been placed on the map already
 			this.AddForceGenerationCondition((y, nodes) => AscensionSaveData.Data.GetNumChallengesOfTypeActive(AscensionChallenge.BaseDifficulty) > 1 
-			                                               && nodes.Exists(n => n is DeckTrialNodeData));
+			                                               && nodes.Exists(n => n is DeckTrialNodeData));*/
 		}
 	}
 	
@@ -33,10 +33,10 @@ namespace ZergMod.Scripts
 	        NodeManager.Add<EvolveSequencer, EvolveSequencerNodeData>(
 		        new[]
 		        {
-			        TextureHelper.GetImageAsTexture("Artwork/Sequencers/evolve_1.png", typeof(EvolveSequencer).Assembly),
-			        TextureHelper.GetImageAsTexture("Artwork/Sequencers/evolve_2.png", typeof(EvolveSequencer).Assembly),
-			        TextureHelper.GetImageAsTexture("Artwork/Sequencers/evolve_3.png", typeof(EvolveSequencer).Assembly),
-			        TextureHelper.GetImageAsTexture("Artwork/Sequencers/evolve_4.png", typeof(EvolveSequencer).Assembly)
+			        Utils.GetTextureFromPath("Artwork/Sequencers/evolve_1.png"),
+			        Utils.GetTextureFromPath("Artwork/Sequencers/evolve_2.png"),
+			        Utils.GetTextureFromPath("Artwork/Sequencers/evolve_3.png"),
+			        Utils.GetTextureFromPath("Artwork/Sequencers/evolve_4.png")
 		        },
 		        NodeManager.NodePosition.Act1Available
 	        );

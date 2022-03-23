@@ -3,82 +3,82 @@
 	"cardEvolutions": [
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Zerglings",
+			"cardName": "Zerg_JSON_Zerglings",
 			"weight": 55
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Roach",
+			"cardName": "Zerg_JSON_Roach",
 			"weight": 35
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Hydralisk",
+			"cardName": "Zerg_JSON_Hydralisk",
 			"weight": 35
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Drone",
+			"cardName": "Zerg_JSON_Drone",
 			"weight": 30
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Corruptor",
+			"cardName": "Zerg_JSON_Corruptor",
 			"weight": 35
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Baneling",
+			"cardName": "Zerg_JSON_Baneling",
 			"weight": 30
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Mutalisk",
+			"cardName": "Zerg_JSON_Mutalisk",
 			"weight": 30
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Lurker",
+			"cardName": "Zerg_JSON_Lurker",
 			"weight": 30
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Overlord",
+			"cardName": "Zerg_JSON_Overlord",
 			"weight": 30
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Swarm Host",
+			"cardName": "Zerg_JSON_Swarm Host",
 			"weight": 20
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Brood lord",
+			"cardName": "Zerg_JSON_Brood lord",
 			"weight": 20
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Viper",
+			"cardName": "Zerg_JSON_Viper",
 			"weight": 15
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Ultralisk",
+			"cardName": "Zerg_JSON_Ultralisk",
 			"weight": 10
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Guardian",
+			"cardName": "Zerg_JSON_Guardian",
 			"weight": 10
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Overseer",
+			"cardName": "Zerg_JSON_Overseer",
 			"weight": 10
 		},
 		{
 			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Queen",
+			"cardName": "Zerg_JSON_Queen",
 			"weight": 10
 		}
 	],

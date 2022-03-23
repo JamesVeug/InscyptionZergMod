@@ -1,6 +1,6 @@
 {
 	"name": "JSON_CrawlerForest",
-	"modPrefix": "Zerg Mod",
+	"modPrefix": "Zerg",
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Crawler Forest",
 	"baseAttack": 1,
@@ -9,7 +9,7 @@
 	"abilities": ["AllStrike","jamesgames.inscryption.zergmod.Detector"],
 	"cardComplexity": "Intermediate",
 	"temple": "Nature",
-	"tailName": "biomass",
+	"tailName": "Zerg_JSON_biomass",
 	"description": "A forest of Spine and Spore crawlers designed to defend you",
 	"appearanceBehaviour": ["TerrainBackground"],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/crawler_forest.png",
