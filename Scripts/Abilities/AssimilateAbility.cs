@@ -10,6 +10,8 @@ namespace ZergMod.Scripts.Abilities
     {
         public override Ability Ability => ability;
         public static Ability ability = Ability.None;
+
+        private bool triggered = false;
 		
         public static void Initialize(Type declaringType)
         {
@@ -18,7 +20,7 @@ namespace ZergMod.Scripts.Abilities
 
         public override bool RespondsToDealDamage(int amount, PlayableCard target)
         {
-            return target != null && target.Dead;
+            return !triggered && target != null && target.Dead;
         }
 
         public override IEnumerator OnDealDamage(int amount, PlayableCard target)
@@ -51,6 +53,7 @@ namespace ZergMod.Scripts.Abilities
             yield return Card.TransformIntoCard(evolution, RemoveTemporaryModsWithEvolve);
             yield return new WaitForSeconds(0.5f);
             yield return LearnAbility(0.5f);
+            triggered = true;
         }
         
         protected CardInfo GetTransformCardInfo()

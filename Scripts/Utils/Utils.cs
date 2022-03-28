@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using DiskCardGame;
 using InscryptionAPI.Card;
@@ -40,7 +41,6 @@ namespace ZergMod
             where T : SpecialAbilityData
         {
             loadedData = DataUtil.LoadFromFile<T>("Data/SpecialAbilities/" + declaringType.Name + ".customsigil");
-            newSpecialAbility = SpecialTriggeredAbilityManager.Add(Plugin.PluginGuid, declaringType.Name, declaringType);
             
             StatIconInfo iconInfo = new StatIconInfo();
             iconInfo.rulebookName = loadedData.ruleBookName;
@@ -49,7 +49,9 @@ namespace ZergMod
             iconInfo.iconGraphic = GetTextureFromPath(loadedData.iconPath);
             iconInfo.metaCategories = loadedData.metaCategories;
 
-            StatIconManager.Add(Plugin.PluginGuid, iconInfo, declaringType);
+            StatIconManager.FullStatIcon fullStatIcon = StatIconManager.Add(Plugin.PluginGuid, iconInfo, declaringType);
+            SpecialTriggeredAbility specialAbility = fullStatIcon.AbilityId;
+            newSpecialAbility = SpecialTriggeredAbilityManager.NewSpecialTriggers.First((a) => a.Id == specialAbility);
         }
 
         public static Dictionary<Texture2D, string> TextureToPath = new Dictionary<Texture2D, string>();

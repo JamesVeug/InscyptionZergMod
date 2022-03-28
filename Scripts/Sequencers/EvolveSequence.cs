@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using DiskCardGame;
 using InscryptionAPI.Encounters;
-using InscryptionAPI.Helpers;
 using UnityEngine;
 
 namespace ZergMod.Scripts
@@ -12,13 +11,10 @@ namespace ZergMod.Scripts
 	{
 		public override void Initialize()
 		{
-			// This node can only generate if the BaseDifficulty challenge is active
-			/*this.AddGenerationPrerequisite(() => AscensionSaveData.Data.ChallengeIsActive(AscensionChallenge.BaseDifficulty));
-        
-			// This node is forced to generate if more than one BaseDifficulty challenge is active
-			// and a deck trial node has been placed on the map already
-			this.AddForceGenerationCondition((y, nodes) => AscensionSaveData.Data.GetNumChallengesOfTypeActive(AscensionChallenge.BaseDifficulty) > 1 
-			                                               && nodes.Exists(n => n is DeckTrialNodeData));*/
+			base.Initialize();
+			
+			//this.AddGenerationPrerequisite(() => AscensionSaveData.Data.ChallengeIsActive(AscensionChallenge.BaseDifficulty));
+			//this.AddForceGenerationCondition((y, nodes) => true);
 		}
 	}
 	
@@ -38,7 +34,7 @@ namespace ZergMod.Scripts
 			        Utils.GetTextureFromPath("Artwork/Sequencers/evolve_3.png"),
 			        Utils.GetTextureFromPath("Artwork/Sequencers/evolve_4.png")
 		        },
-		        NodeManager.NodePosition.Act1Available
+		        NodeManager.NodePosition.SpecialEventRandom | NodeManager.NodePosition.Act1Available
 	        );
         }
 
@@ -57,10 +53,11 @@ namespace ZergMod.Scripts
         
         public EvolveSequencer()
         {
-	        this.sequencer = CloneCardMergeSequence();
+	        sequencer = CloneCardMergeSequence();
 
 	        DuplicateMergeSequencer duplicateMergeSequencer = GameObject.FindObjectOfType<DuplicateMergeSequencer>();
-	        this.cardChoiceSequencer = Instantiate(duplicateMergeSequencer.cardChoiceSequencer, transform);
+	        cardChoiceSequencer = Instantiate(duplicateMergeSequencer.cardChoiceSequencer, transform);
+	        cardChoiceSequencer.deckPile = this.sequencer.pile;
 		        
 	        DeckTrialSequencer deckTrialSequencer = GameObject.FindObjectOfType<DeckTrialSequencer>();
 	        eyeTexture = deckTrialSequencer.snakeEyeTexture;
@@ -75,17 +72,16 @@ namespace ZergMod.Scripts
             Singleton<ViewManager>.Instance.Controller.LockState = ViewLockState.Locked;
             
             
-            Singleton<ExplorableAreaManager>.Instance.TweenHangingLightColors(new Color(0, 0.5f, 0, 1), new Color(0, 0.3f, 0, 1), 0.1f);
+            yield return new WaitForSeconds(0.5f);
+            Singleton<ExplorableAreaManager>.Instance.TweenHangingLightColors(new Color(0.3f, 0.6f, 0, 1), new Color(0.3f, 0.4f, 0, 1), 0.1f);
             yield return Singleton<TextDisplayer>.Instance.ShowUntilInput(
-	            "You encounter a large strange green slug like looking creature that slithers towards you.", 
+	            "A large green slug like looking creature slithers towards you.", 
 	            -2.5f, 0.5f, Emotion.Neutral, TextDisplayer.LetterAnimation.WavyJitter);
             
             yield return new WaitForSeconds(0.3f);
             LeshyAnimationController.Instance.SetEyesTexture(eyeTexture);
-            
-            sequencer.stoneCircleAnim.gameObject.SetActive(true);
-            yield return new WaitForSeconds(0.5f);
             yield return sequencer.pile.SpawnCards(RunState.DeckList.Count, 0.5f);
+            
             List<CardInfo> validHosts = this.GetValidCardsForHost(null);
             List<CardInfo> validSacrifices = this.GetValidCardsForSacrifice(null);
             bool singleValidHostIsSameAsSacrifice = validHosts.Count == 1 && validSacrifices.Count == 1 && validHosts[0] == validSacrifices[0];
@@ -100,10 +96,22 @@ namespace ZergMod.Scripts
 	            yield return AbathurMessage("Potential hidden evolution available");
 	            yield return AbathurMessage("Require Biomass extraction from weaker cards to unlock");
 	            yield return ValidSequence();
-	            yield return AbathurMessage("Army now more efficient. Perfection is inevitable.");
+	            yield return AbathurMessage("Army now more efficient. Victory is inevitable.");
+	            
+	            if (RunState.Run.consumables.Count < RunState.Run.MaxConsumables)
+	            {
+		            yield return new WaitForSeconds(0.4f);
+		            Singleton<ViewManager>.Instance.SwitchToView(View.Consumables, false, false);
+		            yield return new WaitForSeconds(0.2f);
+		            RunState.Run.consumables.Add("BiomassInABottle");
+		            Singleton<ItemsManager>.Instance.UpdateItems(false);
+		            yield return new WaitForSeconds(0.5f);
+		            yield return AbathurMessage("Excess Biomass will help on battlefield.");
+	            }
             }
             
             Singleton<ExplorableAreaManager>.Instance.ResetHangingLightsToZoneColors(0.25f);
+            Singleton<ViewManager>.Instance.SwitchToView(View.Default, false, false);
 			yield return sequencer.pile.DestroyCards(0.5f);
 			sequencer.stoneCircleAnim.SetTrigger("exit");
 			yield return new WaitForSeconds(0.25f);
@@ -114,10 +122,18 @@ namespace ZergMod.Scripts
 			sequencer.confirmStone.SetStoneInactive();
 			sequencer.sacrificeSlot.DestroyCard();
 			sequencer.hostSlot.DestroyCard();
+			
+			if (Singleton<GameFlowManager>.Instance != null)
+			{
+				Singleton<GameFlowManager>.Instance.TransitionToGameState(GameState.Map, null);
+			}
         }
 
         private IEnumerator ValidSequence()
         {
+	        sequencer.stoneCircleAnim.gameObject.SetActive(true);
+	        yield return new WaitForSeconds(0.5f);
+	        
 	        Singleton<ViewManager>.Instance.SwitchToView(View.CardMergeSlots, false, false);
 	        sequencer.sacrificeSlot.RevealAndEnable();
 	        sequencer.sacrificeSlot.ClearDelegates();
@@ -140,7 +156,7 @@ namespace ZergMod.Scripts
 	        yield return new WaitForSeconds(1f);
 	        foreach (SpecialCardBehaviour cardBehaviour in sequencer.hostSlot.Card.GetComponents<SpecialCardBehaviour>())
 	        {
-		        yield return cardBehaviour.OnSelectedForCardMergeHost();
+		        yield return cardBehaviour.OnSelectedForCardRemoval();
 	        }
 
 	        // Remove sacrifice
@@ -167,9 +183,6 @@ namespace ZergMod.Scripts
 	        sequencer.hostSlot.Card.RenderCard();
 	        
 	        yield return new WaitForSeconds(1.5f);
-
-	        Singleton<ViewManager>.Instance.SwitchToView(View.Default, false, false);
-	        yield return new WaitForSeconds(0.25f);
 	        sequencer.hostSlot.FlyOffCard();
         }
 
@@ -195,12 +208,12 @@ namespace ZergMod.Scripts
         
         private IEnumerator InvalidCardsSequence()
         {
+	        yield return AbathurMessage("Army strands not capable of evolution. Choose strand to join Army.");
+	        
 	        CardChoicesNodeData nodeData = new CardChoicesNodeData();
 	        nodeData.overrideChoices = this.GetEvolvingCardChoices();
 	        if (nodeData.overrideChoices.Count > 0)
 	        {
-		        yield return AbathurMessage("Army strands not capable of improving. Choose strand to join Army.");
-		        
 		        Singleton<ViewManager>.Instance.SwitchToView(View.CardMergeSlots, false, false);
 		        yield return new WaitForSeconds(0.1f);
 		        yield return cardChoiceSequencer.CardSelectionSequence(nodeData);
@@ -215,7 +228,12 @@ namespace ZergMod.Scripts
         private List<CardChoice> GetEvolvingCardChoices()
         {
 	        List<CardInfo> allCards = new List<CardInfo>(CardLoader.AllData);
-	        allCards.RemoveAll((CardInfo x) => x.evolveParams == null);
+	        allCards.RemoveAll((CardInfo x) => x.evolveParams == null || 
+	                                           x.temple != CardTemple.Nature || 
+	                                           x.metaCategories.Count == 0 || 
+	                                           x.metaCategories.Contains(CardMetaCategory.Rare) ||
+	                                           !(x.metaCategories.Contains(CardMetaCategory.TraderOffer) &&
+	                                           x.metaCategories.Contains(CardMetaCategory.ChoiceNode)));
 	        
 	        List<CardChoice> finalList = new List<CardChoice>();
 	        int currentRandomSeed = SaveManager.SaveFile.GetCurrentRandomSeed();

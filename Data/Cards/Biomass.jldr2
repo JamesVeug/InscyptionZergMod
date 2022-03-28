@@ -4,7 +4,7 @@
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Biomass",
 	"abilities": ["Morsel"],
-	"baseHealth": 2,
+	"baseHealth": 1,
 	"cardComplexity": "Simple",
 	"temple": "Nature",
 	"tailName": "Zerg_JSON_biomass",
