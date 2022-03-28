@@ -45,7 +45,6 @@ namespace ZergMod
             StatIconInfo iconInfo = new StatIconInfo();
             iconInfo.rulebookName = loadedData.ruleBookName;
             iconInfo.rulebookDescription = loadedData.ruleDescription;
-            iconInfo.iconType = loadedData.iconType;
             iconInfo.iconGraphic = GetTextureFromPath(loadedData.iconPath);
             iconInfo.metaCategories = loadedData.metaCategories;
 

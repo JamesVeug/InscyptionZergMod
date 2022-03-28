@@ -1,14 +1,20 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
-	"power": 4,
-	"priority": 100,
-	"learnText": "A worthy sacrifice...",
-	"name": "Explode",
-	"ruleBookName": "Explode",
-	"ruleDescription": "When a card bearing this sigil attacks, the damage is also applied to the creatures adjacent to the target. This creature then perishes.",
-	"iconPath": "Artwork/Sigils/explode.png",
-	"metaCategories": [
-		"Part1Rulebook",
-		"Part1Modular"
-	]
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.AbilityData, ZergMod",
+    "name": "Explode",
+    "power": 4,
+    "priority": 100,
+    "learnText": "A worthy sacrifice...",
+    "ruleBookName": "Explode",
+    "ruleDescription": "When a card bearing this sigil attacks, the damage is also applied to the creatures adjacent to the target. This creature then perishes.",
+    "iconPath": "Artwork/Sigils/explode.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    }
 }

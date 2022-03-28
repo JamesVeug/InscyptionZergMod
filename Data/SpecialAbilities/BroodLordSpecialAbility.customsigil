@@ -1,16 +1,22 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.BroodLordSpecialAbilityData",
-	"cardCreatedName": "Zerg_JSON_Broodling",
-	"maxCards": 3,
-	"power": 0,
-	"priority": 0,
-	"learnText": "",
-	"name": "Brood Lord",
-	"ruleBookName": "Brood Lord",
-	"ruleDescription": "As long as this creature is on the board, a Broodling is created in your hand at the start of your turn, up to 3 maximum.",
-	"iconPath": "Artwork/Cards/broodlord.png",
-	"metaCategories": [
-		"Part1Rulebook",
-		"Part1Modular"
-	]
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.BroodLordSpecialAbilityData, ZergMod",
+    "name": "Brood Lord",
+    "power": 0,
+    "priority": 0,
+    "learnText": "",
+    "ruleBookName": "Brood Lord",
+    "ruleDescription": "As long as this creature is on the board, a Broodling is created in your hand at the start of your turn, up to 3 maximum.",
+    "iconPath": "Artwork/Cards/broodlord.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    }
+    "cardCreatedName": "Zerg_JSON_Broodling",
+    "maxCards": 3
 }

@@ -12,7 +12,7 @@ namespace ZergMod.Scripts.Data.Sigils
         public string learnText = "";
         public string ruleBookName = "";
         public string ruleDescription = "";
-        public string iconPath = "Artwork/zerg.png";
+        public string iconPath = "Artwork/";
         public List<AbilityMetaCategory> metaCategories = new List<AbilityMetaCategory>{ AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular };
     }
 }

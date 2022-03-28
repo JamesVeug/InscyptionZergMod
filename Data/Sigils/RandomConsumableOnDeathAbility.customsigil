@@ -1,14 +1,20 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
-	"power": 0,
-	"priority": 0,
-	"learnText": "None can hide from it’s piercing gaze.",
-	"name": "RandomConsumableOnDeath",
-	"ruleBookName": "Trinket Within",
-	"ruleDescription": "When a card bearing this sigil perishes, a random item is given to you.",
-	"iconPath": "Artwork/Sigils/consumable_on_death.png",
-	"metaCategories": [
-		"Part1Rulebook",
-		"Part1Modular"
-	]
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.AbilityData, ZergMod",
+    "name": "RandomConsumableOnDeath",
+    "power": 0,
+    "priority": 0,
+    "learnText": "None can hide from it’s piercing gaze.",
+    "ruleBookName": "Trinket Within",
+    "ruleDescription": "When a card bearing this sigil perishes, a random item is given to you.",
+    "iconPath": "Artwork/Sigils/consumable_on_death.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    }
 }

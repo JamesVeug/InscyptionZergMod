@@ -1,34 +1,48 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.DehakaSpecialAbilityData",
-	"portraitChanges": [
-		{
-			"@type": "ZergMod.Scripts.Data.Sigils.DehakaSpecialAbilityData+PortraitChangeData",
-			"minimumKills": 0,
-			"portraitPath": "Artwork/Cards/dehaka_1.png",
-			"portraitEmitPath": "Artwork/Cards/dehaka_1_emit.png"
-		},
-		{
-			"@type": "ZergMod.Scripts.Data.Sigils.DehakaSpecialAbilityData+PortraitChangeData",
-			"minimumKills": 3,
-			"portraitPath": "Artwork/Cards/dehaka_2.png",
-			"portraitEmitPath": "Artwork/Cards/dehaka_2_emit.png"
-		},
-		{
-			"@type": "ZergMod.Scripts.Data.Sigils.DehakaSpecialAbilityData+PortraitChangeData",
-			"minimumKills": 6,
-			"portraitPath": "Artwork/Cards/dehaka_3.png",
-			"portraitEmitPath": "Artwork/Cards/dehaka_3_emit.png"
-		}
-	],
-	"power": 0,
-	"priority": 0,
-	"learnText": "",
-	"name": "Collect Essence",
-	"ruleBookName": "Collect Essence",
-	"ruleDescription": "This Primal leader will permanently grow stronger after defeating more powerful cards.",
-	"iconPath": "Artwork/Cards/dehaka_1.png",
-	"metaCategories": [
-		"Part1Rulebook",
-		"Part1Modular"
-	]
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.DehakaSpecialAbilityData, ZergMod",
+    "name": "Collect Essence",
+    "power": 0,
+    "priority": 0,
+    "learnText": "",
+    "ruleBookName": "Collect Essence",
+    "ruleDescription": "This Primal leader will permanently grow stronger after defeating more powerful cards.",
+    "iconPath": "Artwork/Cards/dehaka_1.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    }
+    "portraitChanges": {
+        "$id": 2,
+        "$type": "2|System.Collections.Generic.List`1[[ZergMod.Scripts.Data.Sigils.DehakaSpecialAbilityData+PortraitChangeData, ZergMod]], mscorlib",
+        "$rlength": 1,
+        "$rcontent": [
+            {
+                "$id": 3,
+                "$type": "3|ZergMod.Scripts.Data.Sigils.DehakaSpecialAbilityData+PortraitChangeData, ZergMod",
+                "minimumKills": 0,
+                "portraitPath": "Artwork/Cards/dehaka_1.png",
+                "portraitEmitPath": "Artwork/Cards/dehaka_1_emit.png"
+            },
+            {
+                "$id": 4,
+                "$type": "3|ZergMod.Scripts.Data.Sigils.DehakaSpecialAbilityData+PortraitChangeData, ZergMod",
+                "minimumKills": 0,
+                "portraitPath": "Artwork/Cards/dehaka_2.png",
+                "portraitEmitPath": "Artwork/Cards/dehaka_2_emit.png"
+            },
+            {
+                "$id": 5,
+                "$type": "3|ZergMod.Scripts.Data.Sigils.DehakaSpecialAbilityData+PortraitChangeData, ZergMod",
+                "minimumKills": 0,
+                "portraitPath": "Artwork/Cards/dehaka_3.png",
+                "portraitEmitPath": "Artwork/Cards/dehaka_3_emit.png"
+            }
+        ]
+    }
 }

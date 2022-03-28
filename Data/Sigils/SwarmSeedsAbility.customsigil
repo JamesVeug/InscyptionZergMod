@@ -1,14 +1,20 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
-	"power": 0,
-	"priority": 0,
-	"learnText": "How ferocious...",
-	"name": "Draw Broodling's",
-	"ruleBookName": "Swarm Seeds",
-	"ruleDescription": "When a card bearing this sigil is played, a Broodling is placed in your hand. A Broodling is defined as 2 power 2 health with Brittle.",
-	"iconPath": "Artwork/Sigils/swarm_seeds.png",
-	"metaCategories": [
-		"Part1Rulebook",
-		"Part1Modular"
-	]
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.AbilityData, ZergMod",
+    "name": "Draw Broodling's",
+    "power": 0,
+    "priority": 0,
+    "learnText": "How ferocious...",
+    "ruleBookName": "Swarm Seeds",
+    "ruleDescription": "When a card bearing this sigil is played, a Broodling is placed in your hand. A Broodling is defined as 2 power 2 health with Brittle.",
+    "iconPath": "Artwork/Sigils/swarm_seeds.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    }
 }

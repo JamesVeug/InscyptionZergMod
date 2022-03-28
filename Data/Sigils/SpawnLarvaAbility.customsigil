@@ -1,16 +1,22 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.CreateCardsAbilityData",
-	"spawnCardId": "Zerg_JSON_Larva",
-	"cannotSpawnDialogue": "No room for Larva!",
-	"power": 9,
-	"priority": 0,
-	"learnText": "The Swarm grows...",
-	"name": "Spawn Larva",
-	"ruleBookName": "Spawn Larva",
-	"ruleDescription": "When a card bearing this sigil is played, Larva are created adjacent to it. A Larva is defined as 0 power 3 health with Fledgling.",
-	"iconPath": "Artwork/Sigils/spawn_larva.png",
-	"metaCategories": [
-		"Part1Rulebook",
-		"Part1Modular"
-	]
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.CreateCardsAbilityData, ZergMod",
+    "name": "Spawn Larva",
+    "power": 9,
+    "priority": 0,
+    "learnText": "The Swarm grows...",
+    "ruleBookName": "Spawn Larva",
+    "ruleDescription": "When a card bearing this sigil is played, Larva are created adjacent to it. A Larva is defined as 0 power 3 health with Fledgling.",
+    "iconPath": "Artwork/Sigils/spawn_larva.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    },
+    "spawnCardId": "Zerg_JSON_Larva",
+    "cannotSpawnDialogue": "No room for Larva!"
 }
