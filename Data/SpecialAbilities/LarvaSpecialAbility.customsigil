@@ -1,63 +1,82 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.LarvaSpecialAbilityData",
-	"cardEvolutions": [
-		{
-			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Zerglings",
-			"weight": 40
-		},
-		{
-			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Mutalisk",
-			"weight": 30
-		},
-		{
-			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Roach",
-			"weight": 20
-		},
-		{
-			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Drone",
-			"weight": 20
-		},
-		{
-			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Hydralisk",
-			"weight": 20
-		},
-		{
-			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Scourge",
-			"weight": 20
-		},
-		{
-			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Corruptor",
-			"weight": 20
-		},
-		{
-			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Baneling",
-			"weight": 20
-		},
-		{
-			"@type": "ZergMod.Scripts.WeightData",
-			"cardName": "Ultralisk",
-			"weight": 10
-		}
-	],
-	"turnsUntilEvolve": 1,
-	"iconType": "CardsInHand",
-	"power": 0,
-	"priority": 0,
-	"learnText": "",
-	"name": "Larva",
-	"ruleBookName": "Larva",
-	"ruleDescription": "The Larva will evolve into a random Zerg when it matures.",
-	"iconPath": "Artwork/Cards/larva.png",
-	"metaCategories": [
-		"Part1Rulebook",
-		"Part1Modular"
-	]
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.LarvaSpecialAbilityData, ZergMod",
+    "name": "Larva",
+    "power": 0,
+    "priority": 0,
+    "learnText": "",
+    "ruleBookName": "Larva",
+    "ruleDescription": "The Larva will evolve into a random Zerg when it matures.",
+    "iconPath": "Artwork/Cards/larva.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    }
+    "cardEvolutions": {
+        "$id": 2,
+        "$type": "2|System.Collections.Generic.List`1[[ZergMod.Scripts.WeightData, ZergMod]], mscorlib",
+        "$rlength": 1,
+        "$rcontent": [
+            {
+                "$id": 3,
+                "$type": "3|ZergMod.Scripts.WeightData, ZergMod",
+                "cardName": "Zerg_JSON_Zerglings",
+                "weight": 40
+            },
+            {
+                "$id": 4,
+                "$type": "3|ZergMod.Scripts.WeightData, ZergMod",
+                "cardName": "Zerg_JSON_Mutalisk",
+                "weight": 30
+            },
+            {
+                "$id": 5,
+                "$type": "3|ZergMod.Scripts.WeightData, ZergMod",
+                "cardName": "Zerg_JSON_Roach",
+                "weight": 30
+            },
+            {
+                "$id": 6,
+                "$type": "3|ZergMod.Scripts.WeightData, ZergMod",
+                "cardName": "Zerg_JSON_Drone",
+                "weight": 20
+            },
+            {
+                "$id": 7,
+                "$type": "3|ZergMod.Scripts.WeightData, ZergMod",
+                "cardName": "Zerg_JSON_Hydralisk",
+                "weight": 20
+            },
+            {
+                "$id": 3,
+                "$type": "3|ZergMod.Scripts.WeightData, ZergMod",
+                "cardName": "Zerg_JSON_Scourge",
+                "weight": 20
+            },
+            {
+                "$id": 8,
+                "$type": "3|ZergMod.Scripts.WeightData, ZergMod",
+                "cardName": "Zerg_JSON_Corruptor",
+                "weight": 20
+            },
+            {
+                "$id": 9,
+                "$type": "3|ZergMod.Scripts.WeightData, ZergMod",
+                "cardName": "Zerg_JSON_Baneling",
+                "weight": 20
+            },
+            {
+                "$id": 10,
+                "$type": "3|ZergMod.Scripts.WeightData, ZergMod",
+                "cardName": "Zerg_JSON_Ultralisk",
+                "weight": 10
+            }
+        ]
+    },
+    "turnsUntilEvolve": 1
 }

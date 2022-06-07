@@ -1,0 +1,19 @@
+{
+	"name": "JSON_Brenda",
+	"modPrefix": "Zerg",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Brenda",
+	"baseAttack": 1,
+	"baseHealth": 3,
+	"bloodCost": 2,
+	"abilities": ["jamesgames.inscryption.zergmod.Spawn Creep Tumor"],
+	"metaCategories": ["Rare"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "Zerg_JSON_biomass",
+	"description": "Back before we war we could fly!",
+	"appearanceBehaviour": ["RareCardBackground"],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/brenda.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/brenda_emit.png",
+	"tribes": ["Insect"]
+}

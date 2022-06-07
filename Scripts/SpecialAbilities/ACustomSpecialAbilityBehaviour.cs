@@ -1,6 +1,7 @@
 ﻿using System;
 using APIPlugin;
 using DiskCardGame;
+using InscryptionAPI.Card;
 using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.SpecialAbilities
@@ -14,8 +15,9 @@ namespace ZergMod.Scripts.SpecialAbilities
 
         public static SpecialTriggeredAbility InitializeBase(Type declaringType)
         {
-            Utils.InitializeSpecialAbility(declaringType, out m_loadedData, out NewSpecialAbility newSpecialAbility);
-            return newSpecialAbility.specialTriggeredAbility;
+            SpecialTriggeredAbilityManager.FullSpecialTriggeredAbility newSpecialAbility;
+            Utils.InitializeSpecialAbility(declaringType, out m_loadedData, out newSpecialAbility);
+            return newSpecialAbility.Id;
         }
     }
 }

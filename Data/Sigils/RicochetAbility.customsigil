@@ -1,15 +1,21 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.RicochetAbilityData",
-	"ricochetDamage": 1,
-	"power": 0,
-	"priority": 0,
-	"learnText": "A bizarre attack. But effective.",
-	"name": "Ricochet",
-	"ruleBookName": "Ricochet",
-	"ruleDescription": "When a card bearing this sigil deals damage to a creature, it will also deal 1 flying damage.",
-	"iconPath": "Artwork/Sigils/ricochet.png",
-	"metaCategories": [
-		"Part1Rulebook",
-		"Part1Modular"
-	]
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.RicochetAbilityData, ZergMod",
+    "name": "Ricochet",
+    "power": 0,
+    "priority": 0,
+    "learnText": "",
+    "ruleBookName": "Ricochet",
+    "ruleDescription": "When a card bearing this sigil deals damage to a creature, it will also deal 1 flying damage.",
+    "iconPath": "Artwork/Sigils/ricochet.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    },
+    "ricochetDamage": 1
 }

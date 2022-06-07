@@ -1,53 +1,69 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData",
-	"portraitChanges": [
-		{
-			"@type": "ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData",
-			"health": 1,
-			"portraitPath": "Artwork/Cards/zergling_1.png",
-			"portraitEmitPath": "Artwork/Cards/zergling_1_emit.png"
-		},
-		{
-			"@type": "ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData",
-			"health": 2,
-			"portraitPath": "Artwork/Cards/zergling_2.png",
-			"portraitEmitPath": "Artwork/Cards/zergling_2_emit.png"
-		},
-		{
-			"@type": "ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData",
-			"health": 3,
-			"portraitPath": "Artwork/Cards/zergling_3.png",
-			"portraitEmitPath": "Artwork/Cards/zergling_3_emit.png"
-		},
-		{
-			"@type": "ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData",
-			"health": 4,
-			"portraitPath": "Artwork/Cards/zergling_4.png",
-			"portraitEmitPath": "Artwork/Cards/zergling_4_emit.png"
-		},
-		{
-			"@type": "ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData",
-			"health": 5,
-			"portraitPath": "Artwork/Cards/zergling_5.png",
-			"portraitEmitPath": "Artwork/Cards/zergling_5_emit.png"
-		},
-		{
-			"@type": "ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData",
-			"health": 6,
-			"portraitPath": "Artwork/Cards/zergling_6.png",
-			"portraitEmitPath": "Artwork/Cards/zergling_6_emit.png"
-		}
-	],
-	"iconType": "CardsInHand",
-	"power": 0,
-	"priority": 0,
-	"learnText": "",
-	"name": "Zergling Swarm",
-	"ruleBookName": "Zergling Swarm",
-	"ruleDescription": "For every point of health this creature has, the portrait will gain 1 Zergling up to 6.",
-	"iconPath": "Artwork/Cards/zergling_6.png",
-	"metaCategories": [
-		"Part1Rulebook",
-		"Part1Modular"
-	]
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData, ZergMod",
+    "name": "Zergling Swarm",
+    "power": 0,
+    "priority": 0,
+    "learnText": "",
+    "ruleBookName": "Zergling Swarm",
+    "ruleDescription": "For every point of health this creature has, the portrait will gain 1 Zergling up to 6.",
+    "iconPath": "Artwork/Cards/zergling_6.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    }
+    "portraitChanges": {
+        "$id": 2,
+        "$type": "2|System.Collections.Generic.List`1[[ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod]], mscorlib",
+        "$rlength": 1,
+        "$rcontent": [
+            {
+                "$id": 3,
+                "$type": "3|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod",
+                "health": 0,
+                "portraitPath": "Artwork/Cards/zergling_1.png",
+                "portraitEmitPath": "Artwork/Cards/zergling_1_emit.png"
+            },
+            {
+                "$id": 4,
+                "$type": "3|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod",
+                "health": 0,
+                "portraitPath": "Artwork/Cards/zergling_2.png",
+                "portraitEmitPath": "Artwork/Cards/zergling_2_emit.png"
+            },
+            {
+                "$id": 5,
+                "$type": "3|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod",
+                "health": 0,
+                "portraitPath": "Artwork/Cards/zergling_3.png",
+                "portraitEmitPath": "Artwork/Cards/zergling_3_emit.png"
+            },
+            {
+                "$id": 6,
+                "$type": "3|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod",
+                "health": 0,
+                "portraitPath": "Artwork/Cards/zergling_4.png",
+                "portraitEmitPath": "Artwork/Cards/zergling_4_emit.png"
+            },
+            {
+                "$id": 7,
+                "$type": "3|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod",
+                "health": 0,
+                "portraitPath": "Artwork/Cards/zergling_5.png",
+                "portraitEmitPath": "Artwork/Cards/zergling_5_emit.png"
+            },
+            {
+                "$id": 8,
+                "$type": "3|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod",
+                "health": 0,
+                "portraitPath": "Artwork/Cards/zergling_6.png",
+                "portraitEmitPath": "Artwork/Cards/zergling_6_emit.png"
+            }
+        ]
+    }
 }

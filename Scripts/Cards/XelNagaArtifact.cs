@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using APIPlugin;
 using DiskCardGame;
+using InscryptionAPI.Card;
 using ZergMod.Scripts.Backgrounds;
 
 namespace ZergMod.Scripts.Cards
@@ -29,28 +30,29 @@ namespace ZergMod.Scripts.Cards
             List<Ability> abilities = new List<Ability>{ };
             abilities.Add(Ability.QuadrupleBones);
             abilities.Add(Ability.TripleBlood);
-            
+
             List<Trait> traits = new List<Trait> { Trait.Goat };
-            List<Tribe> tribes = new List<Tribe>() { Tribe.Insect, Tribe.Bird, Tribe.Canine };
-            
-            NewCard.Add(name: ID,
-                displayedName: DisplayName,
-                baseAttack: BaseAttack,
-                baseHealth: BaseHealth,
-                metaCategories: metaCategories,
-                cardComplexity: CardComplexity.Simple,
-                temple: CardTemple.Nature,
-                description: Description,
-                bloodCost: BloodCost,
-                bonesCost: BoneCost,
-                abilities: abilities,
-                appearanceBehaviour: appearanceBehaviour,
-                defaultTex: Utils.GetTextureFromPath(TextureFile),
-                emissionTex: Utils.GetTextureFromPath(EmitTextureFile),
-                traits: traits,
-                tribes: tribes,
-                decals: Utils.GetDecals(),
-                onePerDeck:true);
+            List<Tribe> tribes = new List<Tribe> { Tribe.Insect, Tribe.Bird, Tribe.Canine };
+
+            CardInfo card = CardManager.New(modPrefix: Plugin.PluginName, 
+                name: ID,
+                displayName: DisplayName,
+                attack: BaseAttack,
+                health: BaseHealth,
+                description: Description);
+
+            card.metaCategories = metaCategories;
+            card.cardComplexity = CardComplexity.Simple;
+            card.temple = CardTemple.Nature;
+            card.SetCost(BloodCost, BoneCost);
+            card.abilities = abilities;
+            card.appearanceBehaviour = appearanceBehaviour;
+            card.SetPortrait(Utils.GetTextureFromPath(TextureFile));
+            card.SetEmissivePortrait(Utils.GetTextureFromPath(EmitTextureFile));
+            card.traits = traits;
+            card.tribes = tribes;
+            card.decals = Utils.GetDecals();
+            card.onePerDeck = true;
         }
     }
 }

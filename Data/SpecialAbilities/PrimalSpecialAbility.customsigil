@@ -1,28 +1,20 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.PrimalSpecialAbilityData",
-	"evolutions": [
-		{
-			"@type": "ZergMod.Scripts.Data.Sigils.NextPrimalEvolution",
-			"Name": "PrimalZergling",
-			"NextEvolutionName": "PrimalRavasaur"
-		},
-		{
-			"@type": "ZergMod.Scripts.Data.Sigils.NextPrimalEvolution",
-			"Name": "PrimalRoach",
-			"NextEvolutionName": "PrimalIgniter"
-		}
-	],
-	"DefaultAttackBuff": 1,
-	"DefaultHealthBuff": 2,
-	"power": 9,
-	"priority": 0,
-	"learnText": "",
-	"name": "PrimalZerg",
-	"ruleBookName": "Primal Zerg",
-	"ruleDescription": "All Primal Zerg will grow stronger depending on what creatures were sacrificed to summon them.",
-	"iconPath": "Artwork/Cards/primal_zergling.png",
-	"metaCategories": [
-		"Part1Rulebook",
-		"Part1Modular"
-	]
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.PrimalSpecialAbilityData, ZergMod",
+    "name": "PrimalZerg",
+    "power": 9,
+    "priority": 0,
+    "learnText": "",
+    "ruleBookName": "Primal Zerg",
+    "ruleDescription": "All Primal Zerg will grow stronger depending on what creatures were sacrificed to summon them.",
+    "iconPath": "Artwork/Cards/primal_zergling.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    }
 }

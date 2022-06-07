@@ -1,0 +1,20 @@
+{
+	"name": "JSON_Leviathan",
+	"modPrefix": "Zerg",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Leviathan",
+	"baseHealth": 20,
+	"bonesCost": 8,
+	"energyCost": 0,
+	"abilities": ["jamesgames.inscryption.zergmod.Blood Bank","jamesgames.inscryption.zergmod.Summon Zerg"],
+	"metaCategories": ["Rare"],
+	"cardComplexity": "Advanced",
+	"onePerDeck": True,
+	"temple": "Nature",
+	"tailName": "Zerg_JSON_biomass",
+	"description": "From these massive creatures, the Swarm moves...",
+	"appearanceBehaviour": ["RareCardBackground"],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/leviathan.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/leviathan_emit.png",
+	"tribes": ["Insect"]
+}

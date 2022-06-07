@@ -1,0 +1,20 @@
+{
+	"name": "JSON_Queen of Blades",
+	"modPrefix": "Zerg",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Queen of Blades",
+	"baseAttack": 3,
+	"baseHealth": 6,
+	"bloodCost": 4,
+	"abilities": ["SplitStrike","jamesgames.inscryption.zergmod.Splash Damage"],
+	"metaCategories": ["Rare"],
+	"cardComplexity": "Advanced",
+	"onePerDeck": True,
+	"temple": "Nature",
+	"tailName": "Zerg_JSON_biomass",
+	"description": "[c:purple]I am the Swarm...[c:]",
+	"appearanceBehaviour": ["RareCardBackground"],
+	"texture": "JamesGames-ZergMod/Artwork/Cards/kerrigan.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/kerrigan_emit.png",
+	"tribes": ["Insect"]
+}

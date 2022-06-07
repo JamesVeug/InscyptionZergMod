@@ -1,0 +1,18 @@
+{
+	"name": "JSON_PrimalRavasaur",
+	"modPrefix": "Zerg",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Primal Ravasaur",
+	"baseAttack": 3,
+	"baseHealth": 2,
+	"bloodCost": 2,
+	"abilities": ["jamesgames.inscryption.zergmod.Assimilate"],
+	"metaCategories": ["ChoiceNode","TraderOffer"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "Zerg_JSON_biomass",
+	"description": "Powerful ancient Zerg...",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_ravasaur.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/primal_ravasaur_emit.png",
+	"tribes": ["Insect"]
+}

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
-using APIPlugin;
 using DiskCardGame;
+using InscryptionAPI.Card;
 using UnityEngine;
 using ZergMod.Scripts;
 using ZergMod.Scripts.Data;
@@ -17,48 +18,39 @@ namespace ZergMod
         
         private static List<Texture> s_defaultDecals = null;
         
-        public static void InitializeAbility<T>(Type declaringType, out NewAbility newAbility) where T : AbilityData
+        public static void InitializeAbility<T>(Type declaringType, out AbilityInfo newAbility) where T : AbilityData
         {
             T loadedData = DataUtil.LoadFromFile<T>("Data/Sigils/" + declaringType.Name + ".customsigil");
             s_dataLookup[declaringType] = loadedData;
-            
-            AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
-            info.powerLevel = loadedData.power;
-            info.rulebookName = loadedData.ruleBookName;
-            info.rulebookDescription = loadedData.ruleDescription;
-            info.metaCategories = loadedData.metaCategories;
 
+            Texture2D texture = GetTextureFromPath(loadedData.iconPath);
+            newAbility = AbilityManager.New(Plugin.PluginGuid, loadedData.ruleBookName, loadedData.ruleDescription, declaringType, texture);
+            newAbility.powerLevel = loadedData.power;
+            newAbility.metaCategories = loadedData.metaCategories;
             if (!string.IsNullOrEmpty(loadedData.learnText))
             {
                 List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
                 DialogueEvent.Line line = new DialogueEvent.Line();
                 line.text = loadedData.learnText;
                 lines.Add(line);
-                info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+                newAbility.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
             }
-
-            newAbility = new NewAbility(
-                info: info, 
-                abilityBehaviour: declaringType, 
-                tex: Utils.GetTextureFromPath(loadedData.iconPath),
-                id: AbilityIdentifier.GetAbilityIdentifier(Plugin.PluginGuid, loadedData.name)
-            );
         }
         
-        public static void InitializeSpecialAbility<T>(Type declaringType, out T loadedData, out NewSpecialAbility newSpecialAbility) where T : SpecialAbilityData
+        public static void InitializeSpecialAbility<T>(Type declaringType, out T loadedData, out SpecialTriggeredAbilityManager.FullSpecialTriggeredAbility newSpecialAbility) 
+            where T : SpecialAbilityData
         {
             loadedData = DataUtil.LoadFromFile<T>("Data/SpecialAbilities/" + declaringType.Name + ".customsigil");
-            
-            SpecialAbilityIdentifier identifier = SpecialAbilityIdentifier.GetID(Plugin.PluginGuid, loadedData.name);
             
             StatIconInfo iconInfo = new StatIconInfo();
             iconInfo.rulebookName = loadedData.ruleBookName;
             iconInfo.rulebookDescription = loadedData.ruleDescription;
-            iconInfo.iconType = loadedData.iconType;
             iconInfo.iconGraphic = GetTextureFromPath(loadedData.iconPath);
             iconInfo.metaCategories = loadedData.metaCategories;
-            
-            newSpecialAbility = new NewSpecialAbility(declaringType, identifier, iconInfo);
+
+            StatIconManager.FullStatIcon fullStatIcon = StatIconManager.Add(Plugin.PluginGuid, iconInfo, declaringType);
+            SpecialTriggeredAbility specialAbility = fullStatIcon.AbilityId;
+            newSpecialAbility = SpecialTriggeredAbilityManager.NewSpecialTriggers.First((a) => a.Id == specialAbility);
         }
 
         public static Dictionary<Texture2D, string> TextureToPath = new Dictionary<Texture2D, string>();
@@ -67,13 +59,7 @@ namespace ZergMod
             byte[] imgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, path));
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
-
             tex.filterMode = FilterMode.Point;
-
-            /*if (!TextureToPath.TryGetValue(tex, out _))
-            {
-                TextureToPath[tex] = path;
-            }*/
 
             return tex;
         }

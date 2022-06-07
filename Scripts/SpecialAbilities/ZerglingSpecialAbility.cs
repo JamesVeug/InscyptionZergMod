@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using APIPlugin;
 using DiskCardGame;
+using InscryptionAPI.Helpers;
 using UnityEngine;
 using ZergMod.Scripts.Data.Sigils;
 
@@ -14,7 +15,7 @@ namespace ZergMod.Scripts.SpecialAbilities
         public SpecialTriggeredAbility SpecialAbility => specialAbility;
         public static SpecialTriggeredAbility specialAbility = SpecialTriggeredAbility.None;
         
-        private static Dictionary<int, Texture2D> m_zerglingImages = new Dictionary<int, Texture2D>();
+        private static Dictionary<int, Sprite> m_zerglingImages = new Dictionary<int, Sprite>();
         private static int m_maxZerglingHealth = 0;
 
         public static void Initialize(Type declaringType)
@@ -37,20 +38,16 @@ namespace ZergMod.Scripts.SpecialAbilities
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(texBytes);
             tex.name = "portrait_" + data.portraitPath;
-            tex.filterMode = FilterMode.Point;
+            Sprite sprite = tex.ConvertTexture(TextureHelper.SpriteType.CardPortrait, FilterMode.Point);
 
-            m_zerglingImages[data.health] = tex;
+            m_zerglingImages[data.health] = sprite;
             
             // Emit Texture
             byte[] emissiveImgBytes = File.ReadAllBytes(Path.Combine(Plugin.Directory, data.portraitEmitPath));
             Texture2D emissiveTex = new Texture2D(2,2);
             emissiveTex.LoadImage(emissiveImgBytes);
             emissiveTex.name = tex.name + "_emission";
-            emissiveTex.filterMode = FilterMode.Point;
-                
-            Sprite emissiveSprite = Sprite.Create(emissiveTex, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
-            emissiveSprite.name = tex.name + "_emission";
-            NewCard.emissions.Add(tex.name, emissiveSprite);
+            sprite.RegisterEmissionForSprite(emissiveTex, TextureHelper.SpriteType.CardPortrait, FilterMode.Point);
         }
 
         private void Awake()
@@ -139,10 +136,10 @@ namespace ZergMod.Scripts.SpecialAbilities
                 return;
             }
 
-            Texture2D tex = m_zerglingImages[health];
-            Card.Info.portraitTex = Sprite.Create(tex, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
+            Sprite tex = m_zerglingImages[health];
+            Card.Info.portraitTex = tex;
             Card.Info.portraitTex.name = tex.name;
-            Card.Info.alternatePortrait = Sprite.Create(tex, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
+            Card.Info.alternatePortrait = tex;
             Card.Info.alternatePortrait.name = tex.name;
             Card.RenderCard();
         }

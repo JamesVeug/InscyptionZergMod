@@ -1,14 +1,20 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
-	"power": 9,
-	"priority": 0,
-	"learnText": "Use that creature well.",
-	"name": "Fish Hook",
-	"ruleBookName": "Fish Hook",
-	"ruleDescription": "Whenever a card bearing this sigil is played, you may hook an opposing creature to your side of the board, if there is room.",
-	"iconPath": "Artwork/Sigils/fish_hook.png",
-	"metaCategories": [
-		"Part1Rulebook",
-		"Part1Modular"
-	]
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.AbilityData, ZergMod",
+    "name": "Fish Hook",
+    "power": 9,
+    "priority": 0,
+    "learnText": "Use that creature well.",
+    "ruleBookName": "Fish Hook",
+    "ruleDescription": "Whenever a card bearing this sigil is played, you may hook an opposing creature to your side of the board, if there is room.",
+    "iconPath": "Artwork/Sigils/fish_hook.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    }
 }

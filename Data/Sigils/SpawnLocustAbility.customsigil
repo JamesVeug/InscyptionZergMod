@@ -1,16 +1,22 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.CreateCardsAbilityData",
-	"spawnCardId": "Locust",
-	"cannotSpawnDialogue": "No room for any Locusts!",
-	"power": 0,
-	"priority": 0,
-	"learnText": "An army that never ends...",
-	"name": "Draw Locust's",
-	"ruleBookName": "Spawn Locust",
-	"ruleDescription": "When a card bearing this sigil is played and at the start of your turn, Locusts will be created adjacent to it. A Locust is defined as 1 power 1 health with Brittle",
-	"iconPath": "Artwork/Sigils/draw_locusts.png",
-	"metaCategories": [
-		"Part1Rulebook",
-		"Part1Modular"
-	]
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.CreateCardsAbilityData, ZergMod",
+    "name": "DrawLocusts",
+    "power": 0,
+    "priority": 0,
+    "learnText": "An army that never ends...",
+    "ruleBookName": "Spawn Locust",
+    "ruleDescription": "When a card bearing this sigil is played and at the start of your turn, Locusts will be created adjacent to it. A Locust is defined as 1 power 1 health with Brittle",
+    "iconPath": "Artwork/Sigils/draw_locusts.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    },
+    "spawnCardId": "Zerg_JSON_Locust",
+    "cannotSpawnDialogue": "No room for any Locusts!"
 }

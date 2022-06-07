@@ -1,14 +1,20 @@
 {
-	"@type": "ZergMod.Scripts.Data.Sigils.AbilityData",
-	"power": 0,
-	"priority": 0,
-	"learnText": "Your creatures need not die to bleed.",
-	"name": "Blood Bank",
-	"ruleBookName": "Blood Bank",
-	"ruleDescription": "Whenever a card bearing this sigil is sacrificed to summon another card, the cost is reduced from this creature’s current health.",
-	"iconPath": "Artwork/Sigils/blood_bank.png",
-	"metaCategories": [
-		"Part1Rulebook",
-		"Part1Modular"
-	]
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.AbilityData, ZergMod",
+    "name": "Blood Bank",
+    "power": 0,
+    "priority": 0,
+    "learnText": "Your creatures need not die to bleed.",
+    "ruleBookName": "Blood Bank",
+    "ruleDescription": "Whenever a card bearing this sigil is sacrificed to summon another card, the cost is reduced from this creature’s current health.",
+    "iconPath": "Artwork/Sigils/blood_bank.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    }
 }

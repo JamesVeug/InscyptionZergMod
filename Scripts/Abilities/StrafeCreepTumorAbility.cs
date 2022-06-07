@@ -3,6 +3,8 @@ using System.Collections;
 using System.IO;
 using APIPlugin;
 using DiskCardGame;
+using InscryptionAPI.Card;
+using InscryptionAPI.Helpers;
 using UnityEngine;
 using ZergMod.Scripts.Data.Sigils;
 using ZergMod.Scripts.SpecialAbilities;
@@ -27,30 +29,30 @@ namespace ZergMod.Scripts.Abilities
 	            // Before
 	            Texture2D beforeTexture = Utils.GetTextureFromPath("Artwork/Cards/brenda_push.png");
 	            beforeTexture.name = "portrait_brend_push";
-	            BeforeSprite = Sprite.Create(beforeTexture, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
+	            BeforeSprite = beforeTexture.ConvertTexture(TextureHelper.SpriteType.CardPortrait);
 	            
 	            // Before Emit Texture
 	            Texture2D beforeEmitTexture = Utils.GetTextureFromPath("Artwork/Cards/brenda_push_emit.png");
 	            beforeEmitTexture.name = BeforeSprite.name + "_emission";
 	            beforeEmitTexture.filterMode = FilterMode.Point;
                 
-	            Sprite beforeEmissiveSprite = Sprite.Create(beforeEmitTexture, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
+	            Sprite beforeEmissiveSprite = beforeEmitTexture.ConvertTexture(TextureHelper.SpriteType.CardPortrait);
 	            beforeEmissiveSprite.name = beforeTexture.name + "_emission";
-	            NewCard.emissions.Add(beforeTexture.name, beforeEmissiveSprite);
+	            beforeEmissiveSprite.RegisterEmissionForSprite(beforeEmitTexture, TextureHelper.SpriteType.CardPortrait);
 	            
 	            // After
 	            Texture2D afterTexture = Utils.GetTextureFromPath("Artwork/Cards/brenda_after.png");
 	            afterTexture.name = "portrait_brend_after";
-	            AfterSprite = Sprite.Create(afterTexture, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
+	            AfterSprite = afterTexture.ConvertTexture(TextureHelper.SpriteType.CardPortrait);
 	            
 	            // After Emit Texture
 	            Texture2D afterEmitTexture = Utils.GetTextureFromPath("Artwork/Cards/brenda_after_emit.png");
 	            afterEmitTexture.name = afterTexture.name + "_emission";
 	            afterEmitTexture.filterMode = FilterMode.Point;
                 
-	            Sprite afterEmissiveSprite = Sprite.Create(afterEmitTexture, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
+	            Sprite afterEmissiveSprite = afterEmitTexture.ConvertTexture(TextureHelper.SpriteType.CardPortrait);
 	            afterEmissiveSprite.name = afterTexture.name + "_emission";
-	            NewCard.emissions.Add(afterEmitTexture.name, afterEmissiveSprite);
+	            afterEmissiveSprite.RegisterEmissionForSprite(afterEmitTexture, TextureHelper.SpriteType.CardPortrait);
             }
         }
 
@@ -79,7 +81,7 @@ namespace ZergMod.Scripts.Abilities
 
         public override IEnumerator PostSuccessfulMoveSequence(CardSlot oldSlot)
         {
-	        CardInfo creepTumorInfo = ScriptableObjectLoader<CardInfo>.AllData.Find((CardInfo info) => info.name == "CreepTumor");
+	        CardInfo creepTumorInfo = ScriptableObjectLoader<CardInfo>.AllData.Find((CardInfo info) => info.name == "Zerg_JSON_CreepTumor");
 
 	        PlayableCard creepTumor = CardSpawner.SpawnPlayableCardWithCopiedMods(creepTumorInfo, base.Card, Ability.TailOnHit);
 	        creepTumor.transform.position = oldSlot.transform.position + Vector3.back * 2f + Vector3.up * 2f;

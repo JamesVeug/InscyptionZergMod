@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using APIPlugin;
 using DiskCardGame;
+using InscryptionAPI.Helpers;
+using InscryptionAPI.Saves;
 using UnityEngine;
 using ZergMod.Scripts.Data.Sigils;
 
@@ -13,8 +14,14 @@ namespace ZergMod.Scripts.SpecialAbilities
     {
         public SpecialTriggeredAbility SpecialAbility => specialAbility;
         public static SpecialTriggeredAbility specialAbility = SpecialTriggeredAbility.None;
+
+        public static int SavedDehakaKills
+        {
+            get => ModdedSaveManager.SaveData.GetValueAsInt(Plugin.PluginGuid, "DehakaKills");
+            set => ModdedSaveManager.SaveData.SetValue(Plugin.PluginGuid, "DehakaKills", value);
+        }
         
-        private static Dictionary<int, Texture2D> m_dehakaImages = new Dictionary<int, Texture2D>();
+        private static Dictionary<int, Sprite> m_dehakaImages = new Dictionary<int, Sprite>();
         private static int m_minDehakakillsForImages = int.MaxValue;
         private static int m_maxDehakakillsForImages = int.MinValue;
 
@@ -37,21 +44,17 @@ namespace ZergMod.Scripts.SpecialAbilities
             tex.LoadImage(imgBytes);
             tex.name = "portrait_" + fileName;
             tex.filterMode = FilterMode.Point;
+
+            Sprite sprite = tex.ConvertTexture(TextureHelper.SpriteType.CardPortrait, FilterMode.Point);
+
+            byte[] emissiveImgBytes = File.ReadAllBytes(Path.Combine(ZergMod.Plugin.Directory, emissiveFileName));
+            Texture2D emissiveTex = new Texture2D(2,2);
+            emissiveTex.LoadImage(emissiveImgBytes);
+            emissiveTex.name = tex.name + "_emission";
+            emissiveTex.filterMode = FilterMode.Point;
+            sprite.RegisterEmissionForSprite(emissiveTex, TextureHelper.SpriteType.CardPortrait, FilterMode.Point);
             
-            if (!NewCard.emissions.ContainsKey(tex.name))
-            {
-                byte[] emissiveImgBytes = File.ReadAllBytes(Path.Combine(ZergMod.Plugin.Directory, emissiveFileName));
-                Texture2D emissiveTex = new Texture2D(2,2);
-                emissiveTex.LoadImage(emissiveImgBytes);
-                emissiveTex.name = tex.name + "_emission";
-                emissiveTex.filterMode = FilterMode.Point;
-                
-                Sprite emissiveSprite = Sprite.Create(emissiveTex, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
-                emissiveSprite.name = tex.name + "_emission";
-                NewCard.emissions.Add(tex.name, emissiveSprite);
-            }
-            
-            m_dehakaImages[kills] = tex;
+            m_dehakaImages[kills] = sprite;
             m_minDehakakillsForImages = Mathf.Min(m_minDehakakillsForImages, kills);
             m_maxDehakakillsForImages = Mathf.Max(m_maxDehakakillsForImages, kills);
         }
@@ -80,11 +83,11 @@ namespace ZergMod.Scripts.SpecialAbilities
 
             return false;
         }
-
+        
         public override IEnumerator OnDealDamage(int amount, PlayableCard target)
         {
             m_activated = true;
-            CustomSaveManager.SaveFile.DehakaKills++;
+            SavedDehakaKills = SavedDehakaKills + 1;
 
             Singleton<ViewManager>.Instance.SwitchToView(View.Board, false, false);
             yield return new WaitForSeconds(0.15f);
@@ -121,12 +124,12 @@ namespace ZergMod.Scripts.SpecialAbilities
             return PlayableCard != null && !PlayableCard.Dead;
         }
 
-        private Texture2D GetCurrentKillsPortrait(out int portraitKills)
+        private Sprite GetCurrentKillsPortrait(out int portraitKills)
         {
-            int kills = CustomSaveManager.SaveFile.DehakaKills;
-            Texture2D tex = null;
+            int kills = SavedDehakaKills;
+            Sprite tex = null;
             int max = int.MinValue;
-            foreach (KeyValuePair<int,Texture2D> pair in m_dehakaImages)
+            foreach (KeyValuePair<int,Sprite> pair in m_dehakaImages)
             {
                 int imageMinKills = pair.Key;
                 if (imageMinKills <= kills && imageMinKills >= max)
@@ -142,15 +145,15 @@ namespace ZergMod.Scripts.SpecialAbilities
         
         public void RefreshPortrait()
         {
-            Texture2D tex = GetCurrentKillsPortrait(out int kills);
+            Sprite tex = GetCurrentKillsPortrait(out int kills);
             if (tex == null)
             {
                 return;
             }
 
-            Card.Info.portraitTex = Sprite.Create(tex, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
+            Card.Info.portraitTex = tex;
             Card.Info.portraitTex.name = tex.name;
-            Card.Info.alternatePortrait = Sprite.Create(tex, CardUtils.DefaultCardArtRect, CardUtils.DefaultVector2);
+            Card.Info.alternatePortrait = tex;
             Card.Info.alternatePortrait.name = tex.name;
             Card.RenderCard();
         }

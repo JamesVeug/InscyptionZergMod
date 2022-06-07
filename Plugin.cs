@@ -1,10 +1,11 @@
 using System.Collections.Generic;
-using APIPlugin;
 using BepInEx;
 using BepInEx.Logging;
 using DiskCardGame;
 using HarmonyLib;
-using SpritzMod.Scripts;
+using InscryptionAPI.Card;
+using InscryptionAPI.Helpers;
+using ZergMod.Scripts;
 using ZergMod.Scripts.Abilities;
 using ZergMod.Scripts.Backgrounds;
 using ZergMod.Scripts.Cards;
@@ -18,7 +19,7 @@ namespace ZergMod
     {
 	    public const string PluginGuid = "jamesgames.inscryption.zergmod";
 	    public const string PluginName = "Zerg Mod";
-	    public const string PluginVersion = "1.1.0.0";
+	    public const string PluginVersion = "2.0.0.0";
 	    public const string DecalPath = "Artwork/watermark.png";
 
         public static string Directory;
@@ -77,13 +78,11 @@ namespace ZergMod
         {
 	        List<Ability> abilities = new List<Ability> { StrafeCreepTumorAbility.ability };
 
-	        new CustomCard("Squirrel")
-	        {
-		        baseAttack = 1, 
-		        baseHealth = 10, 
-		        abilities = abilities,
-		        decals = Utils.GetDecals(),
-	        };
+	        CardInfo card = CardManager.BaseGameCards.CardByName("Squirrel");
+	        card.baseAttack = 1;
+	        card.baseHealth = 10;
+	        card.abilities = abilities;
+	        card.decals = Utils.GetDecals();
         }
     }
 }

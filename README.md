@@ -1,69 +1,113 @@
-# Zerg Mod
+# Zerg
 This mod brings the alien race 'Zerg' from the RTS series StarCraft, into the world of Inscryption.
 
 The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advanced, arthropodal aliens. Dedicated to the pursuit of genetic perfection.
 
 ### Includes:
-- 30 New Cards:
-- 14 New Sigils:
-- 5 New Special Abilities:
 
-### Cards:
-- **Baneling** - 3,1 - <img align="center" src="https://tinyurl.com/2p86btxk"> <img align="center" src="https://tinyurl.com/2p86btxk"> Sigils: Explode. Tribes: Insect.
-- **Corruptor** - 2,3 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Airborne. Evolves into Devourer Tribes: Insect.
-- **Devourer** - 3,3 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Airborne, Armored. Tribes: Insect.
-- **Drone** - 1,1 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Bone Digger, Bone Digger. Evolves into Crawler Forest Tribes: Insect.
-- **Guardian** - 3,5 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Sniper. Tribes: Insect.
-- **Hydralisk** - 2,2 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Double Attack. Evolves into Lurker Tribes: Insect.
-- **Larva** - 0,1 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Fledgling, Nano Armor. Specials: Larva Traits: KillsSurvivors. Tribes: Insect.
-- **Lurker** - 2,2 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Waterborne, Splash Damage. Tribes: Insect.
-- **Mutalisk** - 1,3 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Ricochet, Regenerate. Evolves into Guardian Tribes: Insect.
-- **Overlord** - 0,2 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Many Lives, Mighty Leap. Evolves into Overseer Tribes: Insect.
-- **Overseer** - 0,6 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Stinky, Detector. Tribes: Insect.
-- **Primal Ravasaur** - 3,2 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Specials: Primal Zerg Tribes: Insect.
-- **Primal Roach** - 2,2 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Armored. Specials: Primal Zerg. Tribes: Insect.
-- **Primal Zergling** - 1,2 - <img align="center" src="https://tinyurl.com/34daekbw"> Specials: Primal Zerg Tribes: Insect.
-- **Ravager** - 2,2 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Sniper. Tribes: Insect.
-- **Roach** - 2,3 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Regenerate. Evolves into Ravager Tribes: Insect.
-- **Scourge** - 3,1 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Airborne, Explode. Tribes: Insect.
-- **Strange Artifact** - 0,1 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Bone King, Worthy Sacrifice. Traits: Goat.
-- **Swarm Host** - 0,2 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Waterborne, Spawn Locust. Tribes: Insect.
-- **Zerglings** - 1,2 - <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Double Attack. Evolves into Baneling Specials: Zergling Swarm. Tribes: Insect.
+<details>
+<summary>25 New Cards:
+</summary>
 
-### Rare Cards:
-- **Brood lord** - 0,6 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Swarm Seeds. Specials: Brood Lord. Tribes: Insect.
-- **Dehaka** - 2,2 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Regenerate. Specials: Collect Essence., Primal Zerg Tribes: Insect.
-- **Infested Terran** - 1,2 - <img align="center" src="https://tinyurl.com/2p86btxk"> <img align="center" src="https://tinyurl.com/2p86btxk"> Sigils: Brittle, Fecundity. Tribes: Insect.
-- **Infestor** - 1,1 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Waterborne, Fish Hook. Tribes: Insect.
-- **Leviathan** - 0,20 - <img align="center" src="https://tinyurl.com/2p86btxk"><img align="center" src="https://raw.githubusercontent.com/JamesVeug/InscyptionReadmeMaker/main/Artwork/Git/cost_bone_8.png"> Sigils: Blood Bank, Summon Zerg. Tribes: Insect.
-- **Primal Igniter** - 3,4 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Splash Damage. Specials: Primal Zerg. Tribes: Insect.
-- **Queen** - 1,3 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Spawn Larva. Tribes: Insect.
-- **Queen of Blades** - 2,6 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Bifurcated Strike, Splash Damage. Tribes: Insect.
-- **Ultralisk** - 3,5 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Armored, Splash Damage. Tribes: Insect.
-- **Viper** - 2,1 - <img align="center" src="https://tinyurl.com/34daekbw"> <img align="center" src="https://tinyurl.com/34daekbw"> Sigils: Abduct. Tribes: Insect.
+|Name|Power|Health|Cost|Evolution|Frozen Away|Tail|Sigils|Specials|Traits|Tribes|
+|:-|:-|:-|:-|:-|:-|:-|:-|:-|:-|:-|
+|Baneling|3|1| <img align="center" src="https://tinyurl.com/kt3f8tnw">|||| Explode|||Insect|
+|Biomass|0|1|Free|||| Morsel||||
+|Broodling|2|2| <img align="center" src="https://tinyurl.com/ycku3kab">|||Biomass| Brittle|||Insect|
+|Corruptor|2|3| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Airborne|||Insect|
+|Crawler Forest|1|4| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Omni Strike,  Detector||Terrain|Insect|
+|Creep Tumor|0|1|Free|||Biomass| Waterborne,  Leader|||Insect|
+|Devourer|3|3| <img align="center" src="https://tinyurl.com/yrt8hwxr">|||Biomass| Airborne,  Armored|||Insect|
+|Drone|1|1| <img align="center" src="https://tinyurl.com/2p8ev3yj">|Crawler Forest||Biomass| Bone Digger,  Bone Digger|||Insect|
+|Guardian|3|5| <img align="center" src="https://tinyurl.com/yrt8hwxr">|||Biomass| Sniper|||Insect|
+|Hydralisk|2|2| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Double Attack|||Insect|
+|Larva|0|1| <img align="center" src="https://tinyurl.com/2p8ev3yj">|||Biomass| Fledgling,  Armored| Larva|KillsSurvivors|Insect|
+|Locust|1|2| <img align="center" src="https://tinyurl.com/ycku3kab">|||Biomass| Brittle|||Insect|
+|Lurker|2|2| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Waterborne,  Splash Damage|||Insect|
+|Mutalisk|1|3| <img align="center" src="https://tinyurl.com/42jumw7s">|Guardian||Biomass| Regenerate,  Ricochet|||Insect|
+|Overlord|0|2| <img align="center" src="https://tinyurl.com/2p8ev3yj">|||Biomass| Many Lives,  Mighty Leap|||Insect|
+|Overseer|0|6| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Stinky,  Detector|||Insect|
+|Primal Ravasaur|3|2| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Assimilate|||Insect|
+|Primal Roach|2|2| <img align="center" src="https://tinyurl.com/42jumw7s">|Primal Igniter||Biomass| Assimilate,  Armored|||Insect|
+|Primal Zergling|1|2| <img align="center" src="https://tinyurl.com/2p8ev3yj">|Primal Ravasaur||Biomass| Assimilate|||Insect|
+|Ravager|2|2| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Sniper|||Insect|
+|Roach|2|3| <img align="center" src="https://tinyurl.com/42jumw7s">|Ravager||Biomass| Regenerate|||Insect|
+|Scourge|3|1| <img align="center" src="https://tinyurl.com/2p8ev3yj">|||Biomass| Airborne,  Explode|||Insect|
+|Swarm Host|0|2| <img align="center" src="https://tinyurl.com/2p8ev3yj">|||Biomass| Waterborne,  Spawn Locust|||Insect|
+|Wing|0|2|Free|||Biomass|||||
+|Zerglings|1|2| <img align="center" src="https://tinyurl.com/2p8ev3yj">|Baneling||Biomass| Swarm| Zergling Swarm||Insect|
+</details>
 
-### Sigils:
-- **Abduct** - Whenever a card bearing this sigil is played, you may move any enemy creature to the nearest empty space.
-- **Armored** - All attacks this creature receives are reduced by 1 damage.
-- **Blood Bank** - Whenever a card bearing this sigil is sacrificed to summon another card, the cost is reduced from this creature’s current health.
-- **Detector** - As long as a card bearing this sigil is on the board, all Waterborne creatures are revealed and can be attacked as normal.
-- **Double Attack** - Whenever a card bearing this sigil attacks a creature and that creature survives, this creature will attack a second time.
-- **Explode** - When a card bearing this sigil attacks, the damage is also applied to the creatures adjacent to the target. This creature then perishes.
-- **Fish Hook** - Whenever a card bearing this sigil is played, you may hook an opposing creature to your side of the board, if there is room.
-- **Regenerate** - At the start of your turn, a creature bearing this sigil will heal one health.
-- **Ricochet** - When a card bearing this sigil deals damage to a creature, it will also deal 1 flying damage.
-- **Spawn Larva** - When a card bearing this sigil is played, Larva are created adjacent to it. A Larva is defined as 0 power 3 health with Fledgling.
-- **Spawn Locust** - When a card bearing this sigil is played and at the start of your turn, Locusts will be created adjacent to it. A Locust is defined as 1 power 1 health with Brittle
-- **Splash Damage** - Whenever a card bearing this sigil attacks, the damage will also apply to the creatures adjacent to the target.
-- **Summon Zerg** - Whenever a card bearing this sigil takes damage, a random Zerg card is created in your hand.
-- **Swarm Seeds** - When a card bearing this sigil is played, a Broodling is placed in your hand. A Broodling is defined as 2 power 2 health with Brittle.
+<details>
+<summary>13 New Rare Cards:
+</summary>
 
-### Special Abilities:
-- **Brood Lord** - As long as this creature is on the board, a Broodling is created in your hand at the start of your turn, up to 3 maximum.
-- **Collect Essence** - This Primal leader will permanently grow stronger after defeating more powerful cards.
-- **Larva** - The Larva will evolve into a random Zerg when it matures.
-- **Primal Zerg** - All Primal Zerg will grow stronger depending on what creatures were sacrificed to summon them.
-- **Zergling Swarm** - For every point of health this creature has, the portrait will gain 1 Zergling up to 6.
+|Name|Power|Health|Cost|Evolution|Frozen Away|Tail|Sigils|Specials|Traits|Tribes|
+|:-|:-|:-|:-|:-|:-|:-|:-|:-|:-|:-|
+|Brenda|1|3| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Spawn Creep Tumor|||Insect|
+|Brood lord|0|6| <img align="center" src="https://tinyurl.com/yrt8hwxr">|||Biomass| Swarm Seeds| Brood Lord||Insect|
+|Dehaka|2|2| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Regenerate| Collect Essence,  Primal Zerg||Insect|
+|Infested Terran|1|2| <img align="center" src="https://tinyurl.com/kt3f8tnw">|||Biomass| Brittle,  Fecundity|||Insect|
+|Infestor|1|1| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Waterborne,  Fish Hook|||Insect|
+|Leviathan|0|20| <img align="center" src="https://tinyurl.com/mv6tnc5e">|||Biomass| Blood Bank,  Summon Zerg|||Insect|
+|Patchling|1|1|Free|||Biomass||||Insect|
+|Primal Igniter|3|4| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Splash Damage,  Assimilate|||Insect|
+|Queen|1|3| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Spawn Larva|||Insect|
+|Queen of Blades|3|6| <img align="center" src="https://tinyurl.com/49mpbsvc">|||Biomass| Bifurcated Strike,  Splash Damage|||Insect|
+|Strange Artifact|0|1| <img align="center" src="https://tinyurl.com/2p8ev3yj">|||| Bone King,  Worthy Sacrifice||Goat|Insect, Bird, Canine|
+|Ultralisk|3|5| <img align="center" src="https://tinyurl.com/yrt8hwxr">|||Biomass| Armored,  Splash Damage|||Insect|
+|Viper|2|1| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Abduct|||Insect|
+</details>
+
+<details>
+<summary>18 New Sigils:
+</summary>
+
+|Name|Description|
+|:-|:-|
+|Abduct|Whenever a card bearing this sigil is played, you may move any enemy creature to the nearest empty space.|
+|Armored|All attacks this creature receives are reduced by 1 damage.|
+|Assimilate|When a card bearing this Sigil kills another card it, the killer will Evolve.|
+|Blood Bank|Whenever a card bearing this sigil is sacrificed to summon another card, the cost is reduced from this creature’s current health.|
+|Detector|As long as a card bearing this sigil is on the board, all Waterborne creatures are revealed and can be attacked as normal.|
+|Double Attack|Whenever a card bearing this sigil attacks a creature and that creature survives, this creature will attack a second time.|
+|Explode|When a card bearing this sigil attacks, the damage is also applied to the creatures adjacent to the target. This creature then perishes.|
+|Fish Hook|Whenever a card bearing this sigil is played, you may hook an opposing creature to your side of the board, if there is room.|
+|Regenerate|At the start of your turn, a creature bearing this sigil will heal one health.|
+|Ricochet|When a card bearing this sigil deals damage to a creature, it will also deal 1 flying damage.|
+|Spawn Creep Tumor|At the end of the owner's turn, the card bearing this sigil will move in the direction inscrybed and leave behind a Creep Tumor. A Creep Tumor is defined as 0 Power 1 Health with Waterborne and Leader.|
+|Spawn Larva|When a card bearing this sigil is played, Larva are created adjacent to it. A Larva is defined as 0 power 3 health with Fledgling.|
+|Spawn Locust|When a card bearing this sigil is played and at the start of your turn, Locusts will be created adjacent to it. A Locust is defined as 1 power 1 health with Brittle|
+|Splash Damage|Whenever a card bearing this sigil attacks, the damage will also apply to the creatures adjacent to the target.|
+|Summon Zerg|Whenever a card bearing this sigil takes damage, a random Zerg card is created in your hand.|
+|Swarm|When an card adjacent to a card bearing this sigil bearing attacks another card and survives, this card will also attack the same card.|
+|Swarm Seeds|When a card bearing this sigil is played, a Broodling is placed in your hand. A Broodling is defined as 2 power 2 health with Brittle.|
+|Trinket Within|When a card bearing this sigil perishes, a random item is given to you.|
+</details>
+
+<details>
+<summary>6 New Special Abilities:
+</summary>
+
+|Name|Description|
+|:-|:-|
+|Brenda|Popular character used by WinterGaming to mock Queens getting out of position.|
+|Brood Lord|As long as this creature is on the board, a Broodling is created in your hand at the start of your turn, up to 3 maximum.|
+|Collect Essence|This Primal leader will permanently grow stronger after defeating more powerful cards.|
+|Larva|The Larva will evolve into a random Zerg when it matures.|
+|Primal Zerg|All Primal Zerg will grow stronger depending on what creatures were sacrificed to summon them.|
+|Zergling Swarm|For every point of health this creature has, the portrait will gain 1 Zergling up to 6.|
+</details>
+
+<details>
+<summary>1 New Item:
+</summary>
+
+|Name|Description|
+|:-|:-|
+|Biomass in a Bottle|A Biomass is created in your hand. Biomass is defined as 0 Power 1 Health with Morsel.|
+</details>
+1 New Map Nodes
 
 
 ## Credits:
@@ -85,6 +129,8 @@ I recommend this tutorial if you are curious how to manually install mods in the
 ## Known Issues:
 - Armored does not work on some sigils
 - Transferred sigils onto sacrificed Primal Zerg appear blank.
+- Evolution Map node does not spawn
+- Baneling does not have a Biomass tail
 
 
 ### Bug Reports / Suggestions:
@@ -93,6 +139,33 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 
 # Update notes:
+
+## `Version: 2.0.0 - 28/3/2022`
+### Added:
+- General
+    - Added Patchling
+    - Added Brenda
+    - Added Creep Tumor
+    - Added Egg to replace Packrat
+    - Added Assimilate Ability
+    - Added Swarm Ability
+    - Added Trinket Within Ability
+    - Added Evolution Map node (May be very hard to get)
+    - Added Biomass in a Bottle Item
+    + Plus More
+
+### Changes:
+- General
+  - Kaycees mod / Api 2.1 support
+  - Changed Packrat to Egg
+  - Changed Crawler Forest
+  - Changed all Primal Zerg. Only Dehaka steals sigils
+  - Changed Zergling to have Swarm instead of Double Attack
+  - Changed Biomass to have Morsel
+  - Plus More
+
+<details>
+  <summary>See all Changes</summary>
 
 ## `Version: 1.1.0 - 29/1/2022`
 ### Added:
@@ -130,9 +203,6 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
   - Fixed sigils spamming config view
 - Summon Zerg
   - Fixed it always giving the same card
-
-<details>
-  <summary>See all Changes</summary>
 
 
 ## `Version: 1.0.0 - 25/1/2022`
