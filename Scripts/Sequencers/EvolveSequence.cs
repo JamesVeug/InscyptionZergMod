@@ -41,8 +41,8 @@ namespace ZergMod.Scripts
         private CardMergeSequencer CloneCardMergeSequence()
         {
 	        CardMergeSequencer clone = Instantiate(GameObject.FindObjectOfType<CardMergeSequencer>(), transform);
-	        GameObject backRock = Utils.FindObjectInChildren(clone.gameObject, "Back Rock");
-	        GameObject quad = Utils.FindObjectInChildren(backRock, "Quad");
+	        GameObject backRock = StarCraftCore.Utils.FindObjectInChildren(clone.gameObject, "Back Rock");
+	        GameObject quad = StarCraftCore.Utils.FindObjectInChildren(backRock, "Quad");
 
 	        Texture t = Utils.GetTextureFromPath("Artwork/Sequencers/card_slot_host_evolve.png");
 	        Renderer renderer = quad.GetComponent<Renderer>();

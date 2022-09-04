@@ -1,6 +1,7 @@
 ﻿using System;
 using DiskCardGame;
-using ZergMod.Scripts.Data.Sigils;
+using StarCraftCore.Scripts.Abilities;
+using StarCraftCore.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
@@ -11,7 +12,7 @@ namespace ZergMod.Scripts.Abilities
 		
 		public static void Initialize(Type declaringType)
 		{
-			ability = InitializeBase(declaringType);
+			ability = InitializeBase(Plugin.PluginGuid, declaringType, Plugin.Directory);
 		}
 	}
 }

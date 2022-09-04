@@ -4,10 +4,8 @@ using BepInEx.Logging;
 using DiskCardGame;
 using HarmonyLib;
 using InscryptionAPI.Card;
-using InscryptionAPI.Helpers;
 using ZergMod.Scripts;
 using ZergMod.Scripts.Abilities;
-using ZergMod.Scripts.Backgrounds;
 using ZergMod.Scripts.Cards;
 using ZergMod.Scripts.SpecialAbilities;
 
@@ -32,45 +30,35 @@ namespace ZergMod
             Directory = this.Info.Location.Replace("ZergMod.dll", "");
             new Harmony(PluginGuid).PatchAll();
 
-            // Backgrounds
-            XelNagaBackground.Initialize();
+            // Abilities
+            SpawnLarvaAbility.Initialize(typeof(SpawnLarvaAbility));
+            SpawnLocustAbility.Initialize(typeof(SpawnLocustAbility));
+            StrafeCreepTumorAbility.Initialize(typeof(StrafeCreepTumorAbility));
+            SummonZergAbility.Initialize(typeof(SummonZergAbility));
+            SwarmSeedsAbility.Initialize(typeof(SwarmSeedsAbility));
             
-            // SpecialAbilities
-            ZerglingSpecialAbility.Initialize(typeof(ZerglingSpecialAbility));
+            // Special Abilities
+            BrendaSpecialAbility.Initialize(typeof(BrendaSpecialAbility));
+            BroodLordSpecialAbility.Initialize(typeof(BroodLordSpecialAbility));
             DehakaSpecialAbility.Initialize(typeof(DehakaSpecialAbility));
             LarvaSpecialAbility.Initialize(typeof(LarvaSpecialAbility));
             PrimalSpecialAbility.Initialize(typeof(PrimalSpecialAbility));
-            BroodLordSpecialAbility.Initialize(typeof(BroodLordSpecialAbility));
-            BrendaSpecialAbility.Initialize(typeof(BrendaSpecialAbility));
-	        
-            // Abilities
-            RegenerateAbility.Initialize(typeof(RegenerateAbility));
-            DoubleAttackAbility.Initialize(typeof(DoubleAttackAbility));
-            SpawnLarvaAbility.Initialize(typeof(SpawnLarvaAbility));
-            DetectorAbility.Initialize(typeof(DetectorAbility));
-            SwarmSeedsAbility.Initialize(typeof(SwarmSeedsAbility));
-            SpawnLocustAbility.Initialize(typeof(SpawnLocustAbility));
-            ArmoredAbility.Initialize(typeof(ArmoredAbility));
-            SplashDamageAbility.Initialize(typeof(SplashDamageAbility));
-            AbductAbility.Initialize(typeof(AbductAbility));
-            ExplodeAbility.Initialize(typeof(ExplodeAbility));
-            HookAbility.Initialize(typeof(HookAbility));
-            RicochetAbility.Initialize(typeof(RicochetAbility));
-            BloodBankAbility.Initialize(typeof(BloodBankAbility));
-            SummonZergAbility.Initialize(typeof(SummonZergAbility));
-            StrafeCreepTumorAbility.Initialize(typeof(StrafeCreepTumorAbility));
-            SwarmAbility.Initialize(typeof(SwarmAbility));
-            AssimilateAbility.Initialize(typeof(AssimilateAbility));
-            RandomConsumableOnDeathAbility.Initialize(typeof(RandomConsumableOnDeathAbility));
-
+            ZerglingSpecialAbility.Initialize(typeof(ZerglingSpecialAbility));
+            
             // Cards
             XelNagaArtifact.Initialize();
             
             // Encounters
             EvolveSequencer.Initialize();
-
-            //ChangeSquirrelToLarva();
             
+            CardInfo card = CardManager.BaseGameCards.CardByName("Wolf");
+            card.AddTraits(Trait.KillsSurvivors);
+
+            
+            CardInfo card2 = CardManager.BaseGameCards.CardByName("PackRat");
+            card2.baseAttack = 1;
+            ChangeSquirrelToLarva();
+
             Logger.LogInfo($"Loaded {PluginName}!");
         }
         

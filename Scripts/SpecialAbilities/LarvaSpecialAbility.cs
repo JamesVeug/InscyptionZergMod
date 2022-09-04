@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections;
-using APIPlugin;
 using DiskCardGame;
+using StarCraftCore.Scripts.SpecialAbilities;
 using ZergMod.Scripts.Data.Sigils;
-using Random = UnityEngine.Random;
 
 namespace ZergMod.Scripts.SpecialAbilities
 {
@@ -16,7 +15,7 @@ namespace ZergMod.Scripts.SpecialAbilities
         
         public static void Initialize(Type declaringType)
         {
-            specialAbility = InitializeBase(declaringType);
+            specialAbility = InitializeBase(Plugin.PluginGuid, declaringType, Plugin.Directory);
         }
 
         public override bool RespondsToDrawn()
@@ -52,7 +51,7 @@ namespace ZergMod.Scripts.SpecialAbilities
             cardInfo.evolveParams = new EvolveParams
             {
                 turnsToEvolve = LoadedData.turnsUntilEvolve,
-                evolution = Utils.GetRandomWeightedCard(LoadedData.cardEvolutions, LoadedData.TotalWeights)
+                evolution = StarCraftCore.Utils.GetRandomWeightedCard(LoadedData.cardEvolutions, LoadedData.TotalWeights)
             };
             Card.SetInfo(cardInfo);
             

@@ -6,7 +6,7 @@
 	"baseAttack": 3,
 	"baseHealth": 5,
 	"bloodCost": 3,
-	"abilities": ["jamesgames.inscryption.zergmod.Armored","jamesgames.inscryption.zergmod.Splash Damage"],
+	"abilities": ["jamesgames.inscryption.starcraftcore.Armored","jamesgames.inscryption.starcraftcore.Splash Damage"],
 	"metaCategories": ["Rare"],
 	"cardComplexity": "Intermediate",
 	"temple": "Nature",

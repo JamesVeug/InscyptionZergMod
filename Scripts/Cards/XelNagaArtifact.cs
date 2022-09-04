@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using APIPlugin;
 using DiskCardGame;
 using InscryptionAPI.Card;
-using ZergMod.Scripts.Backgrounds;
+using StarCraftCore.Scripts.Backgrounds;
 
 namespace ZergMod.Scripts.Cards
 {
@@ -28,8 +27,8 @@ namespace ZergMod.Scripts.Cards
             appearanceBehaviour.Add(XelNagaBackground.CustomAppearance);
             
             List<Ability> abilities = new List<Ability>{ };
-            abilities.Add(Ability.QuadrupleBones);
             abilities.Add(Ability.TripleBlood);
+            abilities.Add(Ability.Sacrificial);
 
             List<Trait> traits = new List<Trait> { Trait.Goat };
             List<Tribe> tribes = new List<Tribe> { Tribe.Insect, Tribe.Bird, Tribe.Canine };

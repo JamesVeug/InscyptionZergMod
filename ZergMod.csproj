@@ -26,16 +26,11 @@
     <Reference Include="InscryptionAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>lib\InscryptionAPI.dll</HintPath>
     </Reference>
-    <Reference Include="ReadmeMaker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\InscyptionReadmeMaker\bin\Debug\netstandard2.0\ReadmeMaker.dll</HintPath>
-    </Reference>
     <Reference Include="Sirenix.Serialization">
       <HintPath>lib\Sirenix.Serialization.dll</HintPath>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\Sigils" />
-    <Folder Include="Data\SpecialAbilities" />
+    <Reference Include="StarCraftCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\InscyptionStarCraftCore\bin\Debug\netstandard2.0\StarCraftCore.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 ﻿using System;
+using StarCraftCore.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Data.Sigils
 {

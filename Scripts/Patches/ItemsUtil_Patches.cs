@@ -24,7 +24,7 @@ namespace ZergMod.Scripts.Patches
                     BiomassInABottle.rulebookName = "Biomass in a Bottle";
                     BiomassInABottle.rulebookDescription = "A Biomass is created in your hand. Biomass is defined as 0 Power 1 Health with Morsel.";
 
-                    Sprite texture = ZergMod.Utils.GetTextureFromPath("Artwork/Items/biomassbottle.png").ConvertTexture();
+                    Sprite texture = Utils.GetTextureFromPath("Artwork/Items/biomassbottle.png").ConvertTexture();
                     BiomassInABottle.rulebookSprite = texture;
                     __result.Add(BiomassInABottle);
                     break;

@@ -5,7 +5,7 @@
 	"displayedName": "Overseer",
 	"baseHealth": 6,
 	"bloodCost": 2,
-	"abilities": ["DebuffEnemy","jamesgames.inscryption.zergmod.Detector"],
+	"abilities": ["DebuffEnemy","jamesgames.inscryption.starcraftcore.Detector"],
 	"metaCategories": ["TraderOffer"],
 	"cardComplexity": "Advanced",
 	"temple": "Nature",

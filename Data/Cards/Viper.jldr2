@@ -6,7 +6,7 @@
 	"baseAttack": 2,
 	"baseHealth": 1,
 	"bloodCost": 2,
-	"abilities": ["jamesgames.inscryption.zergmod.Abduct"],
+	"abilities": ["jamesgames.inscryption.starcraftcore.Abduct"],
 	"metaCategories": ["Rare"],
 	"cardComplexity": "Intermediate",
 	"temple": "Nature",

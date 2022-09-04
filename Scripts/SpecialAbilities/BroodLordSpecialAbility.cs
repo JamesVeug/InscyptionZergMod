@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using DiskCardGame;
+using StarCraftCore.Scripts.Data.Sigils;
+using StarCraftCore.Scripts.SpecialAbilities;
 using UnityEngine;
 using ZergMod.Scripts.Data.Sigils;
 
@@ -16,7 +17,7 @@ namespace ZergMod.Scripts.SpecialAbilities
 
         public static void Initialize(Type declaringType)
         {
-            specialAbility = InitializeBase(declaringType);
+            specialAbility = InitializeBase(Plugin.PluginGuid, declaringType, Plugin.Directory);
         }
 
         public override bool RespondsToUpkeep(bool playerUpkeep)

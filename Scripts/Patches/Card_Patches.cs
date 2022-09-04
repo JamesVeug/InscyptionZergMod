@@ -1,23 +1,23 @@
-﻿using APIPlugin;
+﻿using System.Collections.Generic;
 using DiskCardGame;
 using HarmonyLib;
-using InscryptionAPI.Card;
+using InscryptionAPI.Helpers;
+using UnityEngine;
 
 namespace ZergMod.Scripts.Patches
 {
-    [HarmonyPatch(typeof (Card), "SetInfo", new System.Type[] {typeof (CardInfo)})]
-    public class Card_SetInfo
+    [HarmonyPatch(typeof(Card), "AttachAbilities",new System.Type[] {typeof(CardInfo)})]
+    public class Card_AttachAbilities
     {
-        public static void Postfix(CardInfo info, Card __instance)
+        public static bool Prefix(Card __instance, CardInfo info)
         {
-            // Fixes Zerglings portrait not changing from 2 to 4 when buffing the health at the campfire
-            foreach (IPortraitChanges portraitChanges in __instance.gameObject.GetComponents<IPortraitChanges>())
+            Plugin.Log.LogInfo("[CardTriggerHandler_AddReceiverToGameObject] " + __instance.name + " " + info.displayedName);
+            foreach (SpecialTriggeredAbility specialTriggeredAbility in info.SpecialAbilities)
             {
-                if (portraitChanges.ShouldRefreshPortrait())
-                {
-                    portraitChanges.RefreshPortrait();
-                }
+                Plugin.Log.LogInfo("\t " + specialTriggeredAbility);
             }
+
+            return true;
         }
     }
 }

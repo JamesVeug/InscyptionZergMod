@@ -6,7 +6,7 @@
 	"baseAttack": 1,
 	"baseHealth": 4,
 	"bloodCost": 2,
-	"abilities": ["AllStrike","jamesgames.inscryption.zergmod.Detector"],
+	"abilities": ["AllStrike","jamesgames.inscryption.starcraftcore.Detector"],
 	"cardComplexity": "Intermediate",
 	"temple": "Nature",
 	"tailName": "Zerg_JSON_biomass",

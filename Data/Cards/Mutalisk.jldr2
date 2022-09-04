@@ -6,7 +6,7 @@
 	"baseAttack": 1,
 	"baseHealth": 3,
 	"bloodCost": 2,
-	"abilities": ["jamesgames.inscryption.zergmod.Regenerate","jamesgames.inscryption.zergmod.Ricochet"],
+	"abilities": ["jamesgames.inscryption.starcraftcore.Regenerate","jamesgames.inscryption.starcraftcore.Ricochet"],
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",

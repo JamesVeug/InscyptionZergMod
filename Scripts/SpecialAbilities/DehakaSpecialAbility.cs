@@ -5,6 +5,8 @@ using System.IO;
 using DiskCardGame;
 using InscryptionAPI.Helpers;
 using InscryptionAPI.Saves;
+using StarCraftCore;
+using StarCraftCore.Scripts.SpecialAbilities;
 using UnityEngine;
 using ZergMod.Scripts.Data.Sigils;
 
@@ -29,7 +31,7 @@ namespace ZergMod.Scripts.SpecialAbilities
 
         public static void Initialize(Type declaringType)
         {
-            specialAbility = InitializeBase(declaringType);
+            specialAbility = InitializeBase(Plugin.PluginGuid, declaringType, Plugin.Directory);
             
             foreach (DehakaSpecialAbilityData.PortraitChangeData data in LoadedData.portraitChanges)
             {

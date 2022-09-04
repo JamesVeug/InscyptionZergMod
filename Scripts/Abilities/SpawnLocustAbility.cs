@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections;
 using DiskCardGame;
+using StarCraftCore.Scripts.Abilities;
+using StarCraftCore.Scripts.Data.Sigils;
 using UnityEngine;
-using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.Abilities
 {
@@ -13,7 +14,7 @@ namespace ZergMod.Scripts.Abilities
 		
 		public static void Initialize(Type declaringType)
 		{
-			ability = InitializeBase(declaringType);
+			ability = InitializeBase(Plugin.PluginGuid, declaringType, Plugin.Directory);
 		}
         
 		public override bool RespondsToUpkeep(bool playerUpkeep)

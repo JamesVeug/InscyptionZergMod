@@ -2,9 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using DiskCardGame;
-using ZergMod.Scripts.Data.Sigils;
+using StarCraftCore.Scripts.SpecialAbilities;
 using UnityEngine;
-using Random = System.Random;
+using ZergMod.Scripts.Data.Sigils;
 
 namespace ZergMod.Scripts.SpecialAbilities
 {
@@ -17,7 +17,7 @@ namespace ZergMod.Scripts.SpecialAbilities
 
         public static void Initialize(Type declaringType)
         {
-            specialAbility = InitializeBase(declaringType);
+            specialAbility = InitializeBase(Plugin.PluginGuid, declaringType, Plugin.Directory);
         }
 
         public IEnumerator OnOtherSacrificed(PlayableCard playableCard)

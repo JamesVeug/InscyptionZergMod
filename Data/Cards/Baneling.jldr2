@@ -7,7 +7,7 @@
 	"baseHealth": 1,
 	"bonesCost": 2,
 	"energyCost": 0,
-	"abilities": ["jamesgames.inscryption.zergmod.Explode"],
+	"abilities": ["jamesgames.inscryption.starcraftcore.Explode"],
 	"metaCategories": ["TraderOffer"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",

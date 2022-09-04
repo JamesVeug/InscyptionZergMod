@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using DiskCardGame;
+using StarCraftCore.Scripts.Abilities;
 using UnityEngine;
 using ZergMod.Scripts.Data.Sigils;
-using Random = UnityEngine.Random;
 
 namespace ZergMod.Scripts.Abilities
 {
@@ -15,7 +14,7 @@ namespace ZergMod.Scripts.Abilities
 
 		public static void Initialize(Type declaringType)
 		{
-			ability = InitializeBase(declaringType);
+			ability = InitializeBase(Plugin.PluginGuid, declaringType, Plugin.Directory);
 		}
 
 		public override bool RespondsToTakeDamage(PlayableCard source)
@@ -25,7 +24,7 @@ namespace ZergMod.Scripts.Abilities
 
 		public override IEnumerator OnTakeDamage(PlayableCard source)
 		{
-			CardInfo cardInfo = Utils.GetRandomWeightedCard(LoadedData.cardEvolutions, LoadedData.TotalWeights);
+			CardInfo cardInfo = StarCraftCore.Utils.GetRandomWeightedCard(LoadedData.cardEvolutions, LoadedData.TotalWeights);
 			if (cardInfo == null)
 			{
 				if (!Card.Dead)

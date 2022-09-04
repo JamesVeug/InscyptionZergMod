@@ -5,7 +5,7 @@
 	"displayedName": "Swarm Host",
 	"baseHealth": 2,
 	"bloodCost": 1,
-	"abilities": ["Submerge","jamesgames.inscryption.zergmod.Spawn Locust"],
+	"abilities": ["Submerge","jamesgames.inscryption.starcraftcore.Spawn Locust"],
 	"metaCategories": ["TraderOffer"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",

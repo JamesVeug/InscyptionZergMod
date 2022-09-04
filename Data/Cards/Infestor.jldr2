@@ -6,7 +6,7 @@
 	"baseAttack": 1,
 	"baseHealth": 1,
 	"bloodCost": 2,
-	"abilities": ["Submerge","jamesgames.inscryption.zergmod.Fish Hook"],
+	"abilities": ["Submerge","jamesgames.inscryption.starcraftcore.Fish Hook"],
 	"metaCategories": ["Rare"],
 	"cardComplexity": "Intermediate",
 	"temple": "Nature",

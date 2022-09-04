@@ -6,7 +6,7 @@
 	"baseAttack": 3,
 	"baseHealth": 6,
 	"bloodCost": 4,
-	"abilities": ["SplitStrike","jamesgames.inscryption.zergmod.Splash Damage"],
+	"abilities": ["SplitStrike","jamesgames.inscryption.starcraftcore.Splash Damage"],
 	"metaCategories": ["Rare"],
 	"cardComplexity": "Advanced",
 	"onePerDeck": True,

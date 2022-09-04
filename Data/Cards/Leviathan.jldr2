@@ -6,7 +6,7 @@
 	"baseHealth": 20,
 	"bonesCost": 8,
 	"energyCost": 0,
-	"abilities": ["jamesgames.inscryption.zergmod.Blood Bank","jamesgames.inscryption.zergmod.Summon Zerg"],
+	"abilities": ["jamesgames.inscryption.starcraftcore.Blood Bank","jamesgames.inscryption.starcraftcore.Summon Zerg"],
 	"metaCategories": ["Rare"],
 	"cardComplexity": "Advanced",
 	"onePerDeck": True,

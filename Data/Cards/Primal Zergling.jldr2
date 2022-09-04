@@ -6,7 +6,7 @@
 	"baseAttack": 1,
 	"baseHealth": 2,
 	"bloodCost": 1,
-	"abilities": ["jamesgames.inscryption.zergmod.Assimilate"],
+	"abilities": ["jamesgames.inscryption.starcraftcore.Assimilate"],
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",

@@ -6,7 +6,7 @@
 	"baseAttack": 3,
 	"baseHealth": 4,
 	"bloodCost": 2,
-	"abilities": ["jamesgames.inscryption.zergmod.Splash Damage","jamesgames.inscryption.zergmod.Assimilate"],
+	"abilities": ["jamesgames.inscryption.starcraftcore.Splash Damage","jamesgames.inscryption.starcraftcore.Assimilate"],
 	"metaCategories": ["Rare"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",

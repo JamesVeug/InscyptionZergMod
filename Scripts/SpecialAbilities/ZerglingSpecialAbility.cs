@@ -2,9 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using APIPlugin;
 using DiskCardGame;
 using InscryptionAPI.Helpers;
+using StarCraftCore;
+using StarCraftCore.Scripts.SpecialAbilities;
 using UnityEngine;
 using ZergMod.Scripts.Data.Sigils;
 
@@ -20,7 +21,7 @@ namespace ZergMod.Scripts.SpecialAbilities
 
         public static void Initialize(Type declaringType)
         {
-            specialAbility = InitializeBase(declaringType);
+            specialAbility = InitializeBase(Plugin.PluginGuid, declaringType, Plugin.Directory);
             
             foreach (ZerglingSpecialAbilityData.PortraitChangeData changeData in LoadedData.portraitChanges)
             {

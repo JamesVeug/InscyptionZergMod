@@ -6,7 +6,7 @@
 	"baseAttack": 3,
 	"baseHealth": 1,
 	"bloodCost": 1,
-	"abilities": ["Flying","jamesgames.inscryption.zergmod.Explode"],
+	"abilities": ["Flying","jamesgames.inscryption.starcraftcore.Explode"],
 	"metaCategories": ["ChoiceNode"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",

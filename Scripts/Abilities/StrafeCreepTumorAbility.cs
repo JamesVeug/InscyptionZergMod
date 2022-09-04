@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections;
-using System.IO;
-using APIPlugin;
 using DiskCardGame;
-using InscryptionAPI.Card;
 using InscryptionAPI.Helpers;
+using StarCraftCore.Scripts.Abilities;
 using UnityEngine;
 using ZergMod.Scripts.Data.Sigils;
 using ZergMod.Scripts.SpecialAbilities;
@@ -22,7 +20,7 @@ namespace ZergMod.Scripts.Abilities
 		
         public static void Initialize(Type declaringType)
         {
-            ability = InitializeBase(declaringType);
+            ability = InitializeBase(Plugin.PluginGuid, declaringType, Plugin.Directory);
 
             if (BeforeSprite == null)
             {
