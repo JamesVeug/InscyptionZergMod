@@ -7,7 +7,7 @@
 	"baseHealth": 2,
 	"bloodCost": 1,
 	"abilities": ["jamesgames.inscryption.starcraftcore.Swarm"],
-	"specialAbilities": ["jamesgames.inscryption.starcraftcore.Zergling Swarm"],
+	"specialAbilities": ["jamesgames.inscryption.zergmod.Zergling Swarm"],
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",

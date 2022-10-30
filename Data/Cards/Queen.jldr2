@@ -6,7 +6,7 @@
 	"baseAttack": 1,
 	"baseHealth": 3,
 	"bloodCost": 2,
-	"abilities": ["jamesgames.inscryption.starcraftcore.Spawn Larva"],
+	"abilities": ["jamesgames.inscryption.zergmod.Spawn Larva"],
 	"metaCategories": ["Rare"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",

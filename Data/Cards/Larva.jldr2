@@ -6,7 +6,7 @@
 	"baseHealth": 1,
 	"bloodCost": 1,
 	"abilities": ["Evolve","DeathShield"],
-	"specialAbilities": ["jamesgames.inscryption.starcraftcore.Larva"],
+	"specialAbilities": ["jamesgames.inscryption.zergmod.Larva"],
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Simple",
 	"onePerDeck": True,
