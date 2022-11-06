@@ -1,12 +1,11 @@
 {
     "$id": 0,
     "$type": "0|ZergMod.Scripts.Data.Sigils.StrafeCreepTumorData, ZergMod",
-    "name": "StrafeCreepTumor",
+    "ruleBookName": "Spawn Creep Tumor",
+    "ruleDescription": "At the end of the owner's turn, the card bearing this sigil will move in the direction inscrybed and leave behind a Creep Tumor. A Creep Tumor is defined as 0 Power 1 Health with Waterborne and Leader.",
     "power": 0,
     "priority": 0,
     "learnText": "Oh gross. Where did that come from?",
-    "ruleBookName": "Spawn Creep Tumor",
-    "ruleDescription": "At the end of the owner's turn, the card bearing this sigil will move in the direction inscrybed and leave behind a Creep Tumor. A Creep Tumor is defined as 0 Power 1 Health with Waterborne and Leader.",
     "iconPath": "Artwork/Sigils/strafe_creep_tumor.png",
     "metaCategories": {
         "$id": 1,

@@ -1,12 +1,11 @@
 {
     "$id": 0,
     "$type": "0|ZergMod.Scripts.Data.Sigils.SummonZergAbilityData, ZergMod",
-    "name": "Summon Zerg",
+    "ruleBookName": "Summon Zerg",
+    "ruleDescription": "Whenever a card bearing this sigil takes damage, a random Zerg card is created in your hand.",
     "power": 9,
     "priority": 0,
     "learnText": "Another Zerg out of billions...",
-    "ruleBookName": "Summon Zerg",
-    "ruleDescription": "Whenever a card bearing this sigil takes damage, a random Zerg card is created in your hand.",
     "iconPath": "Artwork/Sigils/summon_zerg.png",
     "metaCategories": {
         "$id": 1,

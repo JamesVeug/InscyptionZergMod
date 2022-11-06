@@ -2,23 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using DiskCardGame;
-using InscryptionAPI.Encounters;
+using InscryptionAPI.Nodes;
 using UnityEngine;
+using ZergMod.Scripts.Items;
 
 namespace ZergMod.Scripts
 {
-	public class EvolveSequencerNodeData : CustomNodeData
-	{
-		public override void Initialize()
-		{
-			base.Initialize();
-			
-			//this.AddGenerationPrerequisite(() => AscensionSaveData.Data.ChallengeIsActive(AscensionChallenge.BaseDifficulty));
-			//this.AddForceGenerationCondition((y, nodes) => true);
-		}
-	}
-	
-    public class EvolveSequencer : MonoBehaviour, ICustomNodeSequence
+    public class EvolveSequencer : MonoBehaviour, ICustomNodeSequencer
     {
         private CardMergeSequencer sequencer = null;
         private CardSingleChoicesSequencer cardChoiceSequencer = null;
@@ -26,15 +16,22 @@ namespace ZergMod.Scripts
 
         public static void Initialize()
         {
-	        NodeManager.Add<EvolveSequencer, EvolveSequencerNodeData>(
-		        new[]
+	        NewNodeManager.New<EvolveSequencer>(Plugin.PluginGuid, "Evolve Sequence", GenerationType.SpecialCardChoice,
+		        new List<Texture2D>()
 		        {
 			        Utils.GetTextureFromPath("Artwork/Sequencers/evolve_1.png"),
 			        Utils.GetTextureFromPath("Artwork/Sequencers/evolve_2.png"),
 			        Utils.GetTextureFromPath("Artwork/Sequencers/evolve_3.png"),
 			        Utils.GetTextureFromPath("Artwork/Sequencers/evolve_4.png")
 		        },
-		        NodeManager.NodePosition.SpecialEventRandom | NodeManager.NodePosition.Act1Available
+		        new List<NodeData.SelectionCondition>()
+		        {
+			        
+		        },
+		        new List<NodeData.SelectionCondition>()
+		        {
+			        
+		        }
 	        );
         }
 
@@ -63,7 +60,7 @@ namespace ZergMod.Scripts
 	        eyeTexture = deckTrialSequencer.snakeEyeTexture;
         }
 
-        public IEnumerator ExecuteCustomSequence(CustomNodeData nodeData)
+        public IEnumerator DoCustomSequence(CustomSpecialNodeData nodeData)
         {
             sequencer.hostSlot.Disable();
             sequencer.sacrificeSlot.Disable();
@@ -103,7 +100,7 @@ namespace ZergMod.Scripts
 		            yield return new WaitForSeconds(0.4f);
 		            Singleton<ViewManager>.Instance.SwitchToView(View.Consumables, false, false);
 		            yield return new WaitForSeconds(0.2f);
-		            RunState.Run.consumables.Add("BiomassInABottle");
+		            RunState.Run.consumables.Add(BiomassInABottle.Data.name);
 		            Singleton<ItemsManager>.Instance.UpdateItems(false);
 		            yield return new WaitForSeconds(0.5f);
 		            yield return AbathurMessage("Excess Biomass will help on battlefield.");

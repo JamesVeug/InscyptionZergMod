@@ -1,12 +1,11 @@
 {
     "$id": 0,
     "$type": "0|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData, ZergMod",
-    "name": "Zergling Swarm",
+    "ruleBookName": "Zergling Swarm",
+    "ruleDescription": "For every point of health this creature has, the portrait will gain 1 Zergling up to 6.",
     "power": 0,
     "priority": 0,
     "learnText": "",
-    "ruleBookName": "Zergling Swarm",
-    "ruleDescription": "For every point of health this creature has, the portrait will gain 1 Zergling up to 6.",
     "iconPath": "Artwork/Cards/zergling_6.png",
     "metaCategories": {
         "$id": 1,

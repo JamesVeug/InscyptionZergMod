@@ -1,12 +1,11 @@
 {
     "$id": 0,
     "$type": "0|ZergMod.Scripts.Data.Sigils.LarvaSpecialAbilityData, ZergMod",
-    "name": "Larva",
+    "ruleBookName": "Larva",
+    "ruleDescription": "The Larva will evolve into a random Zerg when it matures.",
     "power": 0,
     "priority": 0,
     "learnText": "",
-    "ruleBookName": "Larva",
-    "ruleDescription": "The Larva will evolve into a random Zerg when it matures.",
     "iconPath": "Artwork/Cards/larva.png",
     "metaCategories": {
         "$id": 1,

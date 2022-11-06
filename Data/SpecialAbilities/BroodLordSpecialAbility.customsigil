@@ -1,12 +1,11 @@
 {
     "$id": 0,
     "$type": "0|ZergMod.Scripts.Data.Sigils.BroodLordSpecialAbilityData, ZergMod",
-    "name": "Brood Lord",
+    "ruleBookName": "Brood Lord",
+    "ruleDescription": "As long as this creature is on the board, a Broodling is created in your hand at the start of your turn, up to 3 maximum.",
     "power": 0,
     "priority": 0,
     "learnText": "",
-    "ruleBookName": "Brood Lord",
-    "ruleDescription": "As long as this creature is on the board, a Broodling is created in your hand at the start of your turn, up to 3 maximum.",
     "iconPath": "Artwork/Cards/broodlord.png",
     "metaCategories": {
         "$id": 1,

@@ -1,12 +1,11 @@
 {
     "$id": 0,
     "$type": "0|ZergMod.Scripts.Data.Sigils.BrendaSpecialAbilityData, ZergMod",
-    "name": "Brenda",
+    "ruleBookName": "Brenda",
+    "ruleDescription": "Popular character used by WinterGaming to mock Queens getting out of position.",
     "power": 0,
     "priority": 0,
     "learnText": "Back before the war we used to be able ot fly!",
-    "ruleBookName": "Brenda",
-    "ruleDescription": "Popular character used by WinterGaming to mock Queens getting out of position.",
     "iconPath": "Artwork/Cards/Brenda.png",
     "metaCategories": {
         "$id": 1,
