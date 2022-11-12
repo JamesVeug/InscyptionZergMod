@@ -9,80 +9,76 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 <summary>25 New Cards:
 </summary>
 
-|Name|Power|Health|Cost|Evolution|Frozen Away|Tail|Sigils|Specials|Traits|Tribes|
-|:-|:-|:-|:-|:-|:-|:-|:-|:-|:-|:-|
-|Baneling|3|1| <img align="center" src="https://tinyurl.com/kt3f8tnw">|||| Explode|||Insect|
-|Biomass|0|1|Free|||| Morsel||||
-|Broodling|2|2| <img align="center" src="https://tinyurl.com/ycku3kab">|||Biomass| Brittle|||Insect|
-|Corruptor|2|3| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Airborne|||Insect|
-|Crawler Forest|1|4| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Omni Strike,  Detector||Terrain|Insect|
-|Creep Tumor|0|1|Free|||Biomass| Waterborne,  Leader|||Insect|
-|Devourer|3|3| <img align="center" src="https://tinyurl.com/yrt8hwxr">|||Biomass| Airborne,  Armored|||Insect|
-|Drone|1|1| <img align="center" src="https://tinyurl.com/2p8ev3yj">|Crawler Forest||Biomass| Bone Digger,  Bone Digger|||Insect|
-|Guardian|3|5| <img align="center" src="https://tinyurl.com/yrt8hwxr">|||Biomass| Sniper|||Insect|
-|Hydralisk|2|2| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Double Attack|||Insect|
-|Larva|0|1| <img align="center" src="https://tinyurl.com/2p8ev3yj">|||Biomass| Fledgling,  Armored| Larva|KillsSurvivors|Insect|
-|Locust|1|2| <img align="center" src="https://tinyurl.com/ycku3kab">|||Biomass| Brittle|||Insect|
-|Lurker|2|2| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Waterborne,  Splash Damage|||Insect|
-|Mutalisk|1|3| <img align="center" src="https://tinyurl.com/42jumw7s">|Guardian||Biomass| Regenerate,  Ricochet|||Insect|
-|Overlord|0|2| <img align="center" src="https://tinyurl.com/2p8ev3yj">|||Biomass| Many Lives,  Mighty Leap|||Insect|
-|Overseer|0|6| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Stinky,  Detector|||Insect|
-|Primal Ravasaur|3|2| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Assimilate|||Insect|
-|Primal Roach|2|2| <img align="center" src="https://tinyurl.com/42jumw7s">|Primal Igniter||Biomass| Assimilate,  Armored|||Insect|
-|Primal Zergling|1|2| <img align="center" src="https://tinyurl.com/2p8ev3yj">|Primal Ravasaur||Biomass| Assimilate|||Insect|
-|Ravager|2|2| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Sniper|||Insect|
-|Roach|2|3| <img align="center" src="https://tinyurl.com/42jumw7s">|Ravager||Biomass| Regenerate|||Insect|
-|Scourge|3|1| <img align="center" src="https://tinyurl.com/2p8ev3yj">|||Biomass| Airborne,  Explode|||Insect|
-|Swarm Host|0|2| <img align="center" src="https://tinyurl.com/2p8ev3yj">|||Biomass| Waterborne,  Spawn Locust|||Insect|
-|Wing|0|2|Free|||Biomass|||||
-|Zerglings|1|2| <img align="center" src="https://tinyurl.com/2p8ev3yj">|Baneling||Biomass| Swarm| Zergling Swarm||Insect|
+|Name|Power|Health|Cost|Sigils|Evolution|Tail|Specials|Traits|Tribes|
+|:-|:-|:-|:-|:-|:-|:-|:-|:-|:-|
+|Baneling|3|1| <img align="center" src="https://i.imgur.com/beJhD7d.png">|Explode|||||Insect|
+|Biomass|0|1|Free|Morsel||||||
+|Broodling|2|2| <img align="center" src="https://i.imgur.com/GeMgIce.png">|Brittle||Biomass|||Insect|
+|Corruptor|2|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Airborne||Biomass|||Insect|
+|Crawler Forest|1|4| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Omni Strike, Detector||Biomass||Terrain|Insect|
+|Creep Tumor|0|1|Free|Waterborne, Leader||Biomass|||Insect|
+|Devourer|4|3| <img align="center" src="https://i.imgur.com/Ckvc6Ww.png">|Airborne, Armored||Biomass|||Insect|
+|Drone|1|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Bone Digger(x2)|Crawler Forest|Biomass|||Insect|
+|Guardian|3|5| <img align="center" src="https://i.imgur.com/Ckvc6Ww.png">|Sniper||Biomass|||Insect|
+|Hydralisk|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Double Strike||Biomass|||Insect|
+|Larva|0|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Fledgling, Armored||Biomass|Larva|KillsSurvivors|Insect|
+|Locust|1|2| <img align="center" src="https://i.imgur.com/GeMgIce.png">|Brittle||Biomass|||Insect|
+|Lurker|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Waterborne, Splash Damage||Biomass|||Insect|
+|Mutalisk|1|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Regenerate, Ricochet|Guardian|Biomass|||Insect|
+|Overlord|0|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Many Lives, Mighty Leap||Biomass|||Insect|
+|Overseer|0|6| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Stinky, Detector||Biomass|||Insect|
+|Primal Ravasaur|3|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Assimilate||Biomass|||Insect|
+|Primal Roach|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Assimilate, Armored|Primal Igniter|Biomass|||Insect|
+|Primal Zergling|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Assimilate|Primal Ravasaur|Biomass|||Insect|
+|Ravager|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Sniper||Biomass|||Insect|
+|Roach|2|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Regenerate|Ravager|Biomass|||Insect|
+|Scourge|3|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Airborne, Explode||Biomass|||Insect|
+|Swarm Host|0|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Waterborne, Spawn Locust||Biomass|||Insect|
+|Wing|0|2|Free|||Biomass||||
+|Zerglings|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Swarm|Baneling|Biomass|Zergling Swarm||Insect|
+</details>
+
+<details>
+<summary>1 Modified Cards:
+</summary>
+
+|Name|Cost|Description|Display Name|Health|Power|Sigils|Tribes|
+|:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|PackRat| <img align="center" src="https://i.imgur.com/62GUUAC.png"><br>=><br> <img align="center" src="https://i.imgur.com/H6vESv7.png">|The prudent Pack Rat. Never doubt the utility of a well stocked pack.<br>=><br>Egg that is gestating into something else|Pack Rat<br>=><br>Egg|2<br>=><br>1|2<br>=><br>0|Trinket Bearer<br>=><br>Trinket Within|/<br>=><br>Insect|
 </details>
 
 <details>
 <summary>13 New Rare Cards:
 </summary>
 
-|Name|Power|Health|Cost|Evolution|Frozen Away|Tail|Sigils|Specials|Traits|Tribes|
-|:-|:-|:-|:-|:-|:-|:-|:-|:-|:-|:-|
-|Brenda|1|3| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Spawn Creep Tumor|||Insect|
-|Brood lord|0|6| <img align="center" src="https://tinyurl.com/yrt8hwxr">|||Biomass| Swarm Seeds| Brood Lord||Insect|
-|Dehaka|2|2| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Regenerate| Collect Essence,  Primal Zerg||Insect|
-|Infested Terran|1|2| <img align="center" src="https://tinyurl.com/kt3f8tnw">|||Biomass| Brittle,  Fecundity|||Insect|
-|Infestor|1|1| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Waterborne,  Fish Hook|||Insect|
-|Leviathan|0|20| <img align="center" src="https://tinyurl.com/mv6tnc5e">|||Biomass| Blood Bank,  Summon Zerg|||Insect|
-|Patchling|1|1|Free|||Biomass||||Insect|
-|Primal Igniter|3|4| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Splash Damage,  Assimilate|||Insect|
-|Queen|1|3| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Spawn Larva|||Insect|
-|Queen of Blades|3|6| <img align="center" src="https://tinyurl.com/49mpbsvc">|||Biomass| Bifurcated Strike,  Splash Damage|||Insect|
-|Strange Artifact|0|1| <img align="center" src="https://tinyurl.com/2p8ev3yj">|||| Bone King,  Worthy Sacrifice||Goat|Insect, Bird, Canine|
-|Ultralisk|3|5| <img align="center" src="https://tinyurl.com/yrt8hwxr">|||Biomass| Armored,  Splash Damage|||Insect|
-|Viper|2|1| <img align="center" src="https://tinyurl.com/42jumw7s">|||Biomass| Abduct|||Insect|
+|Name|Power|Health|Cost|Sigils|Tail|Specials|Traits|Tribes|
+|:-|:-|:-|:-|:-|:-|:-|:-|:-|
+|Brenda|1|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Spawn Creep Tumor|Biomass|||Insect|
+|Brood lord|0|6| <img align="center" src="https://i.imgur.com/Ckvc6Ww.png">|Swarm Seeds|Biomass|Brood Lord||Insect|
+|Dehaka|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Regenerate|Biomass|Collect Essence, Primal Zerg||Insect|
+|Infested Terran|1|2| <img align="center" src="https://i.imgur.com/beJhD7d.png">|Brittle, Fecundity|Biomass|||Insect|
+|Infestor|1|1| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Waterborne, Fish Hook|Biomass|||Insect|
+|Leviathan|0|20| <img align="center" src="https://i.imgur.com/66XMPEU.png">|Blood Bank, Summon Zerg|Biomass|||Insect|
+|Patchling|1|1|Free||Biomass|||Insect|
+|Primal Igniter|3|4| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Splash Damage, Assimilate|Biomass|||Insect|
+|Queen|1|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Spawn Larva|Biomass|||Insect|
+|Queen of Blades|3|6| <img align="center" src="https://i.imgur.com/8SvThbo.png">|Bifurcated Strike, Splash Damage|Biomass|||Insect|
+|Strange Artifact|0|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Worthy Sacrifice, Many Lives|||Goat|Insect, Bird, Canine|
+|Ultralisk|3|5| <img align="center" src="https://i.imgur.com/Ckvc6Ww.png">|Armored, Splash Damage|Biomass|||Insect|
+|Viper|2|1| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Abduct|Biomass|||Insect|
 </details>
 
 <details>
-<summary>18 New Sigils:
+<summary>5 New Sigils:
 </summary>
 
 |Name|Description|
 |:-|:-|
-|Abduct|Whenever a card bearing this sigil is played, you may move any enemy creature to the nearest empty space.|
-|Armored|All attacks this creature receives are reduced by 1 damage.|
-|Assimilate|When a card bearing this Sigil kills another card it, the killer will Evolve.|
-|Blood Bank|Whenever a card bearing this sigil is sacrificed to summon another card, the cost is reduced from this creature’s current health.|
-|Detector|As long as a card bearing this sigil is on the board, all Waterborne creatures are revealed and can be attacked as normal.|
-|Double Attack|Whenever a card bearing this sigil attacks a creature and that creature survives, this creature will attack a second time.|
-|Explode|When a card bearing this sigil attacks, the damage is also applied to the creatures adjacent to the target. This creature then perishes.|
-|Fish Hook|Whenever a card bearing this sigil is played, you may hook an opposing creature to your side of the board, if there is room.|
-|Regenerate|At the start of your turn, a creature bearing this sigil will heal one health.|
-|Ricochet|When a card bearing this sigil deals damage to a creature, it will also deal 1 flying damage.|
 |Spawn Creep Tumor|At the end of the owner's turn, the card bearing this sigil will move in the direction inscrybed and leave behind a Creep Tumor. A Creep Tumor is defined as 0 Power 1 Health with Waterborne and Leader.|
 |Spawn Larva|When a card bearing this sigil is played, Larva are created adjacent to it. A Larva is defined as 0 power 3 health with Fledgling.|
 |Spawn Locust|When a card bearing this sigil is played and at the start of your turn, Locusts will be created adjacent to it. A Locust is defined as 1 power 1 health with Brittle|
-|Splash Damage|Whenever a card bearing this sigil attacks, the damage will also apply to the creatures adjacent to the target.|
 |Summon Zerg|Whenever a card bearing this sigil takes damage, a random Zerg card is created in your hand.|
-|Swarm|When an card adjacent to a card bearing this sigil bearing attacks another card and survives, this card will also attack the same card.|
 |Swarm Seeds|When a card bearing this sigil is played, a Broodling is placed in your hand. A Broodling is defined as 2 power 2 health with Brittle.|
-|Trinket Within|When a card bearing this sigil perishes, a random item is given to you.|
 </details>
 
 <details>
@@ -100,14 +96,23 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 </details>
 
 <details>
-<summary>1 New Item:
+<summary>1 New Map Nodes:
 </summary>
 
-|Name|Description|
-|:-|:-|
-|Biomass in a Bottle|A Biomass is created in your hand. Biomass is defined as 0 Power 1 Health with Morsel.|
+|Name|
+|:-|
+|Evolve Sequence|
 </details>
-1 New Map Nodes
+
+<details>
+<summary>1 New Consumable Items:
+</summary>
+
+|Name|Description|Randomly Given|Power Level|
+|:-|:-|:-|:-|
+|Biomass Bottle|A Biomass is created in your hand. A Biomass is defined as: 0 Power, 1 Health, Morsel.|Yes|1|
+</details>
+
 
 
 ## Credits:
@@ -140,6 +145,21 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 # Update notes:
 
+## `Version: 2.1.0 - 6/11/2022`
+### Added:
+- General
+  - Upgrade API to v2.6
+  - Added StarCraft core dependency
+
+### Changes:
+- General
+  - Replaced Double Attack with Double Strike
+  - Removed Double Attack
+  - Minor description fixes
+
+<details>
+  <summary>See all Changes</summary>
+
 ## `Version: 2.0.0 - 28/3/2022`
 ### Added:
 - General
@@ -163,9 +183,6 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
   - Changed Zergling to have Swarm instead of Double Attack
   - Changed Biomass to have Morsel
   - Plus More
-
-<details>
-  <summary>See all Changes</summary>
 
 ## `Version: 1.1.0 - 29/1/2022`
 ### Added:
