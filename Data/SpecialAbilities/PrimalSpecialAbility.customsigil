@@ -2,7 +2,7 @@
     "$id": 0,
     "$type": "0|ZergMod.Scripts.Data.Sigils.PrimalSpecialAbilityData, ZergMod",
     "ruleBookName": "Primal Zerg",
-    "ruleDescription": "All Primal Zerg will grow stronger depending on what creatures were sacrificed to summon them.",
+    "ruleDescription": "Primal Zerg will grow stronger depending on what creatures were sacrificed to summon them.",
     "power": 9,
     "priority": 0,
     "learnText": "",
