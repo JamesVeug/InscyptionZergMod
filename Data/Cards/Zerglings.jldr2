@@ -14,6 +14,7 @@
 	"tailName": "Zerg_JSON_biomass",
 	"description": "The most numerous creatures of the Swarm...",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/zergling_2.png",
+	"pixelTexture": "JamesGames-ZergMod/Artwork/Cards/Pixel/pixel_zergling.png",
 	"tribes": ["Insect"],
 	"evolveIntoName": "Zerg_JSON_Baneling"
 }

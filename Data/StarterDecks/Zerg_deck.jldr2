@@ -1,0 +1,14 @@
+{
+  "decks": [
+    {
+      "name": "Zerglings",
+      "iconTexture": "ZerglingDeck.png",
+      "cards": [ "Zerg_JSON_Larva", "Zerg_JSON_Zerglings", "Zerg_JSON_Zerglings" ]
+    },
+    {
+      "name": "Primal Zerg",
+      "iconTexture": "DehakaDeck.png",
+      "cards": [ "Zerg_JSON_Dehaka", "Zerg_JSON_PrimalZergling", "Zerg_JSON_PrimalZergling" ]
+    }
+  ]
+}

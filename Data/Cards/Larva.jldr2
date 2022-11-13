@@ -15,6 +15,7 @@
 	"description": "Beware, even this small [c:bR]worm[c:] can be deadly...",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/larva.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/larva_emit.png",
+	"pixelTexture": "JamesGames-ZergMod/Artwork/Cards/Pixel/pixel_larva.png",
 	"tribes": ["Insect"],
 	"traits": ["KillsSurvivors"]
 }

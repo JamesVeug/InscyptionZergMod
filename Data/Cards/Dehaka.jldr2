@@ -17,5 +17,6 @@
 	"appearanceBehaviour": ["RareCardBackground"],
 	"texture": "JamesGames-ZergMod/Artwork/Cards/dehaka_1.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/dehaka_1_emit.png",
+	"pixelTexture": "JamesGames-ZergMod/Artwork/Cards/Pixel/pixel_dehaka.png",
 	"tribes": ["Insect"]
 }

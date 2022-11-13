@@ -14,6 +14,7 @@
 	"description": "These ancient Zerg can steal essence to evolve and grow strong.",
 	"texture": "JamesGames-ZergMod/Artwork/Cards/primal_zergling.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/primal_zergling_emit.png",
+	"pixelTexture": "JamesGames-ZergMod/Artwork/Cards/Pixel/pixel_primalzergling.png",
 	"tribes": ["Insect"],
 	"evolveIntoName": "Zerg_JSON_PrimalRavasaur"
 }
