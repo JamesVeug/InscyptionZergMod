@@ -131,6 +131,11 @@ namespace ZergMod.Scripts.SpecialAbilities
 
         public void RefreshPortrait()
         {
+            if (this.Card.Info.name != "Zerg_JSON_Zerglings")
+            {
+                return;
+            }
+            
             int health = Mathf.Clamp(Health(), 0, m_maxZerglingHealth);
             if (health == 0)
             {
