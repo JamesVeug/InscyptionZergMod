@@ -5,7 +5,7 @@
 	"displayedName": "Larva",
 	"baseHealth": 1,
 	"bloodCost": 1,
-	"abilities": ["Evolve","DeathShield"],
+	"abilities": ["TripleBlood","DeathShield"],
 	"specialAbilities": ["jamesgames.inscryption.zergmod.Larva"],
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Simple",
