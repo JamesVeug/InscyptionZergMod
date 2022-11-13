@@ -19,47 +19,47 @@
     "portraitChanges": {
         "$id": 2,
         "$type": "2|System.Collections.Generic.List`1[[ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod]], mscorlib",
-        "$rlength": 1,
+        "$rlength": 6,
         "$rcontent": [
             {
                 "$id": 3,
                 "$type": "3|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod",
-                "health": 0,
+                "health": 1,
                 "portraitPath": "Artwork/Cards/zergling_1.png",
                 "portraitEmitPath": "Artwork/Cards/zergling_1_emit.png"
             },
             {
                 "$id": 4,
                 "$type": "3|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod",
-                "health": 0,
+                "health": 2,
                 "portraitPath": "Artwork/Cards/zergling_2.png",
                 "portraitEmitPath": "Artwork/Cards/zergling_2_emit.png"
             },
             {
                 "$id": 5,
                 "$type": "3|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod",
-                "health": 0,
+                "health": 3,
                 "portraitPath": "Artwork/Cards/zergling_3.png",
                 "portraitEmitPath": "Artwork/Cards/zergling_3_emit.png"
             },
             {
                 "$id": 6,
                 "$type": "3|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod",
-                "health": 0,
+                "health": 4,
                 "portraitPath": "Artwork/Cards/zergling_4.png",
                 "portraitEmitPath": "Artwork/Cards/zergling_4_emit.png"
             },
             {
                 "$id": 7,
                 "$type": "3|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod",
-                "health": 0,
+                "health": 5,
                 "portraitPath": "Artwork/Cards/zergling_5.png",
                 "portraitEmitPath": "Artwork/Cards/zergling_5_emit.png"
             },
             {
                 "$id": 8,
                 "$type": "3|ZergMod.Scripts.Data.Sigils.ZerglingSpecialAbilityData+PortraitChangeData, ZergMod",
-                "health": 0,
+                "health": 6,
                 "portraitPath": "Artwork/Cards/zergling_6.png",
                 "portraitEmitPath": "Artwork/Cards/zergling_6_emit.png"
             }

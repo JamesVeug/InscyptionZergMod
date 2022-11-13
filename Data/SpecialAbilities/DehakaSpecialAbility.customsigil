@@ -19,7 +19,7 @@
     "portraitChanges": {
         "$id": 2,
         "$type": "2|System.Collections.Generic.List`1[[ZergMod.Scripts.Data.Sigils.DehakaSpecialAbilityData+PortraitChangeData, ZergMod]], mscorlib",
-        "$rlength": 1,
+        "$rlength": 3,
         "$rcontent": [
             {
                 "$id": 3,
@@ -31,14 +31,14 @@
             {
                 "$id": 4,
                 "$type": "3|ZergMod.Scripts.Data.Sigils.DehakaSpecialAbilityData+PortraitChangeData, ZergMod",
-                "minimumKills": 0,
+                "minimumKills": 2,
                 "portraitPath": "Artwork/Cards/dehaka_2.png",
                 "portraitEmitPath": "Artwork/Cards/dehaka_2_emit.png"
             },
             {
                 "$id": 5,
                 "$type": "3|ZergMod.Scripts.Data.Sigils.DehakaSpecialAbilityData+PortraitChangeData, ZergMod",
-                "minimumKills": 0,
+                "minimumKills": 4,
                 "portraitPath": "Artwork/Cards/dehaka_3.png",
                 "portraitEmitPath": "Artwork/Cards/dehaka_3_emit.png"
             }
