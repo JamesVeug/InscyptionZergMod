@@ -1,16 +1,13 @@
-using System;
 using System.Collections.Generic;
 using BepInEx;
 using BepInEx.Logging;
 using DiskCardGame;
 using HarmonyLib;
 using InscryptionAPI.Card;
-using InscryptionAPI.Helpers;
-using InscryptionAPI.Items;
-using UnityEngine;
 using ZergMod.Scripts;
 using ZergMod.Scripts.Abilities;
 using ZergMod.Scripts.Cards;
+using ZergMod.Scripts.Encounters;
 using ZergMod.Scripts.Items;
 using ZergMod.Scripts.SpecialAbilities;
 
@@ -53,7 +50,7 @@ namespace ZergMod
             // Cards
             XelNagaArtifact.Initialize();
             
-            // Encounters
+            // Sequences
             EvolveSequencer.Initialize();
 
             //ChangeSquirrelToLarva();
@@ -63,7 +60,14 @@ namespace ZergMod
         {
 	        // Items
 	        BiomassInABottle.Initialize();
-
+            
+	        // Encounters
+	        AirEncounter.Initialize();
+	        DroneEncounter.Initialize();
+	        SwarmHostEncounter.Initialize();
+	        UltraliskEncounter.Initialize();
+	        ZerglingEncounter.Initialize();
+	        
 	        Logger.LogInfo($"Loaded {PluginName}!");
         }
 
