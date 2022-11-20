@@ -5,6 +5,8 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 
 ### Includes:
 
+### Includes:
+
 <details>
 <summary>25 New Cards:
 </summary>
@@ -14,14 +16,14 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 |Baneling|3|1| <img align="center" src="https://i.imgur.com/beJhD7d.png">|Explode|||||Insect|
 |Biomass|0|1|Free|Morsel||||||
 |Broodling|2|2| <img align="center" src="https://i.imgur.com/GeMgIce.png">|Brittle||Biomass|||Insect|
-|Corruptor|2|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Airborne||Biomass|||Insect|
+|Corruptor|2|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Airborne||Biomass||KillsSurvivors|Insect|
 |Crawler Forest|1|4| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Omni Strike, Detector||Biomass||Terrain|Insect|
 |Creep Tumor|0|1|Free|Waterborne, Leader||Biomass|||Insect|
-|Devourer|4|3| <img align="center" src="https://i.imgur.com/Ckvc6Ww.png">|Airborne, Armored||Biomass|||Insect|
+|Devourer|4|3| <img align="center" src="https://i.imgur.com/Ckvc6Ww.png">|Airborne, Armored||Biomass||KillsSurvivors|Insect|
 |Drone|1|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Bone Digger(x2)|Crawler Forest|Biomass|||Insect|
 |Guardian|3|5| <img align="center" src="https://i.imgur.com/Ckvc6Ww.png">|Sniper||Biomass|||Insect|
 |Hydralisk|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Double Strike||Biomass|||Insect|
-|Larva|0|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Fledgling, Armored||Biomass|Larva|KillsSurvivors|Insect|
+|Larva|0|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Worthy Sacrifice, Armored||Biomass|Larva|Goat|Insect|
 |Locust|1|2| <img align="center" src="https://i.imgur.com/GeMgIce.png">|Brittle||Biomass|||Insect|
 |Lurker|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Waterborne, Splash Damage||Biomass|||Insect|
 |Mutalisk|1|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Regenerate, Ricochet|Guardian|Biomass|||Insect|
@@ -91,7 +93,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 |Brood Lord|As long as this creature is on the board, a Broodling is created in your hand at the start of your turn, up to 3 maximum.|
 |Collect Essence|This Primal leader will permanently grow stronger after defeating more powerful cards.|
 |Larva|The Larva will evolve into a random Zerg when it matures.|
-|Primal Zerg|All Primal Zerg will grow stronger depending on what creatures were sacrificed to summon them.|
+|Primal Zerg|Primal Zerg will grow stronger depending on what creatures were sacrificed to summon them.|
 |Zergling Swarm|For every point of health this creature has, the portrait will gain 1 Zergling up to 6.|
 </details>
 
@@ -105,13 +107,28 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 </details>
 
 <details>
+<summary>5 New Encounters:
+</summary>
+
+|Name|Min Difficulty|Max Difficulty|Regions|Main Tribes|Turns|
+|:-|:-|:-|:-|:-|:-|
+|Drone Rush|1|5|Char|Insect|5|
+|Swarm Host snipe|1|15|Char|Insect|5|
+|Ultralisk Rush|10|15|Char|Insect|6|
+|Zerg Air|1|15|Char|Insect|6|
+|Zergling Swarm|1|15|Char|Insect|5|
+</details>
+
+<details>
 <summary>1 New Consumable Items:
 </summary>
 
-|Name|Description|Randomly Given|Power Level|
-|:-|:-|:-|:-|
-|Biomass Bottle|A Biomass is created in your hand. A Biomass is defined as: 0 Power, 1 Health, Morsel.|Yes|1|
+|Name|Description|Randomly Given|Power Level|Available In Regions|
+|:-|:-|:-|:-|:-|
+|Biomass Bottle|A Biomass is created in your hand. A Biomass is defined as: 0 Power, 1 Health, Morsel.|Yes|1|All|
 </details>
+
+
 
 
 
@@ -145,6 +162,30 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 # Update notes:
 
+## `Version: 2.2.0 - 15/11/2022`
+### Added:
+  - 5 Encounters for Char Region
+  - Zergling Starter Deck
+  - Primal Zerg Starter Deck
+  - Pixel art for Dehaka
+  - Pixel art for Larva
+  - Pixel art for Zergling
+  - Pixel art for Primal Zergling
+
+### Changes:
+  - Larva now has TripleBlood instead of Evolve
+  - Larva now is a good sacrifice to the bone lord instead of Killing survivors
+  - Corrupter now kills survivors when sacrificed at the fire
+  - Devourer now kills survivors when sacrificed at the fire
+
+### Fixes:
+  - Fixed Zergling portrait not changing with health
+  - Fixed Zergling portrait staying as Zerglings after evolving
+  - Fixed Dehaka portrait not changing with kills
+
+<details>
+  <summary>See all Changes</summary>
+
 ## `Version: 2.1.0 - 6/11/2022`
 ### Added:
 - General
@@ -156,9 +197,6 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
   - Replaced Double Attack with Double Strike
   - Removed Double Attack
   - Minor description fixes
-
-<details>
-  <summary>See all Changes</summary>
 
 ## `Version: 2.0.0 - 28/3/2022`
 ### Added:

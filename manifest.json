@@ -1,12 +1,12 @@
 {
     "name": "ZergMod",
-    "version_number": "2.1.0",
+    "version_number": "2.2.0",
     "website_url": "https://github.com/JamesVeug/InscyptionZergMod",
     "description": "KCM Supporter! A StarCraft inspired mod that brings Zerg into the world of Inscryption",
     "dependencies": [
         "BepInEx-BepInExPack_Inscryption-5.4.1902",
         "API_dev-API-2.6.0",
-        "JamesGames-StarCraftCore-1.0.0",
+        "JamesGames-StarCraftCore-1.1.0",
         "MADH95Mods-JSONCardLoader-2.2.0"
     ]
 }
