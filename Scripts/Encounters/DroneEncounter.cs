@@ -10,9 +10,7 @@ namespace ZergMod.Scripts.Encounters
     {
         public static void Initialize()
         {
-            RegionData charRegion = CharRegion.regionData;
-            
-            EncounterBlueprintData data = EncounterManager.New(Plugin.PluginGuid + "_Zergling");
+            EncounterBlueprintData data = EncounterManager.New("Drone Rush");
             data.SetDifficulty(1, 5);
             data.AddDominantTribes(Tribe.Insect);
             data.AddRandomReplacementCards(new string[]
@@ -37,34 +35,14 @@ namespace ZergMod.Scripts.Encounters
                 new EncounterBlueprintData.CardBlueprint()
                 {
                     card = CardLoader.GetCardByName("Zerg_JSON_Drone"),
+                    minDifficulty = 5,
+                    maxDifficulty = 15
                 },
                 new EncounterBlueprintData.CardBlueprint()
                 {
                     card = CardLoader.GetCardByName("Zerg_JSON_Drone"),
-                },
-            });
-            data.AddTurn(new EncounterBlueprintData.CardBlueprint[]
-            {
-                new EncounterBlueprintData.CardBlueprint()
-                {
-                    card = CardLoader.GetCardByName("Zerg_JSON_Drone"),
-                },
-            });
-            data.AddTurn(new EncounterBlueprintData.CardBlueprint[]
-            {
-                new EncounterBlueprintData.CardBlueprint()
-                {
-                    card = CardLoader.GetCardByName("Zerg_JSON_Drone"),
-                },
-                new EncounterBlueprintData.CardBlueprint()
-                {
-                    card = CardLoader.GetCardByName("Zerg_JSON_Drone"),
-                },
-                new EncounterBlueprintData.CardBlueprint()
-                {
-                    card = CardLoader.GetCardByName("Zerg_JSON_Drone"),
-                    minDifficulty = 3,
-                    maxDifficulty = 5,
+                    minDifficulty = 10,
+                    maxDifficulty = 15
                 },
             });
             data.AddTurn(new EncounterBlueprintData.CardBlueprint[]
@@ -83,27 +61,53 @@ namespace ZergMod.Scripts.Encounters
                 new EncounterBlueprintData.CardBlueprint()
                 {
                     card = CardLoader.GetCardByName("Zerg_JSON_Drone"),
-                    minDifficulty = 3,
-                    maxDifficulty = 5,
+                    minDifficulty = 5,
+                    maxDifficulty = 15,
                 },
                 new EncounterBlueprintData.CardBlueprint()
                 {
                     card = CardLoader.GetCardByName("Zerg_JSON_Drone"),
-                    minDifficulty = 4,
-                    maxDifficulty = 5,
+                    minDifficulty = 10,
+                    maxDifficulty = 15,
+                },
+            });
+            data.AddTurn(new EncounterBlueprintData.CardBlueprint[]
+            {
+                new EncounterBlueprintData.CardBlueprint()
+                {
+                    card = CardLoader.GetCardByName("Zerg_JSON_Drone"),
+                },
+            });
+            data.AddTurn(new EncounterBlueprintData.CardBlueprint[]
+            {
+                new EncounterBlueprintData.CardBlueprint()
+                {
+                    card = CardLoader.GetCardByName("Zerg_JSON_Drone"),
+                },
+                new EncounterBlueprintData.CardBlueprint()
+                {
+                    card = CardLoader.GetCardByName("Zerg_JSON_Drone"),
+                    minDifficulty = 5,
+                    maxDifficulty = 15,
+                },
+                new EncounterBlueprintData.CardBlueprint()
+                {
+                    card = CardLoader.GetCardByName("Zerg_JSON_CrawlerForest"),
+                    minDifficulty = 10,
+                    maxDifficulty = 15,
                 },
             });
 
+            RegionData charRegion = CharRegion.regionData;
             if (charRegion != null)
             {
-                if (!CharRegion.HasClearedEncounters)
-                {
-                    charRegion.encounters.Clear();
-                    CharRegion.HasClearedEncounters = true;
-                }
-
                 data.regionSpecific = true;
                 charRegion.AddEncounters(data);
+                Plugin.Log.LogInfo("Added region " + data.name + " " + charRegion.encounters[charRegion.encounters.Count-1].name);
+                foreach (EncounterBlueprintData encounter in charRegion.encounters)
+                {
+                    Plugin.Log.LogInfo("\t" + encounter.name);
+                }
             }
         }
     }

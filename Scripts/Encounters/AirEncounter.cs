@@ -10,9 +10,7 @@ namespace ZergMod.Scripts.Encounters
     {
         public static void Initialize()
         {
-            RegionData charRegion = CharRegion.regionData;
-            
-            EncounterBlueprintData data = EncounterManager.New(Plugin.PluginGuid + "_Zergling");
+            EncounterBlueprintData data = EncounterManager.New("Zerg Air");
             data.SetDifficulty(1, 15);
             data.AddDominantTribes(Tribe.Insect);
             data.AddRandomReplacementCards(new string[]
@@ -46,6 +44,8 @@ namespace ZergMod.Scripts.Encounters
                 new EncounterBlueprintData.CardBlueprint()
                 {
                     card = CardLoader.GetCardByName("Zerg_JSON_Zerglings"),
+                    minDifficulty = 10,
+                    maxDifficulty = 15
                 }
             });
             data.AddTurn(new EncounterBlueprintData.CardBlueprint[]
@@ -53,6 +53,8 @@ namespace ZergMod.Scripts.Encounters
                 new EncounterBlueprintData.CardBlueprint()
                 {
                     card = CardLoader.GetCardByName("Zerg_JSON_Corruptor"),
+                    minDifficulty = 5,
+                    maxDifficulty = 15
                 }
             });
             data.AddTurn(new EncounterBlueprintData.CardBlueprint[]
@@ -67,19 +69,21 @@ namespace ZergMod.Scripts.Encounters
                 new EncounterBlueprintData.CardBlueprint()
                 {
                     card = CardLoader.GetCardByName("Zerg_JSON_Corruptor"),
+                    minDifficulty = 10,
+                    maxDifficulty = 15
                 }
             });
 
+            RegionData charRegion = CharRegion.regionData;
             if (charRegion != null)
             {
-                if (!CharRegion.HasClearedEncounters)
-                {
-                    charRegion.encounters.Clear();
-                    CharRegion.HasClearedEncounters = true;
-                }
-
                 data.regionSpecific = true;
                 charRegion.AddEncounters(data);
+                Plugin.Log.LogInfo("Added region " + data.name + " " + charRegion.encounters[charRegion.encounters.Count-1].name);
+                foreach (EncounterBlueprintData encounter in charRegion.encounters)
+                {
+                    Plugin.Log.LogInfo("\t" + encounter.name);
+                }
             }
         }
     }

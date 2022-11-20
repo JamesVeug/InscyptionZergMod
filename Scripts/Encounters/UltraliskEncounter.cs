@@ -10,22 +10,12 @@ namespace ZergMod.Scripts.Encounters
     {
         public static void Initialize()
         {
-            RegionData charRegion = CharRegion.regionData;
-            
-            EncounterBlueprintData data = EncounterManager.New(Plugin.PluginGuid + "_Zergling");
-            data.SetDifficulty(5, 15);
+            EncounterBlueprintData data = EncounterManager.New("Ultralisk Rush");
+            data.SetDifficulty(10, 15);
             data.AddDominantTribes(Tribe.Insect);
             data.AddRandomReplacementCards(new string[]
             {
-                "Zerg_JSON_Hydralisk",
-            });
-            data.AddTurnMods(new []
-            {
-                new EncounterBlueprintData.TurnModBlueprint()
-                {
-                    turn = 1,
-                    applyAtDifficulty = 1,
-                }
+                "Zerg_JSON_Zerglings",
             });
             data.AddTurn(new EncounterBlueprintData.CardBlueprint[]
             {
@@ -62,16 +52,16 @@ namespace ZergMod.Scripts.Encounters
                 }
             });
 
+            RegionData charRegion = CharRegion.regionData;
             if (charRegion != null)
             {
-                if (!CharRegion.HasClearedEncounters)
-                {
-                    charRegion.encounters.Clear();
-                    CharRegion.HasClearedEncounters = true;
-                }
-
                 data.regionSpecific = true;
                 charRegion.AddEncounters(data);
+                Plugin.Log.LogInfo("Added region " + data.name + " " + charRegion.encounters[charRegion.encounters.Count-1].name);
+                foreach (EncounterBlueprintData encounter in charRegion.encounters)
+                {
+                    Plugin.Log.LogInfo("\t" + encounter.name);
+                }
             }
         }
     }
