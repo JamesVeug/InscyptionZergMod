@@ -15,5 +15,6 @@
 	"texture": "JamesGames-ZergMod/Artwork/Cards/corruptor.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/corruptor_emit.png",
 	"tribes": ["Insect"],
-	"evolveIntoName": "Zerg_JSON_Devourer"
+	"evolveIntoName": "Zerg_JSON_Devourer",
+	"traits": ["KillsSurvivors"]
 }
