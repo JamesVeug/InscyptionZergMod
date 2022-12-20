@@ -1,0 +1,19 @@
+{
+	"name": "JSON_SwarmQueen",
+	"modPrefix": "Zerg",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Swarm Queen",
+	"baseAttack": 2,
+	"baseHealth": 2,
+	"bloodCost": 2,
+	"abilities": ["jamesgames.inscryption.zergmod.Mend"],
+	"specialAbilities": [],
+	"metaCategories": ["ChoiceNode"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "Zerg_JSON_biomass",
+	"description": "Combat queens used on the battlefield can heal friendlies to prolong the fight.",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/swarmqueen.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/swarmqueen_emit.png",
+	"tribes": ["Insect"]
+}

@@ -8,6 +8,8 @@ namespace ZergMod.Scripts.Encounters
 {
     public class AirEncounter
     {
+        public static EncounterBlueprintData Instance = null;
+
         public static void Initialize()
         {
             EncounterBlueprintData data = EncounterManager.New("Zerg Air");
@@ -79,12 +81,8 @@ namespace ZergMod.Scripts.Encounters
             {
                 data.regionSpecific = true;
                 charRegion.AddEncounters(data);
-                Plugin.Log.LogInfo("Added region " + data.name + " " + charRegion.encounters[charRegion.encounters.Count-1].name);
-                foreach (EncounterBlueprintData encounter in charRegion.encounters)
-                {
-                    Plugin.Log.LogInfo("\t" + encounter.name);
-                }
             }
+            Instance = data;
         }
     }
 }

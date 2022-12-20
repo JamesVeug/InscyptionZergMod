@@ -5,10 +5,8 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 
 ### Includes:
 
-### Includes:
-
 <details>
-<summary>25 New Cards:
+<summary>28 New Cards:
 </summary>
 
 |Name|Power|Health|Cost|Sigils|Evolution|Tail|Specials|Traits|Tribes|
@@ -23,6 +21,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 |Drone|1|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Bone Digger(x2)|Crawler Forest|Biomass|||Insect|
 |Guardian|3|5| <img align="center" src="https://i.imgur.com/Ckvc6Ww.png">|Sniper||Biomass|||Insect|
 |Hydralisk|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Double Strike||Biomass|||Insect|
+|Infested Civilian|1|1| <img align="center" src="https://i.imgur.com/UvtK0PY.png">|Unkillable||Biomass|||Insect|
 |Larva|0|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Worthy Sacrifice, Armored||Biomass|Larva|Goat|Insect|
 |Locust|1|2| <img align="center" src="https://i.imgur.com/GeMgIce.png">|Brittle||Biomass|||Insect|
 |Lurker|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Waterborne, Splash Damage||Biomass|||Insect|
@@ -31,13 +30,15 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 |Overseer|0|6| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Stinky, Detector||Biomass|||Insect|
 |Primal Ravasaur|3|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Assimilate||Biomass|||Insect|
 |Primal Roach|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Assimilate, Armored|Primal Igniter|Biomass|||Insect|
-|Primal Zergling|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Assimilate|Primal Ravasaur|Biomass|||Insect|
+|Primal Zergling|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Assimilate|Primal Ravasaur|Biomass||Zergling Rush|Insect|
 |Ravager|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Sniper||Biomass|||Insect|
 |Roach|2|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Regenerate|Ravager|Biomass|||Insect|
 |Scourge|3|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Airborne, Explode||Biomass|||Insect|
 |Swarm Host|0|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Waterborne, Spawn Locust||Biomass|||Insect|
+|Swarm Queen|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Mend||Biomass|||Insect|
+|Swarmling|0|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|||Biomass||Zergling Rush|Insect|
 |Wing|0|2|Free|||Biomass||||
-|Zerglings|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Swarm|Baneling|Biomass|Zergling Swarm||Insect|
+|Zerglings|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Swarm|Baneling|Biomass|Zergling Swarm|Zergling Rush|Insect|
 </details>
 
 <details>
@@ -61,7 +62,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 |Infested Terran|1|2| <img align="center" src="https://i.imgur.com/beJhD7d.png">|Brittle, Fecundity|Biomass|||Insect|
 |Infestor|1|1| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Waterborne, Fish Hook|Biomass|||Insect|
 |Leviathan|0|20| <img align="center" src="https://i.imgur.com/66XMPEU.png">|Blood Bank, Summon Zerg|Biomass|||Insect|
-|Patchling|1|1|Free||Biomass|||Insect|
+|Patchling|1|1|Free||Biomass||Zergling Rush|Insect|
 |Primal Igniter|3|4| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Splash Damage, Assimilate|Biomass|||Insect|
 |Queen|1|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Spawn Larva|Biomass|||Insect|
 |Queen of Blades|3|6| <img align="center" src="https://i.imgur.com/8SvThbo.png">|Bifurcated Strike, Splash Damage|Biomass|||Insect|
@@ -71,11 +72,12 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 </details>
 
 <details>
-<summary>5 New Sigils:
+<summary>6 New Sigils:
 </summary>
 
 |Name|Description|
 |:-|:-|
+|Mend|When a card bearing this sigil is played, a targeted card can restore 1 health.|
 |Spawn Creep Tumor|At the end of the owner's turn, the card bearing this sigil will move in the direction inscrybed and leave behind a Creep Tumor. A Creep Tumor is defined as 0 Power 1 Health with Waterborne and Leader.|
 |Spawn Larva|When a card bearing this sigil is played, Larva are created adjacent to it. A Larva is defined as 0 power 3 health with Fledgling.|
 |Spawn Locust|When a card bearing this sigil is played and at the start of your turn, Locusts will be created adjacent to it. A Locust is defined as 1 power 1 health with Brittle|
@@ -84,7 +86,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 </details>
 
 <details>
-<summary>6 New Special Abilities:
+<summary>7 New Special Abilities:
 </summary>
 
 |Name|Description|
@@ -94,6 +96,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 |Collect Essence|This Primal leader will permanently grow stronger after defeating more powerful cards.|
 |Larva|The Larva will evolve into a random Zerg when it matures.|
 |Primal Zerg|Primal Zerg will grow stronger depending on what creatures were sacrificed to summon them.|
+|Zergling Rush|The value represented with this sigil will be equal to the number of Zerglings that the owner has on their side of the table.|
 |Zergling Swarm|For every point of health this creature has, the portrait will gain 1 Zergling up to 6.|
 </details>
 
@@ -132,6 +135,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 
 
 
+
 ## Credits:
 - **JamesGames** - Creator
 - **GeneralSpritz** - Custom Art
@@ -162,7 +166,30 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 # Update notes:
 
-## `Version: 2.2.0 - 15/11/2022`
+## `Version: 2.3.0 - 21/12/2022`
+### Added:
+- Swarm Queen
+- Swarmling
+- Infested Civilian
+- Mend Ability
+- Zergling Rush Stat Icon
+- Zergling Trait
+
+### Changes:
+- Added Zergling Rush to Zergling, Patchling and Primal Zergling
+
+
+## `Version: 2.2.1 - 21/11/2022`
+### Changes:
+- Updated icon to line uop with StarcraftCore and Protoss
+- Removed log spam
+
+
+<details>
+  <summary>See all Changes</summary>
+
+
+## `Version: 2.2.0 - 20/11/2022`
 ### Added:
   - 5 Encounters for Char Region
   - Zergling Starter Deck
@@ -182,9 +209,6 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
   - Fixed Zergling portrait not changing with health
   - Fixed Zergling portrait staying as Zerglings after evolving
   - Fixed Dehaka portrait not changing with kills
-
-<details>
-  <summary>See all Changes</summary>
 
 ## `Version: 2.1.0 - 6/11/2022`
 ### Added:

@@ -1,0 +1,20 @@
+{
+	"name": "JSON_InfestedCivilian",
+	"modPrefix": "Zerg",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Infested Civilian",
+	"baseAttack": 1,
+	"baseHealth": 1,
+	"bonesCost": 4,
+	"abilities": ["DrawCopyOnDeath"],
+	"specialAbilities": [],
+	"metaCategories": ["ChoiceNode"],
+	"cardComplexity": "Simple",
+	"onePerDeck": True,
+	"temple": "Nature",
+	"tailName": "Zerg_JSON_biomass",
+	"description": "The most numerous creatures of the Swarm...",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/infested_civilian.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/infested_civilian_emit.png",
+	"tribes": ["Insect"]
+}

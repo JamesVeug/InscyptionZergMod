@@ -10,6 +10,8 @@ using ZergMod.Scripts.Cards;
 using ZergMod.Scripts.Encounters;
 using ZergMod.Scripts.Items;
 using ZergMod.Scripts.SpecialAbilities;
+using ZergMod.Scripts.Traits;
+using ZergMod.Scripts.VariableStatBehaviours;
 
 namespace ZergMod
 {
@@ -19,7 +21,7 @@ namespace ZergMod
     {
 	    public const string PluginGuid = "jamesgames.inscryption.zergmod";
 	    public const string PluginName = "Zerg Mod";
-	    public const string PluginVersion = "2.2.0.0";
+	    public const string PluginVersion = "2.3.0.0";
 	    public const string DecalPath = "Artwork/watermark.png";
 
         public static string Directory;
@@ -31,13 +33,20 @@ namespace ZergMod
             Logger.LogInfo($"Loading {PluginName}...");
             Directory = this.Info.Location.Replace("ZergMod.dll", "");
             new Harmony(PluginGuid).PatchAll();
-
+            
+            // Traits
+            ZerglingTrait.Initialize();
+            
+            // VariableStatBehaviours
+            ZerglingVariableStat.Initialize();
+            
             // Abilities
             SpawnLarvaAbility.Initialize(typeof(SpawnLarvaAbility));
             SpawnLocustAbility.Initialize(typeof(SpawnLocustAbility));
             StrafeCreepTumorAbility.Initialize(typeof(StrafeCreepTumorAbility));
             SummonZergAbility.Initialize(typeof(SummonZergAbility));
             SwarmSeedsAbility.Initialize(typeof(SwarmSeedsAbility));
+            MendAbility.Initialize(typeof(MendAbility));
             
             // Special Abilities
             BrendaSpecialAbility.Initialize(typeof(BrendaSpecialAbility));
@@ -52,7 +61,7 @@ namespace ZergMod
             
             // Sequences
             EvolveSequencer.Initialize();
-
+            
             //ChangeSquirrelToLarva();
         }
 
@@ -67,6 +76,9 @@ namespace ZergMod
 	        SwarmHostEncounter.Initialize();
 	        UltraliskEncounter.Initialize();
 	        ZerglingEncounter.Initialize();
+	        
+	        // Opponents
+	        //MyBossOpponent.Initialize();
 	        
 	        Logger.LogInfo($"Loaded {PluginName}!");
         }

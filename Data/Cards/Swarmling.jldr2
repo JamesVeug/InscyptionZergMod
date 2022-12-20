@@ -1,0 +1,21 @@
+{
+	"name": "JSON_Swarmling",
+	"modPrefix": "Zerg",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Swarmling",
+	"baseAttack": 0,
+	"baseHealth": 1,
+	"bloodCost": 1,
+	"abilities": [],
+	"specialAbilities": [],
+	"metaCategories": ["ChoiceNode"],
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"tailName": "Zerg_JSON_biomass",
+	"description": "A variant strain of the Zergling. Cheap and weak but powerful in large quantities.",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/swarmling.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/swarmling_emit.png",
+	"tribes": ["Insect"],
+	"traits": ["jamesgames.inscryption.zergmod.ZerglingTrait"],
+	"specialStatIcon": "jamesgames.inscryption.zergmod.Zergling Rush"
+}
