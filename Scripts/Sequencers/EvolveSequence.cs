@@ -16,7 +16,7 @@ namespace ZergMod.Scripts
 
         public static void Initialize()
         {
-	        NewNodeManager.New<EvolveSequencer>(Plugin.PluginGuid, "Evolve Sequence", GenerationType.SpecialCardChoice,
+	        NewNodeManager.New<EvolveSequencer>(Plugin.PluginGuid, "Evolve Sequence", GenerationType.SpecialEvent,
 		        new List<Texture2D>()
 		        {
 			        Utils.GetTextureFromPath("Artwork/Sequencers/evolve_1.png"),
@@ -176,6 +176,8 @@ namespace ZergMod.Scripts
 	        sequencer.hostSlot.Card.SetInfo(evolvedInfo);
 	        sequencer.hostSlot.Card.SetInteractionEnabled(false);
 	        RunState.Run.playerDeck.AddCard(evolvedInfo);
+	        sequencer.transformParticles.gameObject.SetActive(false);
+	        sequencer.transformParticles.gameObject.SetActive(true);
 	        yield return null;
 	        sequencer.hostSlot.Card.RenderCard();
 	        

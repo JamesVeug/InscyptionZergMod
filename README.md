@@ -1,18 +1,19 @@
 # Zerg
-This mod brings the alien race 'Zerg' from the RTS series StarCraft, into the world of Inscryption.
+This mod brings the alien race 'Zerg' from the RTS series StarCraft into the world of Inscryption.
 
 The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advanced, arthropodal aliens. Dedicated to the pursuit of genetic perfection.
 
 ### Includes:
 
 <details>
-<summary>28 New Cards:
+<summary>29 New Cards:
 </summary>
 
 |Name|Power|Health|Cost|Sigils|Evolution|Tail|Specials|Traits|Tribes|
 |:-|:-|:-|:-|:-|:-|:-|:-|:-|:-|
 |Baneling|3|1| <img align="center" src="https://i.imgur.com/beJhD7d.png">|Explode|||||Insect|
 |Biomass|0|1|Free|Morsel||||||
+|Biomass|1|1|Free|Morsel||||||
 |Broodling|2|2| <img align="center" src="https://i.imgur.com/GeMgIce.png">|Brittle||Biomass|||Insect|
 |Corruptor|2|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Airborne||Biomass||KillsSurvivors|Insect|
 |Crawler Forest|1|4| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Omni Strike, Detector||Biomass||Terrain|Insect|
@@ -30,15 +31,15 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 |Overseer|0|6| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Stinky, Detector||Biomass|||Insect|
 |Primal Ravasaur|3|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Assimilate||Biomass|||Insect|
 |Primal Roach|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Assimilate, Armored|Primal Igniter|Biomass|||Insect|
-|Primal Zergling|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Assimilate|Primal Ravasaur|Biomass||Zergling Rush|Insect|
+|Primal Zergling|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Assimilate|Primal Ravasaur|Biomass||ZerglingTrait|Insect|
 |Ravager|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Sniper||Biomass|||Insect|
 |Roach|2|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Regenerate|Ravager|Biomass|||Insect|
 |Scourge|3|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Airborne, Explode||Biomass|||Insect|
 |Swarm Host|0|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Waterborne, Spawn Locust||Biomass|||Insect|
 |Swarm Queen|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Mend||Biomass|||Insect|
-|Swarmling|0|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|||Biomass||Zergling Rush|Insect|
+|Swarmling|0|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|||Biomass||ZerglingTrait|Insect|
 |Wing|0|2|Free|||Biomass||||
-|Zerglings|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Swarm|Baneling|Biomass|Zergling Swarm|Zergling Rush|Insect|
+|Zerglings|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Swarm|Baneling|Biomass|Zergling Swarm|ZerglingTrait|Insect|
 </details>
 
 <details>
@@ -166,6 +167,18 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 # Update notes:
 
+## `Version: 2.3.1 - 22/12/2022`
+### Added:
+- Biomass card #2. Has attack and health. 25% chance to get it from Evolve node.
+
+### Changes:
+- Evolve node is now a special node instead of new card node.
+- Fixed Evolve node not showing green particles when a card evolves.
+- Renamed Zergling trait to ZerglingUnit
+
+<details>
+  <summary>See all Changes</summary>
+
 ## `Version: 2.3.0 - 21/12/2022`
 ### Added:
 - Swarm Queen
@@ -183,10 +196,6 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 ### Changes:
 - Updated icon to line uop with StarcraftCore and Protoss
 - Removed log spam
-
-
-<details>
-  <summary>See all Changes</summary>
 
 
 ## `Version: 2.2.0 - 20/11/2022`

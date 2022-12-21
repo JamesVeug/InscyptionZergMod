@@ -9,7 +9,7 @@ namespace ZergMod.Scripts.Traits
 		
 		public static void Initialize()
 		{
-			ID = GuidManager.GetEnumValue<Trait>(Plugin.PluginGuid, "ZerglingTrait");
+			ID = GuidManager.GetEnumValue<Trait>(Plugin.PluginGuid, "ZerglingUnit");
 		}
 	}
 }

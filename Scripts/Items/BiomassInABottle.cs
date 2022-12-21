@@ -11,7 +11,11 @@ namespace ZergMod.Scripts.Items
         public static void Initialize()
         {
             Texture2D texture = Utils.GetTextureFromPath("Artwork/Items/biomassbottle.png");
-            Data = ConsumableItemManager.NewCardInABottle(Plugin.PluginGuid, "Zerg_JSON_biomass", texture);
+            
+            int currentRandomSeed = SaveManager.SaveFile.GetCurrentRandomSeed();
+            bool attackBioMass = SeededRandom.Range(0, 100, currentRandomSeed++) <= 25;
+            string cardName = attackBioMass ? "Zerg_JSON_biomassAttacker" : "Zerg_JSON_biomass";
+            Data = ConsumableItemManager.NewCardInABottle(Plugin.PluginGuid, cardName, texture);
         }
     }
 }

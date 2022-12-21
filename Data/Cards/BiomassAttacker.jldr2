@@ -1,0 +1,12 @@
+{
+	"name": "JSON_biomassAttacker",
+	"modPrefix": "Zerg",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Biomass",
+	"abilities": ["Morsel"],
+	"baseHealth": 1,
+	"baseAttack": 1,
+	"cardComplexity": "Simple",
+	"temple": "Nature",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/biomass.png"
+}
