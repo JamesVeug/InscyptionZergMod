@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using DiskCardGame;
 using InscryptionAPI.Nodes;
+using InscryptionAPI.Saves;
 using UnityEngine;
 using ZergMod.Scripts.Items;
+using ZergMod.Scripts.Masks;
 
 namespace ZergMod.Scripts
 {
@@ -67,16 +69,28 @@ namespace ZergMod.Scripts
             Singleton<TableRuleBook>.Instance.SetOnBoard(true);
             Singleton<ViewManager>.Instance.Controller.SwitchToControlMode(ViewController.ControlMode.CardMerging, false);
             Singleton<ViewManager>.Instance.Controller.LockState = ViewLockState.Locked;
-            
-            
+
             yield return new WaitForSeconds(0.5f);
-            Singleton<ExplorableAreaManager>.Instance.TweenHangingLightColors(new Color(0.3f, 0.6f, 0, 1), new Color(0.3f, 0.4f, 0, 1), 0.1f);
-            yield return Singleton<TextDisplayer>.Instance.ShowUntilInput(
-	            "A large green slug like looking creature slithers towards you.", 
-	            -2.5f, 0.5f, Emotion.Neutral, TextDisplayer.LetterAnimation.WavyJitter);
-            
+            if (!HasLearnedSequence())
+            {
+	            yield return Singleton<TextDisplayer>.Instance.ShowUntilInput(
+		            "A large green slug like looking creature slithers towards you.",
+		            -2.5f, 0.5f, Emotion.Neutral, TextDisplayer.LetterAnimation.WavyJitter);
+            }
+
+            LeshyAnimationController.Instance.PutOnMask(AbatharMask.ID, true);
             yield return new WaitForSeconds(0.3f);
+            //Singleton<ExplorableAreaManager>.Instance.TweenHangingLightColors(new Color(0.3f, 0.6f, 0, 1), new Color(0.3f, 0.4f, 0, 1), 0.1f);
             LeshyAnimationController.Instance.SetEyesTexture(eyeTexture);
+            yield return new WaitForSeconds(0.3f);
+            
+            if (!HasLearnedSequence())
+            {
+	            yield return Singleton<TextDisplayer>.Instance.ShowUntilInput(
+		            "It's the Evolution Master",
+		            -2.5f, 0.5f, Emotion.Neutral, TextDisplayer.LetterAnimation.WavyJitter);
+            }
+            
             yield return sequencer.pile.SpawnCards(RunState.DeckList.Count, 0.5f);
             
             List<CardInfo> validHosts = this.GetValidCardsForHost(null);
@@ -91,7 +105,7 @@ namespace ZergMod.Scripts
             {
 	            yield return AbathurMessage("Primitive Army");
 	            yield return AbathurMessage("Potential hidden evolution available");
-	            yield return AbathurMessage("Require Biomass extraction from weaker cards to unlock");
+	            yield return AbathurMessage("Require additional Biomass extraction");
 	            yield return ValidSequence();
 	            yield return AbathurMessage("Army now more efficient. Victory is inevitable.");
 	            
@@ -100,14 +114,19 @@ namespace ZergMod.Scripts
 		            yield return new WaitForSeconds(0.4f);
 		            Singleton<ViewManager>.Instance.SwitchToView(View.Consumables, false, false);
 		            yield return new WaitForSeconds(0.2f);
-		            RunState.Run.consumables.Add(BiomassInABottle.Data.name);
+		            
+		            int currentRandomSeed = SaveManager.SaveFile.GetCurrentRandomSeed();
+		            bool attackBioMass = SeededRandom.Range(0, 100, currentRandomSeed++) <= 50;
+		            string itemName = attackBioMass ? BiomassAttackerInABottle.Data.name : BiomassInABottle.Data.name;
+		            RunState.Run.consumables.Add(itemName);
 		            Singleton<ItemsManager>.Instance.UpdateItems(false);
 		            yield return new WaitForSeconds(0.5f);
 		            yield return AbathurMessage("Excess Biomass will help on battlefield.");
 	            }
             }
             
-            Singleton<ExplorableAreaManager>.Instance.ResetHangingLightsToZoneColors(0.25f);
+            yield return LeshyAnimationController.Instance.TakeOffMask();
+            //Singleton<ExplorableAreaManager>.Instance.ResetHangingLightsToZoneColors(0.25f);
             Singleton<ViewManager>.Instance.SwitchToView(View.Default, false, false);
 			yield return sequencer.pile.DestroyCards(0.5f);
 			sequencer.stoneCircleAnim.SetTrigger("exit");
@@ -119,6 +138,11 @@ namespace ZergMod.Scripts
 			sequencer.confirmStone.SetStoneInactive();
 			sequencer.sacrificeSlot.DestroyCard();
 			sequencer.hostSlot.DestroyCard();
+			
+			if (!HasLearnedSequence())
+			{
+				SetSequenceLearned();
+			}
 			
 			if (Singleton<GameFlowManager>.Instance != null)
 			{
@@ -198,16 +222,31 @@ namespace ZergMod.Scripts
             return list;
         }
 
-        private IEnumerator AbathurMessage(string message)
+        private IEnumerator AbathurMessage(string message, bool skipable=true)
         {
-	        yield return Singleton<TextDisplayer>.Instance.ShowUntilInput(
-		        "[c:light_green]" + message + "[c:]", 
-		        -2.5f, 0.5f, Emotion.Neutral, TextDisplayer.LetterAnimation.Jitter);
+	        if (!skipable || !HasLearnedSequence())
+	        {
+		        yield return Singleton<TextDisplayer>.Instance.ShowUntilInput(
+			        "[c:light_green]" + message + "[c:]",
+			        -2.5f, 0.5f, Emotion.Neutral, TextDisplayer.LetterAnimation.Jitter);
+	        }
+        }
+
+        private bool HasLearnedSequence()
+        {
+	        bool learned = ModdedSaveManager.SaveData.GetValueAsBoolean(Plugin.PluginGuid, "LearnedEvolveSequence");
+	        return learned;
+        }
+
+        private void SetSequenceLearned()
+        {
+	        ModdedSaveManager.SaveData.SetValue(Plugin.PluginGuid, "LearnedEvolveSequence", true);
         }
         
         private IEnumerator InvalidCardsSequence()
         {
-	        yield return AbathurMessage("Army strands not capable of evolution. Choose strand to join Army.");
+	        yield return AbathurMessage("Army strands not capable of evolution.", false);
+	        yield return AbathurMessage("Choose new strand to join Army.", false);
 	        
 	        CardChoicesNodeData nodeData = new CardChoicesNodeData();
 	        nodeData.overrideChoices = this.GetEvolvingCardChoices();
@@ -219,7 +258,7 @@ namespace ZergMod.Scripts
 	        }
 	        else
 	        {
-		        yield return AbathurMessage("Army strands not capable of improving. Need more samples!");
+		        yield return AbathurMessage("Army strands not capable of improving. Need more samples!", false);
 	        }
 	        yield return new WaitForSeconds(0.1f);
         }
@@ -231,8 +270,7 @@ namespace ZergMod.Scripts
 	                                           x.temple != CardTemple.Nature || 
 	                                           x.metaCategories.Count == 0 || 
 	                                           x.metaCategories.Contains(CardMetaCategory.Rare) ||
-	                                           !(x.metaCategories.Contains(CardMetaCategory.TraderOffer) &&
-	                                           x.metaCategories.Contains(CardMetaCategory.ChoiceNode)));
+	                                           !(x.metaCategories.Contains(CardMetaCategory.TraderOffer) && x.metaCategories.Contains(CardMetaCategory.ChoiceNode)));
 	        
 	        List<CardChoice> finalList = new List<CardChoice>();
 	        int currentRandomSeed = SaveManager.SaveFile.GetCurrentRandomSeed();

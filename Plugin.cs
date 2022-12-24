@@ -9,6 +9,7 @@ using ZergMod.Scripts.Abilities;
 using ZergMod.Scripts.Cards;
 using ZergMod.Scripts.Encounters;
 using ZergMod.Scripts.Items;
+using ZergMod.Scripts.Masks;
 using ZergMod.Scripts.SpecialAbilities;
 using ZergMod.Scripts.Traits;
 using ZergMod.Scripts.VariableStatBehaviours;
@@ -77,6 +78,9 @@ namespace ZergMod
 	        SwarmHostEncounter.Initialize();
 	        UltraliskEncounter.Initialize();
 	        ZerglingEncounter.Initialize();
+	        
+	        // Masks
+	        AbatharMask.Initialize();
 	        
 	        // Opponents
 	        //MyBossOpponent.Initialize();
