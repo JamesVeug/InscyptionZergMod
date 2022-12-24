@@ -16,6 +16,6 @@
 	"texture": "JamesGames-ZergMod/Artwork/Cards/swarmling.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/swarmling_emit.png",
 	"tribes": ["Insect"],
-	"traits": ["jamesgames.inscryption.zergmod.ZerglingTrait"],
+	"traits": ["jamesgames.inscryption.zergmod.ZerglingUnit"],
 	"specialStatIcon": "jamesgames.inscryption.zergmod.Zergling Rush"
 }

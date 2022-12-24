@@ -17,5 +17,5 @@
 	"pixelTexture": "JamesGames-ZergMod/Artwork/Cards/Pixel/pixel_primalzergling.png",
 	"tribes": ["Insect"],
 	"evolveIntoName": "Zerg_JSON_PrimalRavasaur",
-	"traits": ["jamesgames.inscryption.zergmod.ZerglingTrait"]
+	"traits": ["jamesgames.inscryption.zergmod.ZerglingUnit"]
 }

@@ -14,5 +14,5 @@
 	"texture": "JamesGames-ZergMod/Artwork/Cards/patchling.png",
 	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/patchling_emit.png",
 	"tribes": ["Insect"],
-	"traits": ["jamesgames.inscryption.zergmod.ZerglingTrait"]
+	"traits": ["jamesgames.inscryption.zergmod.ZerglingUnit"]
 }

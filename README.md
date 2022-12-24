@@ -31,15 +31,15 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 |Overseer|0|6| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Stinky, Detector||Biomass|||Insect|
 |Primal Ravasaur|3|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Assimilate||Biomass|||Insect|
 |Primal Roach|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Assimilate, Armored|Primal Igniter|Biomass|||Insect|
-|Primal Zergling|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Assimilate|Primal Ravasaur|Biomass||ZerglingTrait|Insect|
+|Primal Zergling|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Assimilate|Primal Ravasaur|Biomass||ZerglingUnit|Insect|
 |Ravager|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Sniper||Biomass|||Insect|
 |Roach|2|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Regenerate|Ravager|Biomass|||Insect|
 |Scourge|3|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Airborne, Explode||Biomass|||Insect|
 |Swarm Host|0|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Waterborne, Spawn Locust||Biomass|||Insect|
 |Swarm Queen|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Mend||Biomass|||Insect|
-|Swarmling|0|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|||Biomass||ZerglingTrait|Insect|
+|Swarmling|0|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|||Biomass||ZerglingUnit|Insect|
 |Wing|0|2|Free|||Biomass||||
-|Zerglings|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Swarm|Baneling|Biomass|Zergling Swarm|ZerglingTrait|Insect|
+|Zerglings|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Swarm|Baneling|Biomass|Zergling Swarm|ZerglingUnit|Insect|
 </details>
 
 <details>
@@ -63,7 +63,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 |Infested Terran|1|2| <img align="center" src="https://i.imgur.com/beJhD7d.png">|Brittle, Fecundity|Biomass|||Insect|
 |Infestor|1|1| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Waterborne, Fish Hook|Biomass|||Insect|
 |Leviathan|0|20| <img align="center" src="https://i.imgur.com/66XMPEU.png">|Blood Bank, Summon Zerg|Biomass|||Insect|
-|Patchling|1|1|Free||Biomass||Zergling Rush|Insect|
+|Patchling|1|1|Free||Biomass||ZerglingUnit|Insect|
 |Primal Igniter|3|4| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Splash Damage, Assimilate|Biomass|||Insect|
 |Queen|1|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Spawn Larva|Biomass|||Insect|
 |Queen of Blades|3|6| <img align="center" src="https://i.imgur.com/8SvThbo.png">|Bifurcated Strike, Splash Damage|Biomass|||Insect|
@@ -124,12 +124,13 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 </details>
 
 <details>
-<summary>1 New Consumable Items:
+<summary>2 New Consumable Items:
 </summary>
 
 |Name|Description|Randomly Given|Power Level|Available In Regions|
 |:-|:-|:-|:-|:-|
 |Biomass Bottle|A Biomass is created in your hand. A Biomass is defined as: 0 Power, 1 Health, Morsel.|Yes|1|All|
+|Biomass Bottle|A Biomass is created in your hand. A Biomass is defined as: 1 Power, 1 Health, Morsel.|Yes|1|All|
 </details>
 
 
@@ -167,6 +168,22 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 # Update notes:
 
+## `Version: 2.3.2 - 23/12/2022`
+### Added:
+- Biomass card #2. Has attack and health. 25% chance to get it from Evolve node.
+
+### Changes:
+- Fixed Swarming new stat icon not working for any zergling
+- Fixed error from new bottle in item
+- Increased attacking biomass chance from 25% to 50%
+- Broodling
+  - Bonecost increased from 1 to 4
+- Locus
+  - Bonecost increased from 1 to 2
+
+<details>
+  <summary>See all Changes</summary>
+
 ## `Version: 2.3.1 - 22/12/2022`
 ### Added:
 - Biomass card #2. Has attack and health. 25% chance to get it from Evolve node.
@@ -175,9 +192,6 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 - Evolve node is now a special node instead of new card node.
 - Fixed Evolve node not showing green particles when a card evolves.
 - Renamed Zergling trait to ZerglingUnit
-
-<details>
-  <summary>See all Changes</summary>
 
 ## `Version: 2.3.0 - 21/12/2022`
 ### Added:

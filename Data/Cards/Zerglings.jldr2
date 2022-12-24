@@ -17,5 +17,5 @@
 	"pixelTexture": "JamesGames-ZergMod/Artwork/Cards/Pixel/pixel_zergling.png",
 	"tribes": ["Insect"],
 	"evolveIntoName": "Zerg_JSON_Baneling",
-	"traits": ["jamesgames.inscryption.zergmod.ZerglingTrait"]
+	"traits": ["jamesgames.inscryption.zergmod.ZerglingUnit"]
 }
