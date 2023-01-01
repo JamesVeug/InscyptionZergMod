@@ -48,6 +48,7 @@ namespace ZergMod
             SummonZergAbility.Initialize(typeof(SummonZergAbility));
             SwarmSeedsAbility.Initialize(typeof(SwarmSeedsAbility));
             MendAbility.Initialize(typeof(MendAbility));
+            DevourAbility.Initialize(typeof(DevourAbility));
             
             // Special Abilities
             BrendaSpecialAbility.Initialize(typeof(BrendaSpecialAbility));

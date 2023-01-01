@@ -1,0 +1,20 @@
+{
+    "$id": 0,
+    "$type": "0|ZergMod.Scripts.Data.Sigils.AbilityData, ZergMod",
+    "ruleBookName": "Devour",
+    "ruleDescription": "When a card bearing this sigil is placed on the board and there is an opposing card, this card will eat that card and absorb some of its stats.",
+    "power": 6,
+    "priority": 0,
+    "learnText": "",
+    "iconPath": "Artwork/Sigils/devour.png",
+	"pixelIconPath": "Artwork/Sigils/Pixel/pixelability_devour.png",
+    "metaCategories": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[DiskCardGame.AbilityMetaCategory, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            0,
+            1
+        ]
+    }
+}

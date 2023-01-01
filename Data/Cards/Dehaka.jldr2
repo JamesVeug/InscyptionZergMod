@@ -6,7 +6,7 @@
 	"baseAttack": 2,
 	"baseHealth": 2,
 	"bloodCost": 2,
-	"abilities": ["jamesgames.inscryption.starcraftcore.Regenerate"],
+	"abilities": ["jamesgames.inscryption.zergmod.Devour"],
 	"specialAbilities": ["jamesgames.inscryption.zergmod.Collect Essence","jamesgames.inscryption.zergmod.Primal Zerg"],
 	"metaCategories": ["Rare"],
 	"onePerDeck": True,
