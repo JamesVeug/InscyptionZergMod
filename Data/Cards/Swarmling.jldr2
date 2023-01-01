@@ -4,7 +4,7 @@
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Swarmling",
 	"baseAttack": 0,
-	"baseHealth": 1,
+	"baseHealth": 2,
 	"bloodCost": 1,
 	"abilities": [],
 	"specialAbilities": [],
