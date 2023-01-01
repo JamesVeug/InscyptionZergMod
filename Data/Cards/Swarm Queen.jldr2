@@ -4,7 +4,7 @@
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Swarm Queen",
 	"baseAttack": 2,
-	"baseHealth": 2,
+	"baseHealth": 3,
 	"bloodCost": 2,
 	"abilities": ["jamesgames.inscryption.zergmod.Mend"],
 	"specialAbilities": [],
