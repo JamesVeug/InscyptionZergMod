@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using DiskCardGame;
+using InscryptionAPI.Card;
 using StarCraftCore.Scripts.Abilities;
 using StarCraftCore.Scripts.Data.Sigils;
 using UnityEngine;
@@ -19,7 +20,8 @@ namespace ZergMod.Scripts.Abilities
 		
 		public override bool RespondsToResolveOnBoard()
 		{
-			return !Card.Dead && Card.slot.IsPlayerSlot && Card.slot.opposingSlot.Card != null;
+			PlayableCard target = Card.slot.opposingSlot.Card;
+			return !Card.Dead && Card.slot.IsPlayerSlot && target != null && !target.Dead && !target.HasAbility(Ability.MadeOfStone);
 		}
 
 		public override IEnumerator OnResolveOnBoard()
