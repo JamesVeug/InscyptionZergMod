@@ -6,7 +6,7 @@
 	"baseAttack": 3,
 	"baseHealth": 2,
 	"bloodCost": 2,
-	"abilities": ["jamesgames.inscryption.starcraftcore.Assimilate"],
+	"abilities": [],
 	"metaCategories": ["ChoiceNode","TraderOffer"],
 	"cardComplexity": "Simple",
 	"temple": "Nature",
