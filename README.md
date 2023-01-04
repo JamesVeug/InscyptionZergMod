@@ -14,7 +14,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 |Baneling|3|1| <img align="center" src="https://i.imgur.com/beJhD7d.png">|Explode|||||Insect|
 |Biomass|0|1|Free|Morsel||||||
 |Biomass|1|1|Free|Morsel||||||
-|Broodling|2|2| <img align="center" src="https://i.imgur.com/GeMgIce.png">|Brittle||Biomass|||Insect|
+|Broodling|2|2| <img align="center" src="https://i.imgur.com/UvtK0PY.png">|Brittle||Biomass|||Insect|
 |Corruptor|2|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Airborne||Biomass||KillsSurvivors|Insect|
 |Crawler Forest|1|4| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Omni Strike, Detector||Biomass||Terrain|Insect|
 |Creep Tumor|0|1|Free|Waterborne, Leader||Biomass|||Insect|
@@ -24,20 +24,20 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 |Hydralisk|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Double Strike||Biomass|||Insect|
 |Infested Civilian|1|1| <img align="center" src="https://i.imgur.com/UvtK0PY.png">|Unkillable||Biomass|||Insect|
 |Larva|0|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Worthy Sacrifice, Armored||Biomass|Larva|Goat|Insect|
-|Locust|1|2| <img align="center" src="https://i.imgur.com/GeMgIce.png">|Brittle||Biomass|||Insect|
+|Locust|1|2| <img align="center" src="https://i.imgur.com/beJhD7d.png">|Brittle||Biomass|||Insect|
 |Lurker|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Waterborne, Splash Damage||Biomass|||Insect|
 |Mutalisk|1|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Regenerate, Ricochet|Guardian|Biomass|||Insect|
 |Overlord|0|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Many Lives, Mighty Leap||Biomass|||Insect|
 |Overseer|0|6| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Stinky, Detector||Biomass|||Insect|
-|Primal Ravasaur|3|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Assimilate||Biomass|||Insect|
+|Primal Ravasaur|3|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|||Biomass|||Insect|
 |Primal Roach|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Assimilate, Armored|Primal Igniter|Biomass|||Insect|
 |Primal Zergling|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Assimilate|Primal Ravasaur|Biomass||ZerglingUnit|Insect|
 |Ravager|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Sniper||Biomass|||Insect|
 |Roach|2|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Regenerate|Ravager|Biomass|||Insect|
 |Scourge|3|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Airborne, Explode||Biomass|||Insect|
 |Swarm Host|0|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Waterborne, Spawn Locust||Biomass|||Insect|
-|Swarm Queen|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Mend||Biomass|||Insect|
-|Swarmling|0|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|||Biomass||ZerglingUnit|Insect|
+|Swarm Queen|2|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Mend||Biomass|||Insect|
+|Swarmling|0|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|||Biomass||ZerglingUnit|Insect|
 |Wing|0|2|Free|||Biomass||||
 |Zerglings|1|2| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Swarm|Baneling|Biomass|Zergling Swarm|ZerglingUnit|Insect|
 </details>
@@ -59,25 +59,26 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 |:-|:-|:-|:-|:-|:-|:-|:-|:-|
 |Brenda|1|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Spawn Creep Tumor|Biomass|||Insect|
 |Brood lord|0|6| <img align="center" src="https://i.imgur.com/Ckvc6Ww.png">|Swarm Seeds|Biomass|Brood Lord||Insect|
-|Dehaka|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Regenerate|Biomass|Collect Essence, Primal Zerg||Insect|
+|Dehaka|2|2| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Devour|Biomass|Collect Essence, Primal Zerg||Insect|
 |Infested Terran|1|2| <img align="center" src="https://i.imgur.com/beJhD7d.png">|Brittle, Fecundity|Biomass|||Insect|
 |Infestor|1|1| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Waterborne, Fish Hook|Biomass|||Insect|
 |Leviathan|0|20| <img align="center" src="https://i.imgur.com/66XMPEU.png">|Blood Bank, Summon Zerg|Biomass|||Insect|
 |Patchling|1|1|Free||Biomass||ZerglingUnit|Insect|
-|Primal Igniter|3|4| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Splash Damage, Assimilate|Biomass|||Insect|
+|Primal Igniter|3|4| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Splash Damage|Biomass|||Insect|
 |Queen|1|3| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Spawn Larva|Biomass|||Insect|
 |Queen of Blades|3|6| <img align="center" src="https://i.imgur.com/8SvThbo.png">|Bifurcated Strike, Splash Damage|Biomass|||Insect|
 |Strange Artifact|0|1| <img align="center" src="https://i.imgur.com/H6vESv7.png">|Worthy Sacrifice, Many Lives|||Goat|Insect, Bird, Canine|
-|Ultralisk|3|5| <img align="center" src="https://i.imgur.com/Ckvc6Ww.png">|Armored, Splash Damage|Biomass|||Insect|
+|Ultralisk|7|7| <img align="center" src="https://i.imgur.com/8SvThbo.png">||Biomass|||Insect|
 |Viper|2|1| <img align="center" src="https://i.imgur.com/62GUUAC.png">|Abduct|Biomass|||Insect|
 </details>
 
 <details>
-<summary>6 New Sigils:
+<summary>7 New Sigils:
 </summary>
 
 |Name|Description|
 |:-|:-|
+|Devour|When a card bearing this sigil is placed on the board and there is an opposing card, this card will eat that card and absorb some of its stats.|
 |Mend|When a card bearing this sigil is played, a targeted card can restore 1 health.|
 |Spawn Creep Tumor|At the end of the owner's turn, the card bearing this sigil will move in the direction inscrybed and leave behind a Creep Tumor. A Creep Tumor is defined as 0 Power 1 Health with Waterborne and Leader.|
 |Spawn Larva|When a card bearing this sigil is played, Larva are created adjacent to it. A Larva is defined as 0 power 3 health with Fledgling.|
@@ -168,6 +169,21 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 # Update notes:
 
+## `Version: 2.4.0 - 04/01/2023`
+### Added:
+- New Mask to Evolve Sequence and added new dialogue
+- Devour Sigil
+
+### Changes:
+- Ultralisk now redesigned to be like the Urayuli
+- Removed Assimilate sigil from Primal Igniter and Ravasaur
+- Swarmling Health increased from 1 to 2
+- Swarm Queen Health increased from 2 to 3
+- Replaced Regenerate on Dehaka with Devour
+
+<details>
+  <summary>See all Changes</summary>
+
 ## `Version: 2.3.2 - 23/12/2022`
 ### Added:
 - Biomass card #2. Has attack and health. 25% chance to get it from Evolve node.
@@ -180,9 +196,6 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
   - Bonecost increased from 1 to 4
 - Locus
   - Bonecost increased from 1 to 2
-
-<details>
-  <summary>See all Changes</summary>
 
 ## `Version: 2.3.1 - 22/12/2022`
 ### Added:
