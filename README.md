@@ -146,6 +146,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Cyantist** - Armored Ability
 - **CarbotAnimations** - Original Cartoon art for StarCraft - https://www.youtube.com/c/CarbotAnimations
 - **CountryGump** - Art for Primal Zerg - https://www.deviantart.com/countrygump
+- **Bonie** - Help with the Evolution masters Mask
 
 
 # Installation
