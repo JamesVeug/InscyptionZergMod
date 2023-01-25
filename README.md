@@ -137,8 +137,6 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 
 
 
-
-
 ## Credits:
 - **JamesGames** - Creator
 - **GeneralSpritz** - Custom Art
@@ -146,7 +144,7 @@ The Zerg Swarm is a terrifying and ruthless amalgamation of biologically advance
 - **Cyantist** - Armored Ability
 - **CarbotAnimations** - Original Cartoon art for StarCraft - https://www.youtube.com/c/CarbotAnimations
 - **CountryGump** - Art for Primal Zerg - https://www.deviantart.com/countrygump
-- **Bonie** - Help with the Evolution masters Mask
+- **Bonie** - Help with some portraits and the Evolution masters Mask
 
 
 # Installation
@@ -158,8 +156,6 @@ I recommend this tutorial if you are curious how to manually install mods in the
 
 ## Known Issues:
 - Armored does not work on some sigils
-- Transferred sigils onto sacrificed Primal Zerg appear blank.
-- Evolution Map node does not spawn
 - Baneling does not have a Biomass tail
 
 
@@ -169,6 +165,19 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 
 
 # Update notes:
+
+## `Version: 2.4.1 - 25/01/2023`
+### General:
+- Fixed Evolution masters mask looking flat
+- New strange artifact art
+
+### Changes:
+- Roach health decreased from 3 -> 2
+- Primal Roach health increased from 2 -> 3
+- Removed Armored sigil from Primal Roach
+
+<details>
+  <summary>See all Changes</summary>
 
 ## `Version: 2.4.0 - 04/01/2023`
 ### Added:
@@ -181,9 +190,6 @@ Write an issue report here: https://github.com/JamesVeug/InscyptionZergMod/issue
 - Swarmling Health increased from 1 to 2
 - Swarm Queen Health increased from 2 to 3
 - Replaced Regenerate on Dehaka with Devour
-
-<details>
-  <summary>See all Changes</summary>
 
 ## `Version: 2.3.2 - 23/12/2022`
 ### Added:
