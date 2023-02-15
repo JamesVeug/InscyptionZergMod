@@ -1,0 +1,172 @@
+{
+	"name": "Zerg_JSON_Queen of Blades Talking Card",
+	"cardName": "Zerg_JSON_Queen of Blades",
+	"faceSprite": "JamesGames-ZergMod/Artwork/TalkingCards/TalkingKerrigan/face.png",
+	"eyeSprites": {
+		"open": "JamesGames-ZergMod/Artwork/TalkingCards/TalkingKerrigan/neutral/eyes_open.png",
+		"closed": "JamesGames-ZergMod/Artwork/TalkingCards/TalkingKerrigan/eyes_closed.png"
+	},
+	"mouthSprites": {
+		"open": "_",
+		"closed": "_"
+	},
+	"emissionSprites": {
+		"open": "JamesGames-ZergMod/Artwork/TalkingCards/TalkingKerrigan/neutral/eyes_open_emit.png",
+		"closed": "-"
+	},
+	"faceInfo": {
+		"blinkRate": 1.5,
+		"voiceSoundPitch": 1.1,
+		"customVoice": "kerrigan_voice.wav"
+	},
+	"emotions": [{
+			"emotion": "Anger",
+			"eyeSprites": {
+				"open": "JamesGames-ZergMod/Artwork/TalkingCards/TalkingKerrigan/angry/eyes_open.png",
+				"closed": "JamesGames-ZergMod/Artwork/TalkingCards/TalkingKerrigan/eyes_closed.png"
+			},
+			"emissionSprites": {
+		        "open": "JamesGames-ZergMod/Artwork/TalkingCards/TalkingKerrigan/angry/eyes_open_emit.png",
+				"closed": "_"
+			}
+		},
+		{
+			"emotion": "Quiet",
+			"eyeSprites": {
+		        "open": "JamesGames-ZergMod/Artwork/TalkingCards/TalkingKerrigan/neutral/eyes_open.png",
+				"closed": "JamesGames-ZergMod/Artwork/TalkingCards/TalkingKerrigan/eyes_closed.png"
+			},
+			"emissionSprites": {
+				"open": "JamesGames-ZergMod/Artwork/TalkingCards/TalkingKerrigan/neutral/eyes_open_emit.png",
+				"closed": "_"
+			}
+		},
+		{
+			"emotion": "Surprise",
+			"eyeSprites": {
+				"open": "JamesGames-ZergMod/Artwork/TalkingCards/TalkingKerrigan/surprised/eyes_open.png",
+				"closed": "JamesGames-ZergMod/Artwork/TalkingCards/TalkingKerrigan/eyes_closed.png"
+			},
+			"emissionSprites": {
+				"open": "JamesGames-ZergMod/Artwork/TalkingCards/TalkingKerrigan/surprised/eyes_open_emit.png",
+				"closed": "_"
+			}
+		}
+	],
+	"dialogueEvents": [{
+			"eventName": "OnDrawn",
+			"mainLines": [
+				"[e:surprise]...[w:1]",
+				"[e:anger]Finally[w:1]",
+				"The Dark One has taken over the Swarm.[w:2]",
+				"You must join me.[w:1]",
+				"In defeating him.[w:1]",
+				"[leshy:That would not be wise.][w:2]",
+				"[e:anger]...[w:1]"
+			],
+			"repeatLines": [
+				[
+					"Another fight[w:0.6]"
+				],
+				[
+					"You have potential.[w:1]"
+				],
+				[
+					"[e:surprise]...[w:1]"
+				]
+			]
+		},
+		{
+			"eventName": "OnAttacked",
+			"mainLines": ["[e:anger]You will regret that!"],
+			"repeatLines": [
+				["[e:anger]Pathetic attempt."],
+				["[e:anger]Barely a scratch."]
+			]
+		},
+		{
+			"eventName": "OnSacrificed",
+			"mainLines": ["[e:surprise]Unwise"],
+			"repeatLines": [
+				["[e:surprise]I will return"]
+			]
+		},
+		{
+			"eventName": "OnBecomeSelectableNegative",
+			"mainLines": [
+				"[e:anger]...[w:1]",
+				"[e:surprise]I wouldn't."
+			],
+			"repeatLines": [
+				["[e:quiet]Choose another"],
+				["[e:anger]Don't"]
+			]
+		},
+		{
+			"eventName": "OnBecomeSelectablePositive",
+			"mainLines": [
+				"[e:anger]...[w:1]",
+				"[e:neutral]Strengthen me."
+			],
+			"repeatLines": [
+				[
+					"[e:neutral]...[w:1]",
+					"[e:surprise]Wise choice."
+				],
+				[
+					"[e:neutral]...[w:1]",
+					"[e:quiet]Powers the Swarm"
+				]
+			]
+		},
+		{
+			"eventName": "OnPlayFromHand",
+			"mainLines": [
+				"[e:anger]They will flea![w:1]"
+			],
+			"repeatLines": [
+				[
+					"[e:anger]They won't see what's coming.[w:1]"
+				]
+			]
+		},
+		{
+			"eventName": "OnSelectedForCardRemove",
+			"mainLines": [
+				"[e:anger]Don't do it[w:0.4]"
+			],
+			"repeatLines": [
+				[
+					"[e:anger]...[w:1]",
+					"[e:anger]You will regret this...[w:1]"
+				]
+			]
+		},
+		{
+			"eventName": "OnSelectedForCardMerge",
+			"mainLines": [
+				"[e:anger]This sounds...[w:0.6]",
+				"[e:surprise]... [c:#1e0040]acceptable.[c:][w:1]"
+			],
+			"repeatLines": [
+				[
+					"[e:quiet]We can only get stronger![w:0.4]"
+				],
+				[
+					"[e:surprise]This is...[w:0.6] [e:quiet]fine.[w:1]",
+					"... I suppose.[w:1]"
+				]
+			]
+		},
+		{
+			"eventName": "OnSelectedForDeckTrial",
+			"mainLines": [
+				"[e:neutral]...[w:1]",
+				"[e:anger]... All others are pathetic[w:1]"
+			],
+			"repeatLines": [
+				["[e:neutral]...[w:1]"]
+			]
+		}
+	]
+}
