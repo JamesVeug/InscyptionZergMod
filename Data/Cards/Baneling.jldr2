@@ -4,7 +4,7 @@
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Baneling",
 	"baseAttack": 3,
-	"baseHealth": 1,
+	"baseHealth": 2,
 	"bonesCost": 2,
 	"energyCost": 0,
 	"abilities": ["jamesgames.inscryption.starcraftcore.Explode"],
