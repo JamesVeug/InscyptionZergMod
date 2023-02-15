@@ -104,10 +104,10 @@ namespace ZergMod.Scripts
             else
             {
 	            yield return AbathurMessage("Primitive Army");
-	            yield return AbathurMessage("Potential hidden evolution available");
+	            yield return AbathurMessage("Potential hidden evolution available", false);
 	            yield return AbathurMessage("Require additional Biomass extraction");
 	            yield return ValidSequence();
-	            yield return AbathurMessage("Army now more efficient. Victory is inevitable.");
+	            yield return AbathurMessage("Army now more efficient. Victory is inevitable.", false);
 	            
 	            if (RunState.Run.consumables.Count < RunState.Run.MaxConsumables)
 	            {
@@ -121,7 +121,7 @@ namespace ZergMod.Scripts
 		            RunState.Run.consumables.Add(itemName);
 		            Singleton<ItemsManager>.Instance.UpdateItems(false);
 		            yield return new WaitForSeconds(0.5f);
-		            yield return AbathurMessage("Excess Biomass will help on battlefield.");
+		            yield return AbathurMessage("Excess Biomass will help on battlefield.", false);
 	            }
             }
             
