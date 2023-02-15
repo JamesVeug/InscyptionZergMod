@@ -1,0 +1,16 @@
+{
+	"name": "JSON_AbathurEgg",
+	"modPrefix": "Zerg",
+	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
+	"displayedName": "Egg",
+	"baseAttack": 0,
+	"baseHealth": 1,
+	"bloodCost": 1,
+	"tailName": "Zerg_JSON_biomass",
+	"abilities": [],
+	"description": "",
+	"texture": "JamesGames-ZergMod/Artwork/Cards/egg.png",
+	"emissionTexture": "JamesGames-ZergMod/Artwork/Cards/egg_emit.png",
+	"tribes": ["Insect"],
+	"tailName": "JSON_biomass"
+}

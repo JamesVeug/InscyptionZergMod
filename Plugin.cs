@@ -84,7 +84,7 @@ namespace ZergMod
 	        AbatharMask.Initialize();
 	        
 	        // Opponents
-	        //MyBossOpponent.Initialize();
+	        AbathurOpponent.Initialize();
 	        
 	        Logger.LogInfo($"Loaded {PluginName}!");
         }
