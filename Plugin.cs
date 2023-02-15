@@ -47,7 +47,6 @@ namespace ZergMod
             StrafeCreepTumorAbility.Initialize(typeof(StrafeCreepTumorAbility));
             SummonZergAbility.Initialize(typeof(SummonZergAbility));
             SwarmSeedsAbility.Initialize(typeof(SwarmSeedsAbility));
-            MendAbility.Initialize(typeof(MendAbility));
             DevourAbility.Initialize(typeof(DevourAbility));
             
             // Special Abilities
