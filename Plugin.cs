@@ -17,7 +17,7 @@ using ZergMod.Scripts.VariableStatBehaviours;
 namespace ZergMod
 {
     [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
-    [BepInDependency("cyantist.inscryption.api", BepInDependency.DependencyFlags.HardDependency)]
+    [BepInDependency("jamesgames.inscryption.starcraftcore", BepInDependency.DependencyFlags.HardDependency)]
     public class Plugin : BaseUnityPlugin
     {
 	    public const string PluginGuid = "jamesgames.inscryption.zergmod";
