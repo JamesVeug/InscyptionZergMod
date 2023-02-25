@@ -4,7 +4,7 @@
 	"decals": ["JamesGames-ZergMod/Artwork/watermark.png"],
 	"displayedName": "Leviathan",
 	"baseHealth": 20,
-	"bonesCost": 8,
+	"bonesCost": 6,
 	"energyCost": 0,
 	"abilities": ["jamesgames.inscryption.starcraftcore.Blood Bank","jamesgames.inscryption.zergmod.Summon Zerg"],
 	"metaCategories": ["Rare"],
