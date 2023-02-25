@@ -2,8 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using DiskCardGame;
+using DiskCardGame.Zerg;
 using InscryptionAPI.Nodes;
 using InscryptionAPI.Saves;
+using StarCraftCore.Scripts.Regions;
 using UnityEngine;
 using ZergMod.Scripts.Items;
 using ZergMod.Scripts.Masks;
@@ -15,10 +17,14 @@ namespace ZergMod.Scripts
         private CardMergeSequencer sequencer = null;
         private CardSingleChoicesSequencer cardChoiceSequencer = null;
         private Texture eyeTexture = null;
+        
+        private static NewNodeManager.FullNode fullNode;
 
         public static void Initialize()
         {
-	        NewNodeManager.New<EvolveSequencer>(Plugin.PluginGuid, "Evolve Sequence", GenerationType.SpecialEvent,
+	        string guid = Plugin.PluginGuid;
+	        string sequenceName = "Evolve Sequence";
+	        fullNode = NewNodeManager.New<EvolveSequencer>(guid, sequenceName, GenerationType.SpecialEvent,
 		        new List<Texture2D>()
 		        {
 			        Utils.GetTextureFromPath("Artwork/Sequencers/evolve_1.png"),
@@ -28,13 +34,19 @@ namespace ZergMod.Scripts
 		        },
 		        new List<NodeData.SelectionCondition>()
 		        {
-			        
+			        new CustomPreviousNodesContent(guid, sequenceName, false),
+			        new NodeData.WithinRegionIndexRange(1, int.MaxValue),
+			        new NodeData.WithinGridYRange(2, int.MaxValue)
 		        },
 		        new List<NodeData.SelectionCondition>()
 		        {
 			        
 		        }
 	        );
+	        CharRegion.regionData.bosses.Clear(); // Only Abathur!
+	        CharRegion.regionData.bosses.Add(AbathurOpponent.ID);
+	        MarSaraRegion.regionData.bosses.Add(AbathurOpponent.ID);
+	        AuirRegion.regionData.bosses.Add(AbathurOpponent.ID);
         }
 
         private CardMergeSequencer CloneCardMergeSequence()

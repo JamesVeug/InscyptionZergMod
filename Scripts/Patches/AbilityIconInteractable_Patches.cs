@@ -1,5 +1,10 @@
 ﻿
 
+using System.Collections.Generic;
+using DiskCardGame;
+using DiskCardGame.Zerg;
+using HarmonyLib;
+
 namespace ZergMod.Scripts.Patches
 {
     /*[HarmonyPatch(typeof(Opponent), nameof(Opponent.SpawnOpponent), new System.Type[] { typeof(EncounterData) })]
@@ -7,7 +12,7 @@ namespace ZergMod.Scripts.Patches
     {
         public static bool Prefix(Opponent __instance, EncounterData encounterData)
         {
-            encounterData.opponentType = MyBossOpponent.ID;
+            encounterData.opponentType = AbathurOpponent.ID;
             Plugin.Log.LogInfo("[MapGenerator_CreateNode][Postfix]");
             return true;
         }
@@ -18,14 +23,19 @@ namespace ZergMod.Scripts.Patches
     {
         public static void Postfix(ref NodeData __result)
         {
-            BossBattleNodeData nodeData = new BossBattleNodeData();
+            if (__result is BossBattleNodeData battleNodeData)
+            {
+                battleNodeData.bossType = AbathurOpponent.ID;
+                battleNodeData.specialBattleId = AbathurBattleSequencer.ID;
+            }
+            /*BossBattleNodeData nodeData = new BossBattleNodeData();
             nodeData.gridX = __result.gridX;
             nodeData.gridY = __result.gridY;
             nodeData.id = __result.id;
             __result = nodeData;
-            nodeData.bossType = MyBossOpponent.ID;
+            nodeData.bossType = AbathurOpponent.ID;
             nodeData.specialBattleId = BossBattleSequencer.GetSequencerIdForBoss(nodeData.bossType);
-            Plugin.Log.LogInfo("[MapGenerator_CreateNode][Postfix]");
+            //Plugin.Log.LogInfo("[MapGenerator_CreateNode][Postfix]");
         }
     }*/
 
