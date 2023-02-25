@@ -61,7 +61,7 @@ namespace DiskCardGame.Zerg
 			Singleton<OpponentAnimationController>.Instance.SetHeadTilt(5f, 1.5f, 0.1f);
 			yield return base.FaceZoomSequence();
 			yield return Singleton<TextDisplayer>.Instance.ShowUntilInput("It's the Evolution Master!", -2.5f, 0.5f, Emotion.Neutral, TextDisplayer.LetterAnimation.Jitter);
-			yield return BossUtils.AbathurMessage("New specimen, must experiment");
+			yield return BossUtils.AbathurMessage("New hostile specimen, must experiment");
 			yield return BossUtils.AbathurMessage("Biomass extraction required");
 			//yield return new WaitForSeconds(1.5f);
 			
@@ -123,22 +123,29 @@ namespace DiskCardGame.Zerg
 			Singleton<ViewManager>.Instance.SwitchToView(View.Default, false, false);
 			yield return new WaitForSeconds(0.4f);
 			
-			yield return BossUtils.AbathurMessage("Experiment proving successful");
+			yield return BossUtils.AbathurMessage("Experiment successful");
 			yield return BossUtils.AbathurMessage("Must acquire essence for the Dark One");
 			yield return new WaitForSeconds(0.5f);
 			yield return base.ClearQueue();
 			yield return new WaitForSeconds(0.5f);
-			
+
 			// Evolve everything on Abathur's side
-			CardInfo swarmlings = CardLoader.GetCardByName("Zerg_JSON_Swarmling");
-			CardInfo zerglings = CardLoader.GetCardByName("Zerg_JSON_Zerglings");
+			List<CardSlot> slotsToBeAttacked = new List<CardSlot>();
+			foreach (CardSlot slot in Singleton<BoardManager>.Instance.PlayerSlotsCopy)
+			{
+				if (slot.Card != null)
+				{
+					slotsToBeAttacked.AddRange(slot.Card.GetOpposingSlots());
+				}
+			}
+			
 			CardInfo eggInfo = CardLoader.GetCardByName("Zerg_JSON_AbathurEgg");
 			foreach (CardSlot slot in Singleton<BoardManager>.Instance.OpponentSlotsCopy)
 			{
 				if (slot.Card == null)
 				{
 					// Put an egg in an empty slot
-					if (slot.opposingSlot.Card != null)
+					if (slotsToBeAttacked.Contains(slot))
 					{
 						yield return Singleton<BoardManager>.Instance.CreateCardInSlot(eggInfo, slot, 0.1f, true);
 					}
