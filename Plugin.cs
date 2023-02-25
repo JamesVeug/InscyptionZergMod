@@ -35,6 +35,8 @@ namespace ZergMod
             Directory = this.Info.Location.Replace("ZergMod.dll", "");
             new Harmony(PluginGuid).PatchAll();
             
+            ZergMod.Scripts.Bosses.BossUtils.Initialize();
+            
             // Traits
             ZerglingTrait.Initialize();
             
@@ -59,15 +61,17 @@ namespace ZergMod
             
             // Cards
             XelNagaArtifact.Initialize();
-            
-            // Sequences
-            EvolveSequencer.Initialize();
-            
-            //ChangeSquirrelToLarva();
+	        
+	        // Masks
+	        AbatharMask.Initialize();
+	        
+	        Logger.LogInfo($"Loaded {PluginName}!");
         }
 
         private void Start()
         {
+	        // Wait for JSONLoader to load Zerg related cards
+            
 	        // Items
 	        BiomassInABottle.Initialize();
 	        BiomassAttackerInABottle.Initialize();
@@ -79,24 +83,11 @@ namespace ZergMod
 	        UltraliskEncounter.Initialize();
 	        ZerglingEncounter.Initialize();
 	        
-	        // Masks
-	        AbatharMask.Initialize();
-	        
 	        // Opponents
 	        AbathurOpponent.Initialize();
-	        
-	        Logger.LogInfo($"Loaded {PluginName}!");
-        }
-
-        public void ChangeSquirrelToLarva()
-        {
-	        List<Ability> abilities = new List<Ability> { StrafeCreepTumorAbility.ability };
-
-	        CardInfo card = CardManager.BaseGameCards.CardByName("Squirrel");
-	        card.baseAttack = 1;
-	        card.baseHealth = 10;
-	        card.abilities = abilities;
-	        card.decals = Utils.GetDecals();
+            
+	        // Sequences
+	        EvolveSequencer.Initialize();
         }
     }
 }
